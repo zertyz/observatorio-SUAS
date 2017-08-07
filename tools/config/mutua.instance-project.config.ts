@@ -56,8 +56,9 @@ export const MutuaInstanceProjectComponentsActivationConfiguration: IInstancePro
 
 
   // componentes do projeto observatorio-SUAS
-  {componentName: 'MPHomeComponent',                 htmlEnabled: true,  mobileEnabled: true},
-  {componentName: 'MPDadosEIndicadoresComponent',    htmlEnabled: true,  mobileEnabled: true},
+  {componentName: 'MPHomeComponent',              htmlEnabled: true,  mobileEnabled: true},
+  {componentName: 'MPDadosEIndicadoresComponent', htmlEnabled: true,  mobileEnabled: true},
+  {componentName: 'MPInspecoesComponent',         htmlEnabled: true,  mobileEnabled: true},
 ];
 
 /** Defines the modules this application should bundle and load, for html (web and desktop) and mobile platforms.
