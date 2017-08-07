@@ -1,0 +1,302 @@
+.scrollEquipamentos{
+  max-height: 17rem;
+  overflow-y: scroll;
+  }
+
+.img-fluid{
+  min-width: 2.7vw;
+}
+.img-fluid2{
+  width:2.4vw;
+}
+.img-fluid3{
+  width: 2.4vw;
+}
+.subtitulo {
+  font-family: 'Roboto-Condensed-Light';
+  font-size: 1.1vw;
+  line-height: 80%;
+  padding-left: 1rem;
+}
+
+.dimensao {
+  font-family: 'Roboto-Condensed';
+  font-size: 140%;
+  line-height: 90%;
+  font-weight: bold;
+  margin-top: 4%;
+}
+
+.pesoHeader {
+  font-family: 'Roboto-Condensed';
+  font-size: 100%;
+  font-weight: bold;
+  line-height: 90%;
+}
+
+.pesoValor {
+  font-family: 'Roboto-Condensed';
+  font-size: 340%;
+  line-height: 90%;
+  font-weight: normal;
+  color: rgb(5, 127, 178);
+  right: 2%;
+}
+.btn-group-lg{
+  padding-bottom: 2%;
+  align-self: center !important;
+}
+.info {
+  font-family: 'Roboto-Condensed-Light';
+  font-size: 100%;
+  line-height: 95%;
+}
+
+.barra {
+  border-right: 1px solid #2e3a48;
+}
+
+.barraH {
+  border-bottom: 1px solid #2e3a48;
+}
+
+hr {
+  border-style: dotted;
+  border-color: #2e3a48;
+  width: 90%;
+  padding-top: 2%;
+  position: inherit;
+  bottom: 1%;
+}
+
+
+
+@media(max-width:799px){
+  div.borderedL { border-color: transparent;}
+  div.borderedR { border-color: transparent;}
+  img.img-responsive { width:80%;}
+  div.scroll { height: 8rem; width:100%;display: inline-block;}
+
+  .container-fluid .testimonial-group {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .container-fluid.testimonial-group.col-xs-4{
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+  }
+
+  div.barraH{border-color: transparent}
+  max-width: 100%;
+}
+
+.logo {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  cursor: pointer;
+}
+
+
+.titulo{
+  font-family: 'Raleway';
+  font-size: 1.8vw;
+  line-height: 90%;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: url(http://www.mprj.mp.br/mprj-responsiveflat-theme/images/comum/borda-titulo.png) no-repeat left top;
+}
+
+.nome-eq{
+  color: rgb(5, 127, 178);
+  font-family: 'Roboto-Condensed';
+  font-size: 1vw;
+  line-height: 90%;
+  font-weight: bold;
+  margin-top: 4%;
+  padding-left: 1rem;
+}
+
+.card{
+  color: inherit;
+  overflow: auto;
+  margin-top: 1rem;
+  min-height: 24.2rem;
+}
+.card-block{
+  height: 100%;
+}
+
+.t-padding{
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+p{
+  padding: 0rem;
+  padding-left: 1rem;
+  line-height: initial;
+  padding-top: 5px;
+}
+.p-2{
+  @extend .hw3;
+  padding: 0 0 !important;
+  margin-bottom: 0;
+  padding-left: 1.0rem!important;
+}
+.nome-pessoal{
+  color: rgb(5, 127, 178);
+  font-family: 'Roboto-Condensed';
+  font-size: 1.2vw;
+}
+.span{
+  height: 0.1rem;
+}
+
+.keyword{
+  font-family: 'Roboto-Condensed';
+  font-size: 1vw;
+  text-transform: uppercase;
+}
+
+.numero-destacado{
+  @extend .nome-pessoal;
+  font-size: 1.6vw;
+  font-weight: bold;
+}
+
+.valor-tabela{
+  font-size: 1.3vw;
+  padding-left: 1rem;
+}
+
+.vt-bold{
+  @extend .valor-tabela;
+  font-weight: bold;
+}
+
+.vt-black{
+  @extend .vt-bold;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.vt-green{
+  @extend .vt-black;
+  color: #006600;
+}
+
+.vt-red{
+  @extend .vt-black;
+  color: #660000;
+}
+
+.vt-blue{
+  @extend .vt-bold;//Diferente dos outros VTs
+  color: rgb(5, 127, 178);
+}
+.hw1{
+  font-size: 1.7vw;
+}
+.hw3{
+  font-size: 1.14vw;
+}
+.pw-1{
+ font-size:  0.7vw;
+}
+.pw-3{
+  font-size: 0.7vw;
+  text-align: center;
+}
+
+
+.grafico-rosca {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+
+  .fatia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .centro {
+    position: absolute;
+    border-radius: 50%;
+
+    span.exibicao {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+@mixin grafico-rosca($name, $perc, $size, $width, $base, $center, $color, $textColor: $color, $textSize: 20px) {
+  $color2: $color;
+  $base2: $base;
+  $deg: ($perc/100*360)+deg;
+  $deg1: 90deg;
+  $deg2: $deg;
+
+  @if $perc < 50 {
+    $base: $color;
+    $color: $base2;
+    $color2: $base2;
+    $deg1: ($perc/100*360+90)+deg;
+    $deg2: 0deg;
+  }
+
+  .grafico-rosca {
+    &#{$name} {
+      width: $size;
+      height: $size;
+      background: $base;
+
+      .fatia {
+        &.um {
+          clip: rect(0 $size $size/2 0);
+          -webkit-transform: rotate($deg1);
+          transform: rotate($deg1);
+          background: $color;
+        }
+
+        &.dois {
+          clip: rect(0 $size/2 $size 0);
+          -webkit-transform: rotate($deg2);
+          transform: rotate($deg2);
+          background: $color2;
+        }
+      }
+
+      .centro {
+        top: $width;
+        left: $width;
+        width: $size - ($width * 2);
+        height: $size - ($width * 2);
+        background: $center;
+
+        span.exibicao {
+          font-size: $textSize;
+          line-height: $size - ($width * 2);
+          color: $textColor;
+
+          &:after {
+            content: '#{$perc}%';
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//Não vai dar certo
+
+@include grafico-rosca('.grafico1',10, 90px, 15px, #006600, #fff, #660000);
+@include grafico-rosca('.grafico2',50, 90px, 15px, #006600, #fff, #660000);
+@include grafico-rosca('.grafico3',100, 90px, 15px, #006600, #fff, #660000);

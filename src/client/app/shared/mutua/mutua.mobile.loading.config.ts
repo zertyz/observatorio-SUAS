@@ -12,15 +12,19 @@
 
 import { AppComponent } from '../../components/app.component';
 import { MPHomeComponent } from '../../components/pages/mp-home/mp-home.component';
+import { MPDadosEIndicadoresComponent } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.component';
+import { MPInspecoesComponent } from '../../components/pages/mp-inspecoes/mp-inspecoes.component';
 
-export const MutuaExportedComponents: any[] = [AppComponent,MPHomeComponent];
+export const MutuaExportedComponents: any[] = [AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent,MPInspecoesComponent];
 
 // routes
 /////////
 
 import { MPHomeRoutes } from '../../components/pages/mp-home/mp-home.routes';
+import { MPDadosEIndicadoresRoutes } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.routes';
+import { MPInspecoesRoutes } from '../../components/pages/mp-inspecoes/mp-inspecoes.routes';
 
-export const MutuaExportedRoutes: any[] = [...MPHomeRoutes];
+export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes,...MPInspecoesRoutes];
 
 // modules
 //////////
