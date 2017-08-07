@@ -69,7 +69,7 @@ export const MutuaInstanceProjectModulesActivationConfiguration: IInstanceProjec
   {moduleName: 'BrowserAnimationsModule', htmlEnabled: true,  mobileEnabled: false},  // angular4 module. Required by 'PRIMENG_MODULES'
 //  {moduleName: 'MHelloWorldModule',       htmlEnabled: false, mobileEnabled: false},  // sample module with some SaaS components
   {moduleName: 'NgbModule',               htmlEnabled: true,  mobileEnabled: false},  // bootstrap for angular
-  {moduleName: 'PRIMENG_MODULES',         htmlEnabled: false, mobileEnabled: false},  // form components. depends on 'BrowserAnimationsModule'
+  {moduleName: 'PRIMENG_MODULES',         htmlEnabled: true,  mobileEnabled: false},  // form components. depends on 'BrowserAnimationsModule'
 
   // módulos do projeto Edificando o Controle Interno
   {moduleName: 'MPRJModule', htmlEnabled: true, mobileEnabled: false},
