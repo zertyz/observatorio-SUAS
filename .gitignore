@@ -2,6 +2,9 @@
 logs
 *.log
 
+# newer npm versions
+package-lock.json
+
 # Runtime data
 pids
 *.pid
