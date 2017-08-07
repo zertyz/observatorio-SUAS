@@ -1,6 +1,6 @@
 .titulo{
   font-family: 'Raleway';
-  font-size: 220%;
+  font-size: 1.8vw;
   line-height: 90%;
   text-transform: uppercase;
   padding-top: 0.5rem;
@@ -10,7 +10,7 @@
 
 .subtitulo {
   font-family: 'Roboto-Condensed-Light';
-  font-size: 120%;
+  font-size: 1.1vw;
   line-height: 80%;
   padding-left: 1rem;
 }
@@ -28,4 +28,7 @@
   margin-right: 0.5rem;
   min-height: 20rem;
   width: 100%;
+}
+option{
+  color: black !important;
 }

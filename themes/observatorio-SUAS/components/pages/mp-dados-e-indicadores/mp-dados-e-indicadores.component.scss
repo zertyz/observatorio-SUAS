@@ -4,13 +4,17 @@
   }
 
 .img-fluid{
-  max-width: 51px;
+  min-width: 2.7vw;
 }
-
-
+.img-fluid2{
+  width:2.4vw;
+}
+.img-fluid3{
+  width: 2.4vw;
+}
 .subtitulo {
   font-family: 'Roboto-Condensed-Light';
-  font-size: 120%;
+  font-size: 1.1vw;
   line-height: 80%;
   padding-left: 1rem;
 }
@@ -97,7 +101,7 @@ hr {
 
 .titulo{
   font-family: 'Raleway';
-  font-size: 220%;
+  font-size: 1.8vw;
   line-height: 90%;
   text-transform: uppercase;
   padding-top: 0.5rem;
@@ -108,10 +112,11 @@ hr {
 .nome-eq{
   color: rgb(5, 127, 178);
   font-family: 'Roboto-Condensed';
-  font-size: 140%;
+  font-size: 1vw;
   line-height: 90%;
   font-weight: bold;
   margin-top: 4%;
+  padding-left: 1rem;
 }
 
 .card{
@@ -119,6 +124,9 @@ hr {
   overflow: auto;
   margin-top: 1rem;
   min-height: 24.2rem;
+}
+.card-block{
+  height: 100%;
 }
 
 .t-padding{
@@ -133,6 +141,7 @@ p{
   padding-top: 5px;
 }
 .p-2{
+  @extend .hw3;
   padding: 0 0 !important;
   margin-bottom: 0;
   padding-left: 1.0rem!important;
@@ -140,7 +149,7 @@ p{
 .nome-pessoal{
   color: rgb(5, 127, 178);
   font-family: 'Roboto-Condensed';
-  font-size: 140%;
+  font-size: 1.2vw;
 }
 .span{
   height: 0.1rem;
@@ -148,18 +157,18 @@ p{
 
 .keyword{
   font-family: 'Roboto-Condensed';
-  font-size: 110%;
+  font-size: 1vw;
   text-transform: uppercase;
 }
 
 .numero-destacado{
   @extend .nome-pessoal;
-  font-size: 200%;
+  font-size: 1.6vw;
   font-weight: bold;
 }
 
 .valor-tabela{
-  font-size: 140%;
+  font-size: 1.3vw;
   padding-left: 1rem;
 }
 
@@ -188,7 +197,19 @@ p{
   @extend .vt-bold;//Diferente dos outros VTs
   color: rgb(5, 127, 178);
 }
-
+.hw1{
+  font-size: 1.7vw;
+}
+.hw3{
+  font-size: 1.14vw;
+}
+.pw-1{
+ font-size:  0.7vw;
+}
+.pw-3{
+  font-size: 0.7vw;
+  text-align: center;
+}
 
 
 .grafico-rosca {
