@@ -43,7 +43,7 @@ ts-node
 dist/
 dev/
 docs/
-lib/
+/lib/
 test/
 tmp/
 

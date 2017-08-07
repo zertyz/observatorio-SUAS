@@ -27,9 +27,9 @@ import { IInstanceProjectsComponentActivationConfiguration,
  * 4) Search for 'Angular Seed' in ./tools/install.js
  * 5) nativescript/platforms/android/src/main/res/values/strings.xml
  * */
-export const appTitle: string = 'Angular Seed para o Ministério Público do Rio de Janeiro - MPRJ';
+export const appTitle: string = 'Observatório SUAS';
 
-export const appDescription: string = 'Advanced Seed with Mutuatech Patches for Angular -- Seed para os projetos Frontend do Ministério Público do Rio de Janeiro - MPRJ';
+export const appDescription: string = 'Consultas aos dados do Censo SUAS e Internos do MPRJ';
 
 /** theme configuration
  *  NOTE 1: currently, when changing themes and testing on the mobile, you must manually clean things by 'rm -fr nativescript/platforms/android/build' -- maybe you'll need that for iPhone too.
@@ -39,7 +39,7 @@ export const appDescription: string = 'Advanced Seed with Mutuatech Patches for 
  *          - nativescript/src
  *          - src/client/index.html */
 
-export const appTheme    : string = 'mprj-clean';   /** One of the directories in 'themes/' */
+export const appTheme    : string = 'observatorio-SUAS';   /** One of the directories in 'themes/' */
 export const primeNGTheme: string = 'trontastic';   /** One of the directories in 'node-modules/primeng/resources/themes/' -- If you have 'PRIMENG_MODULES' enabled */
 
 /** Defines the components this application should bundle and load, for html (web and desktop) and mobile platforms.
@@ -55,8 +55,9 @@ export const MutuaInstanceProjectComponentsActivationConfiguration: IInstancePro
  */
 
 
-  // componentes do projeto angular-seed-advanced-MPRJ
-  {componentName: 'MPHomeComponent',    htmlEnabled: true,  mobileEnabled: true},
+  // componentes do projeto observatorio-SUAS
+  {componentName: 'MPHomeComponent',                 htmlEnabled: true,  mobileEnabled: true},
+  {componentName: 'MPDadosEIndicadoresComponent',    htmlEnabled: true,  mobileEnabled: true},
 ];
 
 /** Defines the modules this application should bundle and load, for html (web and desktop) and mobile platforms.

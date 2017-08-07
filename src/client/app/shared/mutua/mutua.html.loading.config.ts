@@ -12,15 +12,17 @@
 
 import { NG2AppComponent } from '../../shared/modules/m-ng2-admin/ng2app.component';
 import { MPHomeComponent } from '../../components/pages/mp-home/mp-home.component';
+import { MPDadosEIndicadoresComponent } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.component';
 
-export const MutuaExportedComponents: any[] = [NG2AppComponent,MPHomeComponent];
+export const MutuaExportedComponents: any[] = [NG2AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent];
 
 // routes
 /////////
 
 import { MPHomeRoutes } from '../../components/pages/mp-home/mp-home.routes';
+import { MPDadosEIndicadoresRoutes } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.routes';
 
-export const MutuaExportedRoutes: any[] = [...MPHomeRoutes];
+export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes];
 
 // modules
 //////////

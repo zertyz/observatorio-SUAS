@@ -1,0 +1,31 @@
+.titulo{
+  font-family: 'Raleway';
+  font-size: 220%;
+  line-height: 90%;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: url(http://www.mprj.mp.br/mprj-responsiveflat-theme/images/comum/borda-titulo.png) no-repeat left top;
+}
+
+.subtitulo {
+  font-family: 'Roboto-Condensed-Light';
+  font-size: 120%;
+  line-height: 80%;
+  padding-left: 1rem;
+}
+
+.t-padding{
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.card{
+  color: inherit;
+  overflow: auto;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  min-height: 20rem;
+  width: 100%;
+}
