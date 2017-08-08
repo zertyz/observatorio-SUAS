@@ -17,26 +17,30 @@
               <div class="row">
                 <div class="col-2">
                   <div>Início</div>
-                  <input type="date" name="begin">
+                  <div class="ui-g-12 ui-md-3">
+                    <p-calendar [(ngModel)]="date1" dateFormat="dd.mm.yy" [showIcon]="true"></p-calendar> <span style="margin-left:35px">{{date1|date}}</span>
+                  </div>
                 </div>
                 <div class="col-2">
                   <div>Fim</div>
-                  <input type="date"  name="end">
+                  <div class="ui-g-12 ui-md-5">
+                    <p-calendar [(ngModel)]="date2" dateFormat="dd.mm.yy" [showIcon]="true"></p-calendar> <span style="margin-left:35px">{{date2|date}}</span>
+                  </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-4">
                   <div class="row">
                     Tipo de inspeção
                   </div>
                   <div class="row">
-                    <button type="button" class="btn btn-secondary">CRAS</button>
-                    <button type="button" class="btn btn-secondary">CREAS</button>
-                    <button type="button" class="btn btn-secondary">CENTRO POP</button>
+                    <p-toggleButton [(ngModel)]="checked1" onLabel="CRAS" offLabel="CRAS" onIcon="fa-check-square" offIcon="fa-square"></p-toggleButton>
+                    <p-toggleButton [(ngModel)]="checked2" onLabel="CREAS" offLabel="CREAS" onIcon="fa-check-square" offIcon="fa-square"></p-toggleButton>
+                    <p-toggleButton [(ngModel)]="checked3" onLabel="CENTRO POP" offLabel="CENTRO POP" onIcon="fa-check-square" offIcon="fa-square"></p-toggleButton>
                   </div>
                 </div>
 
                 <!-- Só testando os tamanhos dos campos a serem usados -->
-                <div class="col-3">
+                <div class="col-4">
                   <div class="row">
                     Eixos
                   </div>
@@ -48,35 +52,48 @@
                     </select>
                   </div>
                 </div>
-                <div class="col-3">
-                  <div class="row">
-                    Municípios
-                  </div>
-                  <div class="form-group">
-                    <select multiple class="form-control" id="sel2">
-                      <option>ANGRA DOS REIS</option>
-                      <option>BARRA DO PIRAÍ</option>
-                      <option>NITERÓI</option>
-                      <option>SÃO GONÇALO</option>
-                      <option>NITERÓI</option>
-                      <option>SÃO GONÇALO</option>
-                      <option>NITERÓI</option>
-                      <option>SÃO GONÇALO</option>
-                    </select>
-                  </div>
-                </div>
 
               </div>
             </div>
-            <div class="col-10">
-              Equipamento
-            <select multiple class="form-control" id="sel2">
-              <option>CRAS BARRA DO PIRAÍ CENTRO</option>
-              <option>CRAS - BARRA DO PIRAÍ - AREAL</option>
-              <option>CRAS - BARRA DO PIRAÍ - CALIFÓRNIA DA BARRA</option>
-              <option>CRAS - BARRA DO PIRAÍ - VARGEM ALEGRE</option>
-            </select>
-          </div>
+
+            <div class="row">
+              <div class="col-3">
+                <div class="row">
+                  Municípios
+                </div>
+                <div class="form-group">
+                  <select multiple class="form-control" id="sel2">
+                    <option>ANGRA DOS REIS</option>
+                    <option>BARRA DO PIRAÍ</option>
+                    <option>NITERÓI</option>
+                    <option>SÃO GONÇALO</option>
+                    <option>NITERÓI</option>
+                    <option>SÃO GONÇALO</option>
+                    <option>NITERÓI</option>
+                    <option>SÃO GONÇALO</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-9">
+                Equipamento
+                <select multiple class="form-control" id="sel2">
+                  <option>CRAS BARRA DO PIRAÍ CENTRO</option>
+                  <option>CRAS - BARRA DO PIRAÍ - AREAL</option>
+                  <option>CRAS - BARRA DO PIRAÍ - CALIFÓRNIA DA BARRA</option>
+                  <option>CRAS - BARRA DO PIRAÍ - VARGEM ALEGRE</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="p-3">
+                <button class="btn btn-secondary" type="reset">Limpar Filtro</button>
+              </div>
+              <div class="p-3">
+                <button class="btn btn-primary" type="submit"> Buscar </button>
+              </div>
+
+
+            </div>
           </div>
         </div>
       </div>
@@ -95,16 +112,18 @@
           <div class="card-block">
             <div class="col-12">
 
-              <p>Exemplo PrimeNG:</p>
+
               <p-accordion>
-                <p-accordionTab header="PrimeNG Header 1">
-                  Content 1
-                </p-accordionTab>
-                <p-accordionTab header="PrimeNG Header 2">
-                  Content 2
-                </p-accordionTab>
-                <p-accordionTab header="PrimeNG Header 3">
-                  Content 3
+                <p-accordionTab header="Resultados">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper semper lacinia. Maecenas eu blandit ligula. Aenean non lorem semper tortor ultrices dictum consectetur a nunc. Suspendisse quis tincidunt metus. Maecenas viverra non dolor vel accumsan. Aliquam id magna ut eros accumsan facilisis vitae non dolor. Fusce facilisis euismod mauris. Vestibulum in nulla odio. Nunc non porta ante, et tempor nulla. Donec suscipit odio nunc, vitae imperdiet arcu iaculis vitae. Vivamus nisi lorem, placerat sit amet facilisis quis, efficitur nec orci. Quisque id cursus eros. Etiam eget pretium nisl, quis sollicitudin dui.
+
+                  In placerat nisi sit amet sodales rutrum. Nulla mollis a diam id sodales. Etiam pulvinar neque non odio luctus suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan nisl vitae orci rhoncus ullamcorper. Curabitur at tincidunt augue. Proin ut massa libero. Phasellus porttitor tincidunt felis sed mattis. Aenean imperdiet leo sit amet elementum blandit.
+
+                  In hac habitasse platea dictumst. Nunc accumsan lorem vel nibh hendrerit, nec aliquet urna blandit. Vestibulum porta risus purus, quis rutrum ligula cursus eu. In ut dui et sapien rhoncus egestas quis non diam. Etiam orci ex, convallis sit amet magna eu, rutrum tincidunt mauris. Maecenas vel aliquam tellus, sit amet commodo est. Maecenas molestie lorem massa, quis lacinia nulla auctor ac. Sed arcu tellus, pulvinar id accumsan a, sollicitudin quis quam. Sed sit amet posuere erat. Vestibulum congue ultricies nunc, a vestibulum risus molestie sed. Etiam eleifend justo sem, at feugiat libero tempus eu. Duis aliquet a ante eget lacinia.
+
+                  Vivamus ultrices imperdiet neque. Fusce euismod venenatis sapien quis gravida. Curabitur id velit ut ante gravida posuere id vitae turpis. Nulla et sagittis mi. Integer venenatis lectus turpis, ut pharetra metus fermentum quis. Phasellus ac ipsum turpis. Phasellus porttitor tincidunt velit ut maximus. Maecenas sit amet scelerisque elit, sit amet fringilla ex. Phasellus gravida fringilla sollicitudin. Mauris id orci vestibulum, luctus augue eget, commodo quam. Duis sed elementum massa. Duis tincidunt erat velit, vel tincidunt ipsum sagittis eu. Sed auctor tempor tempus.
+
+                  Nulla sit amet turpis sed justo laoreet tempus. Nulla tristique justo eget sapien condimentum gravida et a nulla. Sed tincidunt neque non facilisis gravida. Nunc sagittis euismod ex, ac scelerisque diam lacinia et. In sed sem elit. Suspendisse enim orci, varius eget nulla eu, porttitor aliquet sapien. Ut lacinia mattis mauris eu fringilla. In at mauris fermentum, porta nulla eget, mattis velit. Nulla quis nisl vel nibh porttitor lacinia posuere quis nibh. Nunc at commodo nisi.
                 </p-accordionTab>
               </p-accordion>
 
