@@ -1,0 +1,4 @@
+Passos CRAS:
+1) CTRL-C e CTRL-V na linha dos Blocos, garantindo que todos estejam em 1 só linha, ocupando a linha 1
+2) Idem para a linha das perguntas, fazendo todas ocuparem a linha 2. É necessário substituir \n por \\n
+3) Aplicar etl CRASPerguntas2JSON.lua
