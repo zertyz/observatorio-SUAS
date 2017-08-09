@@ -6,8 +6,6 @@ import { Observable } from 'rxjs/Observable';
 import { Injector } from '@angular/core';
 import { Config, RouterExtensions } from '../../../modules/core/index';
 
-import { Chart } from 'chart.js';
-
 @Component({
   moduleId: module.id,
   selector: 'mp-dados-e-indicadores',
