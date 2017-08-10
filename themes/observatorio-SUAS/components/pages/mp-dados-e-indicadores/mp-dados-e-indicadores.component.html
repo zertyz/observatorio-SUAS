@@ -308,15 +308,10 @@
               </div>
             </div>
           </div>
-
         </div>
-
-
           </div>
-
         </div>
       </div>
-
     <div class="col-lg-6 col-xs-12">
       <div class="row t-padding">
         <span class="titulo">Indicadores orçamentários</span>
@@ -350,22 +345,23 @@
             <tr>
               <th scope="row" class="keyword" style="text-align: right"> Não utilizado<br/>(bloqueio ou omissão)</th>
               <td class="barra vt-red">108.501,06
-                </td>
-              <td class="barra vt-red">247.200,00
-                <div>
-                  <div class="grafico-rosca grafico2">
-                    <div class="fatia um"></div>
-                    <div class="fatia dois"></div>
-                    <div class="centro">
-                      <span class="exibicao"></span>
-                    </div>
-                  </div>
+
+                <div style="width: 150px; height:150px ">
+                  <p-chart type="doughnut" [data]="data"></p-chart>
                 </div>
-                 </td>
+
+              </td>
+              <td class="barra vt-red">247.200,00
+
+                <div style="width: 150px; height:150px ">
+                  <p-chart type="doughnut"  [data]="data2"></p-chart>
+                </div>
+
+              </td>
               <td class="vt-red">0,00
 
-                <div>
-                  <p-chart type="doughnut" [data]="data"></p-chart>
+                <div style="width: 150px; height:150px ">
+                  <p-chart type="doughnut"  [data]="data3"></p-chart>
                 </div>
 
               </td>

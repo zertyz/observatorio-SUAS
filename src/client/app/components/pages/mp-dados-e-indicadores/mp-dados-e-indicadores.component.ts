@@ -15,25 +15,62 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
 export class MPDadosEIndicadoresComponent {
 
   data: any;
+  data2: any;
+  data3:any;
+
 
   constructor(private injector: Injector, public routerext: RouterExtensions) {
     this.data = {
-      labels: ['A','B','C'],
+
+      labels:['Verba Utilizada','Verba não utilizada'],
       datasets: [
         {
-          data: [300, 50, 100],
+          data: [38.334, 108.501],
           backgroundColor: [
-            "#FF6384",
-            "#36A2EB",
-            "#FFCE56"
+            "#117011",
+            "#660000"
           ],
           hoverBackgroundColor: [
-            "#FF6384",
-            "#36A2EB",
-            "#FFCE56"
+            "#117011",
+            "#660000"
           ]
-        }]
+        }],
     };
+    this.data2 = {
+
+      labels:['Verba Utilizada','Verba não utilizada'],
+      datasets:[
+
+        {
+          data: [24.000,247.200],
+          backgroundColor: [
+            "#117011",
+            "#660000"
+          ],
+          hoverBackgroundColor: [
+            "#117011",
+            "#660000"
+          ]}
+      ]
+    }
+    this.data3 = {
+
+      labels:['Verba Utilizada','Verba não utilizada'],
+      datasets:[
+
+        {
+          data: [300, 0],
+          backgroundColor: [
+            "#117011",
+            "#660000",
+          ],
+          hoverBackgroundColor: [
+            "#117011",
+            "#660000"
+          ]}
+      ]
+    }
+
   }
 
 }
