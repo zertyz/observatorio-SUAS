@@ -79,23 +79,23 @@
         <div class="row" style="padding-bottom: 2vw">
           <div class="col-1"></div>
           <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword">TOTAL</div>
+            <div  class="keyword" style="text-align: right">TOTAL</div>
             <div class="vt-blue">5</div>
           </div>
           <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword">% DO ESTADO</div>
+            <div  class="keyword" style="text-align: right">% DO ESTADO</div>
             <div class="vt-porcentagem">0,86%</div>
           </div>
           <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword">CRAS</div>
+            <div  class="keyword" style="text-align: right">CRAS</div>
             <div class="vt-blue">4</div>
           </div>
           <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword">CREAS</div>
+            <div  class="keyword" style="text-align: right">CREAS</div>
             <div class="vt-blue">1</div>
           </div>
           <div class="col-2" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword">CENTRO POP</div>
+            <div  class="keyword" style="text-align: right">CENTRO POP</div>
             <div class="vt-blue">0</div>
           </div>
           <div class="col-1"></div>
@@ -276,7 +276,7 @@
                 </div>
                 <div class="col-lg-8">
                   <h3 class="p-2">Benefícios eventuais</h3>
-                  <p class="p-text">Indica se programas eventuais de benefícios são disponibilizados para o ente</p>
+                  <p class="p-text">Indica se Programas Eventuais de Benefícios são disponibilizados para o ente</p>
                 </div>
                 <div class="col-lg-2">
                   <img  src="./assets/img/icones/check-sim.png" width="50vw">
@@ -288,7 +288,7 @@
                 </div>
                 <div class="col-lg-8">
                   <h3 class="p-2">PAIF</h3>
-                  <p class="p-text">Indica se o serviço de proteção a atenção integral à família está implantado no ente </p>
+                  <p class="p-text">Indica se o serviço de Proteção e Atenção Integral à Família está implantado no ente </p>
                 </div>
                 <div class="col-lg-2">
                   <img  src="./assets/img/icones/check-sim.png" width="50vw">
@@ -300,7 +300,7 @@
                 </div>
                 <div class="col-lg-8">
                   <h3 class="p-2">PAEF</h3>
-                  <p class="p-text">Indica se o serviço de proteção e atenção especializado à família está implantado no ente </p>
+                  <p class="p-text">Indica se o serviço de Proteção e Atenção Especializado à Família está implantado no ente </p>
                 </div>
                 <div class="col-lg-2">
                   <img  src="./assets/img/icones/check-nao.png" width="50vw">
@@ -366,7 +366,6 @@
                   <p-chart type="doughnut"  [data]="data3" [options]="options"></p-chart>
                 </div>
                 <div class="porcentagem-chart">{{data3.percentNaoUtilizado*100}}%</div>
-
               </td>
             </tr>
             </tbody>
