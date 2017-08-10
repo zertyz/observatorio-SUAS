@@ -1,4 +1,16 @@
 Passos CRAS:
-1) CTRL-C e CTRL-V na linha dos Blocos, garantindo que todos estejam em 1 só linha, ocupando a linha 1
-2) Idem para a linha das perguntas, fazendo todas ocuparem a linha 2. É necessário substituir \n por \\n
-3) Aplicar etl CRASPerguntas2JSON.lua
+1) Verificar se há colunas escondidas no arquivo (ao menos o de CRAS tem a BK escondida): marcar todo o arquivo e clicar em format->columns->show
+2) CTRL-C e CTRL-V na linha dos Blocos, garantindo que todos estejam em 1 só linha, ocupando a linha 1
+3) Idem para a linha das perguntas, fazendo todas ocuparem a linha 2. É necessário substituir \n por \\n. Adicionar "Numeração dos Questionários\t" no início para o número de campos bater
+4) CTRL-C em todos os dados e CTRL-V no arquivo
+5) Aplicar etl CRASPerguntas2JSON.lua
+
+
+Remodelagem da planilha CRAS:
+1) Fazer cada resposta ocupar 1 e somente 1 coluna:
+	1.1) Remover as colunas "regras" e transpôlas para a 3a. linha do cabeçalho
+	1.2) Remover as colunas com as cores e copiar as cores para os valores
+	1.3) Passear por todas as colunas e remover as que estão vazias
+Rever, na planilha:
+	- dados numéricos devem conter apenas números. Ex: dados da pergunta 3.1 contém explicações para os números
+	- em resumo, o escopo dos dados deve ser bem definido e traduzir fatos. Ex: não cabe nenhum tipo de explicação. Talvez seja necessário alterar algumas perguntas para viabilizar esta regra.
