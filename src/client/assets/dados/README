@@ -11,6 +11,11 @@ Remodelagem da planilha CRAS:
 	1.1) Remover as colunas "regras" e transpôlas para a 3a. linha do cabeçalho
 	1.2) Remover as colunas com as cores e copiar as cores para os valores
 	1.3) Passear por todas as colunas e remover as que estão vazias
+2) Separar a linha de perguntas em 2 -- usar o sublime text:
+  2.1) Usar a expressão regular "Pergunta([^\n]*)\n([^"]*)" para separar em linha 1 (número das perguntas) e linha 2 (texto das perguntas)
+3) Sanitizar a 3a. linha do cabeçalho -- usar o libreoffice search / replace
+  3.1) substituir \n por \\n -- \n --> \\n
+4) Idem, para todo o arquivo
 Rever, na planilha:
 	- dados numéricos devem conter apenas números. Ex: dados da pergunta 3.1 contém explicações para os números
 	- em resumo, o escopo dos dados deve ser bem definido e traduzir fatos. Ex: não cabe nenhum tipo de explicação. Talvez seja necessário alterar algumas perguntas para viabilizar esta regra.
