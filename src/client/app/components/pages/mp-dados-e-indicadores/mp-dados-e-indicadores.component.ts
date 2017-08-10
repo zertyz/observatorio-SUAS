@@ -12,17 +12,18 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
   templateUrl: 'mp-dados-e-indicadores.component.html',
   styleUrls: ['mp-dados-e-indicadores.component.css']
 })
+
 export class MPDadosEIndicadoresComponent {
 
   data: any;
   data2: any;
   data3:any;
-
+  options: any;
 
   constructor(private injector: Injector, public routerext: RouterExtensions) {
     this.data = {
 
-      labels:['Verba Utilizada','Verba não utilizada'],
+      labels: ['Verba Utilizada', 'Verba não utilizada'],
       datasets: [
         {
           data: [38.334, 108.501],
@@ -33,16 +34,17 @@ export class MPDadosEIndicadoresComponent {
           hoverBackgroundColor: [
             "#117011",
             "#660000"
-          ]
-        }],
+          ],
+        }
+      ],
     };
     this.data2 = {
 
-      labels:['Verba Utilizada','Verba não utilizada'],
-      datasets:[
+      labels: ['Verba Utilizada', 'Verba não utilizada'],
+      datasets: [
 
         {
-          data: [24.000,247.200],
+          data: [24.000, 247.200],
           backgroundColor: [
             "#117011",
             "#660000"
@@ -50,13 +52,14 @@ export class MPDadosEIndicadoresComponent {
           hoverBackgroundColor: [
             "#117011",
             "#660000"
-          ]}
+          ]
+        }
       ]
     }
     this.data3 = {
 
-      labels:['Verba Utilizada','Verba não utilizada'],
-      datasets:[
+      labels: ['Verba Utilizada', 'Verba não utilizada'],
+      datasets: [
 
         {
           data: [300, 0],
@@ -67,10 +70,16 @@ export class MPDadosEIndicadoresComponent {
           hoverBackgroundColor: [
             "#117011",
             "#660000"
-          ]}
+          ]
+        }
       ]
     }
 
+    this.options = {
+      legend: {
+        display: false
+      }
+    }
   }
 
 }
