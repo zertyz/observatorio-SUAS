@@ -24,6 +24,7 @@ export class MPDadosEIndicadoresComponent {
     this.data = {
 
       labels: ['Verba Utilizada', 'Verba não utilizada'],
+      percentNaoUtilizado: .75,
       datasets: [
         {
           data: [38.334, 108.501],
@@ -41,6 +42,7 @@ export class MPDadosEIndicadoresComponent {
     this.data2 = {
 
       labels: ['Verba Utilizada', 'Verba não utilizada'],
+      percentNaoUtilizado: .95,
       datasets: [
 
         {
@@ -59,6 +61,7 @@ export class MPDadosEIndicadoresComponent {
     this.data3 = {
 
       labels: ['Verba Utilizada', 'Verba não utilizada'],
+      percentNaoUtilizado: .0,
       datasets: [
 
         {

@@ -8,13 +8,11 @@
 }
 .img-fluid2{
   width:2.4vw;
-}
-.img-fluid3{
-  width: 2.4vw;
+  padding-top: 1vw;
 }
 .subtitulo {
-  font-family: 'Roboto-Condensed-Light';
-  font-size: 1vw;
+  font-family: 'Raleway';
+  font-size: 0.85vw;
   line-height: 80%;
   padding-left: 1rem;
 }
@@ -124,7 +122,8 @@ hr {
   color: inherit;
   overflow: auto;
   margin-top: 1rem;
-  min-height: 24.2rem;
+  height: 25rem;
+  background-color: #FFFFFF;
 }
 .card-block{
   height: 100%;
@@ -140,12 +139,22 @@ p{
   padding-left: 1rem;
   line-height: initial;
   padding-top: 5px;
+  font-family: Roboto-Condensed;
+  text-align: right;
 }
+
+.p-text{
+  font-family: Roboto-Condensed-Light;
+  text-align: left;
+  padding-right: 1vw;
+}
+
 .p-2{
   @extend .hw3;
   padding: 0 0 !important;
   margin-bottom: 0;
   padding-left: 1.0rem!important;
+  text-transform: uppercase;
 }
 .nome-pessoal{
   color: rgb(5, 127, 178);
@@ -158,7 +167,7 @@ p{
 
 .keyword{
   font-family: 'Roboto-Condensed';
-  font-size: 1vw;
+  font-size: 0.8vw;
   text-transform: uppercase;
 }
 
@@ -171,6 +180,19 @@ p{
 .valor-tabela{
   font-size: 1.3vw;
   padding-left: 1rem;
+  font-family: Roboto-Condensed;
+  text-align: right;
+}
+
+.vt-porcentagem{
+  @extend .valor-tabela;
+  color: #006600;
+  font-family: Roboto-Condensed-Light;
+}
+.porcentagem-chart{
+  @extend .vt-porcentagem;
+  text-transform: none;
+  color: #660000;
 }
 
 .vt-bold{
@@ -200,9 +222,11 @@ p{
 }
 .hw1{
   font-size: 1.7vw;
+  font-family: Roboto-Condensed;
 }
 .hw3{
   font-size: 1.14vw;
+  font-family: Roboto-Condensed;
 }
 .pw-1{
  font-size:  0.7vw;
@@ -210,6 +234,7 @@ p{
 .pw-3{
   font-size: 0.7vw;
   text-align: center;
+  text-transform: uppercase;
 }
 
 
