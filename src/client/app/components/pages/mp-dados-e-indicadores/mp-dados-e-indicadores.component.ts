@@ -81,6 +81,9 @@ export class MPDadosEIndicadoresComponent {
     this.options = {
       legend: {
         display: false
+      },
+      tooltips: {
+        enabled: false
       }
     }
   }
