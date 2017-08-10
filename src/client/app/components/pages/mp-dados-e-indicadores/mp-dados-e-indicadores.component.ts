@@ -1,7 +1,9 @@
 // libs
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
+
+import { ActivatedRoute } from '@angular/router';
 
 import { Injector } from '@angular/core';
 import { Config, RouterExtensions } from '../../../modules/core/index';
@@ -13,14 +15,19 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
   styleUrls: ['mp-dados-e-indicadores.component.css']
 })
 
-export class MPDadosEIndicadoresComponent {
+export class MPDadosEIndicadoresComponent implements OnInit {
+
+  // parâmetros
+  municipio: string;
 
   data: any;
   data2: any;
   data3:any;
   options: any;
 
-  constructor(private injector: Injector, public routerext: RouterExtensions) {
+  constructor(private injector: Injector,
+              public routerext: RouterExtensions,
+              private route:    ActivatedRoute) {
     this.data = {
 
       labels: ['Verba Utilizada', 'Verba não utilizada'],
@@ -86,6 +93,12 @@ export class MPDadosEIndicadoresComponent {
         enabled: false
       }
     }
+  }
+
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.municipio = params['municipio'] || 'Rio de Janeiro';
+    });
   }
 
 }

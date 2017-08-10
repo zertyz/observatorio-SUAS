@@ -59,6 +59,7 @@ export class MPMapaInterativoComponent {
 
   ngOnChanges() {
     // marca os municípios pré-selecionados
+    this.selecionados = [];
     for (let nomeMunicipioPreSelecionado of this.preSelecionados) {
       for (let i: number = 0; i<this.municipios.length; i++) {
         if (this.municipios[i].nome == nomeMunicipioPreSelecionado) {

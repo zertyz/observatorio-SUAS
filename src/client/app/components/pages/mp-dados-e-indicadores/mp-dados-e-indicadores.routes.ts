@@ -1,8 +1,8 @@
 import { MPDadosEIndicadoresComponent } from './mp-dados-e-indicadores.component';
 
 export const MPDadosEIndicadoresRoutes: Array<any> = [
-  {
-    path: 'dados-e-indicadores',
-    component: MPDadosEIndicadoresComponent
-  }
+
+  {component:  MPDadosEIndicadoresComponent,          path: 'dados-e-indicadores/:municipio'},
+  {redirectTo: '/dados-e-indicadores/Rio de Janeiro', path: 'dados-e-indicadores'},
+
 ];

@@ -21,13 +21,13 @@
         <div class="card-block">
           <div class="row">
             <div class="col-6">
-              <mp-mapa-interativo class="barra" style="width: 100%; padding-right: 1rem" estado = "rj" [preSelecionados] = "[]" selectedRedirection = "mp-dados-e-indicadores/${nomeMunicipio}"></mp-mapa-interativo>
+              <mp-mapa-interativo class="barra" style="width: 100%; padding-right: 1rem" estado = "rj" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/${nomeMunicipio}"></mp-mapa-interativo>
             </div>
             <div class="col-6">
               <div class="row">
                 <div class="col-lg-7 col-7">
                   <h3 class="hw3">Município</h3>
-                  <h1 class="hw1"><b>Porto Real</b></h1>
+                  <h1 class="hw1"><b>{{municipio}}</b></h1>
                   <div class="row">
                     <div class="col-lg-6 col-6">
                       <div class="keyword">População</div>
