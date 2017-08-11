@@ -19,3 +19,19 @@ Remodelagem da planilha CRAS:
 Rever, na planilha:
 	- dados numéricos devem conter apenas números. Ex: dados da pergunta 3.1 contém explicações para os números
 	- em resumo, o escopo dos dados deve ser bem definido e traduzir fatos. Ex: não cabe nenhum tipo de explicação. Talvez seja necessário alterar algumas perguntas para viabilizar esta regra.
+
+Importação Indicadores Orçamentários para JSON:
+1) para numérico: 			\- --> -1
+2) separadores de milhar: 	\. --> {vazio}
+3) separadores decimais:    ,  --> \.
+4) abre array: 				^([^\t]*) --> ['\1'
+5) separador de campos:		\t --> , 
+6) fecha array:				$  --> ],
+7) nomeação de campos:
+	  de: \[('[^']*')\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*\],
+	para: {"municipio": "\1", "pseUtilizado": \2, "pseNaoUtilizado": \3, "pseTotal": \4, "psbUtilizado": \5, "psbNaoUtilizado": \6, "psbTotal": \7, "programasUtilizado": \8, "programasNaoUtilizado": \9, "programasTotal": \10},
+
+	  de: \[('[^']*')\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*([^,\s]+)\s*,\s*
+	para: {"municipio": "\1", "pseUtilizado": \2, "pseNaoUtilizado": \3, "pseTotal": \4, "psbUtilizado": \5, "psbNaoUtilizado": \6, "psbTotal": \7, "programasUtilizado": \8, "programasNaoUtilizado": \9, 
+	  de: , ([^,\s]+)\s*\],$
+	para: , "programasTotal": \1},
