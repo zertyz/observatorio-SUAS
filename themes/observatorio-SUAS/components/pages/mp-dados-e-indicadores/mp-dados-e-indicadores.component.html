@@ -80,130 +80,47 @@
           <div class="col-1"></div>
           <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
             <div  class="keyword" style="text-align: right">TOTAL</div>
-            <div class="vt-blue">5</div>
+            <div class="vt-blue">{{contagemEquipamentos}}</div>
           </div>
           <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
             <div  class="keyword" style="text-align: right">% DO ESTADO</div>
-            <div class="vt-porcentagem">0,86%</div>
+            <div class="vt-porcentagem">{{formataPercent(totalEquipamentosEstado, contagemEquipamentos)}}</div>
           </div>
           <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
             <div  class="keyword" style="text-align: right">CRAS</div>
-            <div class="vt-blue">4</div>
+            <div class="vt-blue">{{contagemCRAS}}</div>
           </div>
           <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
             <div  class="keyword" style="text-align: right">CREAS</div>
-            <div class="vt-blue">1</div>
+            <div class="vt-blue">{{contagemCREAS}}</div>
           </div>
           <div class="col-2" style="border-top: 1px solid #2e3a48">
             <div  class="keyword" style="text-align: right">CENTRO POP</div>
-            <div class="vt-blue">0</div>
+            <div class="vt-blue">{{contagemCentrosPOP}}</div>
           </div>
           <div class="col-1"></div>
         </div>
         <div class="container-fluid testimonial-group">
         <div class="row scrollEquipamentos">
-          <div class="col-lg-6 col-xs-4 barra barraH" style="height: 8.5rem">
+
+          <div *ngFor="let equipamento of equipamentos; let isEven = even" class="col-lg-6 col-xs-4 barraH" [ngClass]="{barra: isEven}" style="height: 8.5rem">
             <div class="row">
               <div class="col-md-2"style="padding-top: .6rem">
                 <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
-                <div class="pw-3" >Porte Grande</div>
+                <div class="pw-3" >Porte {{equipamento.porte}}</div>
               </div>
               <div class="col-md-10">
                 <div class="row">
-                  <div class="nome-eq">CRAS - CENTRO</div>
+                  <div class="nome-eq">{{equipamento.nome}}</div>
                 </div>
                 <div class="row">
-                  <p class="p-text">Rua jose ferreira aguiar(Antiga rua ana Nery),128 - Centro - Barra do Pirai</p>
-                  <p class="p-text"><i class="fa fa-envelope-o" aria-hidden="true"></i> 27.123-150 <i class="fa fa-phone" aria-hidden="true"></i> 24 2443-1087</p>
+                  <p class="p-text">{{equipamento.endereco}}</p>
+                  <p class="p-text"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{equipamento.cep}} <i class="fa fa-phone" aria-hidden="true"></i> {{equipamento.telefone}}</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-xs-4 barraH" style="height: 8.5rem">
-            <div class="row">
-              <div class="col-md-2 " style="padding-top: .6rem">
-                <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
-                <div class="pw-3" >Porte Grande</div>
-              </div>
-              <div class="col-md-10">
-                <div class="row">
-                  <div class="nome-eq">CRAS - CENTRO</div>
-                </div>
-                <div class="row">
-                  <p class="p-text">Rua jose ferreira aguiar(Antiga rua ana Nery),128 - Centro - Barra do Pirai</p>
-                  <p class="p-text"><i class="fa fa-envelope-o" aria-hidden="true"></i> 27.123-150 <i class="fa fa-phone" aria-hidden="true"></i> 24 2443-1087</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-xs-4 barra barraH" style="height: 8.5rem">
-            <div class="row">
-              <div class="col-md-2" style="padding-top: .6rem">
-                <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_CRAS.png" >
-                <div class="pw-3" >Porte Grande</div>
-              </div>
-              <div class="col-md-10">
-                <div class="row">
-                  <div class="nome-eq">CRAS - CENTRO</div>
-                </div>
-                <div class="row">
-                  <p class="p-text">Rua jose ferreira aguiar(Antiga rua ana Nery),128 - Centro - Barra do Pirai</p>
-                  <p class="p-text"><i class="fa fa-envelope-o" aria-hidden="true"></i> 27.123-150 <i class="fa fa-phone" aria-hidden="true"></i> 24 2443-1087</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-xs-4 barraH" style="height: 8.5rem">
-            <div class="row">
-              <div class="col-md-2" style="padding-top:.6rem">
-                <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
-                <div class="pw-3" >Porte Grande</div>
-              </div>
-              <div class="col-md-10">
-                <div class="row">
-                  <div class="nome-eq">CRAS - CENTRO</div>
-                </div>
-                <div class="row">
-                  <p class="p-text">Rua jose ferreira aguiar(Antiga rua ana Nery),128 - Centro - Barra do Pirai</p>
-                  <p class="p-text"><i class="fa fa-envelope-o" aria-hidden="true"></i> 27.123-150 <i class="fa fa-phone" aria-hidden="true"></i> 24 2443-1087</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-xs-4 barra" style="height: 8.5rem">
-            <div class="row">
-              <div class="col-md-2" style="padding-top: .6rem">
-                <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
-                <div class="pw-3" >Porte Grande</div>
-              </div>
-              <div class="col-md-10">
-                <div class="row">
-                  <div class="nome-eq">CRAS - CENTRO</div>
-                </div>
-                <div class="row">
-                  <p class="p-text">Rua jose ferreira aguiar(Antiga rua ana Nery),128 - Centro - Barra do Pirai</p>
-                  <p class="p-text"><i class="fa fa-envelope-o" aria-hidden="true"></i> 27.123-150 <i class="fa fa-phone" aria-hidden="true"></i> 24 2443-1087</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-xs-4">
-          <div class="row">
-            <div class="col-md-2" style="padding-top: .6rem">
-              <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
-              <div class="pw-3" >Porte Grande</div>
-            </div>
-            <div class="col-md-10">
-              <div class="row">
-                <div class="nome-eq">CRAS - CENTRO</div>
-              </div>
-              <div class="row">
-                <p class="p-text">Rua jose ferreira aguiar(Antiga rua ana Nery),128 - Centro - Barra do Pirai</p>
-                <p class="p-text"><i class="fa fa-envelope-o" aria-hidden="true"></i> 27.123-150 <i class="fa fa-phone" aria-hidden="true"></i> 24 2443-1087</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
               </div>
             </div>
