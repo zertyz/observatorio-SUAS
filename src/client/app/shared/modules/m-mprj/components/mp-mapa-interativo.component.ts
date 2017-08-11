@@ -12,13 +12,13 @@
  *  cores:               objeto com entradas do tipo: {'nome_do_municipio': '#FFAACC'}
  *  preSelecionados:     lista de municípios que devem vir selecionados ao carregar o componente
  *  selectedRedirection: caso definido, desliga a múltipla seleção de municípios e, ao clicar, redireciona a navegação para o link interno especificado.
- *                       o placeholder ${nomeMunicipio} será substituído pelo nome do município selecionado.
+ *                       o placeholder #{nomeMunicipio} será substituído pelo nome do município selecionado.
  *
  *  <mp-mapa-interativo>
  *           estado              = "rj"
  *           [cores]             = "{'Rio de Janeiro': '#fafafa'}"
  *           [preSelecionados]   = "['Angra dos Reis', 'Rio de Janeiro']"
- *           selectedRedirection = "myPath/${nomeMunicipio}/kaka"
+ *           selectedRedirection = "myPath/#{nomeMunicipio}/kaka"
  *  </mp-mapa-interativo>
  *
  * @see RelatedClass(es)
@@ -59,7 +59,7 @@ export class MPMapaInterativoComponent {
 
   ngOnChanges() {
     // marca os municípios pré-selecionados
-    //this.selecionados = [];
+    this.selecionados = [];
     for (let nomeMunicipioPreSelecionado of this.preSelecionados) {
       for (let i: number = 0; i<this.municipios.length; i++) {
         if (this.municipios[i].nome == nomeMunicipioPreSelecionado) {
@@ -74,7 +74,7 @@ export class MPMapaInterativoComponent {
 
     // single-select behaviour
     if (this.selectedRedirection != '') {
-      this.routerext.navigate([this.selectedRedirection.replace('${nomeMunicipio}', this.municipioClicado)]);
+      this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', this.municipioClicado)]);
       return ;
     }
 
