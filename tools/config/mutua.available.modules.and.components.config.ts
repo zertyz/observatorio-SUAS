@@ -182,6 +182,16 @@ const MutuaAvailableComponentsConfiguration: IMutuaAvailableComponentsConfigurat
     source: '../../components/pages/mp-inspecoes/mp-inspecoes.component',
     routes: '../../components/pages/mp-inspecoes/mp-inspecoes.routes',
   },
+  // Busca
+  MPBuscaComponent: {
+    source: '../../components/pages/mp-busca/mp-busca.component',
+    routes: '../../components/pages/mp-busca/mp-busca.routes',
+  },
+  // Ajuda
+  MPAjudaComponent: {
+    source: '../../components/pages/mp-ajuda/mp-ajuda.component',
+    routes: '../../components/pages/mp-ajuda/mp-ajuda.routes',
+  },
 
 };
 

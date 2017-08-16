@@ -14,8 +14,9 @@ import { NG2AppComponent } from '../../shared/modules/m-ng2-admin/ng2app.compone
 import { MPHomeComponent } from '../../components/pages/mp-home/mp-home.component';
 import { MPDadosEIndicadoresComponent } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.component';
 import { MPInspecoesComponent } from '../../components/pages/mp-inspecoes/mp-inspecoes.component';
+import { MPBuscaComponent } from '../../components/pages/mp-busca/mp-busca.component';
 
-export const MutuaExportedComponents: any[] = [NG2AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent,MPInspecoesComponent];
+export const MutuaExportedComponents: any[] = [NG2AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent,MPInspecoesComponent,MPBuscaComponent];
 
 // routes
 /////////
@@ -23,8 +24,9 @@ export const MutuaExportedComponents: any[] = [NG2AppComponent,MPHomeComponent,M
 import { MPHomeRoutes } from '../../components/pages/mp-home/mp-home.routes';
 import { MPDadosEIndicadoresRoutes } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.routes';
 import { MPInspecoesRoutes } from '../../components/pages/mp-inspecoes/mp-inspecoes.routes';
+import { MPBuscaRoutes } from '../../components/pages/mp-busca/mp-busca.routes';
 
-export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes,...MPInspecoesRoutes];
+export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes,...MPInspecoesRoutes,...MPBuscaRoutes];
 
 // modules
 //////////
