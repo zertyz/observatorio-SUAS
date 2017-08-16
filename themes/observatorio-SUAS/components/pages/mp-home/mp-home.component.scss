@@ -5,14 +5,24 @@ h1{
 p{
   font-size: 95%;
   text-align: right;
-}
 
-.titulo {
-  font-family: 'Roboto-Condensed';
-  font-size: 210%;
-  font-weight: bold;
-  line-height: 90%;
 }
+ul > li{
+  padding-bottom: 1.6rem;
+  float: right;
+}
+div mp-link{
+  margin-bottom: 2rem;
+}
+ div > span{
+   color: black;
+   padding-bottom: 2rem;
+ }
+ .text-blue{
+   color: rgb(5, 127, 178);
+   text-align: left;
+ }
+
 .texto {
   font-family: 'Roboto-Condensed-Light';
   font-size: 120%;
@@ -31,15 +41,28 @@ p{
   cursor: pointer;
 }
 
-@media (min-width:992) {
-  .col-lg-2{
-    max-width: 35%!important;
-  }
+.superior {
+  background: url('/dist/dev/assets/img/borda_veja_mais.png') no-repeat right 2.2rem;
+  text-align: right;
+  height: 3rem;
+  margin-top: 0!important;
+  margin-right: -17px;
+  float: right;
 }
 
-@media(max-width:991px){
-  div.borderedL{border-color: transparent}
+.superior a {
+  color: white!important;
+  background-color: #057fb2;
+  line-height: 2.2rem!important;
+  font-size: 0.8rem!important;
+  text-transform: uppercase;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-weight: 600!important;
+  height: 2.2rem;
+  display:inherit;
 }
+
 
 @media(max-width:1199px){
   img.img-responsive { width:90%;}
