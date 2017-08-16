@@ -1,5 +1,5 @@
 {
-  "name": "angular-seed-advanced-mprj",
+  "name": "angular-seed-advanced-observatorio-SUAS",
   "version": "0.1.0",
   "description": "High-quality, modular starter (advanced seed) project for Angular 2 apps with statically typed build and AoT + NativeScript + Electron",
   "repository": {
@@ -193,6 +193,8 @@
     "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.30",
     "font-awesome": "^4.7.0",
     "primeng": "4.1.2",
+    "@angular/material": "2.0.0-beta.8",
+    "@angular/cdk": "2.0.0-beta.8",
 
     "ionicons": "2.0.1",
     "jquery": "3.2.1",
