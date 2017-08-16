@@ -19,3 +19,41 @@ div.borderedL{
   border-left: 0.05rem solid #000000;
   padding-left: 2rem;
 }
+
+.titulo{
+  font-family: 'Raleway';
+  font-size: 1.8vw;
+  line-height: 90%;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: url('/dist/dev/assets/img/borda-titulo.png') no-repeat left top;
+}
+
+.subtitulo {
+  font-family: 'Raleway';
+  font-size: 0.85rem;
+  line-height: 80%;
+  padding-left: 1rem;
+}
+
+.t-padding{
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.card{
+  color: inherit;
+  background-color: white;
+  overflow: auto;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 100%;
+  background-color: white;
+  border-right: 1px solid #d2d7de!important;
+  border-bottom: 1px solid #d2d7de!important;
+  border-left: 1px solid #eaecee!important;
+  border-top: 1px solid #eaecee!important;
+  padding: 30px!important;
+}
