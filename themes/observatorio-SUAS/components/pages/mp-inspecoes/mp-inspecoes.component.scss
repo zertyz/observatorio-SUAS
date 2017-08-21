@@ -12,3 +12,6 @@ div.row p-toggleButton{
 option{
   color: black !important;
 }
+:host/deep/.ui-widget-content a{
+  color: #d9dde8;
+}

@@ -102,17 +102,17 @@
 
           <div *ngFor="let equipamento of equipamentos; let isEven = even" class="col-lg-6 col-xs-4 barraH" [ngClass]="{barra: isEven}" style="height: 8.5rem">
             <div class="row">
-              <div class="col-md-2"style="padding-top: .6rem">
+              <div class="col-md-3"style="padding-top: .6rem">
                 <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
                 <div class="pw-3" >Porte {{equipamento.porte}}</div>
               </div>
-              <div class="col-md-10">
+              <div class="col-md-9">
                 <div class="row">
                   <div class="nome-eq">{{equipamento.nome}}</div>
                 </div>
                 <div class="row">
-                  <p class="p-text">{{equipamento.endereco}}</p>
-                  <p class="p-text"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{equipamento.cep}} <i class="fa fa-phone" aria-hidden="true"></i> {{equipamento.telefone}}</p>
+                  <p class="text-min">{{equipamento.endereco}}</p>
+                  <p class="text-min"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{equipamento.cep}} <i class="fa fa-phone" aria-hidden="true"></i> {{equipamento.telefone}}</p>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@
           <div class="card-block">
         <div class="container">
           <div class="row">
-            <div class="table col-lg-8">
+            <div class="col-xl-8">
                 <tbody>
                 <tr>
                   <td class="barraH" width="10%"><img class="img-fluid2" src="./assets/img/icones/ícones_Tela_2_Bolsa_Familia.png" align="left"></td>
@@ -150,7 +150,7 @@
                     <p class="keyword"> % da população</p>
                     <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasVulneraveisMunicipio}}%</div>
                   </td>
-                  <td class="barraH barra"width="25%">
+                  <td class="barraH barra"style="padding-right: 3%" width="25%">
                     <p class="keyword"> % do estado</p>
                     <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasVulneraveisEstado}}%</div>
                   </td>
@@ -165,61 +165,70 @@
                     <p class="keyword"> % da população</p>
                     <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
                   </td>
-                  <td class="barraH barra" >
-                    <p class="keyword"> cobertura</p>
-                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaCobertura}}%</div>
-                  </td>
+                  <td class="barraH barra"></td>
+
                 </tr>
                 <tr>
-                  <td colspan="2">
+                  <td colspan="2" class="barraH">
                     <img class="img-fluid2" src="./assets/img/icones/ícones_Tela_2_Cadsastro_Unico_3.png" align="left" >
                     <p class="keyword">Famílias registradas no cadastro único</p>
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasCadastroUnico}}</div>
                   </td>
-                  <td class="barra" colspan="2">
+                  <td class="barraH"style="padding-right: 3%" >
+                    <p class="keyword">% cobertura</p>
+                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaCobertura}}%</div>
+                  </td>
+                  <td class="barra barraH">
+                  </td>
+                </tr>
+                <tr>
+                  <td  colspan="2">
                     <img class="img-fluid2" src="./assets/img/icones/Icones_Tela_1_Desenvolvimento_Social.png" align="left">
                     <p class="keyword"> Beneficiários de prestação continuada</p>
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nBeneficiariosPrestacaoContinuada}}</div>
                   </td>
+                  <td></td>
+                  <td class="barra"></td>
+                </tr>
                 </tbody>
             </div>
-            <div class=" col-lg-4">
-              <div class="row">
-                <div class="col-lg-2">
+            <div class=" col-xl-4 col-lg-12 col-md-12">
+              <tr>
+                <td>
                   <img class="img-fluid" src="./assets/img/icones/beneficios-programas.png">
-                </div>
-                <div class="col-lg-8">
+                </td>
+                <td >
                   <h3 class="p-2">Benefícios eventuais</h3>
                   <p class="p-text">Indica se Programas Eventuais de Benefícios são disponibilizados para o ente</p>
-                </div>
-                <div class="col-lg-2">
+                </td>
+                <td>
                   <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoBeneficiosEventuais?'sim':'nao')+'.png'" width="50vw">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-2">
+                </td>
+              </tr>
+              <tr>
+                <td>
                   <img class="img-fluid" src="./assets/img/icones/beneficios-programas.png">
-                </div>
-                <div class="col-lg-8">
+                </td>
+                <td>
                   <h3 class="p-2">PAIF</h3>
                   <p class="p-text">Indica se o serviço de Proteção e Atenção Integral à Família está implantado no ente </p>
-                </div>
-                <div class="col-lg-2">
+                </td>
+                <td>
                   <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAIF?'sim':'nao')+'.png'" width="50vw">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-2">
+                </td>
+              </tr>
+              <tr>
+                <td>
                   <img class="img-fluid" src="./assets/img/icones/beneficios-programas.png">
-                </div>
-                <div class="col-lg-8">
+                </td>
+                <td>
                   <h3 class="p-2">PAEF</h3>
                   <p class="p-text">Indica se o serviço de Proteção e Atenção Especializado à Família está implantado no ente </p>
-                </div>
-                <div class="col-lg-2">
+                </td>
+                <td>
                   <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAEF?'sim':'nao')+'.png'" width="50vw">
-                </div>
-              </div>
+                </td>
+              </tr>
             </div>
           </div>
         </div>

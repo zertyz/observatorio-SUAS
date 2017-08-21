@@ -47,6 +47,9 @@
 .barra {
   border-right: 1px solid #2e3a48;
 }
+.p-2{
+  font-size: 1.1rem;
+}
 
 .barraH {
   border-bottom: 1px solid #2e3a48;
@@ -106,13 +109,14 @@ hr {
   margin-top: 1rem;
   height: 25rem;
   background-color: #FFFFFF;
+  padding: 0!important;
 }
 .card-block{
   height: 100%;
 }
 
 p{
-  padding: 0rem;
+  padding-right: none;
   padding-left: 1rem;
   line-height: initial;
   padding-top: 5px;
@@ -123,10 +127,13 @@ p{
 .p-text{
   font-family: Roboto-Condensed-Light;
   text-align: left;
-  padding-right: 1vw;
+  padding-right:0;
+  font-size: .8rem;
 }
 .text-min{
-  font-size: .74vw;
+  font-size: .8vw;
+  font-family: Roboto-Condensed-Light;
+  text-align: left;
 }
 
 .header{
