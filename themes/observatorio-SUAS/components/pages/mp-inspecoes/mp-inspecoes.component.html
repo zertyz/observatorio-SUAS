@@ -45,11 +45,12 @@
                     Eixos
                   </div>
                   <div class="form-group">
-                    <select multiple class="form-control" id="sel2">
+                    <p-multiSelect [options]="eixos" [(ngModel)]="selectedEixos"></p-multiSelect>
+                    <!--<select multiple class="form-control" id="sel2">
                       <option>EQUIPE TÉCNICA</option>
                       <option>INFRAESTRUTURA</option>
                       <option>PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS</option>
-                    </select>
+                    </select>-->
                   </div>
                 </div>
 
