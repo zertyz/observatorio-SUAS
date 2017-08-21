@@ -1377,7 +1377,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "programasTotal": 154546.08
     },
     {
-      "municipio": "Trajano de Morais",
+      "municipio": "Trajano de Moraes",
       "pseUtilizado": -1,
       "pseNaoUtilizado": -1,
       "pseTotal": -1,
@@ -2075,8 +2075,8 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ["Teresópolis", "Grande", "CRAS ALTO", "Rua", "Nilza Chiapeta Fadigas", "190", "", "Varzea", "25963150", "(21)3641301"],
     ["Teresópolis", "Grande", "CRAS BARROSO", "Rua", "Pará", "0", "s/n no final da rua", "Barroso", "25976065", "(21)3642105"],
     ["Teresópolis", "Grande", "CRAS SÃO PEDRO", "Rua", "Fileuterpe", "845", "casa", "São Pedro", "25956005", "(21)2743830"],
-    ["Trajano de Morais", "Pequeno I", "CRAS CENTRO", "Rua", "DOUTOR JOSE DE MORAES", "15", "", "CENTRO", "28750000", "(22)2564142"],
-    ["Trajano de Morais", "Pequeno I", "CRAS VISCONDE DE IMBÉ", "Rua", "Jugurta Tupinambá", "0", "s/n", "VISCONDE DE IMBÉ", "28755000", "(22)2564005"],
+    ["Trajano de Moraes", "Pequeno I", "CRAS CENTRO", "Rua", "DOUTOR JOSE DE MORAES", "15", "", "CENTRO", "28750000", "(22)2564142"],
+    ["Trajano de Moraes", "Pequeno I", "CRAS VISCONDE DE IMBÉ", "Rua", "Jugurta Tupinambá", "0", "s/n", "VISCONDE DE IMBÉ", "28755000", "(22)2564005"],
     ["Três Rios", "Médio", "CRAS BEMPOSTA", "Rua", "Werneck", "0", "", "Bemposta", "25840000", "(24)2258214"],
     ["Três Rios", "Médio", "CRAS VILA", "Praça", "Ambrosina Bastos", "32", "", "Vila Isabel", "25815430", "(24)2252407"],
     ["Três Rios", "Médio", "CRAS CENTRO", "Rua", "XV de Novembro", "566", "", "Centro", "25804000", "(24)2255138"],
@@ -2279,7 +2279,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ["Sumidouro", "Eliésio Peres Da Silva", "Victória Dos Santos Pereira", "15.010", "0,61", "2", "1", "0", "3", "0,51", "2.152", "14,34", "0,15", "1.600", "10,66", "114,53", "74,35", "R$ 2.814.238,00", "3.069", "NÃO", "SIM", "SIM", "238", "R$ 223.006,00"],
     ["Tanguá", "Valber Luiz Marcelo De Carvalho", "Felippe Matos Monteiro", "31.438", "0,65", "5", "1", "0", "6", "1,02", "4.241", "13,49", "0,30", "3.002", "9,55", "108,3", "70,79", "R$ 6.017.276,00", "5.087", "SIM", "SIM", "SIM", "718", "R$ 670.512,75"],
     ["Teresópolis", "Mario De Oliveira Tricano", "Carla Cavalcanti Tricano", "167.622", "0,73", "5", "1", "0", "6", "1,02", "14.725", "8,78", "1,03", "5.807", "3,46", "68,13", "39,44", "R$ 11.203.527,00", "12.945", "SIM", "SIM", "SIM", "3.254", "R$ 3.042.904,60"],
-    ["Trajano de Morais", "Rodrigo Freire Viana", "Juliana Pais Esteves Freire Viana", "10.327", "0,67", "2", "1", "0", "3", "0,51", "1.401", "13,57", "0,10", "959", "9,29", "107,51", "68,45", "R$ 1.849.666,00", "1.492", "NÃO", "SIM", "SIM", "287", "R$ 268.919,00"],
+    ["Trajano de Moraes", "Rodrigo Freire Viana", "Juliana Pais Esteves Freire Viana", "10.327", "0,67", "2", "1", "0", "3", "0,51", "1.401", "13,57", "0,10", "959", "9,29", "107,51", "68,45", "R$ 1.849.666,00", "1.492", "NÃO", "SIM", "SIM", "287", "R$ 268.919,00"],
     ["Três Rios", "Josimar Salles", "Gilberto Garcia Golfeto", "78.256", "0,73", "4", "1", "0", "5", "0,85", "7.155", "9,14", "0,50", "5.054", "6,46", "114,79", "70,64", "R$ 12.587.620,00", "10.751", "SIM", "SIM", "SIM", "1.001", "R$ 936.026,02"],
     ["Valença", " Luiz Fernando Furtado Da Graça", "Roseli Da Silva Moreira", "72.679", "0,74", "3", "1", "0", "4", "0,68", "7.213", "9,92", "0,50", "5.023", "6,91", "116,54", "69,64", "R$ 11.329.336,00", "8.463", "SIM", "SIM", "SIM", "1.462", "R$ 1.359.761,06"],
     ["Varre-sai", "Silvestre José Gorini", "Isabela Louvain Fabri Moraes", "9.720", "0,66", "2", "0", "0", "2", "0,34", "1.352", "13,91", "0,09", "879", "9,04", "101,97", "65,01", "R$ 1.575.692,00", "1.562", "SIM", "SIM", "NÃO", "178", "R$ 166.786,00"],
