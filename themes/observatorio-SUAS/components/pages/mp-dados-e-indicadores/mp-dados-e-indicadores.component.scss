@@ -4,11 +4,17 @@
   }
 
 .img-fluid{
-  min-width: 2.7vw;
+  min-width: 2.7rem;
 }
 .img-fluid2 {
-  width:2.8vw;
+  width:2.8rem;
   padding-top: 1vw;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2.9rem;
 }
 
 .dimensao {

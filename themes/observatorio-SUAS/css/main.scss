@@ -45,7 +45,6 @@ div.borderedL{
 .card{
   color: inherit;
   background-color: white;
-  overflow: auto;
   margin-top: 1rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -67,13 +66,17 @@ div.borderedL{
   font-size: 14px;
   line-height: 35px;
   text-align: center;
-  width: auto;
+  width: 10rem;
   border-radius: 5px;
   border: 2px solid #c89d51!important;
   line-height: 34px;
-  padding: 0 92px!important;
   box-shadow: none!important;
   outline: none!important;
+}
+
+.btn-primario:hover {
+  background-color: #b38328!important;
+  border-color: #b38328!important;
 }
 
 .btn-secundario {
@@ -81,12 +84,17 @@ div.borderedL{
   font-weight: 600;
   font-size: 14px;
   text-align: center;
-  width: auto;
+  width: 10rem;
   border: 2px solid #a3afbf;
   border-radius: 5px;
   line-height: 34px;
-  padding: 0 20px;
   cursor: pointer;
   display: block;
   background-color: white !important;
+}
+
+.btn-secundario:hover {
+  color: white!important;
+  background-color: #057fb2!important;
+  border-color: #057fb2!important;
 }

@@ -5,95 +5,89 @@
   <div class="row">
     <div class="col-12">
       <div class="row t-padding">
-        <span class="titulo">Filtros para seleção</span>
+        <span class="titulo">Busca de Inspeções no Observatório SUAS</span>
       </div>
       <div class="row">
-        <span class="subtitulo">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.</span>
+        <span class="subtitulo">Indique os critérios de  busca para visualizar os dados das inspeções realizadas nos equipamentos</span>
       </div>
       <div class="row">
-        <div class="card">
+        <div class="card" style="height: 15rem">
           <div class="card-block">
             <div class="col-12">
               <div class="row">
-                <div class="col-2">
+                <div class="col-1" style="padding-left: 0rem">
                   <div>Início</div>
                   <div class="ui-g-12 ui-md-3">
-                    <p-calendar [(ngModel)]="date1" dateFormat="dd.mm.yy" [showIcon]="true"></p-calendar> <span style="margin-left:785px">{{date1|date}}</span>
+                    <p-calendar [(ngModel)]="date1" dateFormat="dd.mm.yy" [showIcon]="true" ></p-calendar>
                   </div>
                 </div>
-                <div class="col-2">
+                <div class="col-1" style="padding-left: 0rem">
                   <div>Fim</div>
                   <div class="ui-g-12 ui-md-5">
-                    <p-calendar [(ngModel)]="date2" dateFormat="dd.mm.yy" [showIcon]="true"></p-calendar> <span style="margin-left:85px">{{date2|date}}</span>
+                    <p-calendar [(ngModel)]="date2" dateFormat="dd.mm.yy" [showIcon]="true"></p-calendar>
                   </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-4" style="padding-left: 2rem">
                   <div class="row">
                     Tipo de inspeção
                   </div>
                   <div class="row">
-                    <p-toggleButton [(ngModel)]="checked1" onLabel="CRAS" offLabel="CRAS" onIcon="fa-check-square" offIcon="fa-square"></p-toggleButton>
-                    <p-toggleButton [(ngModel)]="checked2" onLabel="CREAS" offLabel="CREAS" onIcon="fa-check-square" offIcon="fa-square"></p-toggleButton>
-                    <p-toggleButton [(ngModel)]="checked3" onLabel="CENTRO POP" offLabel="CENTRO POP" onIcon="fa-check-square" offIcon="fa-square"></p-toggleButton>
+
+                    <label class="button-switch">
+                      <input type="checkbox">
+                      <span class="slider">CRAS</span>
+                    </label>
+
+                    <label class="button-switch">
+                      <input type="checkbox">
+                      <span class="slider">CREAS</span>
+                    </label>
+
+                    <label class="button-switch">
+                      <input type="checkbox">
+                      <span class="slider">CENTRO POP</span>
+                    </label>
                   </div>
                 </div>
 
                 <!-- Só testando os tamanhos dos campos a serem usados -->
-                <div class="col-4">
+                <div class="col-2">
                   <div class="row">
                     Eixos
                   </div>
                   <div class="form-group">
-                    <p-multiSelect [options]="eixos" [(ngModel)]="selectedEixos"></p-multiSelect>
-                    <!--<select multiple class="form-control" id="sel2">
-                      <option>EQUIPE TÉCNICA</option>
-                      <option>INFRAESTRUTURA</option>
-                      <option>PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS</option>
-                    </select>-->
+                    <p-multiSelect [options]="eixos" [(ngModel)]="selectedEixos" defaultLabel="Selecionar Eixo" maxSelectedLabels="2" selectedItemsLabel="{0} Eixos selecionados"></p-multiSelect>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="row">
+                    Municípios
+                  </div>
+                  <div class="form-group">
+                    <p-multiSelect [options]="municipio" [(ngModel)]="selectedMunicipios" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
+                  </div>
+                </div>
+
+                <div class="col-2">
+                  <div class="row">
+                    Equipamento
+                  </div>
+                  <div class="form-group">
+                    <p-multiSelect [options]="equipamento" [(ngModel)]="selectedEquipamento" defaultLabel="Selecionar Equipamento" maxSelectedLabels="2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
                   </div>
                 </div>
 
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-3">
-                <div class="row">
-                  Municípios
-                </div>
-                <div class="form-group">
-                  <select multiple class="form-control" id="sel2">
-                    <option>ANGRA DOS REIS</option>
-                    <option>BARRA DO PIRAÍ</option>
-                    <option>NITERÓI</option>
-                    <option>SÃO GONÇALO</option>
-                    <option>NITERÓI</option>
-                    <option>SÃO GONÇALO</option>
-                    <option>NITERÓI</option>
-                    <option>SÃO GONÇALO</option>
-                  </select>
-                </div>
+            <div class="row" style="padding-top: 1.5rem">
+              <div style="padding-left: 1.5rem">
+                <button class="btn-secundario" type="reset">Limpar Critérios</button>
               </div>
-              <div class="col-9">
-                Equipamento
-                <select multiple class="form-control" id="sel2">
-                  <option>CRAS BARRA DO PIRAÍ CENTRO</option>
-                  <option>CRAS - BARRA DO PIRAÍ - AREAL</option>
-                  <option>CRAS - BARRA DO PIRAÍ - CALIFÓRNIA DA BARRA</option>
-                  <option>CRAS - BARRA DO PIRAÍ - VARGEM ALEGRE</option>
-                </select>
+              <div style="padding-left: 0.3rem">
+                <button class="btn-primario">Buscar</button>
               </div>
-            </div>
-            <div class="row">
-
-              <div class="p-3">
-                <button class="btn btn-secundario" type="reset">Limpar Filtro</button>
-              </div>
-              <div class="p-3">
-                <button class="btn btn-primario" type="submit"> Buscar </button>
-              </div>
-
             </div>
           </div>
         </div>
@@ -109,7 +103,7 @@
         <span class="subtitulo">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico.</span>
       </div>
       <div class="row">
-        <div class="card">
+        <div class="card" style="height: 25rem">
           <div class="card-block">
             <div class="col-12">
 

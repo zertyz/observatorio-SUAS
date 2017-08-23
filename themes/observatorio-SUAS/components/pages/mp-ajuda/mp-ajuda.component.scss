@@ -2,14 +2,24 @@
 :host/deep/{
   .ui-state-default{
   border: 1px solid #d1d7dc;
-  background: #eef1f4 !important;
+  background: #fafafa !important;
   color: black;
-  line-height: 3.7rem;
+  line-height: 3rem;
+    margin-bottom: .2rem;
   }
   a{
-    color: #00b0f0;
-    font-size: 1.2rem;
-    font-family: Roboto-Condensed ;
+    color: #0d95e8;
+    font-family: Raleway ;
+  }
+  .ui-widget-content{
+    background: white;
+    border:none;
+  }
+  input {
+    line-height: 1.5rem!important;
+    width: 30vw;
   }
 }
-
+div > a{
+  color: #0d95e8;
+}

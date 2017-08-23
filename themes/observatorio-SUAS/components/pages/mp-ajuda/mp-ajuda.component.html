@@ -140,13 +140,24 @@
       </div>
       <div style="margin-top: 1.7rem" class="card">
         <div class="card-block">
-          <div class="col-2" style="padding-bottom: 1.6rem">
-            <img class="img-fluid" src="./assets/img/logo-doc.png">
+          <div class="row">
+           <div class="col-2" style="padding-bottom: 1.6rem">
+             <img class="img-fluid" src="./assets/img/logo-doc.png">
+           </div>
+          <div class="col-3">
+            <a [routerLink]="['/busca']">Cartilha</a>
+            <p>Cartilha do SUAS</p>
           </div>
-          <div class="col-2">
-            <img class="img-fluid" src="./assets/img/logo-doc.png">
           </div>
-
+          <div class="row">
+            <div class="col-2">
+            <img class="img-fluid" src="./assets/img/logo-doc.png">
+            </div>
+            <div class="col-4">
+              <a [routerLink]="['/inspecoes']">Manual</a>
+              <p>Manual de inspeção CRAS</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row t-padding">
@@ -154,7 +165,8 @@
       </div>
       <div class="card">
         <div class="card-block">
-
+        <p>Email</p>
+          <input id="input" type="text" pInputText [(ngModel)]="text">
         </div>
       </div>
     </div>
