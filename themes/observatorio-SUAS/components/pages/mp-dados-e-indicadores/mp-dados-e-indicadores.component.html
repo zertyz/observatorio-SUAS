@@ -18,7 +18,7 @@
         <div class="card-block">
           <div class="row">
             <div class="col-6">
-              <mp-mapa-interativo class="barra" style="width: 100%; padding-right: 1rem" estado = "rj" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
+              <mp-mapa-interativo  style="width: 100%; padding-right: 1rem" estado = "rj" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
             </div>
             <div class="col-6">
               <div class="row">
@@ -73,57 +73,53 @@
       <span class="subtitulo"> e seus endereços.</span>
       <div class="card">
         <div class="card-block">
-        <div class="row" style="padding-bottom: 2vw">
-          <div class="col-1"></div>
-          <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword" style="text-align: right">TOTAL</div>
-            <div class="vt-blue">{{contagemEquipamentos}}</div>
+          <div class="row" style="padding-bottom: 2vw">
+            <div class="col-1"></div>
+            <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
+             <div  class="keyword" style="text-align: right">TOTAL</div>
+             <div class="vt-blue">{{contagemEquipamentos}}</div>
+            </div>
+            <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
+             <div  class="keyword" style="text-align: right">% DO ESTADO</div>
+             <div class="vt-porcentagem">{{formataPercent(totalEquipamentosEstado, contagemEquipamentos)}}</div>
+            </div>
+            <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
+             <div  class="keyword" style="text-align: right">CRAS</div>
+              <div class="vt-blue">{{contagemCRAS}}</div>
+            </div>
+            <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
+              <div  class="keyword" style="text-align: right">CREAS</div>
+              <div class="vt-blue">{{contagemCREAS}}</div>
+            </div>
+            <div class="col-2" style="border-top: 1px solid #2e3a48">
+              <div  class="keyword" style="text-align: right">CENTRO POP</div>
+              <div class="vt-blue">{{contagemCentrosPOP}}</div>
+            </div>
+            <div class="col-1"></div>
           </div>
-          <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword" style="text-align: right">% DO ESTADO</div>
-            <div class="vt-porcentagem">{{formataPercent(totalEquipamentosEstado, contagemEquipamentos)}}</div>
-          </div>
-          <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword" style="text-align: right">CRAS</div>
-            <div class="vt-blue">{{contagemCRAS}}</div>
-          </div>
-          <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword" style="text-align: right">CREAS</div>
-            <div class="vt-blue">{{contagemCREAS}}</div>
-          </div>
-          <div class="col-2" style="border-top: 1px solid #2e3a48">
-            <div  class="keyword" style="text-align: right">CENTRO POP</div>
-            <div class="vt-blue">{{contagemCentrosPOP}}</div>
-          </div>
-          <div class="col-1"></div>
-        </div>
         <div class="container-fluid testimonial-group">
-        <div class="row scrollEquipamentos">
-
-          <div *ngFor="let equipamento of equipamentos; let isEven = even" class="col-lg-6 col-xs-4 barraH" [ngClass]="{barra: isEven}" style="height: 8.5rem">
-            <div class="row">
-              <div class="col-md-3"style="padding-top: .6rem">
-                <img class="center" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
-                <div class="pw-3" >Porte {{equipamento.porte}}</div>
-              </div>
-              <div class="col-md-9">
-                <div class="row">
-                  <div class="nome-eq">{{equipamento.nome}}</div>
+          <div class="row scrollEquipamentos">
+            <div *ngFor="let equipamento of equipamentos; let isEven = even" class="col-lg-6 col-xs-4 barraH" [ngClass]="{barra: isEven}" style="height: 8.5rem">
+              <div class="row">
+                <div class="col-md-3"style="padding-top: .6rem">
+                  <img class="center" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
+                  <div class="pw-3" >Porte {{equipamento.porte}}</div>
                 </div>
-                <div class="row">
-                  <p class="text-min">{{equipamento.endereco}}</p>
-                  <p class="text-min"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{equipamento.cep}} <i class="fa fa-phone" aria-hidden="true"></i> {{equipamento.telefone}}</p>
+                <div class="col-md-9">
+                  <div class="row">
+                    <div class="nome-eq">{{equipamento.nome}}</div>
+                  </div>
+                  <div class="row">
+                    <p class="text-min">{{equipamento.endereco}}</p>
+                    <p class="text-min"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{equipamento.cep}} <i class="fa fa-phone" aria-hidden="true"></i> {{equipamento.telefone}}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-
-              </div>
-            </div>
-
         </div>
       </div>
+    </div>
 
     </div>
   </div>
