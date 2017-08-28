@@ -1,7 +1,9 @@
 <div class="container-fluid" style="background-color: #fafafa">
+
   <div class="row">
     <p></p>
   </div>
+
   <div class="row">
     <div class="col-12">
       <div class="row t-padding">
@@ -11,24 +13,26 @@
         <span class="subtitulo">Indique os critérios de  busca para visualizar os dados das inspeções realizadas nos equipamentos</span>
       </div>
       <div class="row">
-        <div class="card" style="height: 15rem">
+        <div class="card">
           <div class="card-block">
             <div class="col-12">
               <div class="row">
-                <div class="col-2" style="padding-left: 0rem">
+                <div class="col-lg-2 col-md-3" style="padding-left: 0rem">
                   <div>Início</div>
                   <div class="ui-g-12 ui-md-3">
                     <p-calendar [(ngModel)]="date1" dateFormat="dd.mm.yy" [showIcon]="true" ></p-calendar>
                   </div>
                 </div>
-                <div class="col-2" style="padding-left: 0rem">
+                <div class="col-lg-2 col-md-3" style="padding-left: 0rem">
                   <div>Fim</div>
                   <div class="ui-g-12 ui-md-5">
                     <p-calendar [(ngModel)]="date2" dateFormat="dd.mm.yy" [showIcon]="true"></p-calendar>
                   </div>
                 </div>
 
-                <div class="col-5" style="padding-left: 2rem">
+                <!-- botões selected-->
+
+                <div class="col-lg-5 col-md-6" >
                   <div class="row">
                     Tipo de inspeção
                   </div>
@@ -52,7 +56,8 @@
                 </div>
 
                 <!-- Só testando os tamanhos dos campos a serem usados -->
-                <div class="col-2">
+                <!-- selecionar -->
+                <div class="col-lg-2 col-md-4">
                   <div class="row">
                     Eixos
                   </div>
@@ -60,11 +65,7 @@
                     <p-multiSelect [options]="eixos" [(ngModel)]="selectedEixos" defaultLabel="Selecionar Eixo" maxSelectedLabels="2" selectedItemsLabel="{0} Eixos selecionados"></p-multiSelect>
                   </div>
                 </div>
-             </div>
-            </div>
-
-            <div class="row" style="padding-top: 1.5rem">
-                <div class="col-3">
+                <div class="col-lg-3 col-md-4">
                   <div class="row">
                     Municípios
                   </div>
@@ -73,7 +74,7 @@
                   </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-lg-5 col-md-4">
                   <div class="row">
                     Equipamento
                   </div>
@@ -81,18 +82,24 @@
                     <p-multiSelect [options]="equipamento" [(ngModel)]="selectedEquipamento" defaultLabel="Selecionar Equipamento" maxSelectedLabels="2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
                   </div>
                 </div>
-                <div style="padding-left: 1.5rem">
+
+                <!-- botões-->
+
+                <div class=" col-lg-2 col-md-3" id="btn-1">
                   <button class="btn-secundario" type="reset">Limpar Critérios</button>
                 </div>
-                <div style="padding-left: 0.3rem">
-                 <button class="btn-primario">Buscar</button>
+                <div class="col-lg-2 col-md-3" id="btn-2">
+                  <button class="btn-primario">Buscar</button>
                 </div>
+             </div>
             </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="row">
     <div class="col-12">
       <div class="row t-padding">
