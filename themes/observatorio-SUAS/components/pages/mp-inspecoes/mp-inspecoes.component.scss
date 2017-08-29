@@ -95,3 +95,11 @@ input:checked + .slider {
     }
   }
 }
+@media (max-width: 1068px) {
+  .titulo{
+    font-size: 1.17rem;
+  }
+  #select-inspecao{
+    margin-bottom: .9rem!important;
+  }
+}
