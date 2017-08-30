@@ -15,14 +15,25 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
   templateUrl: 'mp-inspecoes.component.html',
   styleUrls: ['mp-inspecoes.component.css']
 })
+
 export class MPInspecoesComponent {
 
+  dataInicio : Date;
+
+  dataFim : Date;
+
+  // Tipos Selecionados
+  tipo1 : boolean = false; //CRAS
+  tipo2 : boolean = false; //CREAS
+  tipo3 : boolean = false; //CENTRO POP
+  // Tipos Selecionados
+
   eixos: SelectItem[];
-  municipio: SelectItem[];
-  equipamento: SelectItem[];
-  selectedMunicipios: string[] ;
-  selectedEquipamento: string[];
+  municipios: SelectItem[];
+  equipamentos: SelectItem[];
   selectedEixos: string[];
+  selectedMunicipios: string[] ;
+  selectedEquipamentos: string[];
 
   constructor(private injector: Injector, public routerext: RouterExtensions) {
 
@@ -37,20 +48,34 @@ export class MPInspecoesComponent {
       });
 
 
-      this.municipio = [];
-      this.municipio.push({label: 'ANGRA DOS REIS', value: 'ANGRA DOS REIS'});
-      this.municipio.push({label: 'BARRA DO PIRAÍ', value: 'BARRA DO PIRAÍ'});
-      this.municipio.push({label: 'NITERÓI', value: 'NITERÓI'});
-      this.municipio.push({label: 'SÃO GONÇALO', value: 'SÃO GONÇALO'});
-      this.municipio.push({label: 'NOVA IGUAÇU', value: 'NOVA IGUAÇU'});
+      this.municipios = [];
+      this.municipios.push({label: 'ANGRA DOS REIS', value: 'ANGRA DOS REIS'});
+      this.municipios.push({label: 'BARRA DO PIRAÍ', value: 'BARRA DO PIRAÍ'});
+      this.municipios.push({label: 'NITERÓI', value: 'NITERÓI'});
+      this.municipios.push({label: 'SÃO GONÇALO', value: 'SÃO GONÇALO'});
+      this.municipios.push({label: 'NOVA IGUAÇU', value: 'NOVA IGUAÇU'});
 
 
-      this.equipamento = [];
-      this.equipamento.push({label: 'CRAS', value: 'CRAS'});
-      this.equipamento.push({label: 'CRAS BARRA', value: 'CRAS BARRA'});
-      this.equipamento.push({label: 'CRAS SÃO GONÇALO', value: 'CRAS SÃO GONÇALO'});
-      this.equipamento.push({label: 'CRAS RIO', value: 'CRAS RIO'});
+      this.equipamentos = [];
+      this.equipamentos.push({label: 'CRAS', value: 'CRAS'});
+      this.equipamentos.push({label: 'CRAS BARRA', value: 'CRAS BARRA'});
+      this.equipamentos.push({label: 'CRAS SÃO GONÇALO', value: 'CRAS SÃO GONÇALO'});
+      this.equipamentos.push({label: 'CRAS RIO', value: 'CRAS RIO'});
 
 
   }
+
+  selectTipo(i: number) {
+    if (i === 1) {
+      this.tipo1 = !this.tipo1;
+      return ;
+    } else if (i === 2) {
+      this.tipo2 = !this.tipo2;
+      return ;
+    }else {
+      this.tipo3 = !this.tipo3;
+      return ;
+    }
+  }
+
 }

@@ -39,17 +39,17 @@
                   <div class="row" id="select-inspecao">
 
                     <label class="button-switch">
-                      <input type="checkbox">
+                      <input type="checkbox" (click)="selectTipo(1)">
                       <span class="slider">CRAS</span>
                     </label>
 
                     <label class="button-switch">
-                      <input type="checkbox">
+                      <input type="checkbox" (click)="selectTipo(2)">
                       <span class="slider">CREAS</span>
                     </label>
 
                     <label class="button-switch">
-                      <input type="checkbox">
+                      <input type="checkbox" (click)="selectTipo(3)">
                       <span class="slider">CENTRO POP</span>
                     </label>
                   </div>
@@ -70,7 +70,7 @@
                     Municípios
                   </div>
                   <div class="form-group">
-                    <p-multiSelect [options]="municipio" [(ngModel)]="selectedMunicipios" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
+                    <p-multiSelect [options]="municipios" [(ngModel)]="selectedMunicipios" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
                   </div>
                 </div>
 
@@ -81,7 +81,7 @@
                     Equipamento
                   </div>
                   <div class="form-group">
-                    <p-multiSelect [options]="equipamento" [(ngModel)]="selectedEquipamento" defaultLabel="Selecionar Equipamento" maxSelectedLabels="2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
+                    <p-multiSelect [options]="equipamentos" [(ngModel)]="selectedEquipamentos" defaultLabel="Selecionar Equipamento" maxSelectedLabels="2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
                   </div>
                 </div>
 
