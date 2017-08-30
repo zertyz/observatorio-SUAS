@@ -12,7 +12,7 @@ option{
 .button-switch {
   position: relative;
   display: inline-block;
-  width: 10rem;
+  width: 8.1rem;
   height: 2rem;
   padding: 0.2rem;
 }
@@ -52,12 +52,12 @@ input:checked + .slider {
     color: #374c61;
 }
   .ui-inputtext{
-    width: 7rem;
+    width: 10.3rem;
   }
 
   .ui-multiselect .ui-multiselect-label-container{
-    max-width: 15rem;
-    min-width: 15rem;
+    max-width: 19rem;
+    min-width: 19rem;
   }
 
   .ui-multiselect-items-wrapper{
@@ -82,10 +82,6 @@ input:checked + .slider {
   }
   .btn-secundario {
     width: 8rem;
-  }
-
-  .button-switch{
-    width: 9rem;
   }
 
   :host /deep/ {
