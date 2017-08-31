@@ -39,7 +39,7 @@ nav a {
   color: #ffffff;
   font-family: 'Raleway';
   font-weight: 700;
-  font-size: 120%;
+  font-size: 1em;
   line-height: 100%;
   margin-left: 3%;
   text-decoration: none;
@@ -98,35 +98,24 @@ hr{
   margin-left: 0% !important;
 }
 }
-@media (min-width: 576px) and (max-width: 768px){
-.img-fluid {
-  min-width: 270px !important;
-  max-width: 280px !important;
-  margin-left: 2% !important;
-}
-}
-@media (min-width: 769px) {
-  img {
-    min-width: 36px;
-  }
-}
 
 @media (min-width: 900px){
 .img-fluid {
-  min-width: 330px !important;
-  max-width: 349px !important;
+  min-width: 290px !important;
+  max-width: 309px !important;
 }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 900px) {
   .img-fluid {
-    max-width: 98px;
+  max-width: 309px !important;
+  ;
   }
 .logo-completo {
   display: none;
 }
 }
-@media (min-width: 575px) {
+@media (min-width:900px) {
 .logo-mini {
   display: none;
 }

@@ -638,13 +638,14 @@ export class MPInspecoesComponent {
     this.municipios = new Array() ;
     var i = 0;
 
+
     /*this.municipios.push({label: 'teste',value: 'teste'});
     this.teste = (this.municipios.indexOf({label: 'teste',value: 'teste'}) === -1);
     if(this.municipios.indexOf({label: 'teste',value: 'teste'}) !== -1) {
       this.municipios.push({label: 'teste',value: 'teste'});
     }*/
 
-
+// http://www.w3resource.com/javascript-exercises/javascript-array-exercise-14.php Marcos dá uma olhada nessa ideia de criar uma outra matriz
     if(this.tipo1===true) {
       for(i = 1;i<this.crases.length;i++) {
         if(this.municipios.indexOf({label: this.crases[i][0], value: this.crases[i][0]}) === -1) {

@@ -142,21 +142,27 @@
       <div style="margin-top: 1.7rem" class="card">
         <div class="card-block">
           <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-2 col-3  " style="padding-bottom: 1.6rem">
+            <div class=" col-3  " style="padding-bottom: 1.6rem">
                <img class="img-fluid" src="./assets/img/logo-doc.png">
             </div>
-            <div class="col-xl-7 col-lg-8 col-md-8 col-8 ">
-              <a [routerLink]="['/busca']">Cartilha</a>
+            <div class=" col-5 ">
+              <a >Cartilha</a>
               <p>Cartilha do SUAS</p>
+            </div>
+            <div class=" col-4">
+              <button [routerLink]="['/busca']" class="btn btn-secundario">ver</button>
             </div>
           </div>
           <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-2 col-3">
+            <div class=" col-3">
               <img class="img-fluid" src="./assets/img/logo-doc.png">
             </div>
-            <div class="col-xl-7 col-lg-8 col-md-7 col-8">
-              <a [routerLink]="['/inspecoes']">Manual</a>
+            <div class="col-5">
+              <a>Manual</a>
               <p>Manual de inspeção CRAS</p>
+            </div>
+            <div class="col-4">
+              <button [routerLink]="['/busca']" class="btn btn-secundario">ver</button>
             </div>
           </div>
         </div>
@@ -167,7 +173,10 @@
       <div class="card">
         <div class="card-block">
           <p>Email</p>
-          <input id="input" type="text" pInputText [(ngModel)]="text">
+          <input id="email" type="text" pInputText [(ngModel)]="text">
+          <p>Mensagem</p>
+          <input id="mensagem" style="height: 5.5rem" type="text" pInputText [(ngModel)]="text">
+          <button class="btn btn-secundario">enviar</button>
         </div>
       </div>
     </div>
