@@ -18,38 +18,38 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
 
 export class MPInspecoesComponent {
 
-  dataInicio : Date;
+  dataInicio: Date;
 
-  dataFim : Date;
+  dataFim: Date;
 
   // Tipos Selecionados
-  tipo1 : boolean = false; //CRAS
-  tipo2 : boolean = false; //CREAS
-  tipo3 : boolean = false; //CENTRO POP
+  tipo1: boolean = false; //CRAS
+  tipo2: boolean = false; //CREAS
+  tipo3: boolean = false; //CENTRO POP
   // Tipos Selecionados
 
   eixos: SelectItem[];
   municipios: SelectItem[];
   equipamentos: SelectItem[];
   selectedEixos: string[];
-  selectedMunicipios: string[] ;
+  selectedMunicipios: string[];
   selectedEquipamentos: string[];
 
   constructor(private injector: Injector, public routerext: RouterExtensions) {
 
-      this.eixos = [];
-      this.eixos.push({label: 'EQUIPE TÉCNICA', value: 'EQUIPE TÉCNICA'});
-      this.eixos.push({label: 'INFRAESTRUTURA', value: 'INFRAESTRUTURA'});
-      this.eixos.push({
-        label: 'PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS',
-        value: 'PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS'
-      });
+    this.eixos = [];
+    this.eixos.push({label: 'EQUIPE TÉCNICA', value: 'EQUIPE TÉCNICA'});
+    this.eixos.push({label: 'INFRAESTRUTURA', value: 'INFRAESTRUTURA'});
+    this.eixos.push({
+      label: 'PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS',
+      value: 'PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS'
+    });
 
-      this.equipamentos = [];
-      /*this.equipamentos.push({label: 'CRAS', value: 'CRAS'});
-      this.equipamentos.push({label: 'CRAS BARRA', value: 'CRAS BARRA'});
-      this.equipamentos.push({label: 'CRAS SÃO GONÇALO', value: 'CRAS SÃO GONÇALO'});
-      this.equipamentos.push({label: 'CRAS RIO', value: 'CRAS RIO'});*/
+    this.equipamentos = [];
+    /*this.equipamentos.push({label: 'CRAS', value: 'CRAS'});
+    this.equipamentos.push({label: 'CRAS BARRA', value: 'CRAS BARRA'});
+    this.equipamentos.push({label: 'CRAS SÃO GONÇALO', value: 'CRAS SÃO GONÇALO'});
+    this.equipamentos.push({label: 'CRAS RIO', value: 'CRAS RIO'});*/
 
 
   }
@@ -58,20 +58,17 @@ export class MPInspecoesComponent {
     if (i === 1) {
       this.tipo1 = !this.tipo1;
       this.preencheMunicipios();
-      return ;
+      return;
     } else if (i === 2) {
       this.tipo2 = !this.tipo2;
       this.preencheMunicipios();
-      return ;
-    }else {
+      return;
+    } else {
       this.tipo3 = !this.tipo3;
       this.preencheMunicipios();
-      return ;
+      return;
     }
   }
-
-
-
 
 
   //DADOS DE TESTE
@@ -640,29 +637,44 @@ export class MPInspecoesComponent {
 
   preencheMunicipios() {
 
-    this.municipios = [] ;
+    this.municipios = [];
     var i = 0;
     let municipiosAux = [];
 
-    if(this.tipo1===true) {
-      for(i = 1;i<this.crases.length;i++) {
+    if (this.tipo1 === true) {
+      for (i = 1; i < this.crases.length; i++) {
         municipiosAux.push(this.crases[i]);
       }
     }
 
-    if(this.tipo2===true) {
-      for(i = 1;i<this.creases.length;i++) {
+    if (this.tipo2 === true) {
+      for (i = 1; i < this.creases.length; i++) {
         municipiosAux.push(this.creases[i]);
       }
     }
 
-    if(this.tipo3===true) {
-      for(i = 1;i<this.centrosPOP.length;i++) {
+    if (this.tipo3 === true) {
+      for (i = 1; i < this.centrosPOP.length; i++) {
         municipiosAux.push(this.centrosPOP[i]);
       }
     }
 
     this.municipios = this.removeDuplicate(municipiosAux);
 
+  }
+
+  pt: any;
+
+  ngOnInit() {
+    this.pt = {
+      firstDayOfWeek: 0,
+      dayNames: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
+      dayNamesShort: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
+      dayNamesMin: ["D", "S", "T", "Q", "Q", "S", "S"],
+      monthNames: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+      monthNamesShort: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+      today: 'Hoje',
+      clear: 'Limpar'
+    };
   }
 }

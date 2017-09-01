@@ -20,13 +20,13 @@
                 <div class="col-lg-2 col-md-3" style="padding-left: 0rem">
                   <div>Início</div>
                   <div class="ui-g-12 ui-md-3">
-                    <p-calendar [(ngModel)]="date1" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2016" [showIcon]="true" ></p-calendar>
+                    <p-calendar [(ngModel)]="date1" [locale]="pt" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2016" [showIcon]="true" ></p-calendar>
                   </div>
                 </div>
                 <div class="col-xl-3 col-md-3" style="padding-left: 0rem">
                   <div>Fim</div>
                   <div class="ui-g-12 ui-md-5">
-                    <p-calendar [(ngModel)]="date2" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2017" [showIcon]="true"></p-calendar>
+                    <p-calendar [(ngModel)]="date2" [locale]="pt" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2017" [showIcon]="true"></p-calendar>
                   </div>
                 </div>
 
@@ -70,8 +70,8 @@
                     Municípios
                   </div>
                   <div [ngSwitch]="tipo1===false && tipo2===false && tipo3===false" class="form-group">
-                    <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="municipios" [(ngModel)]="selectedMunicipios" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
-                    <p-multiSelect *ngSwitchCase="false" [options]="municipios" [(ngModel)]="selectedMunicipios" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
+                    <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="municipios"  defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
+                    <p-multiSelect *ngSwitchCase="false" [options]="municipios" [(ngModel)]="selectedMunicipios" (onselect)="preencheEquipamentos()" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
                   </div>
                 </div>
 
