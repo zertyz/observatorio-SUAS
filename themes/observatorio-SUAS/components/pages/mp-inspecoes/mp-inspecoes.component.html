@@ -62,15 +62,16 @@
                     Eixos
                   </div>
                   <div class="form-group">
-                    <p-multiSelect [options]="eixos" [(ngModel)]="selectedEixos" defaultLabel="Selecionar Eixo" maxSelectedLabels="2" selectedItemsLabel="{0} Eixos selecionados"></p-multiSelect>
+                    <p-multiSelect ng-switch-when="false" [options]="eixos" [(ngModel)]="selectedEixos" defaultLabel="Selecionar Eixo" maxSelectedLabels="2" selectedItemsLabel="{0} Eixos selecionados"></p-multiSelect>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
                   <div class="row">
                     Municípios
                   </div>
-                  <div class="form-group">
-                    <p-multiSelect [options]="municipios" [(ngModel)]="selectedMunicipios" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
+                  <div [ngSwitch]="tipo1===false && tipo2===false && tipo3===false" class="form-group">
+                    <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="municipios" [(ngModel)]="selectedMunicipios" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
+                    <p-multiSelect *ngSwitchCase="false" [options]="municipios" [(ngModel)]="selectedMunicipios" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
                   </div>
                 </div>
 
