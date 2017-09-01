@@ -45,15 +45,6 @@ export class MPInspecoesComponent {
         value: 'PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS'
       });
 
-
-      this.municipios = [];
-      /*this.municipios.push({label: 'ANGRA DOS REIS', value: 'ANGRA DOS REIS'});
-      this.municipios.push({label: 'BARRA DO PIRAÍ', value: 'BARRA DO PIRAÍ'});
-      this.municipios.push({label: 'NITERÓI', value: 'NITERÓI'});
-      this.municipios.push({label: 'SÃO GONÇALO', value: 'SÃO GONÇALO'});
-      this.municipios.push({label: 'NOVA IGUAÇU', value: 'NOVA IGUAÇU'});*/
-
-
       this.equipamentos = [];
       /*this.equipamentos.push({label: 'CRAS', value: 'CRAS'});
       this.equipamentos.push({label: 'CRAS BARRA', value: 'CRAS BARRA'});
@@ -633,44 +624,45 @@ export class MPInspecoesComponent {
     ['Paraíba do Sul', 'Pequeno II', 'CREAS - Alair Pedroso', 'Rua', 'Visconde do Rio Novo', '149', 'Casa', 'Centro', '25850-000', '(24) 2263-5554'],
   ];
 
+  removeDuplicate(dadosBrutos: string[]) {
+    let municipiosUnicos = {};
+    let dadosPrimeNG: any[] = [];
+    dadosBrutos = dadosBrutos.sort();
+    for (let v of dadosBrutos) {
+      let municipio = v[0];
+      if (municipiosUnicos[municipio] !== true) {
+        municipiosUnicos[municipio] = true;
+        dadosPrimeNG.push({label: municipio, value: municipio});
+      }
+    }
+    return dadosPrimeNG;
+  }
+
   preencheMunicipios() {
 
-    this.municipios = new Array() ;
+    this.municipios = [] ;
     var i = 0;
+    let municipiosAux = [];
 
-
-    /*this.municipios.push({label: 'teste',value: 'teste'});
-    this.teste = (this.municipios.indexOf({label: 'teste',value: 'teste'}) === -1);
-    if(this.municipios.indexOf({label: 'teste',value: 'teste'}) !== -1) {
-      this.municipios.push({label: 'teste',value: 'teste'});
-    }*/
-
-// http://www.w3resource.com/javascript-exercises/javascript-array-exercise-14.php Marcos dá uma olhada nessa ideia de criar uma outra matriz
     if(this.tipo1===true) {
       for(i = 1;i<this.crases.length;i++) {
-        if(this.municipios.indexOf({label: this.crases[i][0], value: this.crases[i][0]}) === -1) {
-          this.municipios.push({label: this.crases[i][0], value: this.crases[i][0]});
-        }
+        municipiosAux.push(this.crases[i]);
       }
     }
 
     if(this.tipo2===true) {
       for(i = 1;i<this.creases.length;i++) {
-        if(this.municipios.indexOf({label: this.creases[i][0], value: this.creases[i][0]}) === -1) {
-          this.municipios.push({label: this.creases[i][0], value: this.creases[i][0]});
-        }
+        municipiosAux.push(this.creases[i]);
       }
     }
 
     if(this.tipo3===true) {
       for(i = 1;i<this.centrosPOP.length;i++) {
-        if(this.municipios.indexOf({label: this.centrosPOP[i][0], value: this.centrosPOP[i][0]}) === -1) {
-          this.municipios.push({label: this.centrosPOP[i][0], value: this.centrosPOP[i][0]});
-        }
+        municipiosAux.push(this.centrosPOP[i]);
       }
     }
 
-
+    this.municipios = this.removeDuplicate(municipiosAux);
 
   }
 }
