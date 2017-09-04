@@ -678,20 +678,30 @@ export class MPInspecoesComponent {
 
     if (this.tipo2 === true) {
       for (let i = 1; i < this.creases.length; i++) {
-
+        for(let j = 0;j < this.selectedMunicipios.length;j++) {
+          if(this.selectedMunicipios[j] === this.creases[i][0]) {
+            equipamentosAux.push(this.creases[i]);
+          }
+        }
       }
     }
 
     if (this.tipo3 === true) {
       for (let i = 1; i < this.centrosPOP.length; i++) {
-
+        for(let j = 0;j < this.selectedMunicipios.length;j++) {
+          if(this.selectedMunicipios[j] === this.centrosPOP[i][0]) {
+            equipamentosAux.push(this.centrosPOP[i]);
+          }
+        }
       }
     }
 
     for(let v of equipamentosAux){
+      let municipio = v[0];
       let equipamento = v[2];
-      this.equipamentos.push({label: equipamento, value: equipamento});
+      this.equipamentos.push({label: municipio + ' - ' + equipamento, value: equipamento});
     }
+    this.equipamentos = this.equipamentos.sort();
 
   }
 
