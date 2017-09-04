@@ -638,6 +638,9 @@ export class MPInspecoesComponent {
   preencheMunicipios() {
 
     this.municipios = [];
+    this.selectedMunicipios = [];
+    this.equipamentos = [];
+    this.selectedEquipamentos = [];
     let municipiosAux = [];
 
     if (this.tipo1 === true) {
@@ -664,6 +667,7 @@ export class MPInspecoesComponent {
 
   preencheEquipamentos() {
     this.equipamentos = [];
+    this.selectedEquipamentos = [];
     let equipamentosAux = [];
 
     if (this.tipo1 === true) {
