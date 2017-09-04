@@ -705,7 +705,42 @@ export class MPInspecoesComponent {
       let equipamento = v[2];
       this.equipamentos.push({label: municipio + ' - ' + equipamento, value: equipamento});
     }
-    this.equipamentos = this.equipamentos.sort();
+    this.equipamentos = this.equipamentos.sort((e1, e2) => e2.label < e1.label ? 1 : -1);
+
+/*
+    Comentários sobre performance para considerações futuras:
+
+    cras = [
+      {cras1, municipio1},
+      {cras2, municipio2},
+      {cras3, municipio3},
+      {cras4, municipio4},
+    ]
+
+    quais crases pertencem à minha lista de municípios?
+
+  ==>
+
+    para cada município na sua lista:
+      quais crases pertencem a municipiox ?
+
+  Ao invés de percorrer x vezes a lista de craes, creases, centros_pop, em uma passada pode se indexar por municípios
+
+      crasIndexadoPorMunicipio = {
+        'Rio de Janeiro': [
+          {cras1, municipio1},
+          {cras2, municipio1},
+          {cras3, municipio1},
+          {cras4, municipio1},
+        ],
+        'Angra dos Reis': [
+          {cras1, municipio2},
+          {cras2, municipio2},
+          {cras3, municipio2},
+          {cras4, municipio2},
+        ],
+      }
+*/
 
   }
 
