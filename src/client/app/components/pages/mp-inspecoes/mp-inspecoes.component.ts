@@ -25,10 +25,10 @@ export class MPInspecoesComponent {
   // Tipos Selecionados
   tipo1: boolean = false; //CRAS
   tipo2: boolean = false; //CREAS
-  tipo3: boolean = false; //CENTRO POP
   // Tipos Selecionados
 
-  eixos: SelectItem[];
+  eixos: SelectItem[];  tipo3: boolean = false; //CENTRO POP
+
   municipios: SelectItem[];
   equipamentos: SelectItem[];
   selectedEixos: string[];
@@ -638,28 +638,60 @@ export class MPInspecoesComponent {
   preencheMunicipios() {
 
     this.municipios = [];
-    var i = 0;
     let municipiosAux = [];
 
     if (this.tipo1 === true) {
-      for (i = 1; i < this.crases.length; i++) {
+      for (let i = 1; i < this.crases.length; i++) {
         municipiosAux.push(this.crases[i]);
       }
     }
 
     if (this.tipo2 === true) {
-      for (i = 1; i < this.creases.length; i++) {
+      for (let i = 1; i < this.creases.length; i++) {
         municipiosAux.push(this.creases[i]);
       }
     }
 
     if (this.tipo3 === true) {
-      for (i = 1; i < this.centrosPOP.length; i++) {
+      for (let i = 1; i < this.centrosPOP.length; i++) {
         municipiosAux.push(this.centrosPOP[i]);
       }
     }
 
     this.municipios = this.removeDuplicate(municipiosAux);
+
+  }
+
+  preencheEquipamentos() {
+    this.equipamentos = [];
+    let equipamentosAux = [];
+
+    if (this.tipo1 === true) {
+      for (let i = 1; i < this.crases.length; i++) {
+        for(let j = 0;j < this.selectedMunicipios.length;j++) {
+          if(this.selectedMunicipios[j] === this.crases[i][0]) {
+            equipamentosAux.push(this.crases[i]);
+          }
+        }
+      }
+    }
+
+    if (this.tipo2 === true) {
+      for (let i = 1; i < this.creases.length; i++) {
+
+      }
+    }
+
+    if (this.tipo3 === true) {
+      for (let i = 1; i < this.centrosPOP.length; i++) {
+
+      }
+    }
+
+    for(let v of equipamentosAux){
+      let equipamento = v[2];
+      this.equipamentos.push({label: equipamento, value: equipamento});
+    }
 
   }
 

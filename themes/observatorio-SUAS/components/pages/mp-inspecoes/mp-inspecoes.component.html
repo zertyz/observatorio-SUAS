@@ -71,7 +71,7 @@
                   </div>
                   <div [ngSwitch]="tipo1===false && tipo2===false && tipo3===false" class="form-group">
                     <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="municipios"  defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
-                    <p-multiSelect *ngSwitchCase="false" [options]="municipios" [(ngModel)]="selectedMunicipios" (onselect)="preencheEquipamentos()" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
+                    <p-multiSelect *ngSwitchCase="false" [options]="municipios" [(ngModel)]="selectedMunicipios" (onChange)="preencheEquipamentos()" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
                   </div>
                 </div>
 
@@ -80,7 +80,10 @@
                     Equipamento
                   </div>
                   <div class="form-group">
-                    <p-multiSelect [options]="equipamentos" [(ngModel)]="selectedEquipamentos" defaultLabel="Selecionar Equipamento" maxSelectedLabels="2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
+                    <div [ngSwitch]="tipo1===false && tipo2===false && tipo3===false" class="form-group">
+                      <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="equipamentos"  defaultLabel="Selecionar Equipamento" maxSelectedLabels= "2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
+                      <p-multiSelect *ngSwitchCase="false" [options]="equipamentos" [(ngModel)]="selectedEquipamentos" defaultLabel="Selecionar Equipamento" maxSelectedLabels="2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
+                    </div>
                   </div>
                 </div>
 
