@@ -25,10 +25,10 @@ export class MPInspecoesComponent {
   // Tipos Selecionados
   tipo1: boolean = false; //CRAS
   tipo2: boolean = false; //CREAS
-  tipo3: boolean = false; //CENTRO POP
   // Tipos Selecionados
 
-  eixos: SelectItem[];
+  eixos: SelectItem[];  tipo3: boolean = false; //CENTRO POP
+
   municipios: SelectItem[];
   equipamentos: SelectItem[];
   selectedEixos: string[];
@@ -638,28 +638,109 @@ export class MPInspecoesComponent {
   preencheMunicipios() {
 
     this.municipios = [];
-    var i = 0;
+    this.selectedMunicipios = [];
+    this.equipamentos = [];
+    this.selectedEquipamentos = [];
     let municipiosAux = [];
 
     if (this.tipo1 === true) {
-      for (i = 1; i < this.crases.length; i++) {
+      for (let i = 1; i < this.crases.length; i++) {
         municipiosAux.push(this.crases[i]);
       }
     }
 
     if (this.tipo2 === true) {
-      for (i = 1; i < this.creases.length; i++) {
+      for (let i = 1; i < this.creases.length; i++) {
         municipiosAux.push(this.creases[i]);
       }
     }
 
     if (this.tipo3 === true) {
-      for (i = 1; i < this.centrosPOP.length; i++) {
+      for (let i = 1; i < this.centrosPOP.length; i++) {
         municipiosAux.push(this.centrosPOP[i]);
       }
     }
 
     this.municipios = this.removeDuplicate(municipiosAux);
+
+  }
+
+  preencheEquipamentos() {
+    this.equipamentos = [];
+    this.selectedEquipamentos = [];
+    let equipamentosAux = [];
+
+    if (this.tipo1 === true) {
+      for (let i = 1; i < this.crases.length; i++) {
+        for(let j = 0;j < this.selectedMunicipios.length;j++) {
+          if(this.selectedMunicipios[j] === this.crases[i][0]) {
+            equipamentosAux.push(this.crases[i]);
+          }
+        }
+      }
+    }
+
+    if (this.tipo2 === true) {
+      for (let i = 1; i < this.creases.length; i++) {
+        for(let j = 0;j < this.selectedMunicipios.length;j++) {
+          if(this.selectedMunicipios[j] === this.creases[i][0]) {
+            equipamentosAux.push(this.creases[i]);
+          }
+        }
+      }
+    }
+
+    if (this.tipo3 === true) {
+      for (let i = 1; i < this.centrosPOP.length; i++) {
+        for(let j = 0;j < this.selectedMunicipios.length;j++) {
+          if(this.selectedMunicipios[j] === this.centrosPOP[i][0]) {
+            equipamentosAux.push(this.centrosPOP[i]);
+          }
+        }
+      }
+    }
+
+    for(let v of equipamentosAux){
+      let municipio = v[0];
+      let equipamento = v[2];
+      this.equipamentos.push({label: municipio + ' - ' + equipamento, value: equipamento});
+    }
+    this.equipamentos = this.equipamentos.sort((e1, e2) => e2.label < e1.label ? 1 : -1);
+
+/*
+    Comentários sobre performance para considerações futuras:
+
+    cras = [
+      {cras1, municipio1},
+      {cras2, municipio2},
+      {cras3, municipio3},
+      {cras4, municipio4},
+    ]
+
+    quais crases pertencem à minha lista de municípios?
+
+  ==>
+
+    para cada município na sua lista:
+      quais crases pertencem a municipiox ?
+
+  Ao invés de percorrer x vezes a lista de craes, creases, centros_pop, em uma passada pode se indexar por municípios
+
+      crasIndexadoPorMunicipio = {
+        'Rio de Janeiro': [
+          {cras1, municipio1},
+          {cras2, municipio1},
+          {cras3, municipio1},
+          {cras4, municipio1},
+        ],
+        'Angra dos Reis': [
+          {cras1, municipio2},
+          {cras2, municipio2},
+          {cras3, municipio2},
+          {cras4, municipio2},
+        ],
+      }
+*/
 
   }
 
