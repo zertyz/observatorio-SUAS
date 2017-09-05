@@ -52,7 +52,7 @@ input:checked + .slider {
     color: #374c61;
 }
   .ui-inputtext{
-    width: 10.3rem;
+    width: 9.4rem;
   }
 
   .ui-multiselect .ui-multiselect-label-container{
@@ -97,5 +97,33 @@ input:checked + .slider {
   }
   #select-inspecao{
     margin-bottom: .9rem!important;
+
+  }
+}
+@media (max-width: 991px)and(min-width: 768px) {
+
+  .btn-primario {
+    width: 10.5rem;
+  }
+  .btn-secundario {
+    width: 10.5rem;
+  }
+  :host/deep/ {
+    .ui-inputtext {
+      width: 8.4rem;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  #select-inspecao{
+    margin-bottom: .9rem!important;
+    margin-left: 1rem;
+  }
+
+  .btn-primario {
+    width: 11.5rem;
+  }
+  .btn-secundario {
+    width: 11.5rem;
   }
 }

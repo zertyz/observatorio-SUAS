@@ -5,8 +5,8 @@ h1{
 p{
   font-size: 95%;
 
-
 }
+
 ul > li{
   padding-bottom: 1.6rem;
 }
@@ -26,6 +26,8 @@ div > span{
   font-family: 'Roboto-Condensed-Light';
   font-size: 120%;
   line-height: 90%;
+  padding-left: .9rem;
+  padding-right: .9rem;
 }
 
 .link {
@@ -67,4 +69,9 @@ div > span{
   img.img-responsive { width:90%;}
   e-link.link{position: inherit;bottom: inherit;right: inherit}
   max-width: 100%;
+}
+@media (max-width: 1068px) {
+  .titulo {
+    font-size: 1.17rem;
+  }
 }
