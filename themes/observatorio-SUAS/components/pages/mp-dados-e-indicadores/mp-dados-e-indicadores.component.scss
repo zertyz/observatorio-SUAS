@@ -91,7 +91,6 @@ hr {
     float: none;
   }
 
-  div.barraH{border-color: transparent}
   max-width: 100%;
 }
 
@@ -273,5 +272,13 @@ p{
   .ui-widget-header{
     background: white;
     border:none ;
+  }
+}
+@media (max-width: 991px) {
+  .nome-eq{
+    font-size: .8rem;
+  }
+  .pw-3{
+    font-size: .5rem;
   }
 }

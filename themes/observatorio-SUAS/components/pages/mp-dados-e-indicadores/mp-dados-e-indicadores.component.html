@@ -96,19 +96,17 @@
               <div class="vt-blue">{{contagemCentrosPOP}}</div>
             </div>
             <div class="col-1"></div>
-
           </div>
 
-          <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4">
-
+          <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]">
             <ng-template let-equipamento pTemplate="item"; >
-              <div class="ui-g-12 ui-md-6 barraH barra padding_equipamentos" >
+              <div class="col-xl-6 col-md-6 col-sm-12 col-12 barraH barra padding_equipamentos" >
                 <div class="row">
-                  <div class="col-md-3"style="padding-top: .6rem">
+                  <div class="col-md-3 col-3"style="padding-top: .6rem">
                     <img class="center" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
                     <div class="pw-3" >Porte {{equipamento.porte}}</div>
                   </div>
-                  <div class="col-md-9">
+                  <div class="col-md-9 col-9">
                     <div class="row">
                       <div class="nome-eq">{{equipamento.nome}}</div>
                     </div>
