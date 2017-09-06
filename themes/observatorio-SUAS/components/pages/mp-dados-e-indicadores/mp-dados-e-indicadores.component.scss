@@ -56,7 +56,10 @@
 .p-2{
   font-size: .9rem;
 }
-
+.padding_equipamentos{
+  padding-right: 12px;
+  padding-bottom: 2px
+}
 .barraH {
   border-bottom: 1px solid #2e3a48;
 }
@@ -260,5 +263,15 @@ p{
   }
   .valor-tabela{
     font-size: 1.2em;
+  }
+}
+:host/deep/{
+  .ui-widget-content{
+    background: white;
+    border:none ;
+  }
+  .ui-widget-header{
+    background: white;
+    border:none ;
   }
 }
