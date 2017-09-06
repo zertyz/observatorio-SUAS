@@ -617,6 +617,28 @@ export class MPInspecoesComponent {
     ['Paraíba do Sul', 'Pequeno II', 'CREAS - Alair Pedroso', 'Rua', 'Visconde do Rio Novo', '149', 'Casa', 'Centro', '25850-000', '(24) 2263-5554'],
   ];
 
+  limpar() {
+
+    if(this.crasSelected) {
+      document.getElementById('check1').click();
+    }
+
+    if(this.creasSelected) {
+      document.getElementById('check2').click();
+    }
+
+    if(this.centropopSelected) {
+      document.getElementById('check3').click();
+    }
+
+    this.eixos = [];
+    this.municipios= [];
+    this.equipamentos = [];
+    this.selectedEixos = [];
+    this.selectedMunicipios = [];
+    this.selectedEquipamentos = [];
+  }
+
   removeDuplicate(dadosBrutos: string[]) {
     let municipiosUnicos = {};
     let dadosPrimeNG: any[] = [];

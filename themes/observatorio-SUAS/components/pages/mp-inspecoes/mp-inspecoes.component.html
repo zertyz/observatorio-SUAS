@@ -18,38 +18,38 @@
             <div class="col-12">
               <div class="row">
                 <div class="col-xl-2 col-md-3" style="padding-left: 0rem">
-                  <div>Início</div>
-                  <div class="ui-g-12 ui-md-3">
-                    <p-calendar [(ngModel)]="date1" [locale]="pt" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2016" [showIcon]="true" ></p-calendar>
+                  <div class="row">Início</div>
+                  <div class="row">
+                    <p-calendar [(ngModel)]="date1" id="date1" [locale]="pt" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2016" [showIcon]="true" ></p-calendar>
                   </div>
                 </div>
                 <div class="col-xl-2 col-md-4" style="padding-left: 0rem">
-                  <div>Fim</div>
-                  <div class="ui-g-12 ui-md-5">
-                    <p-calendar [(ngModel)]="date2" [locale]="pt" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2017" [showIcon]="true"></p-calendar>
+                  <div class="row">Fim</div>
+                  <div class="row">
+                    <p-calendar [(ngModel)]="date2" id="date2" [locale]="pt" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2017" [showIcon]="true"></p-calendar>
                   </div>
                 </div>
 
                 <!-- botões selected-->
 
-                <div class="col-xl-4 col-md-5" >
+                <div class="col-xl-4 col-md-5">
                   <div class="row">
                     Tipo de inspeção
                   </div>
                   <div class="row" id="select-inspecao">
 
                     <label class="button-switch">
-                      <input type="checkbox" (click)="selectTipo(1)">
+                      <input type="checkbox" name="check1" (click)="selectTipo(1)" id="check1">
                       <span class="slider">CRAS</span>
                     </label>
 
                     <label class="button-switch">
-                      <input type="checkbox" (click)="selectTipo(2)">
+                      <input type="checkbox" name="check2" (click)="selectTipo(2)" id="check2">
                       <span class="slider">CREAS</span>
                     </label>
 
                     <label class="button-switch">
-                      <input type="checkbox" (click)="selectTipo(3)">
+                      <input type="checkbox" name="check3" (click)="selectTipo(3)" id="check3">
                       <span class="slider">CENTRO POP</span>
                     </label>
                   </div>
@@ -61,18 +61,16 @@
                   <div class="row">
                     Eixos
                   </div>
-                  <div class="form-group">
-                    <div [ngSwitch]="tipo1===false && tipo2===false && tipo3===false" class="form-group">
-                      <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="eixos"  defaultLabel="Selecionar Eixo" maxSelectedLabels= "2" selectedItemsLabel="{0} Eixos selecionados"></p-multiSelect>
-                      <p-multiSelect *ngSwitchCase="false" [options]="eixos" [(ngModel)]="selectedEixos" defaultLabel="Selecionar Eixo" maxSelectedLabels="2" selectedItemsLabel="{0} Eixos selecionados"></p-multiSelect>
-                    </div>
+                  <div class="form-group" [ngSwitch]="crasSelected===false && creasSelected===false && centropopSelected===false">
+                    <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="eixos"  defaultLabel="Selecionar Eixo" maxSelectedLabels= "2" selectedItemsLabel="{0} Eixos selecionados"></p-multiSelect>
+                    <p-multiSelect *ngSwitchCase="false" [options]="eixos" [(ngModel)]="selectedEixos" defaultLabel="Selecionar Eixo" maxSelectedLabels="2" selectedItemsLabel="{0} Eixos selecionados"></p-multiSelect>
                   </div>
                 </div>
                 <div class="col-xl-4 col-md-4">
                   <div class="row">
                     Municípios
                   </div>
-                  <div [ngSwitch]="tipo1===false && tipo2===false && tipo3===false" class="form-group">
+                  <div class="form-group" [ngSwitch]="crasSelected===false && creasSelected===false && centropopSelected===false">
                     <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="municipios"  defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
                     <p-multiSelect *ngSwitchCase="false" [options]="municipios" [(ngModel)]="selectedMunicipios" (onChange)="preencheEquipamentos()" defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
                   </div>
@@ -83,7 +81,7 @@
                     Equipamento
                   </div>
                   <div class="form-group">
-                    <div [ngSwitch]="tipo1===false && tipo2===false && tipo3===false" class="form-group">
+                    <div [ngSwitch]="crasSelected===false && creasSelected===false && centropopSelected===false" class="form-group">
                       <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="equipamentos"  defaultLabel="Selecionar Equipamento" maxSelectedLabels= "2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
                       <p-multiSelect *ngSwitchCase="false" [options]="equipamentos" [(ngModel)]="selectedEquipamentos" defaultLabel="Selecionar Equipamento" maxSelectedLabels="2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
                     </div>
@@ -93,7 +91,7 @@
                 <!-- botões-->
 
                 <div class=" col-xl-2 col-lg-2 col-md-3" id="btn-1">
-                  <button class="btn-secundario" type="reset">Limpar Critérios</button>
+                  <button class="btn-secundario" (click)="limpar()">Limpar Critérios</button>
                 </div>
                 <div class="col-xl-2  col-lg-2 col-md-2" id="btn-2">
                   <button class="btn-primario">Buscar</button>
