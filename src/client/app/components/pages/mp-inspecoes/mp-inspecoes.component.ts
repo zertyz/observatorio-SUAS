@@ -22,12 +22,13 @@ export class MPInspecoesComponent {
 
   dataFim: Date;
 
-  // Tipos Selecionados
-  tipo1: boolean = false; //CRAS
-  tipo2: boolean = false; //CREAS
-  // Tipos Selecionados
+  // Seleção feita pelos botões de Tipo de inspeção
+  crasSelected: boolean = false;
+  creasSelected: boolean = false;
+  centropopSelected: boolean = false;
+  // Seleção feita pelos botões de Tipo de inspeção
 
-  eixos: SelectItem[];  tipo3: boolean = false; //CENTRO POP
+  eixos: SelectItem[];
 
   municipios: SelectItem[];
   equipamentos: SelectItem[];
@@ -46,25 +47,20 @@ export class MPInspecoesComponent {
     });
 
     this.equipamentos = [];
-    /*this.equipamentos.push({label: 'CRAS', value: 'CRAS'});
-    this.equipamentos.push({label: 'CRAS BARRA', value: 'CRAS BARRA'});
-    this.equipamentos.push({label: 'CRAS SÃO GONÇALO', value: 'CRAS SÃO GONÇALO'});
-    this.equipamentos.push({label: 'CRAS RIO', value: 'CRAS RIO'});*/
-
 
   }
 
   selectTipo(i: number) {
     if (i === 1) {
-      this.tipo1 = !this.tipo1;
+      this.crasSelected = !this.crasSelected;
       this.preencheMunicipios();
       return;
     } else if (i === 2) {
-      this.tipo2 = !this.tipo2;
+      this.creasSelected = !this.creasSelected;
       this.preencheMunicipios();
       return;
     } else {
-      this.tipo3 = !this.tipo3;
+      this.centropopSelected = !this.centropopSelected;
       this.preencheMunicipios();
       return;
     }
@@ -643,19 +639,19 @@ export class MPInspecoesComponent {
     this.selectedEquipamentos = [];
     let municipiosAux = [];
 
-    if (this.tipo1 === true) {
+    if (this.crasSelected === true) {
       for (let i = 1; i < this.crases.length; i++) {
         municipiosAux.push(this.crases[i]);
       }
     }
 
-    if (this.tipo2 === true) {
+    if (this.creasSelected === true) {
       for (let i = 1; i < this.creases.length; i++) {
         municipiosAux.push(this.creases[i]);
       }
     }
 
-    if (this.tipo3 === true) {
+    if (this.centropopSelected === true) {
       for (let i = 1; i < this.centrosPOP.length; i++) {
         municipiosAux.push(this.centrosPOP[i]);
       }
@@ -670,7 +666,7 @@ export class MPInspecoesComponent {
     this.selectedEquipamentos = [];
     let equipamentosAux = [];
 
-    if (this.tipo1 === true) {
+    if (this.crasSelected === true) {
       for (let i = 1; i < this.crases.length; i++) {
         for(let j = 0;j < this.selectedMunicipios.length;j++) {
           if(this.selectedMunicipios[j] === this.crases[i][0]) {
@@ -680,7 +676,7 @@ export class MPInspecoesComponent {
       }
     }
 
-    if (this.tipo2 === true) {
+    if (this.creasSelected === true) {
       for (let i = 1; i < this.creases.length; i++) {
         for(let j = 0;j < this.selectedMunicipios.length;j++) {
           if(this.selectedMunicipios[j] === this.creases[i][0]) {
@@ -690,7 +686,7 @@ export class MPInspecoesComponent {
       }
     }
 
-    if (this.tipo3 === true) {
+    if (this.centropopSelected === true) {
       for (let i = 1; i < this.centrosPOP.length; i++) {
         for(let j = 0;j < this.selectedMunicipios.length;j++) {
           if(this.selectedMunicipios[j] === this.centrosPOP[i][0]) {
