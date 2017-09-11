@@ -5,7 +5,7 @@
   </div>
 
   <div class="row">
-    <div class="col-12">
+    <div>
       <div class="row t-padding">
         <span class="titulo">Busca de Inspeções no Observatório SUAS</span>
       </div>
@@ -17,13 +17,13 @@
           <div class="card-block">
             <div class="col-12">
               <div class="row">
-                <div class="col-xl-2 col-md-3" style="padding-left: 0rem">
+                <div class="col-xl-2 col-md-3" style="padding-left: 0.8rem">
                   <div class="row">Início</div>
                   <div class="row">
                     <p-calendar [(ngModel)]="date1" id="date1" [locale]="pt" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2016" [showIcon]="true" ></p-calendar>
                   </div>
                 </div>
-                <div class="col-xl-2 col-md-4" style="padding-left: 0rem">
+                <div class="col-xl-2 col-md-3" style="padding-left: 0.8rem">
                   <div class="row">Fim</div>
                   <div class="row">
                     <p-calendar [(ngModel)]="date2" id="date2" [locale]="pt" dateFormat="mm.yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2017" [showIcon]="true"></p-calendar>
@@ -32,8 +32,8 @@
 
                 <!-- botões selected-->
 
-                <div class="col-xl-4 col-md-5 col-4" >
-                  <div class="row">
+                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-4 col-4" >
+                  <div class="row" style="padding-left: .6rem">
                     Tipo de inspeção
                   </div>
                   <div class="row" id="select-inspecao">

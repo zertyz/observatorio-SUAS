@@ -1,13 +1,15 @@
 option{
   color: black !important;
 }
-
+.subtitulo{
+  padding-left: 2rem;
+}
 //BEGIN SWITCH
 
 .button-switch {
   position: relative;
   display: inline-block;
-  width: 8.1rem;
+  width:7.41465rem;
   height: 2rem;
   padding: 0.2rem;
 }
@@ -17,7 +19,7 @@ option{
 .slider {
   color: #057fb2;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-align: center;
   width: auto;
   border: 2px solid #a3afbf;
