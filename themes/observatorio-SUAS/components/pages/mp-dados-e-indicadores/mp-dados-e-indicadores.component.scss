@@ -74,7 +74,6 @@ hr {
 }
 
 
-
 @media(max-width:799px){
   div.borderedL { border-color: transparent;}
   div.borderedR { border-color: transparent;}
@@ -104,7 +103,7 @@ hr {
 .nome-eq{
   color: rgb(5, 127, 178);
   font-family: 'Roboto-Condensed';
-  font-size: 1vw;
+  font-size: 1rem;
   line-height: 90%;
   font-weight: bold;
   margin-top: 4%;
@@ -140,7 +139,7 @@ p{
   font-size: .666rem;
 }
 .text-min{
-  font-size: .8vw;
+  font-size: .8rem;
   font-family: Roboto-Condensed-Light;
   text-align: left;
 }
@@ -163,7 +162,7 @@ p{
 
 .keyword{
   font-family: 'Roboto-Condensed';
-  font-size: 0.8vw;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
@@ -174,7 +173,7 @@ p{
 }
 
 .valor-tabela{
-  font-size: 1vw;
+  font-size: 1rem;
   padding-left: 1rem;
   font-family: Roboto-Condensed;
   text-align: right;
@@ -236,6 +235,9 @@ p{
   }
   .subtitulo{
     font-size: .95vw;
+ }
+  .text-min{
+    font-size-adjust: 1rem;
   }
 }
 @media (max-width: 990px) {
