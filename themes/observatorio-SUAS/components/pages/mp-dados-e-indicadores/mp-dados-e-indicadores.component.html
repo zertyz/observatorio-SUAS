@@ -244,45 +244,43 @@
             <thead>
             <tr>
               <th></th>
-              <th class="barra keyword" style="text-align: right">PSE</th>
-              <th class="barra keyword" style="text-align: right">PSB</th>
-              <th class="keyword" style="text-align: right">Outros Programas</th>
+              <th class="barra keyword" style="text-align: right">Recursos</th>
+              <th class="barra keyword" style="text-align: right">Utilizado</th>
+              <th class="keyword" style="text-align: right">Não utilizado</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-              <th class="barraH keyword" scope="row" style="text-align: right">Recursos</th>
+              <th class="barraH keyword" scope="row" style="text-align: right; padding-top: 1.8vw">PSE</th>
               <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseTotal)}}</td>
-              <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbTotal)}}</td>
-              <td class="barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
-            </tr>
-            <tr>
-              <th class="barraH keyword" scope="row" style="text-align: right">Utilizado</th>
               <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseUtilizado)}}</td>
-              <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbUtilizado)}}</td>
-              <td class="barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
-            </tr>
-            <tr>
-              <th scope="row" class="keyword" style="text-align: right"> Não utilizado<br/>(bloqueio ou omissão)</th>
-              <td class="barra vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado)}}
-
-                <div style="width: 6vw; height:6vw; padding-top: 1.5vw">
+              <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado)}}</td>
+              <td class="vt-red">
+                <div style="width: 3vw; height:3vw; padding-top: 0.5vw">
                   <p-chart type="doughnut" [data]="graficoPSE" [options]="opcoesGraficos"></p-chart>
                 </div>
                 <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.pseTotal, indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado)}}</div>
-
               </td>
-              <td class="barra vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado)}}
-
-                <div style="width: 6vw; height:6vw; padding-top: 1.5vw">
+            </tr>
+            <tr>
+              <th class="barraH keyword" scope="row" style="text-align: right; padding-top: 1.8vw">PSB</th>
+              <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbTotal)}}</td>
+              <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbUtilizado)}}</td>
+              <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado)}}</td>
+              <td class="vt-red">
+                <div style="width: 3vw; height:3vw; padding-top: 0.5vw">
                   <p-chart type="doughnut"  [data]="graficoPSB" [options]="opcoesGraficos"></p-chart>
                 </div>
                 <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.psbTotal, indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado)}}</div>
-
               </td>
-              <td class="vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}
-
-                <div style="width: 6vw; height:6vw; padding-top: 1.5vw">
+            </tr>
+            <tr>
+              <th scope="row" class="keyword" style="text-align: right; padding-top: 1.8vw">Outros Programas<br/>(bloqueio ou omissão)</th>
+              <td class="barra vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
+              <td class="barra vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
+              <td class="vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
+              <td class="vt-red">
+                <div style="width: 3vw; height:3vw; padding-top: 0.5vw">
                   <p-chart type="doughnut"  [data]="graficoProgramas" [options]="opcoesGraficos"></p-chart>
                 </div>
                 <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.programasTotal, indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</div>
