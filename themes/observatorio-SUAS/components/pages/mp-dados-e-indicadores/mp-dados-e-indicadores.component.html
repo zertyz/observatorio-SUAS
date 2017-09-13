@@ -2,7 +2,7 @@
   <div class="row">
   </div>
   <div class="row">
-    <div class="col-xl-6 col-lg-12 col-xs-12">
+    <div class="col-xl-6 col-lg-12 ">
       <div class="row t-padding">
         <span class="titulo">Escolha um Município</span>
       </div>
@@ -21,38 +21,38 @@
             </div>
             <div class="col-6">
               <div class="row">
-                <div class="col-lg-7 col-7">
+                <div class="col-7">
                   <h3 class="hw3">Município</h3>
                   <h1 class="hw1"><b>{{municipio}}</b></h1>
                   <div class="row">
-                    <div class="col-lg-6 col-6">
+                    <div class="col-6">
                       <div class="keyword">População</div>
                       <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
                     </div>
-                    <div class="col-lg-6 col-6 ">
+                    <div class="col-6 ">
                       <div class="keyword">IDH</div>
                       <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-5 col-5">
+                <div class="col-5">
                   <img src="./assets/img/municipios/{{municipio}}.png" style="width: 60%">
                 </div>
               </div>
               <div class="row" style="padding-top: 1.5rem">
-                <div class="col-lg-2 col-2">
+                <div class="col-2">
                   <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Município.png">
                 </div>
-                <div class="col-lg-10 col-10">
+                <div class="col-10">
                   <div class="keyword">Prefeito</div>
                   <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
                 </div>
               </div>
               <div class="row" style="padding-top: 1.5rem">
-                <div class="col-lg-2 col-2">
+                <div class="col-2">
                   <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Bolsa_Familia_2.png">
                 </div>
-                <div class="col-lg-10 col-10">
+                <div class="col-10">
                   <div class="keyword">Secretário de Assistência Social</div>
                   <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
                 </div>
@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <div class="col-xl-6 col-lg-12 xs-12">
+    <div class="col-xl-6 col-lg-12 ">
      <div class="row t-padding">
       <span class="titulo">Equipamentos</span>
      </div>
@@ -99,13 +99,13 @@
 
           <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]">
             <ng-template let-equipamento pTemplate="item"; >
-              <div class="col-xl-6 col-md-6 col-sm-12 col-12 barraH barra padding_equipamentos" >
+              <div class="col-md-6 col-sm-12 barraH barra padding_equipamentos" >
                 <div class="row">
-                  <div class="col-md-3 col-3"style="padding-top: .6rem">
+                  <div class="col-3"style="padding-top: .6rem">
                     <img class="center" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
                     <div class="pw-3" >Porte {{equipamento.porte}}</div>
                   </div>
-                  <div class="col-md-9 col-9">
+                  <div class=" col-9">
                     <div class="row">
                       <div class="nome-eq">{{equipamento.nome}}</div>
                     </div>
@@ -126,7 +126,7 @@
   </div>
 
     <div class="row">
-      <div class="col-xl-6 col-lg-12 col-xs-12">
+      <div class="col-xl-6 col-lg-12">
         <div class="row t-padding">
           <span class="titulo">Indicadores Sociais</span>
         </div>
@@ -135,7 +135,7 @@
           <div class="card-block">
         <div class="container">
           <div class="row">
-            <div class="col-xl-8">
+            <div class="col-md-8 col-12">
                 <tbody>
                 <tr>
                   <td class="barraH" width="10%"><img class="img-fluid2" src="./assets/img/icones/ícones_Tela_2_Bolsa_Familia.png" align="left"></td>
@@ -189,7 +189,7 @@
                 </tr>
                 </tbody>
             </div>
-            <div class=" col-xl-4 col-lg-12 col-md-12">
+            <div class=" col-md-4 col-12">
               <tr>
                 <td>
                   <img class="img-fluid" src="./assets/img/icones/beneficios-programas.png">
@@ -232,7 +232,7 @@
           </div>
         </div>
       </div>
-    <div class="col-xl-6 col-lg-12 col-xs-12">
+    <div class="col-xl-6 col-lg-12">
       <div class="row t-padding">
         <span class="titulo">Indicadores orçamentários</span>
       </div>
