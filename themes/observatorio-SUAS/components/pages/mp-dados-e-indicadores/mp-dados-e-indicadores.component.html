@@ -74,28 +74,41 @@
       <div class="card">
         <div class="card-block">
           <div class="row" style="padding-bottom: .8vw">
-            <div class="col-1"></div>
-            <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-             <div  class="keyword" style="text-align: right">TOTAL</div>
-             <div class="vt-blue">{{contagemEquipamentos}}</div>
-            </div>
-            <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-             <div  class="keyword" style="text-align: right">% DO ESTADO</div>
-             <div class="vt-porcentagem">{{formataPercent(totalEquipamentosEstado, contagemEquipamentos)}}</div>
-            </div>
-            <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-             <div  class="keyword" style="text-align: right">CRAS</div>
-              <div class="vt-blue">{{contagemCRAS}}</div>
-            </div>
-            <div class="col-2 barra" style="border-top: 1px solid #2e3a48">
-              <div  class="keyword" style="text-align: right">CREAS</div>
-              <div class="vt-blue">{{contagemCREAS}}</div>
-            </div>
-            <div class="col-2" style="border-top: 1px solid #2e3a48">
-              <div  class="keyword" style="text-align: right">CENTRO POP</div>
-              <div class="vt-blue">{{contagemCentrosPOP}}</div>
-            </div>
-            <div class="col-1"></div>
+            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+              <input type="radio" name="radio" (click)="selectTipo(1)" id="check1">
+              <span class="slider">
+                <div  class="keyword" style="text-align: right">TOTAL</div>
+                <div class="vt-blue">{{contagemEquipamentos}}</div>
+              </span>
+            </label>
+            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+              <!--<input type="radio" name="radio" (click)="selectTipo(2)" id="check2">-->
+              <span class="slider">
+                <div  class="keyword" style="text-align: right">% DO ESTADO</div>
+                <div class="vt-porcentagem">{{formataPercent(totalEquipamentosEstado, contagemEquipamentos)}}</div>
+              </span>
+            </label>
+            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+              <input type="radio" name="radio" (click)="selectTipo(3)" id="check3">
+              <span class="slider">
+                <div  class="keyword" style="text-align: right">CRAS</div>
+                <div class="vt-blue">{{contagemCRAS}}</div>
+              </span>
+            </label>
+            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+              <input type="radio" name="radio" (click)="selectTipo(4)" id="check4">
+              <span class="slider">
+                <div  class="keyword" style="text-align: right">CREAS</div>
+                <div class="vt-blue">{{contagemCREAS}}</div>
+              </span>
+            </label>
+            <label class="button-switch" style="border-top: 1px solid #2e3a48">
+              <input type="radio" name="radio" (click)="selectTipo(5)" id="check5">
+              <span class="slider">
+                <div  class="keyword" style="text-align: right">CENTRO POP</div>
+                <div class="vt-blue">{{contagemCentrosPOP}}</div>
+              </span>
+            </label>
           </div>
 
           <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]">
