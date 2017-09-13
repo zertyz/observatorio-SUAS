@@ -37,6 +37,14 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   graficoPSB: any;
   graficoProgramas: any;
 
+  // Seleção feita pelos botões de Tipo de inspeção
+  totalSelected: boolean = true;
+  porcentagemEstadoSelected: boolean = false;
+  crasSelected: boolean = false;
+  creasSelected: boolean = false;
+  centropopSelected: boolean = false;
+  // Seleção feita pelos botões de Tipo de inspeção
+
   opcoesGraficos: any = {
     legend: {
       display: false
@@ -340,7 +348,19 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     return (decimalDelimiter ? num.replace('.', decimalDelimiter) : num).replace(new RegExp(result, 'g'), '$&' + chunkDelimiter);
   }
 
+  selectTipo(i: number) {
+    if (i === 1) {
 
+    }else if (i === 2) {
+
+    }else if (i === 3) {
+
+    } else if (i === 4) {
+
+    } else {
+
+    }
+  }
 
 
   // TODO cópia de indicadores_orcamentarios_20170810.json até que se implemente como serviço
