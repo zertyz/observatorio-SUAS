@@ -29,15 +29,15 @@ export class MPAjudaComponent {
   private httpPostUrl: string              = '/eci/api/Aux/mailHLP';  // depende do proxy configurado em 'project.config.ts'
   private subscriptionErrorMessage: string = null;
 
-  public isPosting:  boolean = false;
+  /*public isPosting:  boolean = false;
   public subscribed: boolean = false;
   public nome:      string  = "";
   public email:      string  = "";
-  public mensagem:      string  = "";
+  public mensagem:      string  = "";*/
 
   constructor(private injector: Injector, public routerext: RouterExtensions) {}
 
-  subscribe() {
+  /*subscribe() {
     this.isPosting  = true;
     let postData: SubscriptionHttpPostObject = {
       nome:     this.nome,
@@ -57,7 +57,7 @@ export class MPAjudaComponent {
     this.isPosting  = false;
     this.subscribed = true;
     let body = res.json();
-    return body.data || {};
+    // return body.data || {};
   }
 
   public handleHttpError(error: Response | any) {
@@ -65,6 +65,6 @@ export class MPAjudaComponent {
     this.subscribed               = false;
     this.subscriptionErrorMessage = (error.message || error);
     return Observable.throw(error.message || error);
-  }
+  }*/
 
 }
