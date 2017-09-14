@@ -112,7 +112,7 @@
 
           <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]" emptyMessage="Esse Município não possui nenhum {{equipamentoSelecionado}}">
             <ng-template let-equipamento pTemplate="item" let-i="index";>
-              <div *ngIf="i%4 == 0" class="col-md-6 col-sm-12 barraH barra padding_equipamentos" >
+              <div *ngIf="i%4 == 0" class="col-md-6 col-sm-12 barraH border-equipamento padding_equipamentos"> 
                 <div class="row">
                   <div class="col-3"style="padding-top: .6rem">
                     <img class="center" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
@@ -146,7 +146,7 @@
                   </div>
                 </div>
               </div>
-              <div *ngIf="i%4 == 2" class="col-md-6 col-sm-12 barra padding_equipamentos" >
+              <div *ngIf="i%4 == 2" class="col-md-6 col-sm-12 border-equipamento padding_equipamentos" >
                 <div class="row">
                   <div class="col-3"style="padding-top: .6rem">
                     <img class="center" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
@@ -211,7 +211,7 @@
                     <p class="keyword"> % da população</p>
                     <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasVulneraveisMunicipio}}%</div>
                   </td>
-                  <td class="barraH barra"style="padding-right: 3%" width="25%">
+                  <td class="barraH border-equipamento"style="padding-right: 3%" width="25%">
                     <p class="keyword"> % do estado</p>
                     <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasVulneraveisEstado}}%</div>
                   </td>
@@ -226,7 +226,7 @@
                     <p class="keyword"> % da população</p>
                     <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
                   </td>
-                  <td class="barraH barra"></td>
+                  <td class="barraH border-equipamento"></td>
 
                 </tr>
                 <tr>
@@ -239,7 +239,7 @@
                     <p class="keyword">% cobertura</p>
                     <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaCobertura}}%</div>
                   </td>
-                  <td class="barra barraH">
+                  <td class="border-equipamento barraH">
                   </td>
                 </tr>
                 <tr>
@@ -249,7 +249,7 @@
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nBeneficiariosPrestacaoContinuada}}</div>
                   </td>
                   <td></td>
-                  <td class="barra"></td>
+                  <td></td>
                 </tr>
                 </tbody>
             </div>
