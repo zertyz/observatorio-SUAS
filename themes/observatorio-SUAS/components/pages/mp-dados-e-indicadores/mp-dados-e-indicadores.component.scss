@@ -11,12 +11,22 @@
 .slider {
   width: 8vw;
   height: 3.5rem;
-  padding: 20 20px;
+  padding: 0 20px;
   display: block;
   cursor: pointer;
   background-color: white;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+span.slider:hover {
+  color: white;
+  background-color: #057fb2;
+  border-color: #057fb2;
+
+    .vt-blue{
+      color:white;
+    }
 }
 
 input:checked + .slider {
