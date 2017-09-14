@@ -58,6 +58,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.municipio = params['municipio'] || 'Rio de Janeiro';
       this.computaCampos();
+      document.getElementById('check1').click();
     });
 
   }
