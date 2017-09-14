@@ -73,13 +73,8 @@
       <div class="card">
         <div class="card-block">
           <div class="row" style="padding-bottom: .8vw">
-<<<<<<< HEAD
-            <label class="button-switch barra"  style="margin-left:auto; border-top: 1px solid #2e3a48">
-              <input type="radio" name="radio" (click)="selectTipo(1)" id="check1">
-=======
-            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+           <label class="button-switch barra"  style="margin-left:auto; border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" checked="checked" (click)="selectTipo('total')" id="check1">
->>>>>>> 94d02f3113edb3bd5d13499b48f334d5390d7d48
               <span class="slider">
                 <div  class="keyword" style="text-align: right">TOTAL</div>
                 <div class="vt-blue">{{contagemEquipamentos}}</div>
@@ -106,13 +101,8 @@
                 <div class="vt-blue">{{contagemCREAS}}</div>
               </span>
             </label>
-<<<<<<< HEAD
             <label class="button-switch" style="margin-right:auto; border-top: 1px solid #2e3a48">
-              <input type="radio" name="radio" (click)="selectTipo(5)" id="check5">
-=======
-            <label class="button-switch" style="border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" (click)="selectTipo('centroPop')" id="check5">
->>>>>>> 94d02f3113edb3bd5d13499b48f334d5390d7d48
               <span class="slider">
                 <div  class="keyword" style="text-align: right">CENTRO POP</div>
                 <div class="vt-blue">{{contagemCentrosPOP}}</div>
@@ -120,11 +110,6 @@
             </label>
           </div>
 
-<<<<<<< HEAD
-          <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]">
-            <ng-template let-equipamento pTemplate="item"; >
-              <div class="col-sm-6 col-12 barraH barra padding_equipamentos" >
-=======
           <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]" emptyMessage="Esse Município não possui nenhum {{equipamentoSelecionado}}">
             <ng-template let-equipamento pTemplate="item" let-i="index";>
               <div *ngIf="i%4 == 0" class="col-md-6 col-sm-12 barraH barra padding_equipamentos" >
@@ -179,7 +164,6 @@
                 </div>
               </div>
               <div *ngIf="i%4 == 3" class="col-md-6 col-sm-12 padding_equipamentos" >
->>>>>>> 94d02f3113edb3bd5d13499b48f334d5390d7d48
                 <div class="row">
                   <div class="col-3"style="padding-top: .6rem">
                     <img class="center" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
