@@ -19,6 +19,16 @@
   transition: .3s;
 }
 
+span.slider:hover {
+  color: white;
+  background-color: #057fb2;
+  border-color: #057fb2;
+
+  .vt-blue{
+    color:white;
+  }
+}
+
 input:checked + .slider {
   color: white;
   background-color: #057fb2;
