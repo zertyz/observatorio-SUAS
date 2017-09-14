@@ -348,17 +348,94 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     return (decimalDelimiter ? num.replace('.', decimalDelimiter) : num).replace(new RegExp(result, 'g'), '$&' + chunkDelimiter);
   }
 
-  selectTipo(i: number) {
-    if (i === 1) {
+  selectTipo(i: string) {
+    if (i === 'cras') {
+      this.equipamentos = this.crases
+        .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(cras => {
+          return {
+            tipo:      'CRAS',
+            municipio: cras[0],
+            porte:     cras[1],
+            nome:      cras[2].toLocaleUpperCase(),
+            endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+            cep:       cras[8],
+            telefone:  cras[9],
+          };
+        });
 
-    }else if (i === 2) {
+    }else if (i === 'creas') {
+      this.equipamentos = this.creases
+        .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(creas => {
+          return {
+            tipo:      'CREAS',
+            municipio: creas[0],
+            porte:     creas[1],
+            nome:      creas[2].toLocaleUpperCase(),
+            endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+            cep:       creas[8],
+            telefone:  creas[9],
+          };
+        });
 
-    }else if (i === 3) {
-
-    } else if (i === 4) {
+    }else if (i === 'centroPop') {
+      this.equipamentos = this.centrosPOP
+        .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(centroPOP => {
+          return {
+            tipo:      'CENTRO POP',
+            municipio: centroPOP[0],
+            porte:     centroPOP[1],
+            nome:      centroPOP[2].toLocaleUpperCase(),
+            endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+            cep:       centroPOP[8],
+            telefone:  centroPOP[9],
+          };
+        });
 
     } else {
+      this.equipamentos = this.crases
+        .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(cras => {
+          return {
+            tipo:      'CRAS',
+            municipio: cras[0],
+            porte:     cras[1],
+            nome:      cras[2].toLocaleUpperCase(),
+            endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+            cep:       cras[8],
+            telefone:  cras[9],
+          };
+        });
 
+      this.equipamentos = this.equipamentos.concat(this.creases
+        .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(creas => {
+          return {
+            tipo:      'CREAS',
+            municipio: creas[0],
+            porte:     creas[1],
+            nome:      creas[2].toLocaleUpperCase(),
+            endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+            cep:       creas[8],
+            telefone:  creas[9],
+          };
+        }));
+
+      this.equipamentos = this.equipamentos.concat(this.centrosPOP
+        .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(centroPOP => {
+          return {
+            tipo:      'CENTRO POP',
+            municipio: centroPOP[0],
+            porte:     centroPOP[1],
+            nome:      centroPOP[2].toLocaleUpperCase(),
+            endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+            cep:       centroPOP[8],
+            telefone:  centroPOP[9],
+          };
+        }));
     }
   }
 
