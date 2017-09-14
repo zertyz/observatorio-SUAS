@@ -74,7 +74,7 @@
         <div class="card-block">
           <div class="row" style="padding-bottom: .8vw">
             <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
-              <input type="radio" name="radio" (click)="selectTipo('total')" id="check1">
+              <input type="radio" name="radio" checked="checked" (click)="selectTipo('total')" id="check1">
               <span class="slider">
                 <div  class="keyword" style="text-align: right">TOTAL</div>
                 <div class="vt-blue">{{contagemEquipamentos}}</div>
@@ -110,7 +110,7 @@
             </label>
           </div>
 
-          <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]">
+          <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]" emptyMessage="Esse Município não possui nenhum {{equipamentoSelecionado}}">
             <ng-template let-equipamento pTemplate="item"; >
               <div class="col-md-6 col-sm-12 barraH barra padding_equipamentos" >
                 <div class="row">

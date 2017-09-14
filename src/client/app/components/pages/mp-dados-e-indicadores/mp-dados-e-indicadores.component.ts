@@ -22,6 +22,9 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   // parâmetros
   municipio: string;
 
+  //Campo selecionado nos botões no menu de equipamentos
+  equipamentoSelecionado: string = 'equipamento';
+
   // campos computados
   indicadoresOrcamentariosDoMunicipio: IIndicadoresOrcamentarios;
   indicadoresSociaisDoMunicipio:       IIndicadoresSociais;
@@ -36,14 +39,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   graficoPSE: any;
   graficoPSB: any;
   graficoProgramas: any;
-
-  // Seleção feita pelos botões de Tipo de inspeção
-  totalSelected: boolean = true;
-  porcentagemEstadoSelected: boolean = false;
-  crasSelected: boolean = false;
-  creasSelected: boolean = false;
-  centropopSelected: boolean = false;
-  // Seleção feita pelos botões de Tipo de inspeção
 
   opcoesGraficos: any = {
     legend: {
@@ -351,6 +346,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   selectTipo(i: string) {
     //preenche os equipamentos apenas com os CRASes do municipio
     if (i === 'cras') {
+      this.equipamentoSelecionado = 'CRAS';
       this.equipamentos = this.crases
         .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
         .map(cras => {
@@ -366,6 +362,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         });
 
     }else if (i === 'creas') {
+      this.equipamentoSelecionado = 'CREAS';
       //preenche os equipamentos apenas com os CREASes do municipio
       this.equipamentos = this.creases
         .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
@@ -382,6 +379,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         });
 
     }else if (i === 'centroPop') {
+      this.equipamentoSelecionado = 'Centro Pop';
       //preenche os equipamentos apenas com os Centros Pop do municipio
       this.equipamentos = this.centrosPOP
         .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
@@ -398,6 +396,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         });
 
     } else {
+      this.equipamentoSelecionado = 'equipamento';
       //preenche os equipamentos com todos os equipamentos, CRASes, CREASes e Centros Pop
       this.equipamentos = this.crases
         .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
