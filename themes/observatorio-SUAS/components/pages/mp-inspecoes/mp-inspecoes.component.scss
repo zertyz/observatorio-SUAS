@@ -33,6 +33,12 @@ option{
   transition: .5s;
 }
 
+.slider:hover {
+  color: white;
+  background-color: #057fb2;
+  border-color: #057fb2;
+}
+
 input:checked + .slider {
   color: white;
   background-color: #057fb2;
