@@ -9,9 +9,9 @@
 .button-switch input {display:none;}
 
 .slider {
-  width: 9rem;
+  width: 8vw;
   height: 3.5rem;
-  padding: 0 20px;
+  padding: 20 20px;
   display: block;
   cursor: pointer;
   background-color: white;
@@ -195,7 +195,7 @@ p{
 
 .keyword{
   font-family: 'Roboto-Condensed';
-  font-size: 1rem;
+  font-size: .965rem;
   text-transform: uppercase;
 }
 
@@ -264,7 +264,7 @@ p{
 
 @media(max-width:1470px){
   .keyword{
-    font-size: 1vw;
+    font-size: 1em;
   }
   .subtitulo{
     font-size: .95vw;
@@ -282,7 +282,7 @@ p{
 
   }
   .keyword{
-  font-size: 1em;
+  font-size: .95em;
   }
   .text-min{
     font-size: .8rem;
@@ -317,4 +317,10 @@ p{
   .pw-3{
     font-size: .5rem;
   }
+
+@media(min-width: 577px) and (max-width: 1200px) {
+.slider{
+  width: 17.4vw
+}
+
 }

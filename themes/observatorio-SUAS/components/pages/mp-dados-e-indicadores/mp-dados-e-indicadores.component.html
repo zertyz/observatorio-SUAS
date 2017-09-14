@@ -73,7 +73,7 @@
       <div class="card">
         <div class="card-block">
           <div class="row" style="padding-bottom: .8vw">
-            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+            <label class="button-switch barra"  style="margin-left:auto; border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" (click)="selectTipo(1)" id="check1">
               <span class="slider">
                 <div  class="keyword" style="text-align: right">TOTAL</div>
@@ -101,7 +101,7 @@
                 <div class="vt-blue">{{contagemCREAS}}</div>
               </span>
             </label>
-            <label class="button-switch" style="border-top: 1px solid #2e3a48">
+            <label class="button-switch" style="margin-right:auto; border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" (click)="selectTipo(5)" id="check5">
               <span class="slider">
                 <div  class="keyword" style="text-align: right">CENTRO POP</div>
@@ -112,7 +112,7 @@
 
           <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]">
             <ng-template let-equipamento pTemplate="item"; >
-              <div class="col-md-6 col-sm-12 barraH barra padding_equipamentos" >
+              <div class="col-sm-6 col-12 barraH barra padding_equipamentos" >
                 <div class="row">
                   <div class="col-3"style="padding-top: .6rem">
                     <img class="center" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
