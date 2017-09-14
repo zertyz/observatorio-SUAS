@@ -72,6 +72,8 @@ div.borderedL{
   line-height: 34px;
   box-shadow: none!important;
   outline: none!important;
+  padding: 0.344rem 1rem;
+  white-space: nowrap;
 }
 
 .btn-primario:hover {
@@ -91,6 +93,8 @@ div.borderedL{
   cursor: pointer;
   display: block;
   background-color: white !important;
+  padding: 0.344rem 1rem;
+  white-space: nowrap;
 }
 
 .btn-secundario:hover {
