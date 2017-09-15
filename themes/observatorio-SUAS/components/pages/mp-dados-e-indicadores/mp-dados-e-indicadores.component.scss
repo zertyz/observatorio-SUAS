@@ -53,6 +53,9 @@ input:checked + .slider {
   width:2.8rem;
   padding-top: 1vw;
 }
+div.col-md-4{
+  padding-left: 0;
+}
 .center{
   display: block;
   margin-left: auto;
@@ -87,6 +90,9 @@ input:checked + .slider {
   padding-bottom: 2%;
   align-self: center !important;
 }
+.border-equipamento1{
+  border-right: 1px solid #2e3a48;
+}
 .info {
   font-family: 'Roboto-Condensed-Light';
   font-size: 100%;
@@ -101,6 +107,7 @@ input:checked + .slider {
 }
 .p-2{
   font-size: .9rem;
+  padding: 0!important;
 }
 .padding_equipamentos{
   padding-right: 12px;
@@ -149,7 +156,7 @@ hr {
 .nome-eq{
   color: rgb(5, 127, 178);
   font-family: 'Roboto-Condensed';
-  font-size: 1rem;
+  font-size: .9rem;
   line-height: 90%;
   font-weight: bold;
   margin-top: 4%;
@@ -160,7 +167,7 @@ hr {
   color: inherit;
   overflow:auto;
   margin-top: 1rem;
- 
+
   background-color: #FFFFFF;
   padding: 0!important;
 }
@@ -182,14 +189,26 @@ p{
   font-family: Roboto-Condensed-Light;
   text-align: left;
   padding-right:0;
-  font-size: .666rem;
+  font-size: .696rem;
+  min-width: 6.2rem;
+
+
+
+
+
+
 }
 .text-min{
   font-size: .8rem;
   font-family: Roboto-Condensed-Light;
   text-align: left;
+  padding-right: .5rem;
 }
+.keyword1{
+  @extend .keyword;
+  white-space: nowrap;
 
+}
 .header{
   @extend .h-text;
   padding: 0 0 !important;
@@ -270,24 +289,25 @@ p{
   font-family: Roboto-Condensed;
 }
 .pw-3{
-  font-size: 0.7vw;
+  font-size: 0.56vw;
   text-align: center;
   text-transform: uppercase;
 }
 
-@media(min-width:1000px) and (max-width:1540px){
+@media(min-width:1200px) and (max-width:1540px){
   .keyword{
-    font-size: 1em;
+    font-size: .8em;
   }
   .subtitulo{
     font-size: .90vw;
     white-space: nowrap;
  }
   .text-min{
-    font-size-adjust: 1rem;
+    font-size-adjust: inherit;
+
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   .titulo{
   font-size: 1.3em;
   }
@@ -324,15 +344,14 @@ p{
     border:none ;
   }
 }
-@media (max-width: 991px) {
-  .nome-eq{
-    font-size: .8rem;
-  }
-  .pw-3{
-    font-size: .5rem;
-  }
+.nome-eq{
+  font-size: .8rem;
 }
-@media(min-width: 577px) and (max-width: 1200px) {
+.pw-3{
+  font-size: .5rem;
+}
+
+@media(min-width: 577px) and (max-width: 1199px) {
 .slider{
   width: 17.4vw;
 }
@@ -342,9 +361,42 @@ p{
     border-bottom:  1px solid #2e3a48;
     border-right: none!important;
   }
+  .border-equipamento1{
+    border-right: none!important;
+  }
+  div.col-12{
+    margin-bottom: 2rem;
+  }
 }
 @media(min-width:992px){
   .card{
-    height: 25rem; 
+    height: 25rem;
+  }
+}
+@media(min-width:768px)and(max-width: 1200px){
+  .p-2{
+    padding: .7rem!important;
+  }
+}
+@media(max-width: 577px) {
+  .slider{
+    width: 16.7vw;
+  }
+  .keyword1{
+    white-space: nowrap;
+  }
+  .keyword{
+    font-size: .67rem;
+  }
+  .vt-blue{
+    white-space: nowrap;
+    font-size: .9rem;
+  }
+  .vt-porcentagem{
+    white-space: nowrap;
+    font-size: .9rem;
+  }
+  .subtitulo{
+    font-size: .79rem;
   }
 }

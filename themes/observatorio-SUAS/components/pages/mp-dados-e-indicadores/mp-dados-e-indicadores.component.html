@@ -26,11 +26,11 @@
                   <h1 class="hw1"><b>{{municipio}}</b></h1>
                   <div class="row">
                     <div class="col-6">
-                      <div class="keyword">População</div>
+                      <div class="keyword1">População</div>
                       <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
                     </div>
                     <div class="col-6 ">
-                      <div class="keyword">IDH</div>
+                      <div class="keyword1">IDH</div>
                       <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
                     </div>
                   </div>
@@ -76,43 +76,43 @@
            <label class="button-switch barra"  style="margin-left:auto; border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" checked="checked" (click)="selectTipo('total')" id="check1">
               <span class="slider">
-                <div  class="keyword" style="text-align: right">TOTAL</div>
+                <div  class="keyword1" style="text-align: right">TOTAL</div>
                 <div class="vt-blue">{{contagemEquipamentos}}</div>
               </span>
             </label>
             <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
               <!--<input type="radio" name="radio" (click)="selectTipo(2)" id="check2">-->
               <div class="slider">
-                <div  class="keyword" style="text-align: right">% DO ESTADO</div>
+                <div  class="keyword1" style="text-align: right">% DO ESTADO</div>
                 <div class="vt-porcentagem">{{formataPercent(totalEquipamentosEstado, contagemEquipamentos)}}</div>
               </div>
             </label>
             <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" (click)="selectTipo('cras')" id="check3">
               <span class="slider">
-                <div  class="keyword" style="text-align: right">CRAS</div>
+                <div  class="keyword1" style="text-align: right">CRAS</div>
                 <div class="vt-blue">{{contagemCRAS}}</div>
               </span>
             </label>
             <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" (click)="selectTipo('creas')" id="check4">
               <span class="slider">
-                <div  class="keyword" style="text-align: right">CREAS</div>
+                <div  class="keyword1" style="text-align: right">CREAS</div>
                 <div class="vt-blue">{{contagemCREAS}}</div>
               </span>
             </label>
             <label class="button-switch" style="margin-right:auto; border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" (click)="selectTipo('centroPop')" id="check5">
               <span class="slider">
-                <div  class="keyword" style="text-align: right">CENTRO POP</div>
+                <div  class="keyword1" style="text-align: right">CENTRO POP</div>
                 <div class="vt-blue">{{contagemCentrosPOP}}</div>
               </span>
             </label>
           </div>
 
-          <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4" [rowsPerPageOptions]="[2,4]" emptyMessage="Esse Município não possui nenhum {{equipamentoSelecionado}}">
+          <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4"  emptyMessage="Esse Município não possui nenhum {{equipamentoSelecionado}}">
             <ng-template let-equipamento pTemplate="item" let-i="index";>
-              <div *ngIf="i%4 == 0" class="col-md-6 col-sm-12 barraH border-equipamento padding_equipamentos"> 
+              <div *ngIf="i%4 == 0" class="col-md-6 col-sm-12 barraH border-equipamento padding_equipamentos">
                 <div class="row">
                   <div class="col-3"style="padding-top: .6rem">
                     <img class="center" src="./assets/img/icones/ícones_Tela_2_CRAS.png">
@@ -249,7 +249,7 @@
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nBeneficiariosPrestacaoContinuada}}</div>
                   </td>
                   <td></td>
-                  <td></td>
+                  <td class="border-equipamento1"></td>
                 </tr>
                 </tbody>
             </div>
@@ -263,7 +263,7 @@
                   <p class="p-text">Indica se Programas Eventuais de Benefícios são disponibilizados para o ente</p>
                 </td>
                 <td>
-                  <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoBeneficiosEventuais?'sim':'nao')+'.png'" width="50vw">
+                  <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoBeneficiosEventuais?'sim':'nao')+'.png'" width="50rem">
                 </td>
               </tr>
               <tr>
@@ -275,7 +275,7 @@
                   <p class="p-text">Indica se o serviço de Proteção e Atenção Integral à Família está implantado no ente </p>
                 </td>
                 <td>
-                  <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAIF?'sim':'nao')+'.png'" width="50vw">
+                  <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAIF?'sim':'nao')+'.png'" width="50rem">
                 </td>
               </tr>
               <tr>
@@ -287,7 +287,7 @@
                   <p class="p-text">Indica se o serviço de Proteção e Atenção Especializado à Família está implantado no ente </p>
                 </td>
                 <td>
-                  <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAEF?'sim':'nao')+'.png'" width="50vw">
+                  <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAEF?'sim':'nao')+'.png'" width="50">
                 </td>
               </tr>
             </div>
