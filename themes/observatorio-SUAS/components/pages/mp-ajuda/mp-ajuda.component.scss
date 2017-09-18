@@ -23,6 +23,7 @@
 .titulo{
   white-space: nowrap;
 }
+
 .btn-secundario{
   width: 5em;
   line-height: 20px;
@@ -37,6 +38,11 @@ div > a{
 .img-fluid{
   width: 6rem;
   height: auto;
+}
+@media (min-width: 992px) {
+  .card#altura{
+    min-height:93.4vh!important;
+  }
 }
 @media (max-width: 991px) {
   input{

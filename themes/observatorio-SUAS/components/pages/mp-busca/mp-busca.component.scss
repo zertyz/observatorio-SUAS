@@ -36,6 +36,8 @@
   line-height: 1.3rem;
   margin-top: 1.2rem;
 }
-.titulo{
-  font-size: 1rem;
+@media (max-width: 991px) {
+  .titulo{
+    font-size: 1rem;
+  }
 }
