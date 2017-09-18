@@ -1071,7 +1071,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "programasTotal": 70009.05
     },
     {
-      "municipio": "Parati",
+      "municipio": "Paraty",
       "pseUtilizado": 25840.00,
       "pseNaoUtilizado": 170751.80,
       "pseTotal": 196591.80,
@@ -2003,8 +2003,8 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ["Paracambi", "Pequeno II", "CRAS V - JARDIM NOVA ERA", "Rua", "dos Lírios", "285", "", "Jardim Nova Era", "26600000", "(21)3693126"],
     ["Paraíba do Sul", "Pequeno II", "CRAS - CENTRO", "Avenida", "Marechal Castelo Branco", "940", "", "Centro", "25850000", "(24)2263114"],
     ["Paraíba do Sul", "Pequeno II", "CRAS - VILA SALUTARIS", "Rua", "Heinz G Weill", "36", "Fundos", "VILA SALUTARIS", "25850000", "(24)2263386"],
-    ["Parati", "Pequeno II", "CRAS RURAL", "Avenida", "Roberto da Silveira/A", "2203", "C", "Vila Colonial", "23970000", "(24)3371861"],
-    ["Parati", "Pequeno II", "CRAS CENTRAL - 33038006703", "Avenida", "Av. Roberto da Silveira", "2302", "BR 101", "Vila Colonial", "23970000", "(24)3371861"],
+    ["Paraty", "Pequeno II", "CRAS RURAL", "Avenida", "Roberto da Silveira/A", "2203", "C", "Vila Colonial", "23970000", "(24)3371861"],
+    ["Paraty", "Pequeno II", "CRAS CENTRAL - 33038006703", "Avenida", "Av. Roberto da Silveira", "2302", "BR 101", "Vila Colonial", "23970000", "(24)3371861"],
     ["Paty do Alferes", "Pequeno II", "CRAS Avelar", "Rua", "Dr. Manoel Vieira Muniz", "11", "", "Avelar", "26980000", "(24)2487118"],
     ["Paty do Alferes", "Pequeno II", "CRAS CENTRO", "Rua", "DO RECANTO", "46", "", "CENTRO", "26950000", "(24)2485272"],
     ["Petrópolis", "Grande", "CRAS POSSE", "Estrada", "União e Indústria", "32965", "Praça corta Rio", "Posse", "25770470", "(24)2259136"],
