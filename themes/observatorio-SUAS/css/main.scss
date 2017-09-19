@@ -35,6 +35,9 @@ div.borderedL{
   font-size: 0.95rem;
   line-height: 80%;
   padding-left: 1rem;
+  display: block;
+  line-height: inherit;
+
 }
 
 .t-padding{
@@ -45,7 +48,7 @@ div.borderedL{
 .card{
   color: inherit;
   background-color: white;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   width: 100%;

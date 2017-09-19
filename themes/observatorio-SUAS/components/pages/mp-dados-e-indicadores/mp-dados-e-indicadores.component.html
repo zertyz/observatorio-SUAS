@@ -17,10 +17,10 @@
       <div class="card">
         <div class="card-block">
           <div class="row">
-            <div class="col-6">
+            <div class="col-sm-6">
               <mp-mapa-interativo  style="width: 100%; padding-right: 1rem" estado = "rj" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
             </div>
-            <div class="col-6">
+            <div class="col-sm-6">
               <div class="row">
                 <div class="col-7">
                   <h3 class="hw3">Município</h3>
@@ -325,7 +325,7 @@
               <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseUtilizado)}}</td>
               <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado)}}</td>
               <td class="barraH vt-red">
-                <div style="width: 3vw; height:3vw; padding-top: 0.5vw">
+                <div class="height-graphic">
                   <p-chart type="doughnut" [data]="graficoPSE" [options]="opcoesGraficos"></p-chart>
                 </div>
                 <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.pseTotal, indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado)}}</div>
@@ -337,7 +337,7 @@
               <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbUtilizado)}}</td>
               <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado)}}</td>
               <td class="barraH vt-red">
-                <div style="width: 3vw; height:3vw; padding-top: 0.5vw">
+                <div class="height-graphic">
                   <p-chart type="doughnut"  [data]="graficoPSB" [options]="opcoesGraficos"></p-chart>
                 </div>
                 <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.psbTotal, indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado)}}</div>
@@ -349,7 +349,7 @@
               <td class="barra vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
               <td class="vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
               <td class="vt-red">
-                <div style="width: 3vw; height:3vw; padding-top: 0.5vw">
+                <div class="height-graphic">
                   <p-chart type="doughnut"  [data]="graficoProgramas" [options]="opcoesGraficos"></p-chart>
                 </div>
                 <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.programasTotal, indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</div>

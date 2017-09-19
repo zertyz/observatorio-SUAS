@@ -12,6 +12,7 @@
   width: 8vw;
   height: 3.5rem;
   padding: 0 20px;
+  padding-left: inherit;
   display: block;
   cursor: pointer;
   background-color: white;
@@ -125,7 +126,17 @@ hr {
   position: inherit;
   bottom: 1%;
 }
+.col-6{
+  max-width:none!important; ;
+}
+:host/deep/{
+  canvas{
+    width: 3vw!important;
+    height: 3vw !important;
+    padding-top: 0.5vw!important;
+  }
 
+}
 
 @media(max-width:799px){
   div.borderedL { border-color: transparent;}
@@ -224,7 +235,6 @@ p{
 .span{
   height: 0.1rem;
 }
-
 .keyword{
   font-family: 'Roboto-Condensed';
   font-size: .965rem;
@@ -233,7 +243,7 @@ p{
 
 .numero-destacado{
   @extend .nome-pessoal;
-  font-size: 1.6vw;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -281,7 +291,7 @@ p{
   color: rgb(5, 127, 178);
 }
 .hw1{
-  font-size: 1.7vw;
+  font-size: .9em;
   font-family: Roboto-Condensed;
 }
 .h-text{
@@ -301,7 +311,6 @@ p{
   .subtitulo{
     font-size: .90vw;
     white-space: nowrap;
-    padding-bottom: 10px;
     display: table;
  }
   .text-min {
@@ -314,11 +323,11 @@ p{
   font-size: 1.3em;
   }
   .subtitulo{
-   font-size: .9em;
-    display:contents;
+    display:initial;
     padding-left: 0rem;
 
   }
+
   .keyword{
   font-size: .95em;
   }
@@ -338,7 +347,7 @@ p{
   padding-left: 1.5em;
   }
   .valor-tabela{
-    font-size: 1.2em;
+    font-size: .9em;
   }
 }
 :host/deep/{
@@ -411,7 +420,5 @@ p{
     white-space: nowrap;
     font-size: .9rem;
   }
-  .subtitulo{
-    font-size: .79rem;
-  }
+
 }
