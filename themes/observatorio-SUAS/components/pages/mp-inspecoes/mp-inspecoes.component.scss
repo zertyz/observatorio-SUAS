@@ -58,7 +58,10 @@ input:checked + .slider {
   .ui-inputtext{
     width: 9.4rem;
   }
-
+.row{
+  margin-left: -8px!important ;
+  margin-right: -10px!important;
+}
   .ui-multiselect .ui-multiselect-label-container{
     max-width: 19rem;
     min-width: 19rem;

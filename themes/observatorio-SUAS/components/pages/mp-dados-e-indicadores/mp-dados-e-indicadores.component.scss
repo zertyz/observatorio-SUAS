@@ -126,8 +126,10 @@ hr {
   position: inherit;
   bottom: 1%;
 }
-.col-6{
-  max-width:none!important; ;
+
+.hw1{
+  font-size: 1.683em;
+  font-family: Roboto-Condensed;
 }
 :host/deep/{
   canvas{
@@ -243,7 +245,7 @@ p{
 
 .numero-destacado{
   @extend .nome-pessoal;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -290,10 +292,7 @@ p{
   @extend .vt-bold;//Diferente dos outros VTs
   color: rgb(5, 127, 178);
 }
-.hw1{
-  font-size: .9em;
-  font-family: Roboto-Condensed;
-}
+
 .h-text{
   font-size: 1.14vw;
   font-family: Roboto-Condensed;
@@ -306,7 +305,7 @@ p{
 
 @media(min-width:1200px) {
   .keyword{
-    font-size: .8em;
+    font-size: .86em;
   }
   .subtitulo{
     font-size: .90vw;
@@ -316,7 +315,9 @@ p{
   .text-min {
     font-size-adjust: inherit;
   }
-
+.card{
+    height: 25rem;
+  }
 }
 @media (max-width: 991px) {
   .titulo{
@@ -383,11 +384,13 @@ p{
   div.col-12{
     margin-bottom: 2rem;
   }
-}
-@media(min-width:992px){
-  .card{
-    height: 25rem;
+  .hw1{
+  font-size: 1.483em;
   }
+}
+
+@media(min-width:992px){
+  
   span:after {
     content: ' ';
     display: block;
@@ -397,14 +400,15 @@ p{
     display: block;
   }
 }
-@media(min-width:768px)and(max-width: 1200px){
+@media(min-width:768px)and(max-width: 1199px){
   .p-2{
     padding: .7rem!important;
   }
+  
 }
 @media(max-width: 577px) {
   .slider{
-    width: 16.7vw;
+    width: 16.2vw;
   }
   .keyword1{
     white-space: nowrap;
