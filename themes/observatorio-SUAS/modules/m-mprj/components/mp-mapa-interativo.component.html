@@ -7,6 +7,12 @@
   </ul>
 </div>
 
+<div *ngIf="dropdown" class="middle-text">
+  <select #selectElem (change)="selectOption(selectElem.value)">
+      <option *ngFor="let municipio of municipios; let i = index;" [value]="i">{{municipio.nome}}</option>
+  </select>
+</div>
+
 <div>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:odm="http://product.corel.com/CGS/11/cddns/" xml:space="preserve" width="95%" height="100%" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd"
      viewBox="0 0 271000 194640">

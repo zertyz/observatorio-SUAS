@@ -46,6 +46,7 @@ export class MPMapaInterativoComponent {
   @Input() preSelecionados:     string[] = [];
   @Input() selectedRedirection: string   = '';
   @Input() debug:               boolean  = false;
+  @Input() dropdown:            boolean  = false;
 
   //municipios    = [];
   selecionados = [];
@@ -93,6 +94,10 @@ export class MPMapaInterativoComponent {
   }
   estaSelecionado(i: number) {
     return this.selecionados.indexOf(i) >= 0;
+  }
+
+  selectOption(municipio: number):void {
+    this.clicked(municipio);
   }
 
   municipios = [
