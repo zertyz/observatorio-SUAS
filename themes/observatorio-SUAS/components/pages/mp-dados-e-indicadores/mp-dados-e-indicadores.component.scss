@@ -190,12 +190,11 @@ hr {
 }
 
 p{
-  padding-right: none;
   padding-left: 1rem;
   line-height: initial;
   padding-top: 5px;
   font-family: Roboto-Condensed;
-  text-align: right;
+  text-align: center;
 }
 
 .p-text{
@@ -390,7 +389,7 @@ p{
 }
 
 @media(min-width:992px){
-  
+
   span:after {
     content: ' ';
     display: block;
@@ -404,7 +403,7 @@ p{
   .p-2{
     padding: .7rem!important;
   }
-  
+
 }
 @media(max-width: 577px) {
   .slider{
