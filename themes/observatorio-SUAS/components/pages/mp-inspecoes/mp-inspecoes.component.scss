@@ -9,7 +9,7 @@ option{
 .button-switch {
   position: relative;
   display: inline-block;
-  width:7.41465rem;
+  width:6.6rem;
   height: 2rem;
   padding: 0.2rem;
 }
@@ -25,7 +25,6 @@ option{
   border: 2px solid #a3afbf;
   border-radius: 5px;
   line-height: 34px;
-  padding: 0 20px;
   display: block;
   cursor: pointer;
   background-color: white;
@@ -59,12 +58,12 @@ input:checked + .slider {
     width: 9.4rem;
   }
 .row{
-  margin-left: -8px!important ;
-  margin-right: -10px!important;
+  margin-right: 0px!important ;
+
 }
   .ui-multiselect .ui-multiselect-label-container{
-    max-width: 19rem;
-    min-width: 19rem;
+    max-width: 100%;
+    min-width: 19.8rem;
   }
 
   .ui-multiselect-items-wrapper{
@@ -92,9 +91,9 @@ input:checked + .slider {
   }
 
   :host /deep/ {
-    .ui-multiselect {
-      max-width: 12rem;
-      min-width: 12rem;
+    .ui-multiselect .ui-multiselect-label-container {
+      max-width: 100%;
+      min-width: 13rem;
     }
   }
 }
