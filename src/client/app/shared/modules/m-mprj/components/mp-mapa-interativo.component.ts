@@ -48,15 +48,17 @@ export class MPMapaInterativoComponent {
   @Input() debug:               boolean  = false;
   @Input() dropdown:            boolean  = false;
 
-  //municipios    = [];
-  selecionados = [];
-  municipioHover   = '';
-  municipioClicado = '';
+  selecionados    : number[] = [];
+  municipioHover  : string   = '';
+  municipioClicado: string   = '';
 
   //constructor(private geoService: WorldMapService) {}
   //municipios = this.geoService.getCountries();
 
-  constructor(public routerext: RouterExtensions) {}
+  constructor(public routerext: RouterExtensions) {
+    // sorted array for the select
+    this.municipiosOrdenados = this.municipios.sort((e1, e2) => e1.nome > e2.nome ? 1 : -1);
+  }
 
   ngOnChanges() {
     // marca os municípios pré-selecionados
@@ -68,6 +70,10 @@ export class MPMapaInterativoComponent {
         }
       }
     }
+    // single-select ?
+    if (this.selecionados.length == 1) {
+      this.municipioClicado = this.municipios[this.selecionados[0]].nome;
+    }
   }
 
   clicked(i: number) {
@@ -75,7 +81,7 @@ export class MPMapaInterativoComponent {
 
     // single-select behaviour
     if (this.selectedRedirection != '') {
-      this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', this.municipioClicado)]);
+      this.singleSelect(this.municipioClicado);
       return ;
     }
 
@@ -96,11 +102,12 @@ export class MPMapaInterativoComponent {
     return this.selecionados.indexOf(i) >= 0;
   }
 
-  selectOption(municipio: number):void {
-    this.clicked(municipio);
+  singleSelect(nomeMunicipio: string):void {
+    this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', nomeMunicipio)]);
   }
 
-  municipios = [
+  municipiosOrdenados: any[];
+  municipios: any[] = [
     {
       nome: 'Itatiaia',
       path: 'M19971 119812l105 -349 838 -664 210 -803 943 -559 139 -698 594 -280 1921 -733 419 419 629 -244 488 593 1188 -629 174 559 70 280 -384 209 -140 350 35 942 -419 559 -628 0 -699 -524 -1641 1083 -803 1013 698 384 210 384 419 0 7019 2759 -35 419 489 628 -35 420 -524 209 -70 279 210 140 -1641 349 -245 175 -35 768 -978 70 -384 594 -978 174 -1222 943 -454 524 -35 559 699 209 105 315 -1153 803 -245 1012 -628 455 -629 -140 -803 -734 -594 -1257 -69 -1257 558 -629 210 -1082 -2899 -7997z'},
