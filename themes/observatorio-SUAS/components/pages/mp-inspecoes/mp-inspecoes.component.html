@@ -5,34 +5,33 @@
   </div>
 
   <div class="row">
-    <div>
+    <div class="col-12">
       <div class="row t-padding">
         <span class="titulo">Busca de Inspeções no Observatório SUAS</span>
       </div>
       <div class="row">
         <span class="subtitulo">Indique os critérios de  busca para visualizar os dados das inspeções realizadas nos equipamentos</span>
       </div>
-
+      <div class="row">
         <div class="card">
           <div class="card-block">
-            <div class="col-12">
-              <div class="row">
-                <div class="col-xl-2 col-md-3" style="padding-left: 0.8rem">
-                  <div class="row">Início</div>
-                  <div class="row">
+            <div class="row" >
+                <div class="col-xl-2 col-md-3 col-sm-6" style="padding-left: 0.8rem">
+                  <div class="row" id="data1">Início</div>
+                  <div class="row" id="data">
                     <p-calendar [(ngModel)]="date1" id="date1" [locale]="pt" dateFormat="mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2016" [showIcon]="true" ></p-calendar>
                   </div>
                 </div>
-                <div class="col-xl-2 col-md-3" style="padding-left: 0.8rem">
-                  <div class="row">Fim</div>
-                  <div class="row">
+                <div class="col-xl-2 col-md-3 col-sm-6" style="padding-left: 0.8rem">
+                  <div class="row" id="data3">Fim</div>
+                  <div class="row" id="data4">
                     <p-calendar [(ngModel)]="date2" id="date2" [locale]="pt" dateFormat="mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2017" [showIcon]="true"></p-calendar>
                   </div>
                 </div>
 
                 <!-- botões selected-->
 
-                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-4 col-4" >
+                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12" >
                   <div class="row" style="padding-left: .6rem">
                     Tipo de inspeção
                   </div>
@@ -90,17 +89,18 @@
 
                 <!-- botões-->
 
-                <div class=" col-xl-2 col-lg-2 col-md-3" id="btn-1">
+                <div class=" col-xl-2 col-lg-2 col-md-3 col-sm-12" id="btn-1">
                   <button class="btn-secundario" (click)="limpar()">Limpar Critérios</button>
                 </div>
-                <div class="col-xl-2  col-lg-2 col-md-2" id="btn-2">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12" id="btn-2">
                   <button class="btn-primario">Buscar</button>
                 </div>
-             </div>
-            </div>
+
 
           </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 
@@ -113,6 +113,7 @@
         <span class="subtitulo">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico.</span>
       </div>
       <div class="row">
+
         <div class="card" style="height: 25rem">
           <div class="card-block">
             <div class="col-12">

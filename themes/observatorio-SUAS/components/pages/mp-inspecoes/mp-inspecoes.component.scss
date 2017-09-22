@@ -2,7 +2,19 @@ option{
   color: black !important;
 }
 .subtitulo{
-  padding-left: 2rem;
+  padding-left: 1.2rem;
+}
+.row #data{
+  padding-left: .9rem;
+}
+.row #data1{
+  padding-left: .85rem;
+}
+.row #data3{
+  padding-left: .8rem;
+}
+.row #data4{
+  padding-left: .8rem;
 }
 //BEGIN SWITCH
 
@@ -57,18 +69,20 @@ input:checked + .slider {
   .ui-inputtext{
     width: 9.4rem;
   }
-.row{
+#inspecao{
   margin-right: 0px!important ;
 
 }
   .ui-multiselect .ui-multiselect-label-container{
     max-width: 100%;
-    min-width: 19.8rem;
   }
 
   .ui-multiselect-items-wrapper{
     overflow: auto;
     max-height: 4.7rem;
+  }
+ div.ui-corner-all{
+    width:100%;
   }
  .form-group label:hover{
     color: #374c61;
@@ -90,12 +104,6 @@ input:checked + .slider {
     width: 8rem;
   }
 
-  :host /deep/ {
-    .ui-multiselect .ui-multiselect-label-container {
-      max-width: 100%;
-      min-width: 13rem;
-    }
-  }
 }
 @media (max-width: 1068px) {
   .titulo{
@@ -133,4 +141,27 @@ input:checked + .slider {
   .btn-secundario {
     width: 11.5rem;
   }
+}
+
+@media (max-width: 767px) {
+  .btn-secundario {
+
+    width: 100% !important;
+  }
+button.btn-primario {
+  width: 100%!important;
+}
+
+.button-switch {
+  width: 32.8%;
+}
+
+:host /deep/ {
+  .ui-inputtext {
+    width: 36vw;
+    }
+  }
+ .row{
+   padding-left: .5rem;
+ }
 }
