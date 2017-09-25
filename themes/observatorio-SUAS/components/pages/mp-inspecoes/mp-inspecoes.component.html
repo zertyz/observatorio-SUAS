@@ -38,17 +38,17 @@
                   <div class="row" id="select-inspecao">
 
                     <label class="button-switch">
-                      <input type="checkbox" name="check1" (click)="selectTipo(1)" id="check1">
+                      <input type="radio" name="radio" (click)="selectTipo('icras')" id="check1" >
                       <span class="slider">CRAS</span>
                     </label>
 
                     <label class="button-switch">
-                      <input type="checkbox" name="check2" (click)="selectTipo(2)" id="check2">
+                      <input type="radio" name="radio" (click)="selectTipo('icreas')" id="check2">
                       <span class="slider">CREAS</span>
                     </label>
 
                     <label class="button-switch">
-                      <input type="checkbox" name="check3" (click)="selectTipo(3)" id="check3">
+                      <input type="radio" name="radio" (click)="selectTipo('icentropop')" id="check3">
                       <span class="slider">CENTRO POP</span>
                     </label>
                   </div>
@@ -79,11 +79,9 @@
                   <div class="row" style="padding-left: 15px">
                     Equipamento
                   </div>
-                  <div class="form-group">
-                    <div [ngSwitch]="crasSelected===false && creasSelected===false && centropopSelected===false" class="form-group">
+                  <div class="form-group" [ngSwitch]="crasSelected===false && creasSelected===false && centropopSelected===false">
                       <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="equipamentos"  defaultLabel="Selecionar Equipamento" maxSelectedLabels= "2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
                       <p-multiSelect *ngSwitchCase="false" [options]="equipamentos" [(ngModel)]="selectedEquipamentos" defaultLabel="Selecionar Equipamento" maxSelectedLabels="2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
-                    </div>
                   </div>
                 </div>
 

@@ -50,17 +50,26 @@ export class MPInspecoesComponent {
 
   }
 
-  selectTipo(i: number) {
-    if (i === 1) {
-      this.crasSelected = !this.crasSelected;
+  selectTipo(i: string) {
+
+    if (i === 'icras') {
+      this.crasSelected = true;
+      this.creasSelected = false;
+      this.centropopSelected = false;
       this.preencheMunicipios();
       return;
-    } else if (i === 2) {
-      this.creasSelected = !this.creasSelected;
+    }
+    else if (i === 'icreas') {
+      this.crasSelected = false;
+      this.creasSelected = true;
+      this.centropopSelected = false;
       this.preencheMunicipios();
       return;
-    } else {
-      this.centropopSelected = !this.centropopSelected;
+    }
+    else if ('icentropop') {
+      this.crasSelected = false;
+      this.creasSelected = false;
+      this.centropopSelected = true;
       this.preencheMunicipios();
       return;
     }
