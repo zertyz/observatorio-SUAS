@@ -628,17 +628,13 @@ export class MPInspecoesComponent {
 
   limpar() {
 
-    if(this.crasSelected) {
-      document.getElementById('check1').click();
-    }
+    let ele = document.getElementsByName('radio');
+    for(var i=0;i<ele.length;i++)
+      ele[i].checked = false;
 
-    if(this.creasSelected) {
-      document.getElementById('check2').click();
-    }
-
-    if(this.centropopSelected) {
-      document.getElementById('check3').click();
-    }
+    this.crasSelected = false;
+    this.creasSelected = false;
+    this.centropopSelected = false;
 
     this.eixos = [];
     this.municipios= [];
