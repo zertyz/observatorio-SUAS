@@ -38,13 +38,13 @@ export class MPInspecoesComponent {
 
   constructor(private injector: Injector, public routerext: RouterExtensions) {
 
-    this.eixos = [];
+    /*this.eixos = [];
     this.eixos.push({label: 'EQUIPE TÉCNICA', value: 'EQUIPE TÉCNICA'});
     this.eixos.push({label: 'INFRAESTRUTURA', value: 'INFRAESTRUTURA'});
     this.eixos.push({
       label: 'PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS',
       value: 'PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS'
-    });
+    });*/
 
     this.equipamentos = [];
 
@@ -57,6 +57,7 @@ export class MPInspecoesComponent {
       this.creasSelected = false;
       this.centropopSelected = false;
       this.preencheMunicipios();
+      this.preencheEixos();
       return;
     }
     else if (i === 'icreas') {
@@ -64,6 +65,7 @@ export class MPInspecoesComponent {
       this.creasSelected = true;
       this.centropopSelected = false;
       this.preencheMunicipios();
+      this.preencheEixos();
       return;
     }
     else if ('icentropop') {
@@ -71,6 +73,7 @@ export class MPInspecoesComponent {
       this.creasSelected = false;
       this.centropopSelected = true;
       this.preencheMunicipios();
+      this.preencheEixos();
       return;
     }
   }
@@ -626,6 +629,45 @@ export class MPInspecoesComponent {
     ['Paraíba do Sul', 'Pequeno II', 'CREAS - Alair Pedroso', 'Rua', 'Visconde do Rio Novo', '149', 'Casa', 'Centro', '25850-000', '(24) 2263-5554'],
   ];
 
+  //retirado do arquivo "/home/common/Documentos/Dados Observatorio Suas/eixos dos formulários.xlsx"
+  eixosPorEquipamento: string[][] = [
+    ['Eixo', 'Equipamento'],
+    ['Identificação', 'cras'],
+    ['Fiscalização', 'cras'],
+    ['Usuários', 'cras'],
+    ['Trabalho social essencial à unidade', 'cras'],
+    ['Recursos humanos', 'cras'],
+    ['Ambiente físico', 'cras'],
+    ['Recursos materiais', 'cras'],
+    ['Condições e formas de acesso', 'cras'],
+    ['Articulação', 'cras'],
+    ['Análise Técnica', 'cras'],
+    ['Identificação', 'creas'],
+    ['Fiscalização', 'creas'],
+    ['Usuários', 'creas'],
+    ['Trabalho social essencial à unidade', 'creas'],
+    ['Serviço de proteção e atendimento especializado a família e indivíduos ', 'creas'],
+    ['Serviço especializado em abordagem social', 'creas'],
+    ['Serviço de proteção social adolescente em cumprimento de medida social educativa de liberdade assistida (LA) e de prestação de serviços à comunidade (PSC) Condições e formas de acesso', 'creas'],
+    ['Serviço de proteção social especial para pessoas com deficiência, idosos e suas famílias ', 'creas'],
+    ['Recursos humanos', 'creas'],
+    ['Ambiente físico', 'creas'],
+    ['Recursos materiais', 'creas'],
+    ['Condições e formas de acesso', 'creas'],
+    ['Articulação', 'creas'],
+    ['Análise técnica', 'creas'],
+    ['Identificação', 'centroPop'],
+    ['Fiscalização', 'centroPop'],
+    ['Usuários', 'centroPop'],
+    ['Trabalho social essencial à unidade', 'centroPop'],
+    ['Serviço especializado para pessoa em situação de rua', 'centroPop'],
+    ['Serviço especializado em abordagem social', 'centroPop'],
+    ['Recursos humanos', 'centroPop'],
+    ['Ambiente físico', 'centroPop'],
+    ['Recursos materiais', 'centroPop'],
+    ['Análise técnica', 'centroPop'],
+  ];
+
   limpar() {
 
     let ele = document.getElementsByName('radio');
@@ -658,6 +700,32 @@ export class MPInspecoesComponent {
     return dadosPrimeNG;
   }
 
+  preencheEixos() {
+
+    this.eixos = [];
+    this.selectedEixos = [];
+
+    if (this.crasSelected === true) {
+      for (let i = 1; i < this.eixosPorEquipamento.length; i++) {
+        if(this.eixosPorEquipamento[i][1] === 'cras') {
+          this.eixos.push({label: this.eixosPorEquipamento[i][0] , value: this.eixosPorEquipamento[i][0]});
+        }
+      }
+    }else if (this.creasSelected === true) {
+      for (let i = 1; i < this.eixosPorEquipamento.length; i++) {
+        if(this.eixosPorEquipamento[i][1] === 'creas') {
+          this.eixos.push({label: this.eixosPorEquipamento[i][0] , value: this.eixosPorEquipamento[i][0]});
+        }
+      }
+    }else if (this.centropopSelected === true) {
+      for (let i = 1; i < this.eixosPorEquipamento.length; i++) {
+        if(this.eixosPorEquipamento[i][1] === 'centroPop') {
+          this.eixos.push({label: this.eixosPorEquipamento[i][0] , value: this.eixosPorEquipamento[i][0]});
+        }
+      }
+    }
+  }
+
   preencheMunicipios() {
 
     this.municipios = [];
@@ -670,15 +738,11 @@ export class MPInspecoesComponent {
       for (let i = 1; i < this.crases.length; i++) {
         municipiosAux.push(this.crases[i]);
       }
-    }
-
-    if (this.creasSelected === true) {
+    }else if (this.creasSelected === true) {
       for (let i = 1; i < this.creases.length; i++) {
         municipiosAux.push(this.creases[i]);
       }
-    }
-
-    if (this.centropopSelected === true) {
+    }else if (this.centropopSelected === true) {
       for (let i = 1; i < this.centrosPOP.length; i++) {
         municipiosAux.push(this.centrosPOP[i]);
       }
@@ -701,9 +765,7 @@ export class MPInspecoesComponent {
           }
         }
       }
-    }
-
-    if (this.creasSelected === true) {
+    }else if (this.creasSelected === true) {
       for (let i = 1; i < this.creases.length; i++) {
         for(let j = 0;j < this.selectedMunicipios.length;j++) {
           if(this.selectedMunicipios[j] === this.creases[i][0]) {
@@ -711,9 +773,7 @@ export class MPInspecoesComponent {
           }
         }
       }
-    }
-
-    if (this.centropopSelected === true) {
+    }else if (this.centropopSelected === true) {
       for (let i = 1; i < this.centrosPOP.length; i++) {
         for(let j = 0;j < this.selectedMunicipios.length;j++) {
           if(this.selectedMunicipios[j] === this.centrosPOP[i][0]) {
