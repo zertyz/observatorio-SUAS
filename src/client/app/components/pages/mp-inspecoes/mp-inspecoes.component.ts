@@ -671,7 +671,7 @@ export class MPInspecoesComponent {
   limpar() {
 
     let ele = document.getElementsByName('radio');
-    for(var i=0;i<ele.length;i++)
+    for(var i= 0; i< ele.length; i++)
       ele[i].checked = false;
 
     this.crasSelected = false;

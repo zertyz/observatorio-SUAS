@@ -66,9 +66,9 @@ input:checked + .slider {
   li > label{
     color: #374c61;
 }
-  .ui-inputtext{
+ /* .ui-inputtext{
     width: 9.4rem;
-  }
+  }*/
 #inspecao{
   margin-right: 0px!important ;
 
@@ -81,8 +81,11 @@ input:checked + .slider {
     overflow: auto;
     max-height: 4.7rem;
   }
- div.ui-corner-all{
+ p-multiSelect > div.ui-corner-all{
     width:100%;
+  }
+  div.ui-multiselect-panel{
+    min-width: 100%;
   }
  .form-group label:hover{
     color: #374c61;
