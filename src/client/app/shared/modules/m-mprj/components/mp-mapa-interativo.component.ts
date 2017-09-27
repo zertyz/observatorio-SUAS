@@ -106,6 +106,11 @@ export class MPMapaInterativoComponent {
     this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', nomeMunicipio)]);
   }
 
+  chamadaEstado() {
+    this.municipioClicado = this.estado;
+    this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', 'Estado')]);
+  }
+
   municipiosOrdenados: any[];
   municipios: any[] = [
     {

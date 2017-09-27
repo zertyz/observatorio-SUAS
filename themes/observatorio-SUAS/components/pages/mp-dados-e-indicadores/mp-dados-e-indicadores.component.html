@@ -18,47 +18,91 @@
         <div class="card-block">
           <div class="row">
             <div class="col-sm-6">
-              <mp-mapa-interativo style="width: 100%; padding-right: 1rem" estado = "rj" [dropdown] = "true" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
+              <mp-mapa-interativo style="width: 100%; padding-right: 1rem" estado = {{estado}} [debug]="true" [dropdown] = "true" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
             </div>
-            <div class="col-sm-6">
-              <div class="row">
-                <div class="col-8">
-                  <h3 class="hw3">Município</h3>
-                  <h1 class="hw1"><b>{{municipio}}</b></h1>
-                  <div class="row">
-                    <div class="col-7">
-                      <div class="keyword1">População</div>
-                      <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
-                    </div>
-                    <div class="col-5 ">
-                      <div class="keyword1">IDH</div>
-                      <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
+
+
+              <div class="col-sm-6" *ngIf="estadoSelected===false">
+                <div class="row">
+                  <div class="col-8">
+                    <h3 class="hw3">Município</h3>
+                    <h1 class="hw1"><b>{{municipio}}</b></h1>
+                    <div class="row">
+                      <div class="col-7">
+                        <div class="keyword1">População</div>
+                        <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
+                      </div>
+                      <div class="col-5 ">
+                        <div class="keyword1">IDH</div>
+                        <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
+                      </div>
                     </div>
                   </div>
+                  <div class="col-4">
+                    <img src="./assets/img/municipios/{{municipio}}.png" style="width: 60%">
+                  </div>
                 </div>
-                <div class="col-4">
-                  <img src="./assets/img/municipios/{{municipio}}.png" style="width: 60%">
+                <div class="row" style="padding-top: 1.5rem">
+                  <div class="col-2">
+                    <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Município.png">
+                  </div>
+                  <div class="col-10">
+                    <div class="keyword">Prefeito</div>
+                    <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
+                  </div>
+                </div>
+                <div class="row" style="padding-top: 1.5rem">
+                  <div class="col-2">
+                    <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Bolsa_Familia_2.png">
+                  </div>
+                  <div class="col-10">
+                    <div class="keyword">Secretário de Assistência Social</div>
+                    <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
+                  </div>
                 </div>
               </div>
-              <div class="row" style="padding-top: 1.5rem">
-                <div class="col-2">
-                  <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Município.png">
+
+              <div class="col-sm-6" *ngIf="estadoSelected">
+                <div class="row">
+                  <div class="col-8">
+                    <h3 class="hw3">Estado</h3>
+                    <h1 class="hw1"><b>{{estado}}</b></h1>
+                    <div class="row">
+                      <div class="col-7">
+                        <div class="keyword1">População</div>
+                        <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
+                      </div>
+                      <div class="col-5 ">
+                        <div class="keyword1">IDH</div>
+                        <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <img src="./assets/img/municipios/{{municipio}}.png" style="width: 60%">
+                  </div>
                 </div>
-                <div class="col-10">
-                  <div class="keyword">Prefeito</div>
-                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
+                <div class="row" style="padding-top: 1.5rem">
+                  <div class="col-2">
+                    <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Município.png">
+                  </div>
+                  <div class="col-10">
+                    <div class="keyword">Governador</div>
+                    <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
+                  </div>
+                </div>
+                <div class="row" style="padding-top: 1.5rem">
+                  <div class="col-2">
+                    <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Bolsa_Familia_2.png">
+                  </div>
+                  <div class="col-10">
+                    <div class="keyword">Secretário de Estado de Ciência, Tecnologia e Desenvolvimento Social</div>
+                    <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
+                  </div>
                 </div>
               </div>
-              <div class="row" style="padding-top: 1.5rem">
-                <div class="col-2">
-                  <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Bolsa_Familia_2.png">
-                </div>
-                <div class="col-10">
-                  <div class="keyword">Secretário de Assistência Social</div>
-                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
-                </div>
-              </div>
-            </div>
+
+
           </div>
         </div>
       </div>
