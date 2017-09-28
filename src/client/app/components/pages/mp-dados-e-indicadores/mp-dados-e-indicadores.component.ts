@@ -143,136 +143,284 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     this.contagemEquipamentos = 0;
     this.equipamentos         = [];
 
-    // computa Centros POP
-    this.equipamentos = this.equipamentos.concat(this.centrosPOP
-      .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-      .map(centroPOP => {
-        this.contagemCentrosPOP++;
-        this.contagemEquipamentos++;
-        return {
-          tipo:      'CENTRO POP',
-          municipio: centroPOP[0],
-          porte:     centroPOP[1],
-          nome:      centroPOP[2].toLocaleUpperCase(),
-          endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
-          cep:       centroPOP[8],
-          telefone:  centroPOP[9],
-        };
-      }));
+    if(this.estadoSelected) {
+      // computa Centros POP
+      this.equipamentos = this.equipamentos.concat(this.centrosPOP
+        .map(centroPOP => {
+          this.contagemCentrosPOP++;
+          this.contagemEquipamentos++;
+          return {
+            tipo:      'CENTRO POP',
+            municipio: centroPOP[0],
+            porte:     centroPOP[1],
+            nome:      centroPOP[2].toLocaleUpperCase(),
+            endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+            cep:       centroPOP[8],
+            telefone:  centroPOP[9],
+          };
+        }));
 
-    // computa CREASes
-    this.equipamentos = this.equipamentos.concat(this.creases
-      .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-      .map(creas => {
-        this.contagemCREAS++;
-        this.contagemEquipamentos++;
-        return {
-          tipo:      'CREAS',
-          municipio: creas[0],
-          porte:     creas[1],
-          nome:      creas[2].toLocaleUpperCase(),
-          endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
-          cep:       creas[8],
-          telefone:  creas[9],
-        };
-      }));
+      this.equipamentos.reverse();
+      this.equipamentos.pop();
+      this.contagemCentrosPOP--;
+      this.contagemEquipamentos--;
+      this.equipamentos.reverse();
 
-    // computa CRASes
-    this.equipamentos = this.equipamentos.concat(this.crases
-      .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-      .map(cras => {
-        this.contagemCRAS++;
-        this.contagemEquipamentos++;
-        return {
-          tipo:      'CRAS',
-          municipio: cras[0],
-          porte:     cras[1],
-          nome:      cras[2].toLocaleUpperCase(),
-          endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
-          cep:       cras[8],
-          telefone:  cras[9],
-        };
-      }));
+      // computa CREASes
+      this.equipamentos = this.equipamentos.concat(this.creases
+        .map(creas => {
+          this.contagemCREAS++;
+          this.contagemEquipamentos++;
+          return {
+            tipo:      'CREAS',
+            municipio: creas[0],
+            porte:     creas[1],
+            nome:      creas[2].toLocaleUpperCase(),
+            endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+            cep:       creas[8],
+            telefone:  creas[9],
+          };
+        }));
 
-    // computa total de equipamentos no estado
-    this.totalEquipamentosEstado = (this.centrosPOP.length-1) + (this.crases.length-1) + (this.creases.length-1);
+      this.equipamentos.reverse();
+      this.equipamentos.pop();
+      this.contagemCREAS--;
+      this.contagemEquipamentos--;
+      this.equipamentos.reverse();
 
-    // computa indicadores sociais
-    this.indicadoresSociaisDoMunicipio = this.indicadoresSociais
-      .filter(indicadoresSociais => indicadoresSociais[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-      .map(indicadoresSociais => {
-        return {
-          municipio:                         indicadoresSociais[0],
-          prefeito:                          indicadoresSociais[1],
-          secretarioAssistenciaSocial:       indicadoresSociais[2],
-          nFamiliasVulneraveis:              indicadoresSociais[10],
-          pFamiliasVulneraveisMunicipio:     indicadoresSociais[11],
-          pFamiliasVulneraveisEstado:        indicadoresSociais[12],
-          nFamiliasBolsaFamilia:             indicadoresSociais[13],
-          pFamiliasBolsaFamiliaMunicipio:    indicadoresSociais[14],
-          pFamiliasBolsaFamiliaCobertura:    indicadoresSociais[15],
-          nFamiliasCadastroUnico:            indicadoresSociais[18],
-          nBeneficiariosPrestacaoContinuada: indicadoresSociais[22],
-          cadUnicoBeneficiosEventuais:       indicadoresSociais[19] == "SIM" ? true : false,
-          cadUnicoPAIF:                      indicadoresSociais[20] == "SIM" ? true : false,
-          cadUnicoPAEF:                      indicadoresSociais[21] == "SIM" ? true : false,
+      // computa CRASes
+      this.equipamentos = this.equipamentos.concat(this.crases
+        .map(cras => {
+          this.contagemCRAS++;
+          this.contagemEquipamentos++;
+          return {
+            tipo:      'CRAS',
+            municipio: cras[0],
+            porte:     cras[1],
+            nome:      cras[2].toLocaleUpperCase(),
+            endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+            cep:       cras[8],
+            telefone:  cras[9],
+          };
+        }));
+
+      this.equipamentos.reverse();
+      this.equipamentos.pop();
+      this.contagemCRAS--;
+      this.contagemEquipamentos--;
+      this.equipamentos.reverse();
+
+      // computa total de equipamentos no estado
+      this.totalEquipamentosEstado = (this.centrosPOP.length-1) + (this.crases.length-1) + (this.creases.length-1);
+
+      // computa indicadores sociais
+      this.indicadoresSociaisDoMunicipio = this.indicadoresSociais
+        .filter(indicadoresSociais => indicadoresSociais[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(indicadoresSociais => {
+          return {
+            municipio:                         indicadoresSociais[0],
+            prefeito:                          indicadoresSociais[1],
+            secretarioAssistenciaSocial:       indicadoresSociais[2],
+            nFamiliasVulneraveis:              indicadoresSociais[10],
+            pFamiliasVulneraveisMunicipio:     indicadoresSociais[11],
+            pFamiliasVulneraveisEstado:        indicadoresSociais[12],
+            nFamiliasBolsaFamilia:             indicadoresSociais[13],
+            pFamiliasBolsaFamiliaMunicipio:    indicadoresSociais[14],
+            pFamiliasBolsaFamiliaCobertura:    indicadoresSociais[15],
+            nFamiliasCadastroUnico:            indicadoresSociais[18],
+            nBeneficiariosPrestacaoContinuada: indicadoresSociais[22],
+            cadUnicoBeneficiosEventuais:       true,
+            cadUnicoPAIF:                      true,
+            cadUnicoPAEF:                      true,
+          };
+        })[0];
+
+      // preenche estrutura de dados dos gráfico PSE
+      this.graficoPSE = {
+        labels: ['Verba Utilizada', 'Verba não utilizada'],
+        datasets: [
+          {
+            data: [this.indicadoresOrcamentariosDoMunicipio.pseUtilizado, this.indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado],
+            backgroundColor: [
+              "#117011",
+              "#660000"
+            ],
+            hoverBackgroundColor: [
+              "#117011",
+              "#660000"
+            ],
+          }
+        ],
       };
-      })[0];
 
+      // preenche estrutura de dados do gráfico PSB
+      this.graficoPSB = {
+        labels: ['Verba Utilizada', 'Verba não utilizada'],
+        datasets: [
+          {
+            data: [this.indicadoresOrcamentariosDoMunicipio.psbUtilizado, this.indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado],
+            backgroundColor: [
+              "#117011",
+              "#660000"
+            ],
+            hoverBackgroundColor: [
+              "#117011",
+              "#660000"
+            ]
+          }
+        ]
+      };
 
-    // preenche estrutura de dados dos gráfico PSE
-    this.graficoPSE = {
-      labels: ['Verba Utilizada', 'Verba não utilizada'],
-      datasets: [
-        {
-          data: [this.indicadoresOrcamentariosDoMunicipio.pseUtilizado, this.indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado],
-          backgroundColor: [
-            "#117011",
-            "#660000"
-          ],
-          hoverBackgroundColor: [
-            "#117011",
-            "#660000"
-          ],
-        }
-      ],
-    };
+      // preenche estrutura de dados do gráfico Programas
+      this.graficoProgramas = {
+        labels: ['Verba Utilizada', 'Verba não utilizada'],
+        datasets: [
+          {
+            data: [this.indicadoresOrcamentariosDoMunicipio.programasUtilizado, this.indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado],
+            backgroundColor: [
+              "#117011",
+              "#660000",
+            ],
+            hoverBackgroundColor: [
+              "#117011",
+              "#660000"
+            ]
+          }
+        ]
+      };
 
-    // preenche estrutura de dados do gráfico PSB
-    this.graficoPSB = {
-      labels: ['Verba Utilizada', 'Verba não utilizada'],
-      datasets: [
-        {
-          data: [this.indicadoresOrcamentariosDoMunicipio.psbUtilizado, this.indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado],
-          backgroundColor: [
-            "#117011",
-            "#660000"
-          ],
-          hoverBackgroundColor: [
-            "#117011",
-            "#660000"
-          ]
-        }
-      ]
-    };
+    }else {
 
-    // preenche estrutura de dados do gráfico Programas
-    this.graficoProgramas = {
-      labels: ['Verba Utilizada', 'Verba não utilizada'],
-      datasets: [
-        {
-          data: [this.indicadoresOrcamentariosDoMunicipio.programasUtilizado, this.indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado],
-          backgroundColor: [
-            "#117011",
-            "#660000",
-          ],
-          hoverBackgroundColor: [
-            "#117011",
-            "#660000"
-          ]
-        }
-      ]
-    };
+      // computa Centros POP
+      this.equipamentos = this.equipamentos.concat(this.centrosPOP
+        .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(centroPOP => {
+          this.contagemCentrosPOP++;
+          this.contagemEquipamentos++;
+          return {
+            tipo:      'CENTRO POP',
+            municipio: centroPOP[0],
+            porte:     centroPOP[1],
+            nome:      centroPOP[2].toLocaleUpperCase(),
+            endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+            cep:       centroPOP[8],
+            telefone:  centroPOP[9],
+          };
+        }));
+
+      // computa CREASes
+      this.equipamentos = this.equipamentos.concat(this.creases
+        .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(creas => {
+          this.contagemCREAS++;
+          this.contagemEquipamentos++;
+          return {
+            tipo:      'CREAS',
+            municipio: creas[0],
+            porte:     creas[1],
+            nome:      creas[2].toLocaleUpperCase(),
+            endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+            cep:       creas[8],
+            telefone:  creas[9],
+          };
+        }));
+
+      // computa CRASes
+      this.equipamentos = this.equipamentos.concat(this.crases
+        .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(cras => {
+          this.contagemCRAS++;
+          this.contagemEquipamentos++;
+          return {
+            tipo:      'CRAS',
+            municipio: cras[0],
+            porte:     cras[1],
+            nome:      cras[2].toLocaleUpperCase(),
+            endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+            cep:       cras[8],
+            telefone:  cras[9],
+          };
+        }));
+
+      // computa total de equipamentos no estado
+      this.totalEquipamentosEstado = (this.centrosPOP.length-1) + (this.crases.length-1) + (this.creases.length-1);
+
+      // computa indicadores sociais
+      this.indicadoresSociaisDoMunicipio = this.indicadoresSociais
+        .filter(indicadoresSociais => indicadoresSociais[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+        .map(indicadoresSociais => {
+          return {
+            municipio:                         indicadoresSociais[0],
+            prefeito:                          indicadoresSociais[1],
+            secretarioAssistenciaSocial:       indicadoresSociais[2],
+            nFamiliasVulneraveis:              indicadoresSociais[10],
+            pFamiliasVulneraveisMunicipio:     indicadoresSociais[11],
+            pFamiliasVulneraveisEstado:        indicadoresSociais[12],
+            nFamiliasBolsaFamilia:             indicadoresSociais[13],
+            pFamiliasBolsaFamiliaMunicipio:    indicadoresSociais[14],
+            pFamiliasBolsaFamiliaCobertura:    indicadoresSociais[15],
+            nFamiliasCadastroUnico:            indicadoresSociais[18],
+            nBeneficiariosPrestacaoContinuada: indicadoresSociais[22],
+            cadUnicoBeneficiosEventuais:       indicadoresSociais[19] == "SIM" ? true : false,
+            cadUnicoPAIF:                      indicadoresSociais[20] == "SIM" ? true : false,
+            cadUnicoPAEF:                      indicadoresSociais[21] == "SIM" ? true : false,
+        };
+        })[0];
+
+      // preenche estrutura de dados dos gráfico PSE
+      this.graficoPSE = {
+        labels: ['Verba Utilizada', 'Verba não utilizada'],
+        datasets: [
+          {
+            data: [this.indicadoresOrcamentariosDoMunicipio.pseUtilizado, this.indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado],
+            backgroundColor: [
+              "#117011",
+              "#660000"
+            ],
+            hoverBackgroundColor: [
+              "#117011",
+              "#660000"
+            ],
+          }
+        ],
+      };
+
+      // preenche estrutura de dados do gráfico PSB
+      this.graficoPSB = {
+        labels: ['Verba Utilizada', 'Verba não utilizada'],
+        datasets: [
+          {
+            data: [this.indicadoresOrcamentariosDoMunicipio.psbUtilizado, this.indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado],
+            backgroundColor: [
+              "#117011",
+              "#660000"
+            ],
+            hoverBackgroundColor: [
+              "#117011",
+              "#660000"
+            ]
+          }
+        ]
+      };
+
+      // preenche estrutura de dados do gráfico Programas
+      this.graficoProgramas = {
+        labels: ['Verba Utilizada', 'Verba não utilizada'],
+        datasets: [
+          {
+            data: [this.indicadoresOrcamentariosDoMunicipio.programasUtilizado, this.indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado],
+            backgroundColor: [
+              "#117011",
+              "#660000",
+            ],
+            hoverBackgroundColor: [
+              "#117011",
+              "#660000"
+            ]
+          }
+        ]
+      };
+    }
 
   }
 
@@ -453,6 +601,18 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   // TODO cópia de indicadores_orcamentarios_20170810.json até que se implemente como serviço
   indicadoresOrcamentarios: IIndicadoresOrcamentarios[] = [
+    {
+      "municipio": "Estado do Rio de Janeiro",
+      "pseUtilizado": 0.00,
+      "pseNaoUtilizado": 0.00,
+      "pseTotal": 0.00,
+      "psbUtilizado": 0.00,
+      "psbNaoUtilizado": -1,
+      "psbTotal": 0.00,
+      "programasUtilizado": 0.00,
+      "programasNaoUtilizado": -1,
+      "programasTotal": 0.00
+    },
     {
       "municipio": "Angra Dos Reis",
       "pseUtilizado": 67500.00,
@@ -1562,6 +1722,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   // TODO cópia de idh_20170810.json até que se implemente como serviço
   idhs: IIDH[] = [
+    {"municipio": "Estado do Rio de Janeiro", "idh": 0.761},
     {"municipio": "Rio de Janeiro", "idh": 0.799},
     {"municipio": "Rio das Ostras", "idh": 0.773},
     {"municipio": "Volta Redonda", "idh": 0.771},
@@ -1657,6 +1818,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   // TODO cópia de populacao_20170810.json até que se implemente como serviço
   populacoes: IPopulacao[] = [
+    {"municipio": "Estado do Rio de Janeiro", "populacao": 16231365},
     {"municipio": "Rio de Janeiro", "populacao": 6476631},
     {"municipio": "São Gonçalo", "populacao": 1038081},
     {"municipio": "Duque de Caxias", "populacao": 882729},
@@ -2394,7 +2556,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ["Varre-sai", "Silvestre José Gorini", "Isabela Louvain Fabri Moraes", "9.720", "0,66", "2", "0", "0", "2", "0,34", "1.352", "13,91", "0,09", "879", "9,04", "101,97", "65,01", "R$ 1.575.692,00", "1.562", "SIM", "SIM", "NÃO", "178", "R$ 166.786,00"],
     ["Vassouras", "Severino Ananias Dias Filho", "Rosa Maria Coelho De Almeida", "34.858", "0,71", "3", "1", "0", "4", "0,68", "3.509", "10,07", "0,25", "1.586", "4,55", "73,49", "45,2", "R$ 2.825.859,00", "3.390", "SIM", "SIM", "SIM", "853", "R$ 792.328,36"],
     ["Volta Redonda", "Elderson Ferreira Da Silva ", "Maycon César Inácio Abrantes", "260.180", "0,77", "33", "1", "1", "35", "5,95", "17.858", "6,86", "1,25", "10.966", "4,21", "115,49", "61,41", "R$ 24.633.994,00", "22.609", "SIM", "SIM", "SIM", "3.439", "R$ 3.199.831,11"],
-    ["ESTADO DO RIO DE JANEIRO", "Luiz Fernando de Souza", "Gustavo Reis Ferreira", "16.231.365", "65,24", "453", "116", "19", "588", "", "1.430.427", "", "", "804.641", "", "", "", "R$ 1.588.104.562,00", "1.560.055", "", "", "", "319.056", "R$ 298.419.232,44"],
+    ["ESTADO DO RIO DE JANEIRO", "Luiz Fernando de Souza", "Gustavo Reis Ferreira", "16.231.365", "0,76", "453", "116", "19", "588", "100", "1.430.427", "", "", "804.641", "", "", "", "R$ 1.588.104.562,00", "1.560.055", "", "", "", "319.056", "R$ 298.419.232,44"],
   ];
 
 }
