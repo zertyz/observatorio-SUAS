@@ -58,20 +58,16 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.municipio = params['municipio'] || 'Estado';
-      if(this.municipio === 'Estado') {
+      this.municipio = params['municipio'] || 'Estado do Rio de Janeiro';
+      if(this.municipio === 'Estado do Rio de Janeiro') {
         this.estadoSelected = true;
-        // this.computaEstado();
+        this.computaCampos();
       }else {
         this.estadoSelected = false;
         this.computaCampos();
       }
       document.getElementById('check1').click();//Equipamento Total
     });
-
-  }
-
-  computaEstado() {
 
   }
 

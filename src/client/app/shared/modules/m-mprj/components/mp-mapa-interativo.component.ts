@@ -48,9 +48,10 @@ export class MPMapaInterativoComponent {
   @Input() debug:               boolean  = false;
   @Input() dropdown:            boolean  = false;
 
-  selecionados    : number[] = [];
-  municipioHover  : string   = '';
-  municipioClicado: string   = '';
+  selecionados    :     number[] = [];
+  municipioHover  :     string   = '';
+  municipioClicado:     string   = '';
+  municipiosOrdenados:  any[];
 
   //constructor(private geoService: WorldMapService) {}
   //municipios = this.geoService.getCountries();
@@ -58,6 +59,13 @@ export class MPMapaInterativoComponent {
   constructor(public routerext: RouterExtensions) {
     // sorted array for the select
     this.municipiosOrdenados = this.municipios.sort((e1, e2) => e1.nome > e2.nome ? 1 : -1);
+    this.municipiosOrdenados.reverse();
+    this.municipiosOrdenados.push({
+      nome: 'Estado do Rio de Janeiro',
+      path: ''
+    });
+    this.municipiosOrdenados.reverse();
+
   }
 
   ngOnChanges() {
@@ -107,11 +115,10 @@ export class MPMapaInterativoComponent {
   }
 
   chamadaEstado() {
-    this.municipioClicado = this.estado;
-    this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', 'Estado')]);
+    this.municipioClicado = 'Estado do '+this.estado;
+    this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', 'Estado do Rio de Janeiro')]);
   }
 
-  municipiosOrdenados: any[];
   municipios: any[] = [
     {
       nome: 'Itatiaia',
