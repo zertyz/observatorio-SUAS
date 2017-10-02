@@ -504,98 +504,211 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     //preenche os equipamentos apenas com os CRASes do municipio
     if (i === 'cras') {
       this.equipamentoSelecionado = 'CRAS';
-      this.equipamentos = this.crases
-        .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(cras => {
-          return {
-            tipo:      'CRAS',
-            municipio: cras[0],
-            porte:     cras[1],
-            nome:      cras[2].toLocaleUpperCase(),
-            endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
-            cep:       cras[8],
-            telefone:  cras[9],
-          };
-        });
+      if(!this.estadoSelected) {
+        this.equipamentos = this.crases
+          .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+          .map(cras => {
+            return {
+              tipo: 'CRAS',
+              municipio: cras[0],
+              porte: cras[1],
+              nome: cras[2].toLocaleUpperCase(),
+              endereco: `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+              cep: cras[8],
+              telefone: cras[9],
+            };
+          });
+      }else {
+        this.equipamentos = this.crases
+          .map(cras => {
+            return {
+              tipo: 'CRAS',
+              municipio: cras[0],
+              porte: cras[1],
+              nome: cras[2].toLocaleUpperCase(),
+              endereco: `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+              cep: cras[8],
+              telefone: cras[9],
+            };
+          });
+        this.equipamentos.reverse();
+        this.equipamentos.pop();
+        this.equipamentos.reverse();
+      }
 
     }else if (i === 'creas') {
       this.equipamentoSelecionado = 'CREAS';
-      //preenche os equipamentos apenas com os CREASes do municipio
-      this.equipamentos = this.creases
-        .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(creas => {
-          return {
-            tipo:      'CREAS',
-            municipio: creas[0],
-            porte:     creas[1],
-            nome:      creas[2].toLocaleUpperCase(),
-            endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
-            cep:       creas[8],
-            telefone:  creas[9],
-          };
-        });
+      if(!this.estadoSelected) {
+        //preenche os equipamentos apenas com os CREASes do municipio
+        this.equipamentos = this.creases
+          .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+          .map(creas => {
+            return {
+              tipo: 'CREAS',
+              municipio: creas[0],
+              porte: creas[1],
+              nome: creas[2].toLocaleUpperCase(),
+              endereco: `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+              cep: creas[8],
+              telefone: creas[9],
+            };
+          });
+      }else {
+        this.equipamentos = this.creases
+          .map(creas => {
+            return {
+              tipo: 'CREAS',
+              municipio: creas[0],
+              porte: creas[1],
+              nome: creas[2].toLocaleUpperCase(),
+              endereco: `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+              cep: creas[8],
+              telefone: creas[9],
+            };
+          });
+        this.equipamentos.reverse();
+        this.equipamentos.pop();
+        this.equipamentos.reverse();
+      }
 
     }else if (i === 'centroPop') {
       this.equipamentoSelecionado = 'Centro Pop';
-      //preenche os equipamentos apenas com os Centros Pop do municipio
-      this.equipamentos = this.centrosPOP
-        .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(centroPOP => {
-          return {
-            tipo:      'CENTRO POP',
-            municipio: centroPOP[0],
-            porte:     centroPOP[1],
-            nome:      centroPOP[2].toLocaleUpperCase(),
-            endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
-            cep:       centroPOP[8],
-            telefone:  centroPOP[9],
-          };
-        });
+      if(!this.estadoSelected) {
+        //preenche os equipamentos apenas com os Centros Pop do municipio
+        this.equipamentos = this.centrosPOP
+          .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+          .map(centroPOP => {
+            return {
+              tipo: 'CENTRO POP',
+              municipio: centroPOP[0],
+              porte: centroPOP[1],
+              nome: centroPOP[2].toLocaleUpperCase(),
+              endereco: `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+              cep: centroPOP[8],
+              telefone: centroPOP[9],
+            };
+          });
+      }else {
+        this.equipamentos = this.centrosPOP
+          .map(centroPOP => {
+            return {
+              tipo: 'CENTRO POP',
+              municipio: centroPOP[0],
+              porte: centroPOP[1],
+              nome: centroPOP[2].toLocaleUpperCase(),
+              endereco: `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+              cep: centroPOP[8],
+              telefone: centroPOP[9],
+            };
+          });
+        this.equipamentos.reverse();
+        this.equipamentos.pop();
+        this.equipamentos.reverse();
+      }
 
-    } else if(i==='AreaExterna') {
+    } else {
       this.equipamentoSelecionado = 'equipamento';
-      //preenche os equipamentos com todos os equipamentos, CRASes, CREASes e Centros Pop
-      this.equipamentos = this.crases
-        .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(cras => {
-          return {
-            tipo:      'CRAS',
-            municipio: cras[0],
-            porte:     cras[1],
-            nome:      cras[2].toLocaleUpperCase(),
-            endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
-            cep:       cras[8],
-            telefone:  cras[9],
-          };
-        });
+      if(!this.estadoSelected) {
+        //preenche os equipamentos com todos os equipamentos, CRASes, CREASes e Centros Pop
+        this.equipamentos = this.crases
+          .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+          .map(cras => {
+            return {
+              tipo: 'CRAS',
+              municipio: cras[0],
+              porte: cras[1],
+              nome: cras[2].toLocaleUpperCase(),
+              endereco: `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+              cep: cras[8],
+              telefone: cras[9],
+            };
+          });
 
-      this.equipamentos = this.equipamentos.concat(this.creases
-        .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(creas => {
-          return {
-            tipo:      'CREAS',
-            municipio: creas[0],
-            porte:     creas[1],
-            nome:      creas[2].toLocaleUpperCase(),
-            endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
-            cep:       creas[8],
-            telefone:  creas[9],
-          };
-        }));
+        this.equipamentos = this.equipamentos.concat(this.creases
+          .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+          .map(creas => {
+            return {
+              tipo:      'CREAS',
+              municipio: creas[0],
+              porte:     creas[1],
+              nome:      creas[2].toLocaleUpperCase(),
+              endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+              cep:       creas[8],
+              telefone:  creas[9],
+            };
+          }));
 
-      this.equipamentos = this.equipamentos.concat(this.centrosPOP
-        .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(centroPOP => {
-          return {
-            tipo:      'CENTRO POP',
-            municipio: centroPOP[0],
-            porte:     centroPOP[1],
-            nome:      centroPOP[2].toLocaleUpperCase(),
-            endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
-            cep:       centroPOP[8],
-            telefone:  centroPOP[9],
-          };
-        }));
+        this.equipamentos = this.equipamentos.concat(this.centrosPOP
+          .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+          .map(centroPOP => {
+            return {
+              tipo:      'CENTRO POP',
+              municipio: centroPOP[0],
+              porte:     centroPOP[1],
+              nome:      centroPOP[2].toLocaleUpperCase(),
+              endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+              cep:       centroPOP[8],
+              telefone:  centroPOP[9],
+            };
+          }));
+      }else {
+        let auxEq: IEquipamento[];
+
+        this.equipamentos = this.crases
+          .map(cras => {
+            return {
+              tipo: 'CRAS',
+              municipio: cras[0],
+              porte: cras[1],
+              nome: cras[2].toLocaleUpperCase(),
+              endereco: `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+              cep: cras[8],
+              telefone: cras[9],
+            };
+          });
+
+        this.equipamentos.reverse();
+        this.equipamentos.pop();
+        this.equipamentos.reverse();
+
+        auxEq = this.creases
+          .map(creas => {
+            return {
+              tipo:      'CREAS',
+              municipio: creas[0],
+              porte:     creas[1],
+              nome:      creas[2].toLocaleUpperCase(),
+              endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+              cep:       creas[8],
+              telefone:  creas[9],
+            };
+          });
+
+        auxEq.reverse();
+        auxEq.pop();
+        auxEq.reverse();
+
+        this.equipamentos = this.equipamentos.concat(auxEq);
+
+        auxEq = this.centrosPOP
+          .map(centroPOP => {
+            return {
+              tipo:      'CENTRO POP',
+              municipio: centroPOP[0],
+              porte:     centroPOP[1],
+              nome:      centroPOP[2].toLocaleUpperCase(),
+              endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+              cep:       centroPOP[8],
+              telefone:  centroPOP[9],
+            };
+          });
+
+        auxEq.reverse();
+        auxEq.pop();
+        auxEq.reverse();
+
+        this.equipamentos = this.equipamentos.concat(auxEq);
+      }
     }
   }
 
