@@ -156,7 +156,7 @@
             </label>
           </div>
 
-          <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "top" [rows]="4"  emptyMessage="Esse Município não possui nenhum {{equipamentoSelecionado}}">
+          <p-dataGrid [value]="equipamentos" [paginator]="true" paginatorPosition = "bottom" [rows]="4"  emptyMessage="Esse Município não possui nenhum {{equipamentoSelecionado}}">
             <ng-template let-equipamento pTemplate="item" let-i="index";>
               <div *ngIf="i%4 == 0" class="col-md-6 col-sm-12 barraH border-equipamento padding_equipamentos">
                 <div class="row">

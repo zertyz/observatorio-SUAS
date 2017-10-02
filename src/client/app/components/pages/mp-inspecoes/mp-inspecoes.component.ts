@@ -826,6 +826,7 @@ export class MPInspecoesComponent {
 */
 
   }
+  yearRange: string = (new Date().getUTCFullYear() - 50) + ':' + (new Date().getUTCFullYear() );
 
   pt: any;
 

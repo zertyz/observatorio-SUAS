@@ -69,7 +69,7 @@ input:checked + .slider {
   width: 2.9rem;
 }
 
-// Styles bar and border 
+// Styles bar and border
 .padding_equipamentos{
   padding-right: 12px;
   padding-bottom: 2px
@@ -112,7 +112,7 @@ hr {
   padding: 1.7rem;
 }
 
-// Sytles Fonts 
+// Sytles Fonts
 .p-2{
   font-size: .9rem;
   padding: 0!important;
@@ -147,17 +147,16 @@ hr {
 .nome-eq{
   font-size: .8rem;
 }
-.pw-3{
-  font-size: .5rem;
-}
+
 .h-text{
   font-size: 1.14vw;
   font-family: Roboto-Condensed;
 }
 .pw-3{
-  font-size: 0.56vw;
+  font-size: .6rem;
   text-align: center;
   text-transform: uppercase;
+
 }
 p{
   padding-left: 1rem;
@@ -280,9 +279,10 @@ div.col-md-4{
   }
   .keyword1{
     white-space: nowrap;
+    font-size: .4em;
   }
   .keyword{
-    font-size: .67rem;
+    font-size: .64rem;
   }
   .vt-blue{
     white-space: nowrap;
@@ -337,7 +337,7 @@ div.col-md-4{
 
   }
   .keyword{
-  font-size: .95em;
+  font-size: .75em;
   }
   .padding-subtitulo{
     padding-left: .8rem

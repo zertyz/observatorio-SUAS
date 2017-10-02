@@ -552,7 +552,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
           };
         });
 
-    } else {
+    } else if(i==='AreaExterna') {
       this.equipamentoSelecionado = 'equipamento';
       //preenche os equipamentos com todos os equipamentos, CRASes, CREASes e Centros Pop
       this.equipamentos = this.crases
