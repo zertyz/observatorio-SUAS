@@ -255,6 +255,7 @@ p{
   .ui-widget-content{
     background: white;
     border:none ;
+    height: 15em;
   }
   .ui-widget-header{
     background: white;
@@ -307,6 +308,11 @@ div.col-md-4{
   }
   .hw1{
   font-size: 1.483em;
+  }
+  :host/deep/{
+    .ui-widget-content{
+      height: inherit;
+    }
   }
 }
 @media(max-width:799px){

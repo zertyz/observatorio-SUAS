@@ -4,7 +4,6 @@
   width: 5em;
   line-height: 20px;
   float: right;
-  margin-right:4vw;
   margin-top: .8em;
 
 }
@@ -39,25 +38,23 @@ div > a{
   }
   input {
     line-height: 1.5rem!important;
-    width: 33vw;
+    width: 100%;
   }
 }
 
 @media (max-width: 991px) {
-  input{
-    width: 80vw;
-  }
+
   .titulo{
     font-size: 1.3rem;
   }
   :host/deep/{
     .ui-state-default{
-    line-height: 6vw!important;
+    line-height: 2.5em!important;
     }
   }
 }
 @media (min-width: 992px) {
   .card#altura{
-    min-height:86.5%!important;
+    min-height:85.7%!important;
   }
 }

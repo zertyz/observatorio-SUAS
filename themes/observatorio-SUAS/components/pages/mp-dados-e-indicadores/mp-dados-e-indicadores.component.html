@@ -14,10 +14,12 @@
         Para visualizar informações clique no município correspondente no mapa, ou fora do mapa para ver o estado do RJ.
         </span>
       </div>
+
+      <div class="row">
       <div class="card">
         <div class="card-block">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-lg-6 col-md-12">
               <mp-mapa-interativo style="width: 100%; padding-right: 1rem" estado = {{estado}} [dropdown] = "true" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
             </div>
 
@@ -62,7 +64,7 @@
                 </div>
               </div>
 
-              <div class="col-sm-6" *ngIf="estadoSelected">
+              <div class="col-lg-6 col-md-12" *ngIf="estadoSelected">
                 <div class="row">
                   <div class="col-8">
                     <h3 class="hw3">Estado</h3>
@@ -105,7 +107,7 @@
 
           </div>
         </div>
-      </div>
+      </div></div>
     </div>
 
     <div class="col-xl-6 col-lg-12 ">
@@ -116,6 +118,7 @@
         <sub class="subtitulo">Clique em um tipo de equipamento para visualizar a relação de estabelecimento </sub>
         <sub class="subtitulo"> e seus endereços.</sub>
       </div>
+      <div class="row">
       <div class="card">
         <div class="card-block">
           <div class="row" style="padding-bottom: .8vw">
@@ -231,7 +234,7 @@
 
       </div>
     </div>
-
+      </div>
     </div>
   </div>
 
@@ -369,7 +372,7 @@
             </thead>
             <tbody>
             <tr>
-              <th class="barraH keyword" scope="row" style="text-align: right; padding-top: 1.8vw">PSE</th>
+              <th class="barraH keyword" scope="row" style="text-align: left; padding-top: 1.8vw;width: 20%">PSE</th>
               <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseTotal)}}</td>
               <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseUtilizado)}}</td>
               <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado)}}</td>
@@ -381,7 +384,7 @@
               </td>
             </tr>
             <tr>
-              <th class="barraH keyword" scope="row" style="text-align: right; padding-top: 1.8vw">PSB</th>
+              <th class="barraH keyword" scope="row" style="text-align: left; padding-top: 1.8vw">PSB</th>
               <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbTotal)}}</td>
               <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbUtilizado)}}</td>
               <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado)}}</td>
@@ -393,7 +396,7 @@
               </td>
             </tr>
             <tr>
-              <th scope="row" class="keyword barraH" style="text-align: right; padding-top: 1.8vw">Outros Programas<br/>(bloqueio ou omissão)</th>
+              <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Outros Programas<br/>(bloqueio ou omissão)</th>
               <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
               <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
               <td class=" barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
@@ -405,7 +408,7 @@
               </td>
             </tr>
             <tr>
-              <th scope="row" class="keyword barraH" style="text-align: right; padding-top: 1.8vw">Proteção Social Especial de Média Complexidade</th>
+              <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Proteção Social Especial de Média Complexidade</th>
               <td class="barra barraH  vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
               <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
               <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
@@ -417,7 +420,7 @@
               </td>
             </tr>
             <tr>
-              <th scope="row" class="keyword barraH" style="text-align: right; padding-top: 1.8vw">Proteção Social Especial de Alta Complexidade</th>
+              <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Proteção Social Especial de Alta Complexidade</th>
               <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
               <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
               <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
@@ -429,7 +432,7 @@
               </td>
             </tr>
             <tr>
-              <th scope="row" class="keyword barraH" style="text-align: right; padding-top: 1.8vw">Proteção Social Básica</th>
+              <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Proteção Social Básica</th>
               <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
               <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
               <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
@@ -441,7 +444,7 @@
               </td>
             </tr>
             <tr>
-                <th scope="row" class="keyword barraH" style="text-align: right; padding-top: 1.8vw">Programas</th>
+                <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Programas</th>
                 <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
                 <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
                 <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
@@ -453,7 +456,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="keyword barraH" style="text-align: right; padding-top: 1.8vw">Gestão do Bolsa Familía e  CadÚnico</th>
+                <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Gestão do Bolsa Familía e  CadÚnico</th>
                 <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
                 <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
                 <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
@@ -465,7 +468,7 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="keyword barraH" style="text-align: right; padding-top: 1.8vw">Gestão do SUAS</th>
+                <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Gestão do SUAS</th>
                 <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
                 <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
                 <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
@@ -477,7 +480,7 @@
                 </td>
             </tr>
             <tr>
-              <th scope="row" class="keyword" style="text-align: right; padding-top: 1.8vw">Resumo orçamentário</th>
+              <th scope="row" class="keyword" style="text-align: left; padding-top: 1.8vw">Resumo orçamentário</th>
               <td class="barra vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
               <td class="barra vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
               <td class="vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
