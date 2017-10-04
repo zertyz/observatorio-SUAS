@@ -61,7 +61,7 @@ export class MPMapaInterativoComponent {
     this.municipiosOrdenados = this.municipios.sort((e1, e2) => e1.nome > e2.nome ? 1 : -1);
     this.municipiosOrdenados.reverse();
     this.municipiosOrdenados.push({
-      nome: 'Estado do Rio de Janeiro',
+      nome: 'Rio de Janeiro - RJ',
       path: ''
     });
     this.municipiosOrdenados.reverse();
@@ -115,8 +115,7 @@ export class MPMapaInterativoComponent {
   }
 
   chamadaEstado() {
-    this.municipioClicado = 'Estado do '+this.estado;
-    this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', 'Estado do Rio de Janeiro')]);
+    this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', 'Rio de Janeiro - RJ')]);
   }
 
   municipios: any[] = [

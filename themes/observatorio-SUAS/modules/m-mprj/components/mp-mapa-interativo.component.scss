@@ -27,16 +27,38 @@
   color: #0680b2;
 }
 
-.select{
-  font-family: 'Roboto-Condensed-Light';
-  font-size: 100%;
+.selectdiv {
+  position: relative;
+}
+
+.selectdiv:after {
+  content: "\f0c9";
+  font: normal normal normal 17px/1 FontAwesome;
+  right: 11px;
+  top: 6px;
+  height: 34px;
+  padding-top: 3px;
+  position: absolute;
+  pointer-events: none;
+}
+
+//Resolve problema no IE9
+select::-ms-expand {
+  display: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  font-size: 1.683em;
+  font-family: Roboto-Condensed;
+  font-weight: bold;
   line-height: 100%;
-  background-color: #E0E0E0;
-  border-style: none;
-  color: rgba(10, 10, 10, 0.87);
+  background-color: transparent;
+  border-color: transparent;
   cursor: pointer;
-  padding: 4px 8px;
-  text-decoration: none;
-  margin-right: 10px;
   width: 100%;
+  height: 2rem;
 }

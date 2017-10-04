@@ -20,16 +20,16 @@
         <div class="card-block">
           <div class="row">
             <div class="col-lg-6 col-md-12">
-              <mp-mapa-interativo style="width: 100%; padding-right: 1rem" estado = {{estado}} [dropdown] = "true" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
+              <h3 class="hw3" *ngIf="estadoSelected">Estado</h3>
+              <h3 class="hw3" *ngIf="estadoSelected===false">Município</h3>
+              <mp-mapa-interativo style="width: 100%; padding-right: 1rem; padding-top: 0px" estado = {{estado}} [dropdown] = "true" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
             </div>
 
 
               <div class="col-sm-6" *ngIf="estadoSelected===false">
                 <div class="row">
                   <div class="col-8">
-                    <h3 class="hw3">Município</h3>
-                    <h1 class="hw1"><b>{{municipio}}</b></h1>
-                    <div class="row">
+                    <div class="row" style="padding-top: 6rem">
                       <div class="col-7">
                         <div class="keyword1">População</div>
                         <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
@@ -67,9 +67,7 @@
               <div class="col-lg-6 col-md-12" *ngIf="estadoSelected">
                 <div class="row">
                   <div class="col-8">
-                    <h3 class="hw3">Estado</h3>
-                    <h1 class="hw1"><b>{{estado}}</b></h1>
-                    <div class="row">
+                    <div class="row" style="padding-top: 6rem">
                       <div class="col-7">
                         <div class="keyword1">População</div>
                         <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
