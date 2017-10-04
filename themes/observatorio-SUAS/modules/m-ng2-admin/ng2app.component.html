@@ -1,5 +1,5 @@
 <div platform >
-      <nav class="navbar fixed-top navbar-expand" >
+      <!--<nav class="navbar fixed-top navbar-expand" >
         <div class="container-fluid">
 
             <div class="col-xl-5 col-5 ">
@@ -17,12 +17,39 @@
                 <a [routerLink]="['/dados-e-indicadores']"   [routerLinkActive]="['router-link-active']"                                         >Dados e Indicadores</a>
                 <a [routerLink]="['/inspecoes']"             [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Inspeções</a>
                 <a [routerLink]="['/ajuda']"                 [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Ajuda</a>
-                <!--<a [routerLink]="['/busca']"                 [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Busca</a>-->
+                &lt;!&ndash;<a [routerLink]="['/busca']"                 [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Busca</a>&ndash;&gt;
 
               </div>
             </div>
         </div>
-      </nav> <br/> <br/> <br/>
+      </nav>-->
+<nav class="navbar-expand ">
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-lg-5 col-4 ">
+      <a  class="navbar-brand logo-completo" href="http://www.mprj.mp.br/home">
+        <img class="img-fluid" style="margin-left:17%; padding: 1em;" alt="MPRJ-image" src="./assets/img/logo_mprj2.png">
+      </a>
+      <a  class="navbar-brand logo-mini" href="http://www.mprj.mp.br/home">
+        <img class="img-fluid" style="margin-left:5%;padding: 1em;" alt="MPRJ-image" src="./assets/img/logo_mini_mprj.png">
+      </a>
+    </div>
+
+    <div class="col-lg-7 col-8">
+      <input class="burger-check " id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+      <div id="navigation1" class="navigation ">
+        <ul>
+          <li><a [routerLink]="['/']"                      [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Início</a></li>
+          <li><a [routerLink]="['/dados-e-indicadores']"   [routerLinkActive]="['router-link-active']"                                         >Dados e Indicadores</a></li>
+          <li><a [routerLink]="['/inspecoes']"             [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Inspeções</a></li>
+          <li><a [routerLink]="['/ajuda']"                 [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Ajuda</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </div>
+</nav>
       <router-outlet ></router-outlet>
 
   <!-- Footer -->

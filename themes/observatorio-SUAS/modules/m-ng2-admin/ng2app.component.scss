@@ -4,7 +4,119 @@ html,body {
   padding-bottom: 70px;
 
 }
+// burger menu
 
+// Burger menu button
+$burger--thickness: 4px;
+.burger {
+  $width: 28px;
+  color: white;
+  float: right;
+  display: inline-block;
+  border: 0;
+  background: none;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  margin: 28px;
+  border-bottom: $burger--thickness solid currentColor;
+  width: $width;
+
+  transition: border-bottom 1s ease-in-out;
+  -webkit-transition: border-bottom 1s ease-in-out;
+
+  // Fix for extra space in Firefox
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    border-bottom: $burger--thickness solid currentColor;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: $burger--thickness solid currentColor;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  }
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked ~ .burger {
+  border-bottom: $burger--thickness solid transparent;
+  transition: border-bottom 0.8s ease-in-out;
+  -webkit-transition: border-bottom 0.8s ease-in-out;
+
+  &:before {
+    transform: rotate(-405deg) translateY(1px) translateX(-3px);
+    -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  }
+
+  &:after {
+    transform: rotate(405deg) translateY(-4px) translateX(-5px);
+    -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  }
+}
+
+// * * * Navigation * * *
+$navigation__transition: max-height 0.5s ease-in-out;
+
+.navigation {
+  overflow: hidden;
+  max-height: 0;
+
+  transition: $navigation__transition;
+}
+
+.burger-check:checked ~ .navigation {
+  max-height: 500px;
+
+  transition: $navigation__transition;
+}
+
+small {
+  font-size: 14px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  text-align: right;
+  list-style: none;
+  font-size: 25px;
+  padding: 2px 0;
+
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//end
 
 .footer-align{
   width: 100% !important;
@@ -25,22 +137,16 @@ footer{
   float: none;
 }
 
-.navbar{
+nav{
   background: #2e3a48;
-  height: 5rem;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  padding : 0.7%;
-  display: block;
-}
 
+}
 nav a {
-  color: #ffffff;
+  color: white;
   font-family: 'Raleway';
   font-weight: 700;
-  font-size: 1em;
-  line-height: 100%;
+  font-size: .7em;
+  line-height: 2em;
   margin-left: 3%;
   text-decoration: none;
   vertical-align: bottom;
@@ -102,7 +208,7 @@ hr{
 @media (min-width: 900px){
 .img-fluid {
   min-width: 290px !important;
-  max-width: 309px !important;
+  max-width: 340px !important;
 }
 }
 
