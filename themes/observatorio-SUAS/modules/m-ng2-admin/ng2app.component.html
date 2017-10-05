@@ -35,7 +35,17 @@
       </a>
     </div>
 
-    <div class="col-lg-7 col-8">
+      <div class="col-xl-7 col-7" id="show-desktop">
+        <div style="padding-top: 1%">
+          <a [routerLink]="['/']"                      [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Início</a>
+          <a [routerLink]="['/dados-e-indicadores']"   [routerLinkActive]="['router-link-active']"                                         >Dados e Indicadores</a>
+          <a [routerLink]="['/inspecoes']"             [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Inspeções</a>
+          <a [routerLink]="['/ajuda']"                 [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Ajuda</a>
+
+        </div>
+      </div>
+
+    <div class="col-lg-7 col-8" id="show-burger">
       <input class="burger-check " id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
       <div id="navigation1" class="navigation ">
         <ul>

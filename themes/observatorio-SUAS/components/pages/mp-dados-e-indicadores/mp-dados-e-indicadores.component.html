@@ -22,26 +22,32 @@
             <div class="col-lg-6 col-md-12">
               <h3 class="hw3" *ngIf="estadoSelected">Estado</h3>
               <h3 class="hw3" *ngIf="estadoSelected===false">Município</h3>
-              <mp-mapa-interativo style="width: 100%; padding-right: 1rem; padding-top: 0px" estado = {{estado}} [dropdown] = "true" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
+              <mp-mapa-interativo style="width: 100%; " estado = {{estado}} [dropdown] = "true" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
             </div>
 
 
-              <div class="col-sm-6" *ngIf="estadoSelected===false">
+              <div class="col-lg-6 col-md-11" *ngIf="estadoSelected===false">
                 <div class="row">
-                  <div class="col-8">
-                    <div class="row" style="padding-top: 6rem">
-                      <div class="col-7">
+                  <div class="col-11">
+                    <img src="./assets/img/municipios/{{municipio}}.png" style="width:3.2em; float: right;">
+                  </div>
+                </div>
+                <div class="row" style="padding-top: 1.5rem">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-5">
                         <div class="keyword1">População</div>
                         <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
                       </div>
-                      <div class="col-5 ">
+                      <div class="col-4 ">
                         <div class="keyword1">IDH</div>
                         <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
                       </div>
+                      <div class="col-3 ">
+                        <div class="keyword1">IDC</div>
+                        <div class="numero-destacado"></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-4">
-                    <img src="./assets/img/municipios/{{municipio}}.png" style="width: 60%">
                   </div>
                 </div>
                 <div class="row" style="padding-top: 1.5rem">
