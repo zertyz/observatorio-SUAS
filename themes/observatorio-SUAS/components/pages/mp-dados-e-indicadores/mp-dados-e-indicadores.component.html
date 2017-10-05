@@ -257,8 +257,8 @@
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasVulneraveis}}</div>
                   </td>
                   <td class=" barraH"width="30%">
-                    <p class="keyword"> % da população do municipio</p>
-                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasVulneraveisMunicipio}}%</div>
+                    <p class="keyword" *ngIf="estadoSelected===false"> % da população do municipio</p>
+                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasVulneraveisMunicipio}}%</div>
                   </td>
                   <td class="barraH border-equipamento"style="padding-right: 3%" width="25%">
                     <p class="keyword"> % do estado</p>
@@ -292,8 +292,8 @@
                     <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaCobertura}}%</div>
                   </td>
                   <td class="border-equipamento barraH" style="padding-right: 3%" width="25%">
-                    <p class="keyword"> % da População Município</p>
-                    <div class="vt-porcentagem">%</div>
+                    <p class="keyword" *ngIf="estadoSelected===false"> % da População Município</p>
+                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">%</div>
                   </td>
                 </tr>
                 <tr>
