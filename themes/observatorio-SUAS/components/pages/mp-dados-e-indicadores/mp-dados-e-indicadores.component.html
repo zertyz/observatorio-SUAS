@@ -45,14 +45,14 @@
                       </div>
                       <div class="col-3 ">
                         <div class="keyword1">IDC</div>
-                        <div class="numero-destacado"></div>
+                        <div class="numero-destacado"> - </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="row" style="padding-top: 1.5rem">
                   <div class="col-2">
-                    <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Município.png">
+                    <img class="img-fluid" src="./assets/img/icones/prefeito_70px.png">
                   </div>
                   <div class="col-10">
                     <div class="keyword">Prefeito</div>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="row" style="padding-top: 1.5rem">
                   <div class="col-2">
-                    <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Bolsa_Familia_2.png">
+                    <img class="img-fluid" src="./assets/img/icones/secretario_assistencia_social_70px.png">
                   </div>
                   <div class="col-10">
                     <div class="keyword">Secretário de Assistência Social</div>
@@ -72,20 +72,29 @@
 
               <div class="col-lg-6 col-md-12" *ngIf="estadoSelected">
                 <div class="row">
-                  <div class="col-8">
-                    <div class="row" style="padding-top: 6rem">
-                      <div class="col-7">
+                  <div class="col-12">
+                    <div class="col-4"  style="float: right">
+                      <img src="./assets/img/municipios/{{municipio}}.png" style="width: 105%">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row" style="padding-top: 2rem">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-5">
                         <div class="keyword1">População</div>
                         <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
                       </div>
-                      <div class="col-5 ">
+                      <div class="col-3 ">
                         <div class="keyword1">IDH</div>
                         <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
                       </div>
+                      <div class="col-3 ">
+                        <div class="keyword1">IDC</div>
+                        <div class="numero-destacado"> -</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-4">
-                    <img src="./assets/img/municipios/{{municipio}}.png" style="width: 60%">
                   </div>
                 </div>
                 <div class="row" style="padding-top: 1.5rem">
@@ -99,7 +108,7 @@
                 </div>
                 <div class="row" style="padding-top: 1.5rem">
                   <div class="col-2">
-                    <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Bolsa_Familia_2.png">
+                    <img class="img-fluid" src="./assets/img/icones/secretario_assistencia_social_70px.png">
                   </div>
                   <div class="col-10">
                     <div class="keyword">Secretário de Estado de Ciência, Tecnologia e Desenvolvimento Social</div>
@@ -257,7 +266,7 @@
             <div class="col-md-8 col-12">
                 <tbody>
                 <tr>
-                  <td class="barraH" width="10%"><img class="img-fluid2" src="./assets/img/icones/ícones_Tela_2_Bolsa_Familia.png" align="left"></td>
+                  <td class="barraH" width="10%"><img class="img-fluid2" src="./assets/img/icones/familias_vulneraveis_70px.png" align="left"></td>
                   <td class=" barraH"width="35%">
                     <p class="keyword">Familias vulneráveis</p>
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasVulneraveis}}</div>
@@ -272,7 +281,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="barraH"><img class="img-fluid2" src="./assets/img/icones/Icones_Tela_1_Orçamentos.png" align="left"></td>
+                  <td class="barraH"><img class="img-fluid2" src="./assets/img/icones/bolsa_familia_70px.png" align="left"></td>
                   <td class="barraH">
                     <p class="keyword">Bolsa família</p>
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasBolsaFamilia}}</div>
@@ -289,7 +298,7 @@
                 </tr>
                 <tr>
                   <td colspan="2" class="barraH">
-                    <img class="img-fluid2" src="./assets/img/icones/ícones_Tela_2_Cadsastro_Unico_3.png" align="left" >
+                    <img class="img-fluid2" src="./assets/img/icones/familias_registradas_70px.png" align="left" >
                     <p class="keyword">Famílias registradas no cadastro único</p>
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasCadastroUnico}}</div>
                   </td>
@@ -304,7 +313,7 @@
                 </tr>
                 <tr>
                   <td  colspan="2">
-                    <img class="img-fluid2" src="./assets/img/icones/Icones_Tela_1_Desenvolvimento_Social.png" align="left">
+                    <img class="img-fluid2" src="./assets/img/icones/beneficio_prestacao_continuada_70px.png" align="left">
                     <p class="keyword"> Beneficiários de prestação continuada</p>
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nBeneficiariosPrestacaoContinuada}}</div>
                   </td>
@@ -316,7 +325,7 @@
             <div class=" col-md-4 col-12">
               <tr>
                 <td>
-                  <img class="img-fluid" src="./assets/img/icones/beneficios-programas.png">
+                  <img class="img-fluid" src="./assets/img/icones/beneficio_eventual_70px.png">
                 </td>
                 <td >
                   <h3 class="p-2">Benefícios eventuais</h3>
@@ -328,7 +337,7 @@
               </tr>
               <tr>
                 <td>
-                  <img class="img-fluid" src="./assets/img/icones/beneficios-programas.png">
+                  <img class="img-fluid" src="./assets/img/icones/paif_70px.png">
                 </td>
                 <td>
                   <h3 class="p-2">PAIF</h3>
@@ -340,7 +349,7 @@
               </tr>
               <tr>
                 <td>
-                  <img class="img-fluid" src="./assets/img/icones/beneficios-programas.png">
+                  <img class="img-fluid" src="./assets/img/icones/paefi_70px.png">
                 </td>
                 <td>
                   <h3 class="p-2">PAEF</h3>

@@ -103,6 +103,7 @@ input:checked + .slider {
   .btn-secundario {
 
     width: 100% !important;
+    margin-bottom: .6em;
   }
 button.btn-primario {
   width: 100%!important;
@@ -114,7 +115,7 @@ button.btn-primario {
 
 :host /deep/ {
   .ui-inputtext {
-    width: 36vw;
+    width: 13.4em;
     }
   }
  .row{
@@ -133,27 +134,25 @@ button.btn-primario {
 }
 @media (min-width: 768px) and (max-width: 991px) {
 
-  .btn-primario {
-    width: 10.5rem;
-  }
-  .btn-secundario {
-    width: 10.5rem;
-  }
+
   :host/deep/ {
     .ui-inputtext {
       width: 8.4rem;
     }
   }
 }
-@media (min-width:768px) and (max-width: 1068px) {
-  
-    .btn-primario {
-      width: 8rem;
-    }
-    .btn-secundario {
-      width: 8rem;
-    }
-  
+@media (min-width: 768px) {
+
+  .btn-primario {
+    width: 10.5rem;
+  }
+  .btn-secundario {
+    width: 10.5rem;
+    margin-right: .5em;
+  }
+  #margin-row-button{
+    margin-left: .1em;
+  }
   }
   @media (min-width: 1200px) and (max-width: 1440px){
     :host/deep/ {
@@ -169,10 +168,12 @@ button.btn-primario {
   }
 
   .btn-primario {
-    width: 11.5rem;
+    width: 9.4vw;
+
   }
   .btn-secundario {
-    width: 11.5rem;
+    width: 9.7vw;
+    margin-right: .4em;
   }
 }
 
