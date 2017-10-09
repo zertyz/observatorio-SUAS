@@ -678,6 +678,9 @@ export class MPInspecoesComponent {
     this.creasSelected = false;
     this.centropopSelected = false;
 
+    this.dataInicio.setDate(0);
+    this.dataFim.setDate(0);
+
     this.eixos = [];
     this.municipios= [];
     this.equipamentos = [];
