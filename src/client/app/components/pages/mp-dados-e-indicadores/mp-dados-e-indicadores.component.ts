@@ -513,7 +513,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: cras[0],
               porte: cras[1],
               nome: cras[2].toLocaleUpperCase(),
-              endereco: `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+              endereco: `${cras[3]} ${cras[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${cras[5]} - ${cras[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${cras[0]}`,
               cep: cras[8],
               telefone: cras[9],
             };
@@ -548,7 +548,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: creas[0],
               porte: creas[1],
               nome: creas[2].toLocaleUpperCase(),
-              endereco: `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+              endereco: `${creas[3]} ${creas[4].toUpperCase().charAt(0)+creas[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${creas[5]} - ${creas[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${creas[0]}`,
               cep: creas[8],
               telefone: creas[9],
             };
@@ -583,7 +583,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: centroPOP[0],
               porte: centroPOP[1],
               nome: centroPOP[2].toLocaleUpperCase(),
-              endereco: `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+              endereco: `${centroPOP[3]} ${centroPOP[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${centroPOP[5]} - ${centroPOP[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${centroPOP[0]}`,
               cep: centroPOP[8],
               telefone: centroPOP[9],
             };
@@ -596,7 +596,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: centroPOP[0],
               porte: centroPOP[1],
               nome: centroPOP[2].toLocaleUpperCase(),
-              endereco: `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+              endereco: `${centroPOP[3]} ${centroPOP[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${centroPOP[5]} - ${centroPOP[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${centroPOP[0]}`,
               cep: centroPOP[8],
               telefone: centroPOP[9],
             };
@@ -618,7 +618,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: cras[0],
               porte: cras[1],
               nome: cras[2].toLocaleUpperCase(),
-              endereco: `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+              endereco: `${cras[3]} ${cras[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${cras[5]} - ${cras[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${cras[0]}`,
               cep: cras[8],
               telefone: cras[9],
             };
@@ -632,7 +632,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: creas[0],
               porte:     creas[1],
               nome:      creas[2].toLocaleUpperCase(),
-              endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+              endereco:  `${creas[3]} ${creas[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${creas[5]} - ${creas[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${creas[0]}`,
               cep:       creas[8],
               telefone:  creas[9],
             };
@@ -646,7 +646,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: centroPOP[0],
               porte:     centroPOP[1],
               nome:      centroPOP[2].toLocaleUpperCase(),
-              endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+              endereco:  `${centroPOP[3]} ${centroPOP[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${centroPOP[5]} - ${centroPOP[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${centroPOP[0]}`,
               cep:       centroPOP[8],
               telefone:  centroPOP[9],
             };
@@ -661,7 +661,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: cras[0],
               porte: cras[1],
               nome: cras[2].toLocaleUpperCase(),
-              endereco: `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+              endereco: `${cras[3]} ${cras[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${cras[5]} - ${cras[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${cras[0]}`,
               cep: cras[8],
               telefone: cras[9],
             };
@@ -678,7 +678,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: creas[0],
               porte:     creas[1],
               nome:      creas[2].toLocaleUpperCase(),
-              endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+              endereco:  `${creas[3]} ${creas[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${creas[5]} - ${creas[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${creas[0]}`,
               cep:       creas[8],
               telefone:  creas[9],
             };
@@ -697,7 +697,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: centroPOP[0],
               porte:     centroPOP[1],
               nome:      centroPOP[2].toLocaleUpperCase(),
-              endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+              endereco:  `${centroPOP[3]} ${centroPOP[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${centroPOP[5]} - ${centroPOP[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${centroPOP[0]}`,
               cep:       centroPOP[8],
               telefone:  centroPOP[9],
             };
