@@ -291,8 +291,8 @@
                     <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
                   </td>
                   <td class="barraH border-equipamento" style="padding-right: 3%" width="25%">
-                    <p class="keyword"> % cobertura</p>
-                    <div class="vt-porcentagem">% </div>
+                    <p class="keyword">% cobertura</p>
+                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaCobertura}}% </div>
                   </td>
 
                 </tr>
@@ -302,13 +302,13 @@
                     <p class="keyword">Famílias registradas no cadastro único</p>
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasCadastroUnico}}</div>
                   </td>
-                  <td class="barraH"style="padding-right: 3%" >
-                    <p class="keyword">% cobertura cadÚnico</p>
-                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaCobertura}}%</div>
-                  </td>
-                  <td class="border-equipamento barraH" style="padding-right: 3%" width="25%">
+                  <td class="barraH" style="padding-right: 3%" width="25%">
                     <p class="keyword" *ngIf="estadoSelected===false"> % da População Município</p>
-                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">%</div>
+                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
+                  </td>
+                  <td class="border-equipamento barraH"style="padding-right: 3%" >
+                    <p class="keyword">% cobertura</p>
+                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasCadastroUnicoCobertura}}%</div>
                   </td>
                 </tr>
                 <tr>
