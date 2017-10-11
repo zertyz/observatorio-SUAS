@@ -550,7 +550,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
               municipio: creas[0],
               porte: creas[1],
               nome: creas[2].toLocaleUpperCase(),
-              endereco: `${creas[3]} ${creas[4].toUpperCase().charAt(0)+creas[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${creas[5]} - ${creas[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${creas[0]}`,
+              endereco: `${creas[3]} ${creas[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${creas[5]} - ${creas[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${creas[0]}`,
               cep: creas[8],
               telefone: creas[9],
             };
