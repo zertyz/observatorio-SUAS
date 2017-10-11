@@ -12,30 +12,42 @@
   width: 100%;
   height: 2.4rem !important;
 }
+
 .img-fluid{
   width: 5.6em;
 }
+
 .text-blue{
   color: rgb(5, 127, 178);
   text-align: left;
 }
+
 #_mprjbusca_WAR_mprjbuscaportlet_keywords_param{
   margin-bottom: 1.2rem;
 }
+
 #_mprjbusca_WAR_mprjbuscaportlet_filtro_param{
   margin-bottom: 1.2rem;
 }
+
 .alinha-card{
   align-content: center;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
+
 .btn-secundario{
-  width: 100%;
   line-height: 30px;
   margin-top: 1.2rem;
 }
+
+.totalRes {
+  color: #a3afbf;
+  font-size: 14px;
+  padding-left: 0.3rem;
+}
+
 @media (max-width: 991px) {
   .titulo{
     font-size: 1.3rem;
