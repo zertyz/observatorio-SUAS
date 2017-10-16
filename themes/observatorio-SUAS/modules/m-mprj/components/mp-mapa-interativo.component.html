@@ -9,7 +9,7 @@
 </div>
 -->
 
-<div *ngIf="dropdown" class="middle-text">
+<div *ngIf="dropdown">
   <div class='selectdiv'>
     <select  #selectElem [(ngModel)] = "municipioClicado" (change)="singleSelect(selectElem.value)">
       <option *ngFor="let municipio of municipiosOrdenados; let i = index;" [value]="municipio.nome">{{municipio.nome}}</option>

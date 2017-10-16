@@ -33,10 +33,14 @@
   position: relative;
   line-height: 3em;
 }
+
+//Opções do Select
 option{
   width: 1em!important;
+  font-size: 0.683em;
 }
 
+//Icone do Select
 .selectdiv:after {
   content: "\f0c9";
   font: normal normal normal 17px/1 FontAwesome;
