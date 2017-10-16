@@ -1,5 +1,4 @@
-<!--
-<div *ngIf="debug" class="middle-text">
+<div *ngIf="debug">
   Hover: {{ municipioHover }}<br/>
   Clicked: {{ municipioClicado }}<br/>
   Selected:
@@ -7,7 +6,6 @@
     <li *ngFor="let i of selecionados">{{municipios[i].nome}}</li>
   </ul>
 </div>
--->
 
 <div *ngIf="dropdown">
   <div class='selectdiv'>
