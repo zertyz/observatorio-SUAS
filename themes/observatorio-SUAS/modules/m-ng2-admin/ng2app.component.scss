@@ -131,7 +131,6 @@ li {
 
 }
 
-
 footer{
   background-color: #2e3a48;
   float: none;
@@ -139,8 +138,8 @@ footer{
 
 nav{
   background: #2e3a48;
-
 }
+
 nav a {
   color: white;
   font-family: 'Raleway';
@@ -152,7 +151,6 @@ nav a {
   vertical-align: bottom;
   cursor: pointer;
 }
-
 
 nav a.router-link-active {
   color: #106cc8;
@@ -170,15 +168,17 @@ hr{
   background-color: white;
   border: none;
 }
+
 .logo-texto{
   font-family: Roboto-Condensed;
   font-weight: 100;
   color: white;
 }
+
 .texto-mp{
   font-size: 16px;
-
 }
+
 .texto-rj{
   font-size:9.5px;
   line-height: 15px;
@@ -187,58 +187,74 @@ hr{
 .logo-mprj{
   padding-left: 20%;
 }
-@media (max-width: 990px) {
+
+@media (max-width: 990px)
+{
   .footer-align {
     position: relative;
     height: 6%;
   }
-  .links-footer{
-    display: none;
-  }
-  #show-desktop{
+
+  .links-footer {
     display: none;
   }
 
-}
-@media (min-width: 320px) and (max-width: 575px){
-.img-fluid {
-  min-width: 90px !important;
-  max-width: 95px !important;
-  margin-left: 0% !important;
-}
-}
-
-@media (min-width: 991px){
-.img-fluid {
-  min-width: 290px !important;
-  max-width: 340px !important;
-}
-  #show-burger{
+  #show-desktop {
     display: none;
   }
-  #show-desktop{
+}
+
+@media (min-width: 320px) and (max-width: 575px)
+{
+  .img-fluid
+  {
+    min-width: 90px !important;
+    max-width: 95px !important;
+    margin-left: 0% !important;
+  }
+}
+
+@media (min-width: 991px)
+{
+  .img-fluid
+  {
+    min-width: 290px !important;
+    max-width: 340px !important;
+  }
+
+  #show-burger {
+    display: none;
+  }
+
+  #show-desktop {
     padding: 1em;
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 990px)
+{
   .img-fluid {
-  max-width: 309px !important;
+    max-width: 309px !important;
   }
-.logo-completo {
-  display: none;
+
+  .logo-completo {
+    display: none;
+  }
 }
+
+@media (min-width:991px)
+{
+  .logo-mini {
+    display: none;
+  }
 }
-@media (min-width:991px) {
-.logo-mini {
-  display: none;
-}
-}
-@media screen and(min-width: 998px) and (max-width:1500px){
-  .footer-align{
+@media screen and(min-width: 998px) and (max-width:1500px)
+{
+  .footer-align {
     height: 3.3rem;
   }
-  p{
-  font-size: 74%;
-}
+
+  p {
+    font-size: 74%;
+  }
 }

@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import {MultiSelectModule} from 'primeng/primeng';
 import {SelectItem} from 'primeng/primeng';
-
+import {Button, Calendar} from 'primeng/primeng';
 
 import { Injector } from '@angular/core';
 import { Config, RouterExtensions } from '../../../modules/core/index';
@@ -17,7 +17,7 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
 })
 
 export class MPInspecoesComponent {
-
+  @ViewChild('p-calendar') calendar: Calendar;
   dataInicio: Date;
 
   dataFim: Date;
@@ -668,7 +668,7 @@ export class MPInspecoesComponent {
     ['Análise técnica', 'centroPop'],
   ];
 
-  limpar() {
+  limpar(event) {
 
     let ele = document.getElementsByName('radio');
     for(var i= 0; i< ele.length; i++)
@@ -678,8 +678,6 @@ export class MPInspecoesComponent {
     this.creasSelected = false;
     this.centropopSelected = false;
 
-    this.dataInicio.setDate(0);
-    this.dataFim.setDate(0);
 
     this.eixos = [];
     this.municipios= [];
@@ -687,7 +685,9 @@ export class MPInspecoesComponent {
     this.selectedEixos = [];
     this.selectedMunicipios = [];
     this.selectedEquipamentos = [];
+
   }
+
 
   removeDuplicate(dadosBrutos: string[]) {
     let municipiosUnicos = {};
