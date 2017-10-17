@@ -61,6 +61,7 @@ export const MutuaInstanceProjectComponentsActivationConfiguration: IInstancePro
   {componentName: 'MPInspecoesComponent',         htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPBuscaComponent',             htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPAjudaComponent',             htmlEnabled: true,  mobileEnabled: true},
+  {componentName: 'MPRanking',                    htmlEnabled: true,  mobileEnabled: true},
 ];
 
 /** Defines the modules this application should bundle and load, for html (web and desktop) and mobile platforms.
