@@ -192,7 +192,7 @@ const MutuaAvailableComponentsConfiguration: IMutuaAvailableComponentsConfigurat
     source: '../../components/pages/mp-ajuda/mp-ajuda.component',
     routes: '../../components/pages/mp-ajuda/mp-ajuda.routes',
   },
-  // Ajuda
+  // Ranking
   MPRankingComponent: {
     source: '../../components/pages/mp-ranking/mp-ranking.component',
     routes: '../../components/pages/mp-ranking/mp-ranking.routes',

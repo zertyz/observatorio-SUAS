@@ -16,8 +16,9 @@ import { MPDadosEIndicadoresComponent } from '../../components/pages/mp-dados-e-
 import { MPInspecoesComponent } from '../../components/pages/mp-inspecoes/mp-inspecoes.component';
 import { MPBuscaComponent } from '../../components/pages/mp-busca/mp-busca.component';
 import { MPAjudaComponent } from '../../components/pages/mp-ajuda/mp-ajuda.component';
+import { MPRankingComponent } from '../../components/pages/mp-ranking/mp-ranking.component';
 
-export const MutuaExportedComponents: any[] = [NG2AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent,MPInspecoesComponent,MPBuscaComponent,MPAjudaComponent];
+export const MutuaExportedComponents: any[] = [NG2AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent,MPInspecoesComponent,MPBuscaComponent,MPAjudaComponent,MPRankingComponent];
 
 // routes
 /////////
@@ -27,8 +28,9 @@ import { MPDadosEIndicadoresRoutes } from '../../components/pages/mp-dados-e-ind
 import { MPInspecoesRoutes } from '../../components/pages/mp-inspecoes/mp-inspecoes.routes';
 import { MPBuscaRoutes } from '../../components/pages/mp-busca/mp-busca.routes';
 import { MPAjudaRoutes } from '../../components/pages/mp-ajuda/mp-ajuda.routes';
+import { MPRankingRoutes } from '../../components/pages/mp-ranking/mp-ranking.routes';
 
-export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes,...MPInspecoesRoutes,...MPBuscaRoutes,...MPAjudaRoutes];
+export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes,...MPInspecoesRoutes,...MPBuscaRoutes,...MPAjudaRoutes,...MPRankingRoutes];
 
 // modules
 //////////
