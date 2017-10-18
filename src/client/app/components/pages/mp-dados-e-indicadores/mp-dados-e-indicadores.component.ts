@@ -22,6 +22,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   // parâmetros
   municipio:      string;
   estado:         string = 'Rio de Janeiro';
+  estadoId:       string = 'Rio de Janeiro - RJ';     // Esta string deve constar como "nome do município" nos dados, para apresentar dados de todo o estado. Também é usada no componente MAPA.
   estadoSelected: boolean = true;
 
   //Campo selecionado nos botões no menu de equipamentos
@@ -58,14 +59,13 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.municipio = params['municipio'] || 'Rio de Janeiro - RJ';
-      if(this.municipio == 'Rio de Janeiro - RJ') {
+      this.municipio = params['municipio'] || this.estadoId;
+      if(this.municipio == this.estadoId) {
         this.estadoSelected = true;
-        this.computaCampos();
       }else {
         this.estadoSelected = false;
-        this.computaCampos();
       }
+      this.computaCampos();
       document.getElementById('check1').click();//Equipamento Total
     });
 
@@ -568,15 +568,15 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   indicadoresOrcamentarios: IIndicadoresOrcamentarios[] = [
     {
       'municipio': 'Rio de Janeiro - RJ',
-      'pseUtilizado': 0.00,
+      'pseUtilizado': 1.00,
       'pseNaoUtilizado': 0.00,
-      'pseTotal': 0.00,
-      'psbUtilizado': 0.00,
-      'psbNaoUtilizado': -1,
-      'psbTotal': 0.00,
-      'programasUtilizado': 0.00,
-      'programasNaoUtilizado': -1,
-      'programasTotal': 0.00
+      'pseTotal': 1.00,
+      'psbUtilizado': 1.00,
+      'psbNaoUtilizado': 1.00,
+      'psbTotal': 2.00,
+      'programasUtilizado': 1.00,
+      'programasNaoUtilizado': 2.00,
+      'programasTotal': 3.00
     },
     {
       'municipio': 'Angra Dos Reis',
@@ -2430,6 +2430,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   indicadoresSociais: string[][] = [
     //    0             1                     2                         3        4       5       6          7           8             9                   10                    11                         12                     13                          14                                15                                    16                          17                      18                        19             20       21                22                        23
 //  ['MUNICÍPIO', 'PREFEITO', 'SECRETÁRIO DE ASSISTÊNCIA SOCIAL', 'POPULAÇÃO', 'IDH', 'CRAS', 'CREAS', 'CENTRO POP', 'Total ', '% do Estado', 'Famílias Vulneráveis', '% da População do Município', '% do Estado', ' Famílias Beneficiárias', '% da População do Município', '% Cobertura - Perfil Cad.Único', '% Cobertura - Perfil Bolsa Família', 'Valor Total Repassado', '  Famílias Registradas', 'Benefícios Eventuais', 'PAIF', 'PAEFI', 'Total de Beneficiários', 'Valor Total Repassado'],
+    ['Rio de Janeiro - RJ', 'Luiz Fernando de Souza', 'Gustavo Reis Ferreira', '16.231.365', '0,76', '453', '116', '19', '588', '100', '1.430.427', '', '8,95', '804.641', '5,03', '9,64', '56,25', 'R$ 1.588.104.562,00', '1.560.055', '', '', '', '319.056', 'R$ 298.419.232,44'],
     ['Angra Dos Reis', 'Fernando Antônio Ceciliano Jordão', 'Munir Francisco', '177.101', '0,72', '7', '1', '0', '8', '1,36', '14.911', '8,42', '1,04', '10.495', '5,93', '116,66', '70,38', 'R$ 22.424.211,00', '19.669', 'SIM', 'SIM', 'SIM', '2.760', 'R$ 2.574.492,98'],
     ['Aperibé', 'Flávio Diniz Berriel', 'Vanessa Garcia Correa', '10.545', '0,69', '3', '1', '0', '4', '0,68', '1.276', '12,10', '0,09', '686', '6,51', '93,46', '53,76', 'R$ 1.362.195,00', '1.476', 'SIM', 'SIM', 'SIM', '155', 'R$ 144.298,14'],
     ['Araruama', 'Livia Soares Bello Da Silva', 'João Baptista De Araujo Filho', '116.418', '0,72', '5', '1', '1', '7', '1,19', '12.712', '10,92', '0,89', '9.494', '8,16', '115,7', '74,69', 'R$ 21.452.175,00', '17.227', 'NÃO', 'SIM', 'SIM', '3.370', 'R$ 3.151.888,96'],
@@ -2522,7 +2523,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Varre-sai', 'Silvestre José Gorini', 'Isabela Louvain Fabri Moraes', '9.720', '0,66', '2', '0', '0', '2', '0,34', '1.352', '13,91', '0,09', '879', '9,04', '101,97', '65,01', 'R$ 1.575.692,00', '1.562', 'SIM', 'SIM', 'NÃO', '178', 'R$ 166.786,00'],
     ['Vassouras', 'Severino Ananias Dias Filho', 'Rosa Maria Coelho De Almeida', '34.858', '0,71', '3', '1', '0', '4', '0,68', '3.509', '10,07', '0,25', '1.586', '4,55', '73,49', '45,2', 'R$ 2.825.859,00', '3.390', 'SIM', 'SIM', 'SIM', '853', 'R$ 792.328,36'],
     ['Volta Redonda', 'Elderson Ferreira Da Silva ', 'Maycon César Inácio Abrantes', '260.180', '0,77', '33', '1', '1', '35', '5,95', '17.858', '6,86', '1,25', '10.966', '4,21', '115,49', '61,41', 'R$ 24.633.994,00', '22.609', 'SIM', 'SIM', 'SIM', '3.439', 'R$ 3.199.831,11'],
-    ['Rio de Janeiro - RJ', 'Luiz Fernando de Souza', 'Gustavo Reis Ferreira', '16.231.365', '0,76', '453', '116', '19', '588', '100', '1.430.427', '', '8,95', '804.641', '5,03', '9,64', '56,25', 'R$ 1.588.104.562,00', '1.560.055', '', '', '', '319.056', 'R$ 298.419.232,44'],
   ];
 
 }
