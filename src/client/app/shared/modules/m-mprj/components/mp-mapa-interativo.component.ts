@@ -8,18 +8,23 @@
  * com a legenda de valores recebidos.
  *
  * Recebe as seguintes propriedades:
- *  estado:              a sigla, em letras minúsculas, do estado da federação a apresentar
+ *  estado:              O texto a apresentar no dropdown ao se selecionar todo o estado.
+ *                       (antigamente era: a sigla, em letras minúsculas, do estado da federação a apresentar).
  *  cores:               objeto com entradas do tipo: {'nome_do_municipio': '#FFAACC'}
  *  preSelecionados:     lista de municípios que devem vir selecionados ao carregar o componente
  *  selectedRedirection: caso definido, desliga a múltipla seleção de municípios e, ao clicar, redireciona a navegação para o link interno especificado.
  *                       o placeholder #{nomeMunicipio} será substituído pelo nome do município selecionado.
+ *  dropdown:            boolean. Indica se deve ser apresentado um dropdown com as opções disponíveis, para complementar os cliques no mapa.
+ *  debug:               boolean. Quando true, apresenta informações adicionais sobre os eventos.
  *
- *  <mp-mapa-interativo>
- *           estado              = "rj"
+ *  <mp-mapa-interativo
+ *           estado              = "Rio de Janeiro - RJ"
  *           [cores]             = "{'Rio de Janeiro': '#fafafa'}"
  *           [preSelecionados]   = "['Angra dos Reis', 'Rio de Janeiro']"
  *           selectedRedirection = "myPath/#{nomeMunicipio}/kaka"
- *  </mp-mapa-interativo>
+ *           dropdown            = "true"
+ *           debug               = "true"
+ *  >
  *
  * @see RelatedClass(es)
  * @author luiz
@@ -30,7 +35,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
-import { Config, RouterExtensions, LogService, ILang } from '../../../../modules/core/index';
+import { Config, RouterExtensions, LogService, ConsoleService, ILang } from '../../../../modules/core/index';
 import { Input } from '@angular/core';
 
 @Component({
@@ -48,48 +53,48 @@ export class MPMapaInterativoComponent {
   @Input() debug:               boolean  = false;
   @Input() dropdown:            boolean  = false;
 
-  selecionados    :     number[] = [];
-  municipioHover  :     string   = '';
-  municipioClicado:     string   = '';
-  municipiosOrdenados:  any[];
+  elementosSelecionados: number[] = [];
+  elementoHover:         string   = '';
+  elementoClicado:       string   = '';
+  elementosOrdenados:    any[];
 
   //constructor(private geoService: WorldMapService) {}
   //municipios = this.geoService.getCountries();
 
-  constructor(public routerext: RouterExtensions) {
-    // sorted array for the select
-    this.municipiosOrdenados = this.municipios.sort((e1, e2) => e1.nome > e2.nome ? 1 : -1);
-    this.municipiosOrdenados.reverse();
-    this.municipiosOrdenados.push({
-      nome: 'Rio de Janeiro - RJ',
-      path: ''
-    });
-    this.municipiosOrdenados.reverse();
-
-  }
+  constructor(public routerext: RouterExtensions,
+              private console: ConsoleService) {}
 
   ngOnChanges() {
+
+    // sorted array for the select
+    this.elementosOrdenados = this.municipios.sort((e1, e2) => e1.nome > e2.nome ? 1 : -1);
+    this.elementosOrdenados.unshift({
+      nome: this.estado,
+      path: ''
+    });
+    this.debug && console.log('Calculados os "elementosOrdenados"');
+
     // marca os municípios pré-selecionados
-    this.selecionados = [];
+    this.elementosSelecionados = [];
     for (let nomeMunicipioPreSelecionado of this.preSelecionados) {
       for (let i: number = 0; i<this.municipios.length; i++) {
         if (this.municipios[i].nome == nomeMunicipioPreSelecionado) {
-          this.selecionados.push(i);
+          this.elementosSelecionados.push(i);
         }
       }
     }
     // single-select ?
-    if (this.selecionados.length == 1) {
-      this.municipioClicado = this.municipios[this.selecionados[0]].nome;
+    if (this.elementosSelecionados.length == 1) {
+      this.elementoClicado = this.municipios[this.elementosSelecionados[0]].nome;
     }
   }
 
   clicked(i: number) {
-    this.municipioClicado = this.municipios[i].nome;
+    this.elementoClicado = this.municipios[i].nome;
 
     // single-select behaviour
     if (this.selectedRedirection != '') {
-      this.singleSelect(this.municipioClicado);
+      this.singleSelect(this.elementoClicado);
       return ;
     }
 
@@ -97,25 +102,22 @@ export class MPMapaInterativoComponent {
     if (this.estaSelecionado(i)) {
       this.removeMunicipio(i);
     } else {
-      this.selecionados.push(i);
+      this.elementosSelecionados.push(i);
     }
   }
   removeMunicipio(i: number) {
     if (this.estaSelecionado(i)) {
-      this.selecionados.splice(this.selecionados.indexOf(i), 1);
+      this.elementosSelecionados.splice(this.elementosSelecionados.indexOf(i), 1);
       //this.setSelectCountry();
     }
   }
   estaSelecionado(i: number) {
-    return this.selecionados.indexOf(i) >= 0;
+    return this.elementosSelecionados.indexOf(i) >= 0;
   }
 
-  singleSelect(nomeMunicipio: string):void {
-    this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', nomeMunicipio)]);
-  }
-
-  chamadaEstado() {
-    this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', 'Rio de Janeiro - RJ')]);
+  singleSelect(nomeElemento: string):void {
+    this.elementoClicado = nomeElemento;
+    this.routerext.navigate([this.selectedRedirection.replace('#{nomeMunicipio}', nomeElemento)]);
   }
 
   municipios: any[] = [
