@@ -17,7 +17,8 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
 })
 
 export class MPInspecoesComponent {
-  @ViewChild('p-calendar') calendar: Calendar;
+  @ViewChild('calendarInicio')  calendarInicio: Calendar;
+  @ViewChild('calendarFim')     calendarFim: Calendar;
   dataInicio: Date;
 
   dataFim: Date;
@@ -677,7 +678,16 @@ export class MPInspecoesComponent {
     for(var i= 0; i< ele.length; i++)
       ele[i].checked = false;
 
+    // this.dataInicio = null;
+    this.calendarInicio.updateModel(null);//Seta o valor da Variavel data para Null
+    this.calendarInicio.updateInputfield();//Atualiza o campo input do calendario
+
+    // this.dataFim = null;
+    this.calendarFim.updateModel(null);//Seta o valor da Variavel data para Null
+    this.calendarFim.updateInputfield();//Atualiza o campo input do calendario
+
     this.crasSelected = false;
+
     this.creasSelected = false;
     this.centropopSelected = false;
 
