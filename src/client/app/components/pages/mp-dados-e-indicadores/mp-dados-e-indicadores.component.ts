@@ -22,6 +22,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   // parâmetros
   municipio:      string;
   estado:         string = 'Rio de Janeiro';
+  estadoId:       string = 'Rio de Janeiro - RJ';     // Esta string deve constar como "nome do município" nos dados, para apresentar dados de todo o estado. Também é usada no componente MAPA.
   estadoSelected: boolean = true;
 
   //Campo selecionado nos botões no menu de equipamentos
@@ -58,14 +59,13 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.municipio = params['municipio'] || 'Rio de Janeiro - RJ';
-      if(this.municipio === 'Rio de Janeiro - RJ') {
+      this.municipio = params['municipio'] || this.estadoId;
+      if(this.municipio == this.estadoId) {
         this.estadoSelected = true;
-        this.computaCampos();
       }else {
         this.estadoSelected = false;
-        this.computaCampos();
       }
+      this.computaCampos();
       document.getElementById('check1').click();//Equipamento Total
     });
 
@@ -143,286 +143,136 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     this.contagemEquipamentos = 0;
     this.equipamentos         = [];
 
-    if(this.estadoSelected) {
-      // computa Centros POP
-      this.equipamentos = this.equipamentos.concat(this.centrosPOP
-        .map(centroPOP => {
-          this.contagemCentrosPOP++;
-          this.contagemEquipamentos++;
-          return {
-            tipo:      'CENTRO POP',
-            municipio: centroPOP[0],
-            porte:     centroPOP[1],
-            nome:      centroPOP[2].toLocaleUpperCase(),
-            endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
-            cep:       centroPOP[8],
-            telefone:  centroPOP[9],
-          };
-        }));
-
-      this.equipamentos.reverse();
-      this.equipamentos.pop();
-      this.contagemCentrosPOP--;
-      this.contagemEquipamentos--;
-      this.equipamentos.reverse();
-
-      // computa CREASes
-      this.equipamentos = this.equipamentos.concat(this.creases
-        .map(creas => {
-          this.contagemCREAS++;
-          this.contagemEquipamentos++;
-          return {
-            tipo:      'CREAS',
-            municipio: creas[0],
-            porte:     creas[1],
-            nome:      creas[2].toLocaleUpperCase(),
-            endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
-            cep:       creas[8],
-            telefone:  creas[9],
-          };
-        }));
-
-      this.equipamentos.reverse();
-      this.equipamentos.pop();
-      this.contagemCREAS--;
-      this.contagemEquipamentos--;
-      this.equipamentos.reverse();
-
-      // computa CRASes
-      this.equipamentos = this.equipamentos.concat(this.crases
-        .map(cras => {
-          this.contagemCRAS++;
-          this.contagemEquipamentos++;
-          return {
-            tipo:      'CRAS',
-            municipio: cras[0],
-            porte:     cras[1],
-            nome:      cras[2].toLocaleUpperCase(),
-            endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
-            cep:       cras[8],
-            telefone:  cras[9],
-          };
-        }));
-
-      this.equipamentos.reverse();
-      this.equipamentos.pop();
-      this.contagemCRAS--;
-      this.contagemEquipamentos--;
-      this.equipamentos.reverse();
-
-      // computa total de equipamentos no estado
-      this.totalEquipamentosEstado = (this.centrosPOP.length-1) + (this.crases.length-1) + (this.creases.length-1);
-
-      // computa indicadores sociais
-      this.indicadoresSociaisDoMunicipio = this.indicadoresSociais
-        .filter(indicadoresSociais => indicadoresSociais[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(indicadoresSociais => {
-          return {
-            municipio:                         indicadoresSociais[0],
-            prefeito:                          indicadoresSociais[1],
-            secretarioAssistenciaSocial:       indicadoresSociais[2],
-            nFamiliasVulneraveis:              indicadoresSociais[10],
-            pFamiliasVulneraveisMunicipio:     indicadoresSociais[11],
-            pFamiliasVulneraveisEstado:        indicadoresSociais[12],
-            nFamiliasBolsaFamilia:             indicadoresSociais[13],
-            pFamiliasBolsaFamiliaMunicipio:    indicadoresSociais[14],
-            pFamiliasBolsaFamiliaCobertura:    indicadoresSociais[16],
-            nFamiliasCadastroUnico:            indicadoresSociais[18],
-            pFamiliasCadastroUnicoCobertura:   indicadoresSociais[15],
-            nBeneficiariosPrestacaoContinuada: indicadoresSociais[22],
-            cadUnicoBeneficiosEventuais:       true,
-            cadUnicoPAIF:                      true,
-            cadUnicoPAEF:                      true,
-          };
-        })[0];
-
-      // preenche estrutura de dados dos gráfico PSE
-      this.graficoPSE = {
-        labels: ['Verba Utilizada', 'Verba não utilizada'],
-        datasets: [
-          {
-            data: [this.indicadoresOrcamentariosDoMunicipio.pseUtilizado, this.indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado],
-            backgroundColor: [
-              '#117011',
-              '#660000'
-            ],
-            hoverBackgroundColor: [
-              '#117011',
-              '#660000'
-            ],
-          }
-        ],
-      };
-
-      // preenche estrutura de dados do gráfico PSB
-      this.graficoPSB = {
-        labels: ['Verba Utilizada', 'Verba não utilizada'],
-        datasets: [
-          {
-            data: [this.indicadoresOrcamentariosDoMunicipio.psbUtilizado, this.indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado],
-            backgroundColor: [
-              '#117011',
-              '#660000'
-            ],
-            hoverBackgroundColor: [
-              '#117011',
-              '#660000'
-            ]
-          }
-        ]
-      };
-
-      // preenche estrutura de dados do gráfico Programas
-      this.graficoProgramas = {
-        labels: ['Verba Utilizada', 'Verba não utilizada'],
-        datasets: [
-          {
-            data: [this.indicadoresOrcamentariosDoMunicipio.programasUtilizado, this.indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado],
-            backgroundColor: [
-              '#117011',
-              '#660000',
-            ],
-            hoverBackgroundColor: [
-              '#117011',
-              '#660000'
-            ]
-          }
-        ]
-      };
-
-    }else {
-
-      // computa Centros POP
-      this.equipamentos = this.equipamentos.concat(this.centrosPOP
-        .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(centroPOP => {
-          this.contagemCentrosPOP++;
-          this.contagemEquipamentos++;
-          return {
-            tipo:      'CENTRO POP',
-            municipio: centroPOP[0],
-            porte:     centroPOP[1],
-            nome:      centroPOP[2].toLocaleUpperCase(),
-            endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
-            cep:       centroPOP[8],
-            telefone:  centroPOP[9],
-          };
-        }));
-
-      // computa CREASes
-      this.equipamentos = this.equipamentos.concat(this.creases
-        .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(creas => {
-          this.contagemCREAS++;
-          this.contagemEquipamentos++;
-          return {
-            tipo:      'CREAS',
-            municipio: creas[0],
-            porte:     creas[1],
-            nome:      creas[2].toLocaleUpperCase(),
-            endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
-            cep:       creas[8],
-            telefone:  creas[9],
-          };
-        }));
-
-      // computa CRASes
-      this.equipamentos = this.equipamentos.concat(this.crases
-        .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(cras => {
-          this.contagemCRAS++;
-          this.contagemEquipamentos++;
-          return {
-            tipo:      'CRAS',
-            municipio: cras[0],
-            porte:     cras[1],
-            nome:      cras[2].toLocaleUpperCase(),
-            endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
-            cep:       cras[8],
-            telefone:  cras[9],
-          };
-        }));
-
-      // computa total de equipamentos no estado
-      this.totalEquipamentosEstado = (this.centrosPOP.length-1) + (this.crases.length-1) + (this.creases.length-1);
-
-      // computa indicadores sociais
-      this.indicadoresSociaisDoMunicipio = this.indicadoresSociais
-        .filter(indicadoresSociais => indicadoresSociais[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-        .map(indicadoresSociais => {
-          return {
-            municipio:                         indicadoresSociais[0],
-            prefeito:                          indicadoresSociais[1],
-            secretarioAssistenciaSocial:       indicadoresSociais[2],
-            nFamiliasVulneraveis:              indicadoresSociais[10],
-            pFamiliasVulneraveisMunicipio:     indicadoresSociais[11],
-            pFamiliasVulneraveisEstado:        indicadoresSociais[12],
-            nFamiliasBolsaFamilia:             indicadoresSociais[13],
-            pFamiliasBolsaFamiliaMunicipio:    indicadoresSociais[14],
-            pFamiliasBolsaFamiliaCobertura:    indicadoresSociais[16],
-            nFamiliasCadastroUnico:            indicadoresSociais[18],
-            pFamiliasCadastroUnicoCobertura:   indicadoresSociais[15],
-            nBeneficiariosPrestacaoContinuada: indicadoresSociais[22],
-            cadUnicoBeneficiosEventuais:       indicadoresSociais[19] == 'SIM' ? true : false,
-            cadUnicoPAIF:                      indicadoresSociais[20] == 'SIM' ? true : false,
-            cadUnicoPAEF:                      indicadoresSociais[21] == 'SIM' ? true : false,
+    // computa Centros POP
+    this.equipamentos = this.equipamentos.concat(this.centrosPOP
+      .filter(centroPOP => this.estadoSelected || centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+      .map(centroPOP => {
+        this.contagemCentrosPOP++;
+        this.contagemEquipamentos++;
+        return {
+          tipo:      'CENTRO POP',
+          municipio: centroPOP[0],
+          porte:     centroPOP[1],
+          nome:      centroPOP[2].toLocaleUpperCase(),
+          endereco:  `${centroPOP[3]} ${centroPOP[4]}, ${centroPOP[5]} - ${centroPOP[7]} - ${centroPOP[0]}`,
+          cep:       centroPOP[8],
+          telefone:  centroPOP[9],
         };
-        })[0];
+      }));
 
-      // preenche estrutura de dados dos gráfico PSE
-      this.graficoPSE = {
-        labels: ['Verba Utilizada', 'Verba não utilizada'],
-        datasets: [
-          {
-            data: [this.indicadoresOrcamentariosDoMunicipio.pseUtilizado, this.indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado],
-            backgroundColor: [
-              '#117011',
-              '#660000'
-            ],
-            hoverBackgroundColor: [
-              '#117011',
-              '#660000'
-            ],
-          }
-        ],
-      };
+    // computa CREASes
+    this.equipamentos = this.equipamentos.concat(this.creases
+      .filter(creas => this.estadoSelected || creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+      .map(creas => {
+        this.contagemCREAS++;
+        this.contagemEquipamentos++;
+        return {
+          tipo:      'CREAS',
+          municipio: creas[0],
+          porte:     creas[1],
+          nome:      creas[2].toLocaleUpperCase(),
+          endereco:  `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
+          cep:       creas[8],
+          telefone:  creas[9],
+        };
+      }));
 
-      // preenche estrutura de dados do gráfico PSB
-      this.graficoPSB = {
-        labels: ['Verba Utilizada', 'Verba não utilizada'],
-        datasets: [
-          {
-            data: [this.indicadoresOrcamentariosDoMunicipio.psbUtilizado, this.indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado],
-            backgroundColor: [
-              '#117011',
-              '#660000'
-            ],
-            hoverBackgroundColor: [
-              '#117011',
-              '#660000'
-            ]
-          }
-        ]
-      };
+    // computa CRASes
+    this.equipamentos = this.equipamentos.concat(this.crases
+      .filter(cras => this.estadoSelected || cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+      .map(cras => {
+        this.contagemCRAS++;
+        this.contagemEquipamentos++;
+        return {
+          tipo:      'CRAS',
+          municipio: cras[0],
+          porte:     cras[1],
+          nome:      cras[2].toLocaleUpperCase(),
+          endereco:  `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
+          cep:       cras[8],
+          telefone:  cras[9],
+        };
+      }));
 
-      // preenche estrutura de dados do gráfico Programas
-      this.graficoProgramas = {
-        labels: ['Verba Utilizada', 'Verba não utilizada'],
-        datasets: [
-          {
-            data: [this.indicadoresOrcamentariosDoMunicipio.programasUtilizado, this.indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado],
-            backgroundColor: [
-              '#117011',
-              '#660000',
-            ],
-            hoverBackgroundColor: [
-              '#117011',
-              '#660000'
-            ]
-          }
-        ]
+    // computa total de equipamentos no estado
+    this.totalEquipamentosEstado = (this.centrosPOP.length) + (this.crases.length) + (this.creases.length);
+
+    // computa indicadores sociais
+    this.indicadoresSociaisDoMunicipio = this.indicadoresSociais
+      .filter(indicadoresSociais => this.estadoSelected || indicadoresSociais[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+      .map(indicadoresSociais => {
+        return {
+          municipio:                         indicadoresSociais[0],
+          prefeito:                          indicadoresSociais[1],
+          secretarioAssistenciaSocial:       indicadoresSociais[2],
+          nFamiliasVulneraveis:              indicadoresSociais[10],
+          pFamiliasVulneraveisMunicipio:     indicadoresSociais[11],
+          pFamiliasVulneraveisEstado:        indicadoresSociais[12],
+          nFamiliasBolsaFamilia:             indicadoresSociais[13],
+          pFamiliasBolsaFamiliaMunicipio:    indicadoresSociais[14],
+          pFamiliasBolsaFamiliaCobertura:    indicadoresSociais[16],
+          nFamiliasCadastroUnico:            indicadoresSociais[18],
+          pFamiliasCadastroUnicoCobertura:   indicadoresSociais[15],
+          nBeneficiariosPrestacaoContinuada: indicadoresSociais[22],
+          cadUnicoBeneficiosEventuais:       indicadoresSociais[19] == 'SIM' ? true : false,
+          cadUnicoPAIF:                      indicadoresSociais[20] == 'SIM' ? true : false,
+          cadUnicoPAEF:                      indicadoresSociais[21] == 'SIM' ? true : false,
       };
-    }
+      })[0];
+
+    // preenche estrutura de dados dos gráfico PSE
+    this.graficoPSE = {
+      labels: ['Verba Utilizada', 'Verba não utilizada'],
+      datasets: [
+        {
+          data: [this.indicadoresOrcamentariosDoMunicipio.pseUtilizado, this.indicadoresOrcamentariosDoMunicipio.pseNaoUtilizado],
+          backgroundColor: [
+            '#117011',
+            '#660000'
+          ],
+          hoverBackgroundColor: [
+            '#117011',
+            '#660000'
+          ],
+        }
+      ],
+    };
+
+    // preenche estrutura de dados do gráfico PSB
+    this.graficoPSB = {
+      labels: ['Verba Utilizada', 'Verba não utilizada'],
+      datasets: [
+        {
+          data: [this.indicadoresOrcamentariosDoMunicipio.psbUtilizado, this.indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado],
+          backgroundColor: [
+            '#117011',
+            '#660000'
+          ],
+          hoverBackgroundColor: [
+            '#117011',
+            '#660000'
+          ]
+        }
+      ]
+    };
+
+    // preenche estrutura de dados do gráfico Programas
+    this.graficoProgramas = {
+      labels: ['Verba Utilizada', 'Verba não utilizada'],
+      datasets: [
+        {
+          data: [this.indicadoresOrcamentariosDoMunicipio.programasUtilizado, this.indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado],
+          backgroundColor: [
+            '#117011',
+            '#660000',
+          ],
+          hoverBackgroundColor: [
+            '#117011',
+            '#660000'
+          ]
+        }
+      ]
+    };
 
   }
 
@@ -503,214 +353,73 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   }
 
   selectTipo(i: string) {
-    //preenche os equipamentos apenas com os CRASes do municipio
+
+    // CRASes do municipio ou com o do estado (todos os municípios)
+    let equipamentosCRAS: IEquipamento[] = this.crases
+      .filter(cras => this.estadoSelected || cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+      .map(cras => {
+        return {
+          tipo: 'CRAS',
+          municipio: cras[0],
+          porte: cras[1],
+          nome: cras[2].toLocaleUpperCase(),
+          endereco: `${cras[3]} ${cras[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${cras[5]} - ${cras[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${cras[0]}`,
+          cep: cras[8],
+          telefone: cras[9],
+        };
+      });
+
+    // CREASes do municipio ou com o do estado (todos os municípios)
+    let equipamentosCREAS: IEquipamento[] = this.creases
+      .filter(creas => this.estadoSelected || creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+      .map(creas => {
+        return {
+          tipo: 'CREAS',
+          municipio: creas[0],
+          porte: creas[1],
+          nome: creas[2].toLocaleUpperCase(),
+          endereco: `${creas[3]} ${creas[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${creas[5]} - ${creas[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${creas[0]}`,
+          cep: creas[8],
+          telefone: creas[9],
+        };
+      });
+
+    // Centros Pop do municipio ou com o do estado (todos os municípios)
+    let equipamentosCentroPop: IEquipamento[] = this.centrosPOP
+      .filter(centroPOP => this.estadoSelected || centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
+      .map(centroPOP => {
+        return {
+          tipo: 'CENTRO POP',
+          municipio: centroPOP[0],
+          porte: centroPOP[1],
+          nome: centroPOP[2].toLocaleUpperCase(),
+          endereco: `${centroPOP[3]} ${centroPOP[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${centroPOP[5]} - ${centroPOP[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${centroPOP[0]}`,
+          cep: centroPOP[8],
+          telefone: centroPOP[9],
+        };
+      });
+
     if (i === 'cras') {
       this.equipamentoSelecionado = 'CRAS';
-      if(!this.estadoSelected) {
-        this.equipamentos = this.crases
-          .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-          .map(cras => {
-            return {
-              tipo: 'CRAS',
-              municipio: cras[0],
-              porte: cras[1],
-              nome: cras[2].toLocaleUpperCase(),
-              endereco: `${cras[3]} ${cras[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${cras[5]} - ${cras[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${cras[0]}`,
-              cep: cras[8],
-              telefone: cras[9],
-            };
-          });
-      }else {
-        this.equipamentos = this.crases
-          .map(cras => {
-            return {
-              tipo: 'CRAS',
-              municipio: cras[0],
-              porte: cras[1],
-              nome: cras[2].toLocaleUpperCase(),
-              endereco: `${cras[3]} ${cras[4]}, ${cras[5]} - ${cras[7]} - ${cras[0]}`,
-              cep: cras[8],
-              telefone: cras[9],
-            };
-          });
-        this.equipamentos.reverse();
-        this.equipamentos.pop();
-        this.equipamentos.reverse();
-      }
+      this.equipamentos = equipamentosCRAS;
 
-    }else if (i === 'creas') {
+    } else if (i === 'creas') {
       this.equipamentoSelecionado = 'CREAS';
-      if(!this.estadoSelected) {
-        //preenche os equipamentos apenas com os CREASes do municipio
-        this.equipamentos = this.creases
-          .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-          .map(creas => {
-            return {
-              tipo: 'CREAS',
-              municipio: creas[0],
-              porte: creas[1],
-              nome: creas[2].toLocaleUpperCase(),
-              endereco: `${creas[3]} ${creas[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${creas[5]} - ${creas[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${creas[0]}`,
-              cep: creas[8],
-              telefone: creas[9],
-            };
-          });
-      }else {
-        this.equipamentos = this.creases
-          .map(creas => {
-            return {
-              tipo: 'CREAS',
-              municipio: creas[0],
-              porte: creas[1],
-              nome: creas[2].toLocaleUpperCase(),
-              endereco: `${creas[3]} ${creas[4]}, ${creas[5]} - ${creas[7]} - ${creas[0]}`,
-              cep: creas[8],
-              telefone: creas[9],
-            };
-          });
-        this.equipamentos.reverse();
-        this.equipamentos.pop();
-        this.equipamentos.reverse();
-      }
+      this.equipamentos = equipamentosCREAS;
 
-    }else if (i === 'centroPop') {
+    } else if (i === 'centroPop') {
       this.equipamentoSelecionado = 'Centro Pop';
-      if(!this.estadoSelected) {
-        //preenche os equipamentos apenas com os Centros Pop do municipio
-        this.equipamentos = this.centrosPOP
-          .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-          .map(centroPOP => {
-            return {
-              tipo: 'CENTRO POP',
-              municipio: centroPOP[0],
-              porte: centroPOP[1],
-              nome: centroPOP[2].toLocaleUpperCase(),
-              endereco: `${centroPOP[3]} ${centroPOP[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${centroPOP[5]} - ${centroPOP[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${centroPOP[0]}`,
-              cep: centroPOP[8],
-              telefone: centroPOP[9],
-            };
-          });
-      }else {
-        this.equipamentos = this.centrosPOP
-          .map(centroPOP => {
-            return {
-              tipo: 'CENTRO POP',
-              municipio: centroPOP[0],
-              porte: centroPOP[1],
-              nome: centroPOP[2].toLocaleUpperCase(),
-              endereco: `${centroPOP[3]} ${centroPOP[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${centroPOP[5]} - ${centroPOP[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${centroPOP[0]}`,
-              cep: centroPOP[8],
-              telefone: centroPOP[9],
-            };
-          });
-        this.equipamentos.reverse();
-        this.equipamentos.pop();
-        this.equipamentos.reverse();
-      }
+      this.equipamentos = equipamentosCentroPop;
 
     } else {
-      this.equipamentoSelecionado = 'equipamento';
-      if(!this.estadoSelected) {
-        //preenche os equipamentos com todos os equipamentos, CRASes, CREASes e Centros Pop
-        this.equipamentos = this.crases
-          .filter(cras => cras[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-          .map(cras => {
-            return {
-              tipo: 'CRAS',
-              municipio: cras[0],
-              porte: cras[1],
-              nome: cras[2].toLocaleUpperCase(),
-              endereco: `${cras[3]} ${cras[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${cras[5]} - ${cras[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${cras[0]}`,
-              cep: cras[8],
-              telefone: cras[9],
-            };
-          });
+      this.equipamentoSelecionado = 'total';
+      // inclui todos os equipamentos, CRASes, CREASes e Centros Pop -- por município ou para todo o estado
+      this.equipamentos = [
+        ...equipamentosCRAS,
+        ...equipamentosCREAS,
+        ...equipamentosCentroPop
+      ];
 
-        this.equipamentos = this.equipamentos.concat(this.creases
-          .filter(creas => creas[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-          .map(creas => {
-            return {
-              tipo:      'CREAS',
-              municipio: creas[0],
-              porte:     creas[1],
-              nome:      creas[2].toLocaleUpperCase(),
-              endereco:  `${creas[3]} ${creas[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${creas[5]} - ${creas[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${creas[0]}`,
-              cep:       creas[8],
-              telefone:  creas[9],
-            };
-          }));
-
-        this.equipamentos = this.equipamentos.concat(this.centrosPOP
-          .filter(centroPOP => centroPOP[0].toLocaleLowerCase() == this.municipio.toLocaleLowerCase())
-          .map(centroPOP => {
-            return {
-              tipo:      'CENTRO POP',
-              municipio: centroPOP[0],
-              porte:     centroPOP[1],
-              nome:      centroPOP[2].toLocaleUpperCase(),
-              endereco:  `${centroPOP[3]} ${centroPOP[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${centroPOP[5]} - ${centroPOP[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${centroPOP[0]}`,
-              cep:       centroPOP[8],
-              telefone:  centroPOP[9],
-            };
-          }));
-      }else {
-        let auxEq: IEquipamento[];
-
-        this.equipamentos = this.crases
-          .map(cras => {
-            return {
-              tipo: 'CRAS',
-              municipio: cras[0],
-              porte: cras[1],
-              nome: cras[2].toLocaleUpperCase(),
-              endereco: `${cras[3]} ${cras[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${cras[5]} - ${cras[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${cras[0]}`,
-              cep: cras[8],
-              telefone: cras[9],
-            };
-          });
-
-        this.equipamentos.reverse();
-        this.equipamentos.pop();
-        this.equipamentos.reverse();
-
-        auxEq = this.creases
-          .map(creas => {
-            return {
-              tipo:      'CREAS',
-              municipio: creas[0],
-              porte:     creas[1],
-              nome:      creas[2].toLocaleUpperCase(),
-              endereco:  `${creas[3]} ${creas[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${creas[5]} - ${creas[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${creas[0]}`,
-              cep:       creas[8],
-              telefone:  creas[9],
-            };
-          });
-
-        auxEq.reverse();
-        auxEq.pop();
-        auxEq.reverse();
-
-        this.equipamentos = this.equipamentos.concat(auxEq);
-
-        auxEq = this.centrosPOP
-          .map(centroPOP => {
-            return {
-              tipo:      'CENTRO POP',
-              municipio: centroPOP[0],
-              porte:     centroPOP[1],
-              nome:      centroPOP[2].toLocaleUpperCase(),
-              endereco:  `${centroPOP[3]} ${centroPOP[4].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}, ${centroPOP[5]} - ${centroPOP[7].replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})} - ${centroPOP[0]}`,
-              cep:       centroPOP[8],
-              telefone:  centroPOP[9],
-            };
-          });
-
-        auxEq.reverse();
-        auxEq.pop();
-        auxEq.reverse();
-
-        this.equipamentos = this.equipamentos.concat(auxEq);
-      }
     }
   }
 
@@ -718,15 +427,15 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   indicadoresOrcamentarios: IIndicadoresOrcamentarios[] = [
     {
       'municipio': 'Rio de Janeiro - RJ',
-      'pseUtilizado': 0.00,
+      'pseUtilizado': 1.00,
       'pseNaoUtilizado': 0.00,
-      'pseTotal': 0.00,
-      'psbUtilizado': 0.00,
-      'psbNaoUtilizado': -1,
-      'psbTotal': 0.00,
-      'programasUtilizado': 0.00,
-      'programasNaoUtilizado': -1,
-      'programasTotal': 0.00
+      'pseTotal': 1.00,
+      'psbUtilizado': 1.00,
+      'psbNaoUtilizado': 1.00,
+      'psbTotal': 2.00,
+      'programasUtilizado': 1.00,
+      'programasNaoUtilizado': 2.00,
+      'programasTotal': 3.00
     },
     {
       'municipio': 'Angra Dos Reis',
@@ -2030,7 +1739,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   // TODO cópia de centro_pop_20170810.json
   centrosPOP: string[][] = [
-    ['Municipio_2013', 'Porte_pop2010', 'ident_1', 'ident_2', 'ident_3', 'ident_4', 'ident_5', 'ident_6', 'ident_8', 'ident_12'],
+//  ['Municipio_2013', 'Porte_pop2010', 'ident_1', 'ident_2', 'ident_3', 'ident_4', 'ident_5', 'ident_6', 'ident_8', 'ident_12'],
     ['Araruama', 'Grande', 'CENTRO POP', 'Rodovia', 'AMARAL PEIXOTO', '1141', '', 'VILA CAPRI', '28970-000', '(22) 2665-3256'],
     ['Barra Mansa', 'Grande', 'CENTRO POP CASA DA GENTE', 'Alameda', 'Alameda vanzzi', '60', '', 'Ano Bom', '27360-000', '(24) 3324-1486'],
     ['Belford Roxo', 'Grande', 'CREAS -CENTRO DE REFERENCIA ESPECIALIZADO EM POPULAÇÃO DE RUA', 'Estrada', 'Estrada Dr. Plínio Casado', '3968', 'loja 01', 'CENTRO', '26127-780', '(21) 2761-4088'],
@@ -2054,7 +1763,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   // TODO cópia de cras_20170810.json
   crases: string[][] = [
-    ['Município', 'Porte_pop2010', 'ident_1_Nome', 'ident_2_TPLog', 'ident_3_Endereço', 'ident_4_Núm', 'ident_5_Comp', 'ident_6_Bairro', 'ident_8_CEP', 'ident_12_Tel'],
+//  ['Município', 'Porte_pop2010', 'ident_1_Nome', 'ident_2_TPLog', 'ident_3_Endereço', 'ident_4_Núm', 'ident_5_Comp', 'ident_6_Bairro', 'ident_8_CEP', 'ident_12_Tel'],
     ['Angra Dos Reis', 'Grande', 'CRAS Frade', 'Rua', 'Julieta Conceição Reis', '142', '', 'Frade', '23946020', '(24)3369655'],
     ['Angra Dos Reis', 'Grande', 'CRAS Belém', 'Rodovia', 'mario covas s/n', '0', '', 'Belém', '23933005', '(24)3368463'],
     ['Angra Dos Reis', 'Grande', 'CRAS Monsuaba', 'Rua', 'Manoel de Souza Lima', '248', '', 'Monsuaba', '23916075', '(24)3366109'],
@@ -2512,7 +2221,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   // TODO cópia de creas_20170810.json
   creases: string[][] = [
-    ['Município', 'Porte_pop2010', 'ident1', 'ident2', 'ident3', 'ident4', 'ident5', 'ident6', 'ident8', 'ident12'],
+//  ['Município', 'Porte_pop2010', 'ident1', 'ident2', 'ident3', 'ident4', 'ident5', 'ident6', 'ident8', 'ident12'],
     ['Angra Dos Reis', 'Grande', 'CREAS Angra dos Reis', 'Rua', '11 DE JUNHO', '51', '', 'CENTRO', '23900-170', '(24) 3365-5167'],
     ['Aperibé', 'Pequeno I', 'CREAS', 'Rua', 'FRANCISCO HENRIQUE DE SOUZA', '535', '', 'PALMEIRAS', '28495-000', '(22) 3864-1606'],
     ['Araruama', 'Grande', 'CREAS - Centro de Referência Especializado de Assistência Social', 'Rua', 'Rua República do Chile', '437', '', 'Centro', '28970-000', '(22) 2664-1706'],
@@ -2579,7 +2288,8 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   // TODO cópia de indicadores_sociais_20170810.json
   indicadoresSociais: string[][] = [
     //    0             1                     2                         3        4       5       6          7           8             9                   10                    11                         12                     13                          14                                15                                    16                          17                      18                        19             20       21                22                        23
-    ['MUNICÍPIO', 'PREFEITO', 'SECRETÁRIO DE ASSISTÊNCIA SOCIAL', 'POPULAÇÃO', 'IDH', 'CRAS', 'CREAS', 'CENTRO POP', 'Total ', '% do Estado', 'Famílias Vulneráveis', '% da População do Município', '% do Estado', ' Famílias Beneficiárias', '% da População do Município', '% Cobertura - Perfil Cad.Único', '% Cobertura - Perfil Bolsa Família', 'Valor Total Repassado', '  Famílias Registradas', 'Benefícios Eventuais', 'PAIF', 'PAEFI', 'Total de Beneficiários', 'Valor Total Repassado'],
+//  ['MUNICÍPIO', 'PREFEITO', 'SECRETÁRIO DE ASSISTÊNCIA SOCIAL', 'POPULAÇÃO', 'IDH', 'CRAS', 'CREAS', 'CENTRO POP', 'Total ', '% do Estado', 'Famílias Vulneráveis', '% da População do Município', '% do Estado', ' Famílias Beneficiárias', '% da População do Município', '% Cobertura - Perfil Cad.Único', '% Cobertura - Perfil Bolsa Família', 'Valor Total Repassado', '  Famílias Registradas', 'Benefícios Eventuais', 'PAIF', 'PAEFI', 'Total de Beneficiários', 'Valor Total Repassado'],
+    ['Rio de Janeiro - RJ', 'Luiz Fernando de Souza', 'Gustavo Reis Ferreira', '16.231.365', '0,76', '453', '116', '19', '588', '100', '1.430.427', '', '8,95', '804.641', '5,03', '9,64', '56,25', 'R$ 1.588.104.562,00', '1.560.055', '', '', '', '319.056', 'R$ 298.419.232,44'],
     ['Angra Dos Reis', 'Fernando Antônio Ceciliano Jordão', 'Munir Francisco', '177.101', '0,72', '7', '1', '0', '8', '1,36', '14.911', '8,42', '1,04', '10.495', '5,93', '116,66', '70,38', 'R$ 22.424.211,00', '19.669', 'SIM', 'SIM', 'SIM', '2.760', 'R$ 2.574.492,98'],
     ['Aperibé', 'Flávio Diniz Berriel', 'Vanessa Garcia Correa', '10.545', '0,69', '3', '1', '0', '4', '0,68', '1.276', '12,10', '0,09', '686', '6,51', '93,46', '53,76', 'R$ 1.362.195,00', '1.476', 'SIM', 'SIM', 'SIM', '155', 'R$ 144.298,14'],
     ['Araruama', 'Livia Soares Bello Da Silva', 'João Baptista De Araujo Filho', '116.418', '0,72', '5', '1', '1', '7', '1,19', '12.712', '10,92', '0,89', '9.494', '8,16', '115,7', '74,69', 'R$ 21.452.175,00', '17.227', 'NÃO', 'SIM', 'SIM', '3.370', 'R$ 3.151.888,96'],
@@ -2672,7 +2382,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Varre-sai', 'Silvestre José Gorini', 'Isabela Louvain Fabri Moraes', '9.720', '0,66', '2', '0', '0', '2', '0,34', '1.352', '13,91', '0,09', '879', '9,04', '101,97', '65,01', 'R$ 1.575.692,00', '1.562', 'SIM', 'SIM', 'NÃO', '178', 'R$ 166.786,00'],
     ['Vassouras', 'Severino Ananias Dias Filho', 'Rosa Maria Coelho De Almeida', '34.858', '0,71', '3', '1', '0', '4', '0,68', '3.509', '10,07', '0,25', '1.586', '4,55', '73,49', '45,2', 'R$ 2.825.859,00', '3.390', 'SIM', 'SIM', 'SIM', '853', 'R$ 792.328,36'],
     ['Volta Redonda', 'Elderson Ferreira Da Silva ', 'Maycon César Inácio Abrantes', '260.180', '0,77', '33', '1', '1', '35', '5,95', '17.858', '6,86', '1,25', '10.966', '4,21', '115,49', '61,41', 'R$ 24.633.994,00', '22.609', 'SIM', 'SIM', 'SIM', '3.439', 'R$ 3.199.831,11'],
-    ['Rio de Janeiro - RJ', 'Luiz Fernando de Souza', 'Gustavo Reis Ferreira', '16.231.365', '0,76', '453', '116', '19', '588', '100', '1.430.427', '', '8,95', '804.641', '5,03', '9,64', '56,25', 'R$ 1.588.104.562,00', '1.560.055', '', '', '', '319.056', 'R$ 298.419.232,44'],
   ];
 
 }

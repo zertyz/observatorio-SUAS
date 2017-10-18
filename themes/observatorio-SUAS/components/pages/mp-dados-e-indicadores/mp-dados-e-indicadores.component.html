@@ -22,7 +22,7 @@
             <div class="col-lg-6 col-md-12">
               <h3 class="hw3" *ngIf="estadoSelected">Estado</h3>
               <h3 class="hw3" *ngIf="estadoSelected===false">Município</h3>
-              <mp-mapa-interativo style="width: 100%; " estado = {{estado}} [dropdown] = "true" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeMunicipio}"></mp-mapa-interativo>
+              <mp-mapa-interativo style="width: 100%; " estado = {{estadoId}} [dropdown] = "true" [preSelecionados] = "[municipio]" selectedRedirection = "dados-e-indicadores/#{nomeElemento}"></mp-mapa-interativo>
             </div>
 
 

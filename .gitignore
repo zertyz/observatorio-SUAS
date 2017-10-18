@@ -43,7 +43,7 @@ ts-node
 dist/
 dev/
 docs/
-/nativescript/lib/
+/nativescript/lib
 test/
 tmp/
 
