@@ -6,12 +6,21 @@
   padding-right: 1%;
 }
 
-.macro{
-
+.macro-card{
+  height: 100%;
+  padding-left: 1em !important;
+  padding-right: 2em !important;
+  padding-top: 0em !important;
+  padding-bottom: 0em !important;
 }
 
-.micro{
+.micro-card{
+  padding: 0.5em !important;
+}
 
+.icone {
+  width:3.5rem;
+  padding-top: 2.5vw;
 }
 
 .dimensao {
@@ -19,7 +28,7 @@
   font-size: 140%;
   line-height: 90%;
   font-weight: bold;
-  margin-top: 4%;
+  word-wrap: normal;
 }
 
 .pesoHeader {
@@ -27,15 +36,17 @@
   font-size: 100%;
   font-weight: bold;
   line-height: 90%;
+  word-wrap: normal;
 }
 
 .pesoValor {
   font-family: 'Roboto-Condensed';
-  font-size: 340%;
+  font-size: 250%;
   line-height: 90%;
   font-weight: normal;
   color: rgb(5, 127, 178);
   right: 2%;
+  word-wrap: normal;
 }
 
 .info {
