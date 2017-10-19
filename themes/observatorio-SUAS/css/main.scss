@@ -3,6 +3,10 @@
 @import "../scss/initial";
 @import "GradacoesDeCores";
 
+.container-fluid{
+  background-color: #fafafa;
+}
+
 .img-envolvida {
   float: left;
   shape-outside: url("../assets/img/Predio Estagio 4 - Construção Adiantada.png");

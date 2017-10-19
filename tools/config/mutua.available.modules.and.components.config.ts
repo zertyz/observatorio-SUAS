@@ -197,6 +197,11 @@ const MutuaAvailableComponentsConfiguration: IMutuaAvailableComponentsConfigurat
     source: '../../components/pages/mp-ranking/mp-ranking.component',
     routes: '../../components/pages/mp-ranking/mp-ranking.routes',
   },
+  // Metodologia
+  MPMetodologiaComponent: {
+    source: '../../components/pages/mp-metodologia/mp-metodologia.component',
+    routes: '../../components/pages/mp-metodologia/mp-metodologia.routes',
+  },
 };
 
 /** available modules */
