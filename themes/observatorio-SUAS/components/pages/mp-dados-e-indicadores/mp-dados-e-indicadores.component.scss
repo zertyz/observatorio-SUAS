@@ -250,6 +250,9 @@ p{
   @extend .vt-bold;//Diferente dos outros VTs
   color: rgb(5, 127, 178);
 }
+.height_line{
+  line-height: 2.8em;
+}
 
 // other styles
 :host/deep/{
@@ -402,5 +405,10 @@ div.col-md-4{
   }
 .card{
     height: 25rem;
+  }
+}
+@media(max-width: 1400px) {
+  .height_line{
+    line-height: 1.7em;
   }
 }

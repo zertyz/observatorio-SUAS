@@ -8,7 +8,7 @@ p{
 }
 
 ul > li{
-  padding-bottom: 1.6rem;
+  padding-bottom: 1em;
 }
 div mp-link{
   margin-bottom: 2rem;
@@ -49,6 +49,16 @@ div > span{
   height: 3rem;
   margin-top: 0!important;
   margin-right: -17px;
+  margin-bottom: -25px;
+  margin-right: -25px;
+}
+.card{
+  border-radius: 0;
+  width: 20em;
+  float: right;
+  margin-right: -7px;
+  margin-top: 12px;
+
 }
 
 .superior a {
@@ -62,8 +72,15 @@ div > span{
   font-weight: 600!important;
   height: 2.2rem;
   display:block;
-}
+  float: right;
 
+}
+.ajusta_elemento{
+  width: 11em!important;
+  height: 14em !important;
+  padding: 1.5rem;
+
+}
 
 @media(max-width:1199px){
   img.img-responsive { width:90%;}
