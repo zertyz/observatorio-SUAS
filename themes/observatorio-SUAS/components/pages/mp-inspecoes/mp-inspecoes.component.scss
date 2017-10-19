@@ -80,6 +80,9 @@ input:checked + .slider {
   .ui-multiselect-items-wrapper{
     overflow: auto;
     max-height: 4.7rem;
+    width:40vmax;
+    max-width: 100%;
+
   }
  p-multiSelect > div.ui-corner-all{
     width:100%;
@@ -105,24 +108,26 @@ input:checked + .slider {
     width: 100% !important;
     margin-bottom: .6em;
   }
-button.btn-primario {
-  width: 100%!important;
-}
+  button.btn-primario {
+    width: 100% !important;
+  }
 
-.button-switch {
-  width: 32.8%;
-}
+  .button-switch {
+    width: 32.8%;
+  }
 
-:host /deep/ {
-  .ui-inputtext {
-    width: 13.4em;
+  :host /deep/ {
+    .ui-inputtext {
+      width: 13.4em;
+    }
+    .ui-multiselect-items-wrapper {
+      width: 65vmax;
+    }
+    .row {
+      padding-left: .5rem;
     }
   }
- .row{
-   padding-left: .5rem;
- }
 }
-
 @media (max-width: 1200px) {
   .titulo{
     font-size: 1.17rem;
