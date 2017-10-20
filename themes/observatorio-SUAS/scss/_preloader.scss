@@ -43,7 +43,7 @@
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: $danger;
+    border-top-color: white;
     transform: translate3d(0, 0, 0);
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     &:before {
