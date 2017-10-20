@@ -1,22 +1,4 @@
-h1{
-  text-align:right;
-}
 
-p{
-  font-size: 95%;
-
-}
-
-ul > li{
-  padding-bottom: 1em;
-}
-div mp-link{
-  margin-bottom: 2rem;
-}
-div > span{
-  color: black;
-  padding-bottom: 2rem;
-}
 .text-blue{
   color: rgb(5, 127, 178);
   text-align: left;
@@ -29,7 +11,11 @@ div > span{
   padding-left: .9rem;
   padding-right: .9rem;
 }
-
+.img-responsive{
+  width: 4em;
+  height: 4em;
+  padding: .4em;
+}
 .link {
   position: relative;
   bottom: 10%;
@@ -48,17 +34,41 @@ div > span{
 
   height: 3rem;
   margin-top: 0!important;
-  margin-right: -17px;
-  margin-bottom: -25px;
-  margin-right: -25px;
+  margin-bottom: -24px;
+  margin-right: -6px;
 }
+
 .card{
   border-radius: 0;
-  width: 20em;
   float: right;
-  margin-right: -7px;
+  margin-right: 6px;
   margin-top: 12px;
+}
 
+.keyword{
+  font-family: 'Roboto-Condensed';
+  font-size: 0.965rem;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+.keyword-small{
+  @extend .keyword;
+  font-size: .765rem;
+}
+
+.number{
+  @extend .keyword;
+  font-size: 1.3rem;
+}
+
+.number-big{
+  @extend .number;
+  font-size: 3.1rem;
+}
+
+.card-special{
+  width: 20em;
 }
 
 .superior a {
@@ -67,19 +77,39 @@ div > span{
   line-height: 2.2rem!important;
   font-size: 0.8rem!important;
   text-transform: uppercase;
-  padding-right: 0.5rem;
+  padding-right: 4.5rem;
   padding-left: 0.5rem;
   font-weight: 600!important;
   height: 2.2rem;
   display:block;
   float: right;
-
 }
+
 .ajusta_elemento{
   width: 11em!important;
   height: 14em !important;
   padding: 1.5rem;
+}
 
+h1{
+  text-align:right;
+}
+
+p{
+  font-size: 95%;
+}
+
+ul > li{
+  padding-bottom: 1em;
+}
+
+div mp-link{
+  margin-bottom: 2rem;
+}
+
+div > span{
+  color: black;
+  padding-bottom: .9rem;
 }
 
 @media(max-width:1199px){
