@@ -38,14 +38,6 @@
   margin-right: -6px;
 }
 
-.card{
-  border-radius: 0;
-  float: right;
-  margin-right: 6px;
-  margin-top: 12px;
-  height: 38em;
-}
-
 .keyword{
   font-family: 'Raleway';
   font-size: 0.965rem;
@@ -67,11 +59,6 @@
 .number-big{
   @extend .number;
   font-size: 3.1rem;
-}
-
-.card-special{
-  width: 20em;
-  padding:0 ;
 }
 
 .superior a {
@@ -127,6 +114,22 @@
   line-height: 95%;
 }
 
+.card{//importação não funciona
+  border-radius: 0;
+  float: right;
+  margin-right: 6px;
+  margin-top: 12px;
+  height: 38em;
+  color: inherit;
+  background-color: white;
+  margin-left: 0.5rem;
+  width: 100%;
+  border-right: 1px solid #d2d7de!important;
+  border-bottom: 1px solid #d2d7de!important;
+  border-left: 1px solid #eaecee!important;
+  border-top: 1px solid #eaecee!important;
+  padding: 30px!important;
+}
 
 .macro-card{
   @extend .card;
@@ -142,21 +145,7 @@
   @extend .card;
   margin: 0em;
   padding: 0.5em !important;
-  height: 11em;
-}
-.card{//importação não funciona
-  color: inherit;
-  background-color: white;
-  margin-top: 0.7rem;
-  margin-left: 0.5rem;
-  margin-right: 0.7rem;
-  width: 100%;
-  background-color: white;
-  border-right: 1px solid #d2d7de!important;
-  border-bottom: 1px solid #d2d7de!important;
-  border-left: 1px solid #eaecee!important;
-  border-top: 1px solid #eaecee!important;
-  padding: 30px!important;
+  height: 8.3em;
 }
 
 .scroll {
