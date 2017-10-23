@@ -25,11 +25,12 @@
 
 .macro-card{
   @extend .card;
-  height: 100%;
+  height: 37em;
   padding-left: 1em !important;
   padding-right: 1em !important;
   padding-top: 1em !important;
   padding-bottom: 0em !important;
+  margin-bottom: 5em;
 }
 
 .micro-card{

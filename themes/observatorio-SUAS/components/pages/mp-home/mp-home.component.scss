@@ -5,7 +5,7 @@
 }
 
 .texto {
-  font-family: 'Roboto-Condensed-Light';
+  font-family: 'Raleway';
   font-size: 120%;
   line-height: 130%;
   padding-left: .9rem;
@@ -20,7 +20,7 @@
   position: relative;
   bottom: 10%;
   right: 2%;
-  font-family: 'Roboto-Condensed';
+  font-family: 'Raleway';
   font-size: 150%;
   line-height: 90%;
   text-align: right;
@@ -46,7 +46,7 @@
 }
 
 .keyword{
-  font-family: 'Roboto-Condensed';
+  font-family: 'Raleway';
   font-size: 0.965rem;
   text-transform: uppercase;
   color: whitesmoke;
@@ -62,6 +62,7 @@
   font-size: 1.3rem;
 }
 
+
 .number-big{
   @extend .number;
   font-size: 3.1rem;
@@ -69,6 +70,7 @@
 
 .card-special{
   width: 20em;
+  padding:0 ;
 }
 
 .superior a {
@@ -90,6 +92,80 @@
   height: 14em !important;
   padding: 1.5rem;
 }
+
+.dimensao {
+  font-family: 'Raleway';
+  font-size: 140%;
+  line-height: 90%;
+  font-weight: bold;
+  word-wrap: normal;
+}
+
+.pesoHeader {
+  font-family: 'Roboto-Condensed';
+  font-size: 100%;
+  font-weight: bold;
+  line-height: 90%;
+  word-wrap: normal;
+  padding-left: 0em!important;
+}
+
+.pesoValor {
+  font-family: 'Roboto-Condensed';
+  font-size: 250%;
+  line-height: 90%;
+  font-weight: normal;
+  color: rgb(5, 127, 178);
+  right: 2%;
+  word-wrap: normal;
+}
+
+.info {
+  font-family: 'Raleway';
+  font-size: 100%;
+  line-height: 95%;
+}
+
+
+.macro-card{
+  @extend .card;
+  height: 37em;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  padding-top: 1em !important;
+  padding-bottom: 0em !important;
+  margin-bottom: 5em;
+}
+
+.micro-card{
+  @extend .card;
+  margin: 0em;
+  padding: 0.5em !important;
+  height: 11em;
+}
+.card{//importação não funciona
+  color: inherit;
+  background-color: white;
+  margin-top: 0.7rem;
+  margin-left: 0.5rem;
+  margin-right: 0.8rem;
+  width: 100%;
+  background-color: white;
+  border-right: 1px solid #d2d7de!important;
+  border-bottom: 1px solid #d2d7de!important;
+  border-left: 1px solid #eaecee!important;
+  border-top: 1px solid #eaecee!important;
+  padding: 30px!important;
+}
+
+.scroll {
+  height:70%;
+  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 1%;
+}
+
 
 h1{
   text-align:right;
