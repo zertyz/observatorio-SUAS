@@ -131,7 +131,7 @@
 }
 
 .card-special{
-  @extend card;
+  @extend .card;
   width: 30em;
 }
 
