@@ -1,20 +1,27 @@
 
 
-.btn-secundario{
-  width: 5em;
+.btn-primario{
+  width: 16em;
   line-height: 30px;
   float: right;
   margin-top: .8em;
 
 }
+.btn-secundario{
+  @extend .btn-primario;
+  width: 5em;
+}
 .titulo{
   white-space: nowrap;
+ text-transform: uppercase;
 }
 
 div > a{
   color: #0d95e8;
 }
-
+.card-block > p{
+  text-transform: uppercase;
+}
 .img-fluid{
   width: 6rem;
   height: auto;
