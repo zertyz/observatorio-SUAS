@@ -5,6 +5,13 @@
 
 .container-fluid{
   background-color: #fafafa;
+  width: 100vw;
+}
+
+.ajusta_elemento{
+  width: 11em!important;
+  height: 14em !important;
+  padding: 1.5rem;
 }
 
 .img-envolvida {
@@ -26,7 +33,7 @@ div.borderedL{
 
 .titulo{
   font-family: 'Raleway';
-  font-size: 1.8em;
+  font-size: 1.56em;
   line-height: 90%;
   text-transform: uppercase;
   padding-top: 0.5rem;
@@ -61,7 +68,7 @@ div.borderedL{
   border-bottom: 1px solid #d2d7de!important;
   border-left: 1px solid #eaecee!important;
   border-top: 1px solid #eaecee!important;
-  padding: 30px!important;
+  padding: 30px
 }
 
 .btn-primario{

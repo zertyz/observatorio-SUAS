@@ -49,7 +49,10 @@
   @extend .keyword;
   font-size: .765rem;
 }
-
+.keyword-municipio{
+  @extend .keyword;
+  color: black;
+}
 .number{
   @extend .keyword;
   font-size: 1.3rem;
@@ -58,7 +61,7 @@
 
 .number-big{
   @extend .number;
-  font-size: 3.1rem;
+  font-size: 4.4rem;
 }
 
 .superior a {
@@ -91,11 +94,14 @@
 
 .pesoHeader {
   font-family: 'Roboto-Condensed';
-  font-size: 100%;
-  font-weight: bold;
+  font-size: 130%;
+  font-weight: normal;
   line-height: 90%;
   word-wrap: normal;
   padding-left: 0em!important;
+  color: rgb(44, 84, 203);
+  padding-top: .7em;
+  padding-right: .33em;
 }
 
 .pesoValor {
@@ -103,9 +109,10 @@
   font-size: 250%;
   line-height: 90%;
   font-weight: normal;
-  color: rgb(5, 127, 178);
+  color: rgb(76, 77, 79);
   right: 2%;
   word-wrap: normal;
+  padding-right: .13em;
 }
 
 .info {
@@ -117,35 +124,39 @@
 .card{//importação não funciona
   border-radius: 0;
   float: right;
-  margin-right: 6px;
-  margin-top: 12px;
-  height: 38em;
-  color: inherit;
-  background-color: white;
-  margin-left: 0.5rem;
-  width: 100%;
-  border-right: 1px solid #d2d7de!important;
-  border-bottom: 1px solid #d2d7de!important;
-  border-left: 1px solid #eaecee!important;
-  border-top: 1px solid #eaecee!important;
-  padding: 30px!important;
+  margin-right: 11px;
+  margin-top: 11px;
+  height: 34em;
+  padding: 15px 30px 0px 30px;
+}
+
+.card-special{
+  @extend card;
+  width: 30em;
 }
 
 .macro-card{
   @extend .card;
-  height: 37em;
+  height: 40em;
   padding-left: 1em !important;
   padding-right: 1em !important;
   padding-top: 1em !important;
   padding-bottom: 0em !important;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 .micro-card{
   @extend .card;
   margin: 0em;
   padding: 0.5em !important;
-  height: 8.3em;
+  width: 100%;
+  height: 6em;
+  text-align: right;
+}
+
+.barra-horizontal{
+  border-right: 2px solid rgb(76, 77, 79);
+  height: 2.1em;
 }
 
 .scroll {
@@ -183,7 +194,7 @@ div > span{
   e-link.link{position: inherit;bottom: inherit;right: inherit}
   max-width: 100%;
 }
-@media (max-width: 1068px) {
+@media (max-width: 1199px) {
   .titulo {
     font-size: 1.3rem;
   }
