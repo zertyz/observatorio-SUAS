@@ -1,92 +1,92 @@
 [
   {
-    "indicador": "FAMÍLIAS VULNERÁVEIS",
-    "informativo": "É a quantidade estimada de famílias de baixa renda, calculada com base nos dados do Censo IBGE de 2010 e em coeficientes de volatilidade de renda, ou seja,  é a estimativa de famílias pobres com perfil Cadastro Único (baixa renda) elaborada a partir da combinação da metodologia de Mapas de Pobreza do IBGE, elaborados a partir do Censo Demográfico 2000, da PNAD 2006 e de outros indicadores sócio-econômicos, levando em consideração a renda familiar per capita de até meio salário mínimo.\nEste valor serve como referência para a quantidade de famílias que devem estar inscritas no Cadastro Único e é também utilizado no cálculo do Índice de Gestão Descentralizada.",
+    "indicador": "FAMÃLIAS VULNERÃVEIS",
+    "informativo": "Ã‰ a quantidade estimada de famÃ­lias de baixa renda, calculada com base nos dados do Censo IBGE de 2010 e em coeficientes de volatilidade de renda, ou seja,  Ã© a estimativa de famÃ­lias pobres com perfil Cadastro Ãšnico (baixa renda) elaborada a partir da combinaÃ§Ã£o da metodologia de Mapas de Pobreza do IBGE, elaborados a partir do Censo DemogrÃ¡fico 2000, da PNAD 2006 e de outros indicadores sÃ³cio-econÃ´micos, levando em consideraÃ§Ã£o a renda familiar per capita de atÃ© meio salÃ¡rio mÃ­nimo.\nEste valor serve como referÃªncia para a quantidade de famÃ­lias que devem estar inscritas no Cadastro Ãšnico e Ã© tambÃ©m utilizado no cÃ¡lculo do Ãndice de GestÃ£o Descentralizada.",
     "fonteDaConsulta": "SAGI-MDSA\nconsulta atualizada em: 21/09/2017"
   },
   {
-    "indicador": "COBERTURA BOLSA FAMÍLIA - PERFIL BF",
-    "informativo": "Percentual de famílias atendidas pelo Programa Bolsa Família. Expressa a cobertura do Programa Bolsa Família, mensalmente, numa área geográfica específica, em relação à estimativa de famílias pobres que se enquadram no perfil de inclusão do Programa. Para os anos de 2004 e 2005, o indicador foi calculado utilizando como denominador, a variável “Estimativa de Famílias Pobres – Meta de atendimento Bolsa Família (Pnad 2004)” (famílias com renda familiar per capita de até R$ 100,00), de 2006 a 2009, o indicador foi calculado utilizando como denominador, a variável “Estimativa de Famílias Pobres – Pnad – 2006 (famílias com renda familiar per capita de até R$ 140,00). A partir de 2010, o indicador foi calculado utilizando como denominador, a variável “Estimativa de Famílias pobres – Perfil BF – Censo 2010”",
+    "indicador": "COBERTURA BOLSA FAMÃLIA - PERFIL BF",
+    "informativo": "Percentual de famÃ­lias atendidas pelo Programa Bolsa FamÃ­lia. Expressa a cobertura do Programa Bolsa FamÃ­lia, mensalmente, numa Ã¡rea geogrÃ¡fica especÃ­fica, em relaÃ§Ã£o Ã  estimativa de famÃ­lias pobres que se enquadram no perfil de inclusÃ£o do Programa. Para os anos de 2004 e 2005, o indicador foi calculado utilizando como denominador, a variÃ¡vel â€œEstimativa de FamÃ­lias Pobres â€“ Meta de atendimento Bolsa FamÃ­lia (Pnad 2004)â€ (famÃ­lias com renda familiar per capita de atÃ© R$ 100,00), de 2006 a 2009, o indicador foi calculado utilizando como denominador, a variÃ¡vel â€œEstimativa de FamÃ­lias Pobres â€“ Pnad â€“ 2006 (famÃ­lias com renda familiar per capita de atÃ© R$ 140,00). A partir de 2010, o indicador foi calculado utilizando como denominador, a variÃ¡vel â€œEstimativa de FamÃ­lias pobres â€“ Perfil BF â€“ Censo 2010â€",
     "fonteDaConsulta": "SAGI-MDSA\nconsulta atualizada em: 21/09/2017"
   },
   {
-    "indicador": "COBERTURA BOLSA FAMÍLIA - PERFIL CAD.ÚNICO",
-    "informativo": "Percentual de famílias atendidas pelo Programa Bolsa Família em relação ao público alvo do Cadastro Único. Expressa a cobertura do Programa Bolsa Família, mensalmente, numa área geográfica específica, em relação à estimativa de famílias pobres que se enquadram no perfil de inclusão do Cadastro Único (famílias com renda familiar per capita de até meio salário mínimo). Abril de 2009, o indicador foi calculado utilizando como denominador “Estimativa de famílias pobres – Perfil Cadastro Único (Pnad 2006)” ; de 2010 em diante o indicador foi calculado utilizando como denominador “Estimativa de famílias pobres – Perfil Cadastro Único (Censo 2010)”.",
+    "indicador": "COBERTURA BOLSA FAMÃLIA - PERFIL CAD.ÃšNICO",
+    "informativo": "Percentual de famÃ­lias atendidas pelo Programa Bolsa FamÃ­lia em relaÃ§Ã£o ao pÃºblico alvo do Cadastro Ãšnico. Expressa a cobertura do Programa Bolsa FamÃ­lia, mensalmente, numa Ã¡rea geogrÃ¡fica especÃ­fica, em relaÃ§Ã£o Ã  estimativa de famÃ­lias pobres que se enquadram no perfil de inclusÃ£o do Cadastro Ãšnico (famÃ­lias com renda familiar per capita de atÃ© meio salÃ¡rio mÃ­nimo). Abril de 2009, o indicador foi calculado utilizando como denominador â€œEstimativa de famÃ­lias pobres â€“ Perfil Cadastro Ãšnico (Pnad 2006)â€ ; de 2010 em diante o indicador foi calculado utilizando como denominador â€œEstimativa de famÃ­lias pobres â€“ Perfil Cadastro Ãšnico (Censo 2010)â€.",
     "fonteDaConsulta": "SAGI-MDSA\nconsulta atualizada em: 21/09/2017"
   },
   {
-    "indicador": "FAMÍLIAS REGISTRADAS NO CADASTRO ÚNICO",
-    "informativo": "O Cadastro Único para Programas Sociais do Governo Federal, instituído pelo Decreto 6.135/07, é um instrumento de identificação e caracterização sócio-econômica das famílias brasileiras de baixa renda, entendidas prioritariamente como aquelas cuja renda per capita mensal é de até meio salário mínimo. Famílias com renda superior  (até três salários mínimos) também podem ser cadastradas, para o planejamento ou implementação de programas sociais específicos. Dessa forma, o número de famílias cadastradas é maior que a quantidade de famílias beneficiadas pelo PBF.",
+    "indicador": "FAMÃLIAS REGISTRADAS NO CADASTRO ÃšNICO",
+    "informativo": "OÂ Cadastro Ãšnico para Programas Sociais do Governo Federal, instituÃ­do pelo Decreto 6.135/07, Ã© um instrumento de identificaÃ§Ã£o e caracterizaÃ§Ã£o sÃ³cio-econÃ´mica das famÃ­lias brasileiras de baixa renda, entendidas prioritariamente como aquelas cuja renda per capita mensal Ã© de atÃ© meio salÃ¡rio mÃ­nimo. FamÃ­lias com renda superiorÂ  (atÃ© trÃªs salÃ¡rios mÃ­nimos) tambÃ©m podem ser cadastradas, para o planejamento ou implementaÃ§Ã£o de programas sociais especÃ­ficos. Dessa forma, o nÃºmero de famÃ­lias cadastradas Ã© maior que a quantidade de famÃ­lias beneficiadas pelo PBF.",
     "fonteDaConsulta": "SAGI-MDSA\nconsulta atualizada em: 21/09/2017"
   },
   {
-    "indicador": "BENEFICIÁRIOS DE PRESTAÇÃO CONTINUADA",
-    "informativo": "É um direito garantido pela Constituição Federal de 1988 e consiste no pagamento de 01 (um) salário mínimo mensal a pessoas com 65 anos de idade ou mais e a pessoas com deficiência incapacitante para a vida independente e para o trabalho. Para ambas as modalidades (idosos e pessoas com deficiência) a renda per capita familiar deve ser inferior a ¼ do salário mínimo. O benefício tem como objetivo garantir a essas pessoas socialmente desprotegidas as condições mínimas de sustento e manutenção de suas vidas e é gerido pelo Ministério do Desenvolvimento Social e Combate à Fome (MDS), a quem compete sua gestão, acompanhamento e avaliação. Sua operacionalização cabe ao Instituto Nacional do Seguro Social (INSS), vinculado ao Ministério da Previdência Social. Os recursos para custeio do BPC provêm do Fundo Nacional de Assistência Social (FNAS).\nPúblico - Idosos e pessoas com deficiência que não possuem meios de prover a própria manutenção nem de tê-la provida por sua família.",
+    "indicador": "BENEFICIÃRIOS DE PRESTAÃ‡ÃƒO CONTINUADA",
+    "informativo": "Ã‰ um direito garantido pela ConstituiÃ§Ã£o Federal de 1988 e consiste no pagamento de 01 (um) salÃ¡rio mÃ­nimo mensal a pessoas com 65 anos de idade ou mais e a pessoas com deficiÃªncia incapacitante para a vida independente e para o trabalho. Para ambas as modalidades (idosos e pessoas com deficiÃªncia) a renda per capita familiar deve ser inferior a Â¼ do salÃ¡rio mÃ­nimo. O benefÃ­cio tem como objetivo garantir a essas pessoas socialmente desprotegidas as condiÃ§Ãµes mÃ­nimas de sustento e manutenÃ§Ã£o de suas vidas e Ã© gerido pelo MinistÃ©rio do Desenvolvimento Social e Combate Ã  Fome (MDS), a quem compete sua gestÃ£o, acompanhamento e avaliaÃ§Ã£o. Sua operacionalizaÃ§Ã£o cabe ao Instituto Nacional do Seguro Social (INSS), vinculado ao MinistÃ©rio da PrevidÃªncia Social. Os recursos para custeio do BPC provÃªm do Fundo Nacional de AssistÃªncia Social (FNAS).\nPÃºblico - Idosos e pessoas com deficiÃªncia que nÃ£o possuem meios de prover a prÃ³pria manutenÃ§Ã£o nem de tÃª-la provida por sua famÃ­lia.",
     "fonteDaConsulta": "SAGI-MDSA\nconsulta atualizada em: 21/09/2017"
   },
   {
-    "indicador": "PEÇAS DE ATUAÇÃO",
-    "informativo": "Banco de dados com modelos de peças jurídicas como: ofícios, portarias de inquéritos civis, recomendações, termos de ajustamento de conduta, ações civis públicas e ação de improbidade. As peças de atuação podem ser adequadas de acordo com o porte do município e resultam na otimização da fiscalização do SUAS.",
-    "fonteDaConsulta": "Observatório SUAS"
+    "indicador": "PEÃ‡AS DE ATUAÃ‡ÃƒO",
+    "informativo": "Banco de dados com modelos de peÃ§as jurÃ­dicas como: ofÃ­cios, portarias de inquÃ©ritos civis, recomendaÃ§Ãµes, termos de ajustamento de conduta, aÃ§Ãµes civis pÃºblicas e aÃ§Ã£o de improbidade. As peÃ§as de atuaÃ§Ã£o podem ser adequadas de acordo com o porte do municÃ­pio e resultam na otimizaÃ§Ã£o da fiscalizaÃ§Ã£o do SUAS.",
+    "fonteDaConsulta": "ObservatÃ³rio SUAS"
   },
   {
-    "indicador": "LEGISLAÇÕES",
-    "informativo": "Foi realizada uma pesquisa documental inédita, que abrangeu 23 anos (1994 á 2017) de normativas da assistência social, resultando em um banco de dados com 625 resoluções do Conselho Nacional de Assistência Social. A partir deste universo de legislações, foi estabelecida uma triagem com 101 normativas em vigor que impactam diretamente na implementação da política de assistência social e facilita o processo de fiscalização.",
-    "fonteDaConsulta": "Resoluções Normativas do CNAS\nconsulta atualizada em: 20/09/2017"
+    "indicador": "LEGISLAÃ‡Ã•ES",
+    "informativo": "Foi realizada uma pesquisa documental inÃ©dita, que abrangeu 23 anos (1994 Ã¡ 2017) de normativas da assistÃªncia social, resultando em um banco de dados com 625 resoluÃ§Ãµes do Conselho Nacional de AssistÃªncia Social. A partir deste universo de legislaÃ§Ãµes, foi estabelecida uma triagem com 101 normativas em vigor que impactam diretamente na implementaÃ§Ã£o da polÃ­tica de assistÃªncia social e facilita o processo de fiscalizaÃ§Ã£o.",
+    "fonteDaConsulta": "ResoluÃ§Ãµes Normativas do CNAS\nconsulta atualizada em: 20/09/2017"
   },
   {
-    "indicador": "ORÇAMENTO",
-    "informativo": "Recursos financeiros transferidos para os municípios do Fundo do Fundo Nacional de Assistência Social – FNAS destinados à assistência social. Os dados foram extraídos da rede SUAS, através das parcelas pagas, tipo de execução serviços e crédito em conta de recursos do ano de 2016 e 2017. Esse dispositivo reafirma a importância do cofinanciamento, ou seja, da alocação de recursos próprios das três esferas de governo  e da transferência automática entre os fundos de assistência social.",
-    "fonteDaConsulta": "Ministério de Desenvolvimento Social e Combate a Fome - SUAS WEB\nconsulta atualizada em: 05/10/2017"
+    "indicador": "ORÃ‡AMENTO",
+    "informativo": "Recursos financeiros transferidos para os municÃ­pios do Fundo do Fundo Nacional de AssistÃªncia Social â€“ FNAS destinados Ã  assistÃªncia social. Os dados foram extraÃ­dos da rede SUAS, atravÃ©s das parcelas pagas, tipo de execuÃ§Ã£o serviÃ§os e crÃ©dito em conta de recursos do ano de 2016 e 2017. Esse dispositivo reafirma a importÃ¢ncia do cofinanciamento, ou seja, da alocaÃ§Ã£o de recursos prÃ³prios das trÃªs esferas de governo  e da transferÃªncia automÃ¡tica entre os fundos de assistÃªncia social.",
+    "fonteDaConsulta": "MinistÃ©rio de Desenvolvimento Social e Combate a Fome - SUAS WEB\nconsulta atualizada em: 05/10/2017"
   },
   {
-    "indicador": "BENEFÍCIOS EVENTUAIS",
-    "informativo": "São previstos no art. 22 da LOAS e consistem no pagamento de auxílio em caráter transitório por natalidade ou morte, ou para atender necessidades advindas de situações de vulnerabilidade temporária, com prioridade para a criança, a família, o idoso, a pessoa com deficiência, a gestante, a nutriz e nos casos de calamidade pública. Os benefícios eventuais devem garantir o pagamento de auxilio natalidade ou morte às famílias cuja renda seja inferior a ¼ de salário mínimo.\nFonte: Guia do PMASWEB 2011",
+    "indicador": "BENEFÃCIOS EVENTUAIS",
+    "informativo": "SÃ£o previstos no art. 22 da LOAS e consistem no pagamento de auxÃ­lio em carÃ¡ter transitÃ³rio por natalidade ou morte, ou para atender necessidades advindas de situaÃ§Ãµes de vulnerabilidade temporÃ¡ria, com prioridade para a crianÃ§a, a famÃ­lia, o idoso, a pessoa com deficiÃªncia, a gestante, a nutriz e nos casos de calamidade pÃºblica. Os benefÃ­cios eventuais devem garantir o pagamento de auxilio natalidade ou morte Ã s famÃ­lias cuja renda seja inferior a Â¼ de salÃ¡rio mÃ­nimo.\nFonte: Guia do PMASWEB 2011",
     "fonteDaConsulta": "Pesquisa nos Diarios Oficiais dos Municipios e contato do CAO para o evio via e-mail.\nconsulta atualizada em: 21/09/2017"
   },
   {
-    "indicador": "SERVIÇO DE PROTEÇÃO E ATENDIMENTO INTEGRAL À FAMÍLIA – PAIF",
-    "informativo": "Consiste no trabalho social com famílias, de caráter continuado, com a finalidade de fortalecer a função protetiva da família, prevenir a ruptura de seus vínculos, promover seu acesso e usufruto de direitos e contribuir na melhoria de sua qualidade de vida. Prevê o desenvolvimento de potencialidades e aquisições das famílias e o fortalecimento de vínculos familiares e comunitários, por meio de ações de caráter preventivo, protetivo e proativo. O serviço PAIF integra o nível de proteção social básica do SUAS. \nFonte:Tipificação Nacional de Serviços Socioassistenciais",
+    "indicador": "SERVIÃ‡O DE PROTEÃ‡ÃƒO E ATENDIMENTO INTEGRAL Ã€ FAMÃLIA â€“ PAIF",
+    "informativo": "Consiste no trabalho social com famÃ­lias, de carÃ¡ter continuado, com a finalidade de fortalecer a funÃ§Ã£o protetiva da famÃ­lia, prevenir a ruptura de seus vÃ­nculos, promover seu acesso e usufruto de direitos e contribuir na melhoria de sua qualidade de vida. PrevÃª o desenvolvimento de potencialidades e aquisiÃ§Ãµes das famÃ­lias e o fortalecimento de vÃ­nculos familiares e comunitÃ¡rios, por meio de aÃ§Ãµes de carÃ¡ter preventivo, protetivo e proativo. O serviÃ§o PAIF integra o nÃ­vel de proteÃ§Ã£o social bÃ¡sica do SUAS. \nFonte:TipificaÃ§Ã£o Nacional de ServiÃ§os Socioassistenciais",
     "fonteDaConsulta": "CENSO SUAS 2016\nconsulta atualizada em: 21/09/2017"
   },
   {
-    "indicador": "SERVIÇO DE PROTEÇÃO E ATENDIMENTO ESPECIALIZADO A FAMÍLIA E INDIVÍDUOS (PAEFI)",
-    "informativo": "É um serviço voltado para famílias e pessoas que estão em situação de risco social ou tiveram seus direitos violados. Oferece apoio, orientação e acompanhamento para a superação dessas situações por meio da promoção de direitos, da preservação e do fortalecimento das relações familiares e sociais.\nO serviço deve ser ofertado, obrigatoriamente, no Centro de Referência Especializado de Assistência Social (CREAS).",
+    "indicador": "SERVIÃ‡O DE PROTEÃ‡ÃƒO E ATENDIMENTO ESPECIALIZADO A FAMÃLIA E INDIVÃDUOS (PAEFI)",
+    "informativo": "Ã‰ um serviÃ§o voltado para famÃ­lias e pessoas que estÃ£o em situaÃ§Ã£o de risco social ou tiveram seus direitos violados. Oferece apoio, orientaÃ§Ã£o e acompanhamento para a superaÃ§Ã£o dessas situaÃ§Ãµes por meio da promoÃ§Ã£o de direitos, da preservaÃ§Ã£o e do fortalecimento das relaÃ§Ãµes familiares e sociais.\nO serviÃ§o deve ser ofertado, obrigatoriamente, no Centro de ReferÃªncia Especializado de AssistÃªncia Social (CREAS).",
     "fonteDaConsulta": "CENSO SUAS 2016\nconsulta atualizada em: 21/09/2017"
   },
   {
-    "indicador": "NOVA INSPEÇÃO",
-    "informativo": "Foram criados três (03) formulários semiestruturados, com eixos de análise voltados para avaliação da equipe técnica, trabalho essencial da unidade e infraestrutura dos equipamentos. O instrumento de fiscalização foi elaborado a partir da revisão das normativas que organizam o SUAS, permitindo dimensionar o funcionamento dos programas, projetos, serviços e benefícios da assistência social.\n       Os questionários do CRAS, CREAS, Centro Pop contam com respectivamente 75 (setenta e cinco), 92 (noventa e duas) e 88 (oitenta e oito) questões distribuídas em: identificação, trabalho essencial à unidade, usuários, recursos humanos, recursos materiais e articulação com as demais políticas. O tempo médio de aplicação é de cinquenta minutos à uma hora e meia.\nA distribuição das perguntas permite ao técnico (assistente social e/ou psicólogo) vistoriar dois equipamentos em um mesmo dia, de forma padronizada, gerando indicadores de acompanhamento dos equipamentos da assistência social.",
-    "fonteDaConsulta": "Observatório SUAS"
+    "indicador": "NOVA INSPEÃ‡ÃƒO",
+    "informativo": "Foram criados trÃªs (03) formulÃ¡rios semiestruturados, com eixos de anÃ¡lise voltados para avaliaÃ§Ã£o da equipe tÃ©cnica, trabalho essencial da unidade e infraestrutura dos equipamentos. O instrumento de fiscalizaÃ§Ã£o foi elaborado a partir da revisÃ£o das normativas que organizam o SUAS, permitindo dimensionar o funcionamento dos programas, projetos, serviÃ§os e benefÃ­cios da assistÃªncia social.\n       Os questionÃ¡rios do CRAS, CREAS, Centro Pop contam com respectivamente 75 (setenta e cinco), 92 (noventa e duas) e 88 (oitenta e oito) questÃµes distribuÃ­das em: identificaÃ§Ã£o, trabalho essencial Ã  unidade, usuÃ¡rios, recursos humanos, recursos materiais e articulaÃ§Ã£o com as demais polÃ­ticas. O tempo mÃ©dio de aplicaÃ§Ã£o Ã© de cinquenta minutos Ã  uma hora e meia.\nA distribuiÃ§Ã£o das perguntas permite ao tÃ©cnico (assistente social e/ou psicÃ³logo) vistoriar dois equipamentos em um mesmo dia, de forma padronizada, gerando indicadores de acompanhamento dos equipamentos da assistÃªncia social.",
+    "fonteDaConsulta": "ObservatÃ³rio SUAS"
   },
   {
     "indicador": "RESULTADOS DA CONSULTA",
-    "informativo": "Após o preenchimento do questionário na plataforma do Observatório SUAS, o sistema vai analisar as 255 questões e verificará as irregularidades, os pontos de atenção e as inconsistências do equipamento vistoriado. Posteriormente, de acordo com as legislações e normativas atribui uma escala de cores, que denominamos “regras de negócios”. Em última análise, será emitido um relatório de notificação da situação do equipamento, a ser encaminhado aos membros do Ministério Público e aos Conselhos Municipais e Estadual de Assistência Social, instâncias estas de caráter fiscalizador da assistência social.",
-    "fonteDaConsulta": "Observatório SUAS"
+    "informativo": "ApÃ³s o preenchimento do questionÃ¡rio na plataforma do ObservatÃ³rio SUAS, o sistema vai analisar as 255 questÃµes e verificarÃ¡ as irregularidades, os pontos de atenÃ§Ã£o e as inconsistÃªncias do equipamento vistoriado. Posteriormente, de acordo com as legislaÃ§Ãµes e normativas atribui uma escala de cores, que denominamos â€œregras de negÃ³ciosâ€. Em Ãºltima anÃ¡lise, serÃ¡ emitido um relatÃ³rio de notificaÃ§Ã£o da situaÃ§Ã£o do equipamento, a ser encaminhado aos membros do MinistÃ©rio PÃºblico e aos Conselhos Municipais e Estadual de AssistÃªncia Social, instÃ¢ncias estas de carÃ¡ter fiscalizador da assistÃªncia social.",
+    "fonteDaConsulta": "ObservatÃ³rio SUAS"
   },
   {
-    "indicador": "BOLSA FAMÍLIA",
-    "informativo": "É um programa de transferência direta de renda, direcionado às famílias em situação de pobreza e de extrema pobreza em todo o País, de modo que consigam superar a situação de vulnerabilidade e pobreza.",
+    "indicador": "BOLSA FAMÃLIA",
+    "informativo": "Ã‰ um programa de transferÃªncia direta de renda, direcionado Ã s famÃ­lias em situaÃ§Ã£o de pobreza e de extrema pobreza em todo o PaÃ­s, de modo que consigam superar a situaÃ§Ã£o de vulnerabilidade e pobreza.",
     "fonteDaConsulta": "SAGI-MDSA\nconsulta atualizada em: 21/09/2017"
   },
   {
-    "indicador": "POPULAÇÃO",
-    "informativo": "Conjunto de pessoas de uma determinada região, contabilizadas pelo censo 2010",
-    "fonteDaConsulta": "IBGE - CENSO DEMOGRÁFICO 2010\nconsulta atualizada em: 21/09/2017"
+    "indicador": "POPULAÃ‡ÃƒO",
+    "informativo": "Conjunto de pessoas de uma determinada regiÃ£o, contabilizadas pelo censo 2010",
+    "fonteDaConsulta": "IBGE - CENSO DEMOGRÃFICO 2010\nconsulta atualizada em: 21/09/2017"
   },
   {
     "indicador": "IDH",
-    "informativo": "DH significa Índice de Desenvolvimento Humano, uma medida importante concebida pela ONU (Organização das Nações Unidas) para avaliar a qualidade de vida e o desenvolvimento econômico de uma população.",
-    "fonteDaConsulta": "IBGE - CENSO DEMOGRÁFICO 2010\nconsulta atualizada em: 21/09/2017"
+    "informativo": "DH significa Ãndice de Desenvolvimento Humano, uma medida importante concebida pela ONU (OrganizaÃ§Ã£o das NaÃ§Ãµes Unidas) para avaliar a qualidade de vida e o desenvolvimento econÃ´mico de uma populaÃ§Ã£o.",
+    "fonteDaConsulta": "IBGE - CENSO DEMOGRÃFICO 2010\nconsulta atualizada em: 21/09/2017"
   },
   {
     "indicador": "IDC",
-    "informativo": "Indicador do Desenvolvimento da Cidadania do Ministério Público do Rio de Janeiro (IDC-MPRJ)",
-    "fonteDaConsulta": "MPRJ - CIDADÃO GESTOR\nconsulta atualizada em: 21/09/2017"
+    "informativo": "Indicador do Desenvolvimento da Cidadania do MinistÃ©rio PÃºblico do Rio de Janeiro (IDC-MPRJ)",
+    "fonteDaConsulta": "MPRJ - CIDADÃƒO GESTOR\nconsulta atualizada em: 21/09/2017"
   },
   {
     "indicador": "EQUIPAMENTOS ( CRAS, CREAS E CENTRO POP)",
-    "informativo": "Tolat de equipamentos da assistência social : CRAS Centro de Referência da Assistência Social, CREAS - Centro de Referência Especializado da Assistência Social,Centro POP - Centro de Referencia Especializado em Pessoa em Situação de Rua",
+    "informativo": "Tolat de equipamentos da assistÃªncia social : CRAS Centro de ReferÃªncia da AssistÃªncia Social, CREAS - Centro de ReferÃªncia Especializado da AssistÃªncia Social,Centro POP - Centro de Referencia Especializado em Pessoa em SituaÃ§Ã£o de Rua",
     "fonteDaConsulta": "CENSO SUAS 2016\nconsulta atualizada em: 21/09/2017"
   }
 ]
