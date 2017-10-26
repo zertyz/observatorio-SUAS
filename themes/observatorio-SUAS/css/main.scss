@@ -14,8 +14,8 @@
 }
 
 .img-envolvida {
-  float: left;
-  shape-outside: url("../assets/img/Predio Estagio 4 - Construção Adiantada.png");
+  float: right;
+  shape-outside: url("../assets/img/Ilustracao_SUAS_fase_6.png");
   shape-margin: 5%;
   shape-image-threshold: 0.5;
 }
@@ -28,6 +28,10 @@ div.borderedR{
 div.borderedL{
   border-left: 0.05rem solid #000000;
   padding-left: 2rem;
+}
+
+p {
+  font-family: 'Raleway';
 }
 
 .titulo{
