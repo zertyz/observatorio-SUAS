@@ -89,13 +89,60 @@ input:checked + .slider {
   border-bottom: 1px solid #2e3a48;
 }
 
+//Style Table Indicadores Orcamentarios
 hr {
-  border-style: dotted;
-  border-color: #2e3a48;
   width: 90%;
   padding-top: 2%;
   position: inherit;
   bottom: 1%;
+}
+
+section {
+  position: relative;
+  padding-top: 37px;
+}
+
+section.positioned {
+  position: absolute;
+  top:100px;
+  left:100px;
+  width:800px;
+}
+
+.container {
+  overflow-y: auto;
+  height: 350px;
+}
+
+table > table {
+  border-spacing: 0;
+  width:100%;
+}
+
+table > td, th {
+  padding: 10px 25px;
+}
+
+table > th {
+  height: 0;
+  line-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  //color: transparent;
+  border: none;
+  white-space: nowrap;
+}
+
+th div{
+  position: absolute;
+  padding: 9px 25px;
+  top: 0;
+  margin-left: -25px;
+  line-height: normal;
+}
+
+table > th:first-child div{
+  border: none;
 }
 
 // Styles Cards
