@@ -60,7 +60,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.municipio = params['municipio'] || this.estadoId;
-      if(this.municipio == this.estadoId) {
+      if(this.municipio === this.estadoId) {
         this.estadoSelected = true;
       }else {
         this.estadoSelected = false;
@@ -2384,6 +2384,16 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Volta Redonda', 'Elderson Ferreira Da Silva ', 'Maycon César Inácio Abrantes', '260.180', '0,77', '33', '1', '1', '35', '5,95', '17.858', '6,86', '1,25', '10.966', '4,21', '115,49', '61,41', 'R$ 24.633.994,00', '22.609', 'SIM', 'SIM', 'SIM', '3.439', 'R$ 3.199.831,11'],
   ];
 
+}
+
+// TODO refatorar como serviço
+interface IDadosGerais {
+  municipio: string;
+  prefeito: string;
+  secretarioAssistenciaSocial: string;
+  populacao: string; //Erro no JSON
+  idh: string; //Erro no JSON
+  idc: number;
 }
 
 // TODO refatorar como serviço
