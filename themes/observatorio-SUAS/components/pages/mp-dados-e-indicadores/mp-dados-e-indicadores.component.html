@@ -15,7 +15,7 @@
         </span>
       </div>
 
-      <div class="row">
+
       <div class="card">
         <div class="card-block">
           <div class="row">
@@ -26,116 +26,116 @@
             </div>
 
 
-              <div class="col-lg-6 col-md-11" *ngIf="estadoSelected===false">
-                <div class="row">
-                  <div class="col-11">
-                    <img src="./assets/img/municipios/{{municipio}}.png" style="width:3.2em; float: right;">
-                  </div>
+            <div class="col-lg-6 col-md-11" *ngIf="estadoSelected===false">
+              <div class="row">
+                <div class="col-11">
+                  <img src="./assets/img/municipios/{{municipio}}.png" style="width:3.2em; float: right;">
                 </div>
-                <div class="row" style="padding-top: 1.5rem">
-                  <div class="col-12">
-                    <div class="row">
-                      <div class="col-5">
-                        <div class="keyword1">População</div>
-                        <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
-                      </div>
-                      <div class="col-4 ">
-                        <div class="keyword1">IDH</div>
-                        <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
-                      </div>
-                      <div class="col-3 ">
-                        <div class="keyword1">IDC</div>
-                        <div class="numero-destacado"> - </div>
-                      </div>
+              </div>
+              <div class="row" style="padding-top: 1.5rem">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-5">
+                      <div class="keyword1">População</div>
+                      <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
+                    </div>
+                    <div class="col-4 ">
+                      <div class="keyword1">IDH</div>
+                      <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
+                    </div>
+                    <div class="col-3 ">
+                      <div class="keyword1">IDC</div>
+                      <div class="numero-destacado"> - </div>
                     </div>
                   </div>
                 </div>
-                <div class="row" style="padding-top: 1.5rem">
-                  <div class="col-2">
-                    <img class="img-fluid" src="./assets/img/icones/prefeito_70px.png">
-                  </div>
-                  <div class="col-10">
-                    <div class="keyword">Prefeito</div>
-                    <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
-                  </div>
+              </div>
+              <div class="row" style="padding-top: 1.5rem">
+                <div class="col-2">
+                  <img class="img-fluid" src="./assets/img/icones/prefeito_70px.png">
                 </div>
-                <div class="row" style="padding-top: 1.5rem">
-                  <div class="col-2">
-                    <img class="img-fluid" src="./assets/img/icones/secretario_assistencia_social_70px.png">
-                  </div>
-                  <div class="col-10">
-                    <div class="keyword">Secretário de Assistência Social</div>
-                    <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
+                <div class="col-10">
+                  <div class="keyword">Prefeito</div>
+                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
+                </div>
+              </div>
+              <div class="row" style="padding-top: 1.5rem">
+                <div class="col-2">
+                  <img class="img-fluid" src="./assets/img/icones/secretario_assistencia_social_70px.png">
+                </div>
+                <div class="col-10">
+                  <div class="keyword">Secretário de Assistência Social</div>
+                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12" *ngIf="estadoSelected">
+              <div class="row">
+                <div class="col-12">
+                  <div class="col-4"  style="float: right">
+                    <img src="./assets/img/municipios/{{municipio}}.png" style="width: 105%">
                   </div>
                 </div>
               </div>
 
-              <div class="col-lg-6 col-md-12" *ngIf="estadoSelected">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="col-4"  style="float: right">
-                      <img src="./assets/img/municipios/{{municipio}}.png" style="width: 105%">
+              <div class="row" style="padding-top: 2rem">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-5">
+                      <div class="keyword1">População</div>
+                      <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
                     </div>
-                  </div>
-                </div>
-
-                <div class="row" style="padding-top: 2rem">
-                  <div class="col-12">
-                    <div class="row">
-                      <div class="col-5">
-                        <div class="keyword1">População</div>
-                        <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
-                      </div>
-                      <div class="col-3 ">
-                        <div class="keyword1">IDH</div>
-                        <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
-                      </div>
-                      <div class="col-3 ">
-                        <div class="keyword1">IDC</div>
-                        <div class="numero-destacado"> -</div>
-                      </div>
+                    <div class="col-3 ">
+                      <div class="keyword1">IDH</div>
+                      <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
                     </div>
-                  </div>
-                </div>
-                <div class="row" style="padding-top: 1.5rem">
-                  <div class="col-2">
-                    <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Município.png">
-                  </div>
-                  <div class="col-10">
-                    <div class="keyword">Governador</div>
-                    <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
-                  </div>
-                </div>
-                <div class="row" style="padding-top: 1.5rem">
-                  <div class="col-2">
-                    <img class="img-fluid" src="./assets/img/icones/secretario_assistencia_social_70px.png">
-                  </div>
-                  <div class="col-10">
-                    <div class="keyword">Secretário de Estado de Ciência, Tecnologia e Desenvolvimento Social</div>
-                    <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
+                    <div class="col-3 ">
+                      <div class="keyword1">IDC</div>
+                      <div class="numero-destacado"> -</div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="row" style="padding-top: 1.5rem">
+                <div class="col-2">
+                  <img class="img-fluid" src="./assets/img/icones/ícones_Tela_2_Município.png">
+                </div>
+                <div class="col-10">
+                  <div class="keyword">Governador</div>
+                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
+                </div>
+              </div>
+              <div class="row" style="padding-top: 1.5rem">
+                <div class="col-2">
+                  <img class="img-fluid" src="./assets/img/icones/secretario_assistencia_social_70px.png">
+                </div>
+                <div class="col-10">
+                  <div class="keyword">Secretário de Estado de Ciência, Tecnologia e Desenvolvimento Social</div>
+                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
+                </div>
+              </div>
+            </div>
 
 
           </div>
         </div>
-      </div></div>
+      </div>
     </div>
 
     <div class="col-xl-6 col-lg-12 ">
-     <div class="row t-padding">
-      <span class="titulo">Equipamentos</span>
-     </div>
+      <div class="row t-padding">
+        <span class="titulo">Equipamentos</span>
+      </div>
       <div class="padding-subtitulo">
         <sub class="subtitulo">Clique em um tipo de equipamento para visualizar a relação de estabelecimento </sub>
         <sub class="subtitulo"> e seus endereços.</sub>
       </div>
-      <div class="row">
+
       <div class="card">
         <div class="card-block">
           <div class="row" style="padding-bottom: .8vw">
-           <label class="button-switch barra"  style="margin-left:auto; border-top: 1px solid #2e3a48">
+            <label class="button-switch barra"  style="margin-left:auto; border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" checked="checked" (click)="selectTipo('total')" id="check1">
               <span class="slider">
                 <div  class="keyword1" style="text-align: right">TOTAL</div>
@@ -245,25 +245,25 @@
             </ng-template>
           </p-dataGrid>
 
+        </div>
       </div>
-    </div>
-      </div>
+
     </div>
   </div>
 
-    <div class="row">
-      <div class="col-xl-6 col-lg-12">
-        <div class="row t-padding">
-          <span class="titulo">Indicadores Sociais</span>
-        </div>
-        <div class="padding-subtitulo">
-          <span class="subtitulo">Indicadores sociais do ente escolhido</span>
-        </div>
-        <div class="card">
-          <div class="card-block">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-12">
+  <div class="row">
+    <div class="col-xl-6 col-lg-12">
+      <div class="row t-padding">
+        <span class="titulo">Indicadores Sociais</span>
+      </div>
+      <div class="padding-subtitulo">
+        <span class="subtitulo">Indicadores sociais do ente escolhido</span>
+      </div>
+      <div class="card">
+        <div class="card-block">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-12">
                 <tbody>
                 <tr>
                   <td class="barraH" width="10%"><img class="img-fluid2" src="./assets/img/icones/familias_vulneraveis_70px.png" align="left"></td>
@@ -321,50 +321,50 @@
                   <td class="border-equipamento1"></td>
                 </tr>
                 </tbody>
+              </div>
+              <div class=" col-md-4 col-12">
+                <tr>
+                  <td>
+                    <img class="img-fluid" src="./assets/img/icones/beneficio_eventual_70px.png">
+                  </td>
+                  <td >
+                    <h3 class="p-2">Benefícios eventuais</h3>
+                    <p class="p-text">Indica se Programas Eventuais de Benefícios são disponibilizados para o ente</p>
+                  </td>
+                  <td>
+                    <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoBeneficiosEventuais?'sim':'nao')+'.png'" width="50rem">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img class="img-fluid" src="./assets/img/icones/paif_70px.png">
+                  </td>
+                  <td>
+                    <h3 class="p-2">PAIF</h3>
+                    <p class="p-text">Indica se o serviço de Proteção e Atenção Integral à Família está implantado no ente </p>
+                  </td>
+                  <td>
+                    <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAIF?'sim':'nao')+'.png'" width="50rem">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img class="img-fluid" src="./assets/img/icones/paefi_70px.png">
+                  </td>
+                  <td>
+                    <h3 class="p-2">PAEF</h3>
+                    <p class="p-text">Indica se o serviço de Proteção e Atenção Especializado à Família está implantado no ente </p>
+                  </td>
+                  <td>
+                    <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAEF?'sim':'nao')+'.png'" width="50">
+                  </td>
+                </tr>
+              </div>
             </div>
-            <div class=" col-md-4 col-12">
-              <tr>
-                <td>
-                  <img class="img-fluid" src="./assets/img/icones/beneficio_eventual_70px.png">
-                </td>
-                <td >
-                  <h3 class="p-2">Benefícios eventuais</h3>
-                  <p class="p-text">Indica se Programas Eventuais de Benefícios são disponibilizados para o ente</p>
-                </td>
-                <td>
-                  <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoBeneficiosEventuais?'sim':'nao')+'.png'" width="50rem">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img class="img-fluid" src="./assets/img/icones/paif_70px.png">
-                </td>
-                <td>
-                  <h3 class="p-2">PAIF</h3>
-                  <p class="p-text">Indica se o serviço de Proteção e Atenção Integral à Família está implantado no ente </p>
-                </td>
-                <td>
-                  <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAIF?'sim':'nao')+'.png'" width="50rem">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img class="img-fluid" src="./assets/img/icones/paefi_70px.png">
-                </td>
-                <td>
-                  <h3 class="p-2">PAEF</h3>
-                  <p class="p-text">Indica se o serviço de Proteção e Atenção Especializado à Família está implantado no ente </p>
-                </td>
-                <td>
-                  <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAEF?'sim':'nao')+'.png'" width="50">
-                </td>
-              </tr>
-            </div>
-          </div>
-        </div>
           </div>
         </div>
       </div>
+    </div>
     <div class="col-xl-6 col-lg-12">
       <div class="row t-padding">
         <span class="titulo">Indicadores orçamentários</span>
