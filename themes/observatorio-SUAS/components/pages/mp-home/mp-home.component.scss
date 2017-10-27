@@ -47,7 +47,7 @@
 
 .keyword-small{
   @extend .keyword;
-  font-size: .765rem;
+  font-size: 41%;
 }
 
 .keyword-municipio{
@@ -55,14 +55,16 @@
   color: black;
 }
 
-.number{
-  @extend .keyword;
-  font-size: 1.3rem;
+.number-big{
+  font-family: 'Roboto-Condensed';
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-size: 4.2rem;
 }
 
-.number-big{
-  @extend .number;
-  font-size: 4.4rem;
+.number{
+  @extend .number-big;
+  font-size: 1.4rem;
 }
 
 .superior a {
@@ -135,20 +137,21 @@
   @extend .card;
   width: 100%;
 }
+
 .macro-card{
   @extend .card;
   height: 35em;
-  padding-left: 1em !important;
-  padding-right: 1em !important;
-  padding-top: 1em !important;
-  padding-bottom: 0em !important;
+  padding-left: 1em ;
+  padding-right: 1em ;
+  padding-top: 1em ;
+  padding-bottom: 0em ;
   margin-bottom: 2em;
 }
 
 .micro-card{
   @extend .card;
   margin: 0em;
-  padding: 0.5em !important;
+  padding: 0.5em ;
   width: 100%;
   height: 6em;
   text-align: right;
@@ -188,14 +191,44 @@ div > span{
   color: black;
   padding-bottom: .9rem;
 }
+@media (max-width: 575px) {
+  .img-envolvida{
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .card {
+    height: auto;
+    padding-bottom: 1em;
+  }
+  .keyword-small {
+    font-size: 53%;
+  }
+  .number{
+    font-size: 1.5em;
+  }
+
+}
 
 @media(max-width:1199px){
-  img.img-responsive { width:90%;}
-  e-link.link{position: inherit;bottom: inherit;right: inherit}
-  max-width: 100%;
+
+  e-link.link{  position: inherit;bottom: inherit;right: inherit  }
+
+  .titulo {  font-size: 1.3rem;  }
 }
-@media (max-width: 1199px) {
-  .titulo {
-    font-size: 1.3rem;
+
+@media (min-width:992px )and (max-width: 1199px) {
+  .texto{
+    font-size: 83%;
+  }
+  .pesoValor{
+   font-size:  187%;
+  }
+  .pesoHeader{
+    font-size: 100%;
+  }
+  .keyword-municipio{
+    font-size: .73em;
   }
 }

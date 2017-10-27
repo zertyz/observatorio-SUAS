@@ -1,7 +1,7 @@
 
 
 .btn-primario{
-  width: 16em;
+  width: 60%;
   line-height: 30px;
   float: right;
   margin-top: .8em;
@@ -56,12 +56,12 @@ div > a{
   }
   :host/deep/{
     .ui-state-default{
-    line-height: 2.5em!important;
+    line-height: 2.5em;
     }
   }
 }
 @media (min-width: 992px) {
   .card#altura{
-    min-height:85.7%!important;
+    min-height:82%
   }
 }
