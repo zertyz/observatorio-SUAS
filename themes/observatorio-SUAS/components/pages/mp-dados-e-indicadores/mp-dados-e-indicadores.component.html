@@ -37,15 +37,15 @@
                   <div class="row">
                     <div class="col-5">
                       <div class="keyword1">População</div>
-                      <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
+                      <div class="numero-destacado">{{formataInteiro(dadosGerais.populacao)}}</div>
                     </div>
                     <div class="col-4 ">
                       <div class="keyword1">IDH</div>
-                      <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
+                      <div class="numero-destacado">{{formataFracao(dadosGerais.idh)}}</div>
                     </div>
                     <div class="col-3 ">
                       <div class="keyword1">IDC</div>
-                      <div class="numero-destacado"> - </div>
+                      <div class="numero-destacado">{{formataFracao(dadosGerais.idc)}}</div>
                     </div>
                   </div>
                 </div>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-10">
                   <div class="keyword">Prefeito</div>
-                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
+                  <div class="nome-pessoal">{{dadosGerais.prefeito}}</div>
                 </div>
               </div>
               <div class="row" style="padding-top: 1.5rem">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-10">
                   <div class="keyword">Secretário de Assistência Social</div>
-                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
+                  <div class="nome-pessoal">{{dadosGerais.secretarioAssistenciaSocial}}</div>
                 </div>
               </div>
             </div>
@@ -84,15 +84,15 @@
                   <div class="row">
                     <div class="col-5">
                       <div class="keyword1">População</div>
-                      <div class="numero-destacado">{{formataInteiro(populacao.populacao)}}</div>
+                      <div class="numero-destacado">{{formataInteiro(dadosGerais.populacao)}}</div>
                     </div>
                     <div class="col-3 ">
                       <div class="keyword1">IDH</div>
-                      <div class="numero-destacado">{{formataFracao(idh.idh)}}</div>
+                      <div class="numero-destacado">{{formataFracao(dadosGerais.idh)}}</div>
                     </div>
                     <div class="col-3 ">
                       <div class="keyword1">IDC</div>
-                      <div class="numero-destacado"> -</div>
+                      <div class="numero-destacado">{{formataFracao(dadosGerais.idc)}}</div>
                     </div>
                   </div>
                 </div>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="col-10">
                   <div class="keyword">Governador</div>
-                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.prefeito}}</div>
+                  <div class="nome-pessoal">{{dadosGerais.prefeito}}</div>
                 </div>
               </div>
               <div class="row" style="padding-top: 1.5rem">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="col-10">
                   <div class="keyword">Secretário de Estado de Ciência, Tecnologia e Desenvolvimento Social</div>
-                  <div class="nome-pessoal">{{indicadoresSociaisDoMunicipio.secretarioAssistenciaSocial}}</div>
+                  <div class="nome-pessoal">{{dadosGerais.secretarioAssistenciaSocial}}</div>
                 </div>
               </div>
             </div>

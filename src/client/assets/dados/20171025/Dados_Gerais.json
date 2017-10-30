@@ -3,744 +3,744 @@
     "municipio": "Angra Dos Reis",
     "prefeito": "Fernando Antônio Ceciliano Jordão",
     "secretarioAssistenciaSocial": "Munir Francisco",
-    "populacao": 169.511,
-    "idh": "0,72",
+    "populacao": 169511,
+    "idh": 0.724,
     "idc": 0.56
   },
   {
     "municipio": "Aperibé",
     "prefeito": "Flávio Diniz Berriel",
     "secretarioAssistenciaSocial": "Vanessa Garcia Correa",
-    "populacao": 10.213,
-    "idh": "0,69",
+    "populacao": 10213,
+    "idh": 0.692,
     "idc": 0.535
   },
   {
     "municipio": "Araruama",
     "prefeito": "Livia Soares Bello Da Silva",
     "secretarioAssistenciaSocial": "João Baptista De Araujo Filho",
-    "populacao": 112.008,
-    "idh": "0,72",
+    "populacao": 112008,
+    "idh": 0.718,
     "idc": 0.556
   },
   {
     "municipio": "Areal",
     "prefeito": "Flávio Magdalena Bravo",
     "secretarioAssistenciaSocial": "Marcos Antonio Ribeiro",
-    "populacao": 11.423,
-    "idh": "0,68",
+    "populacao": 11423,
+    "idh": 0.684,
     "idc": 0.529
   },
   {
     "municipio": "Armação Dos Búzios",
     "prefeito": "Andre Granado",
     "secretarioAssistenciaSocial": "João De Melo Carrilho",
-    "populacao": 27.56,
-    "idh": "0,73",
+    "populacao": 27560,
+    "idh": 0.728,
     "idc": 0.563
   },
   {
     "municipio": "Arraial do Cabo",
     "prefeito": "Renato Martins Vianna",
     "secretarioAssistenciaSocial": "Sergio Lopes De Oliveira Carvalho",
-    "populacao": 27.715,
-    "idh": "0,73",
+    "populacao": 27715,
+    "idh": 0.733,
     "idc": 0.567
   },
   {
     "municipio": "Barra do Piraí",
     "prefeito": "Mario Reis Esteves",
     "secretarioAssistenciaSocial": "Paloma Blunk Dos Reis",
-    "populacao": 94.778,
-    "idh": "0,73",
+    "populacao": 94778,
+    "idh": 0.733,
     "idc": 0.567
   },
   {
     "municipio": "Barra Mansa",
     "prefeito": "Rodrigo Drable",
     "secretarioAssistenciaSocial": "Ruth Cristina Coutinho Henriques De Lima Rebello",
-    "populacao": 177.813,
-    "idh": "0,73",
+    "populacao": 177813,
+    "idh": 0.729,
     "idc": 0.563
   },
   {
     "municipio": "Belford Roxo",
     "prefeito": "Wagner Dos Santos Carneiro",
     "secretarioAssistenciaSocial": "Daniela Moté De Souza Carneiro",
-    "populacao": 469.332,
-    "idh": "0,68",
+    "populacao": 469332,
+    "idh": 0.684,
     "idc": 0.531
   },
   {
     "municipio": "Bom Jardim",
     "prefeito": "Antonio Claret Gonçalves Figueira",
     "secretarioAssistenciaSocial": "Flávio De Almeida E Albuquerque",
-    "populacao": 25.333,
-    "idh": "0,66",
+    "populacao": 25333,
+    "idh": 0.66,
     "idc": 0.512
   },
   {
     "municipio": "Bom Jesus do Itabapoana",
     "prefeito": "Roberto Elias Figueiredo Salim Filho",
     "secretarioAssistenciaSocial": "Gisele Ferreira Da Silva Garcia",
-    "populacao": 35.411,
-    "idh": "0,73",
+    "populacao": 35411,
+    "idh": 0.732,
     "idc": 0.564
   },
   {
     "municipio": "Cabo Frio",
     "prefeito": "Marquinho Mendes",
     "secretarioAssistenciaSocial": "Romulo Vidal Dos Anjos",
-    "populacao": 186.227,
-    "idh": "0,74",
+    "populacao": 186227,
+    "idh": 0.735,
     "idc": 0.568
   },
   {
     "municipio": "Cachoeiras de Macacu",
     "prefeito": "Mauro  Cezar De Castro Soares",
     "secretarioAssistenciaSocial": "Gilvana Azevedo Miranda",
-    "populacao": 54.273,
-    "idh": "0,7",
+    "populacao": 54273,
+    "idh": 0.7,
     "idc": 0.542
   },
   {
     "municipio": "Cambuci",
     "prefeito": "Agnaldo Vieira Mello",
     "secretarioAssistenciaSocial": "Fatima De Souza Vieira",
-    "populacao": 14.827,
-    "idh": "0,69",
+    "populacao": 14827,
+    "idh": 0.691,
     "idc": 0.535
   },
   {
     "municipio": "Campos Dos Goytacazes",
     "prefeito": "Rafael Paes Barbosa Diniz Nogueira",
     "secretarioAssistenciaSocial": "Sana Gimenes Alvarenga Domingues",
-    "populacao": 463.731,
-    "idh": "0,72",
+    "populacao": 463731,
+    "idh": 0.716,
     "idc": 0.551
   },
   {
     "municipio": "Cantagalo",
     "prefeito": "Guga De Paula",
     "secretarioAssistenciaSocial": "Jorge Braz Cardoso Ferreira",
-    "populacao": 19.83,
-    "idh": "0,71",
+    "populacao": 19830,
+    "idh": 0.709,
     "idc": 0.547
   },
   {
     "municipio": "Carapebus",
     "prefeito": "Christiane Miranda De Andrade Cordeiro",
     "secretarioAssistenciaSocial": "Cíntia Camargo Barcelos",
-    "populacao": 13.359,
-    "idh": "0,71",
+    "populacao": 13359,
+    "idh": 0.713,
     "idc": 0.551
   },
   {
     "municipio": "Cardoso Moreira",
     "prefeito": "Gilson Nunes Siqueira",
     "secretarioAssistenciaSocial": "Fausto Da Rocha Pereira",
-    "populacao": 12.6,
-    "idh": "0,65",
+    "populacao": 12600,
+    "idh": 0.648,
     "idc": 0.502
   },
   {
     "municipio": "Carmo",
     "prefeito": "Cesar Ladeira",
     "secretarioAssistenciaSocial": "Silvio Murad De Onofre",
-    "populacao": 17.434,
-    "idh": "0,7",
+    "populacao": 17434,
+    "idh": 0.696,
     "idc": 0.537
   },
   {
     "municipio": "Casimiro de Abreu",
     "prefeito": "Paulo Cezar Dames Passos",
     "secretarioAssistenciaSocial": "Leila Marcia Barbosa De Souza",
-    "populacao": 35.347,
-    "idh": "0,73",
+    "populacao": 35347,
+    "idh": 0.726,
     "idc": 0.559
   },
   {
     "municipio": "Comendador Levy Gasparian",
     "prefeito": "Valter Luis Lavinas Ribeiro",
     "secretarioAssistenciaSocial": "Cristina Bonforte Serpa Vasconcelos",
-    "populacao": 8.18,
-    "idh": "0,69",
+    "populacao": 8180,
+    "idh": 0.685,
     "idc": 0.531
   },
   {
     "municipio": "Conceição de Macabu",
     "prefeito": "Cláudio Eduardo Barbosa Linhares",
     "secretarioAssistenciaSocial": "Marilia Nunes Bastos",
-    "populacao": 21.211,
-    "idh": "0,71",
+    "populacao": 21211,
+    "idh": 0.712,
     "idc": 0.55
   },
   {
     "municipio": "Cordeiro",
     "prefeito": "Luciano Ramos Pinto",
     "secretarioAssistenciaSocial": "Leticia Ramos Reis",
-    "populacao": 20.43,
-    "idh": "0,73",
+    "populacao": 20430,
+    "idh": 0.729,
     "idc": 0.564
   },
   {
     "municipio": "Duas Barras",
     "prefeito": "Luiz Carlos Botelho Lutterbach",
     "secretarioAssistenciaSocial": "Maria Eliza De Jesus Lutterbach",
-    "populacao": 10.93,
-    "idh": "0,66",
+    "populacao": 10930,
+    "idh": 0.659,
     "idc": 0.511
   },
   {
     "municipio": "Duque de Caxias",
     "prefeito": "Washington Reis De Oliveira",
     "secretarioAssistenciaSocial": "Aline Ferreira Batista Ribeiro",
-    "populacao": 855.048,
-    "idh": "0,71",
+    "populacao": 855048,
+    "idh": 0.711,
     "idc": 0.55
   },
   {
     "municipio": "Engenheiro Paulo de Frontin",
     "prefeito": "Jauldo De Souza Balthazar Ferreira",
     "secretarioAssistenciaSocial": "Alexsandra Antunes da Silva Figueiredo",
-    "populacao": 13.237,
-    "idh": "0,72",
+    "populacao": 13237,
+    "idh": 0.722,
     "idc": 0.558
   },
   {
     "municipio": "Guapimirim",
     "prefeito": "Jocelito Pereira De Oliveira",
     "secretarioAssistenciaSocial": "Paula Francinete Machado De Jesus",
-    "populacao": 51.483,
-    "idh": "0,7",
+    "populacao": 51483,
+    "idh": 0.698,
     "idc": 0.541
   },
   {
     "municipio": "Iguaba Grande",
     "prefeito": "Ana Grasiella Moreira Figueiredo Magalhães",
     "secretarioAssistenciaSocial": "Ilana Feitosa S.Lobo",
-    "populacao": 22.851,
-    "idh": "0,76",
+    "populacao": 22851,
+    "idh": 0.761,
     "idc": 0.586
   },
   {
     "municipio": "Itaboraí",
     "prefeito": "Sadinoel Oliveira Gomes Souza",
     "secretarioAssistenciaSocial": "Roberto Mattos da Costa",
-    "populacao": 218.008,
-    "idh": "0,69",
+    "populacao": 218008,
+    "idh": 0.693,
     "idc": 0.537
   },
   {
     "municipio": "Itaguaí",
     "prefeito": "Carlo Busatto Júnior",
     "secretarioAssistenciaSocial": "Maria Izabel Lopes Ribeiro",
-    "populacao": 109.091,
-    "idh": "0,72",
+    "populacao": 109091,
+    "idh": 0.715,
     "idc": 0.554
   },
   {
     "municipio": "Italva",
     "prefeito": "Margareth De Souza Rodrigues Soares",
     "secretarioAssistenciaSocial": "Luis Carlos da Costa Molais",
-    "populacao": 14.063,
-    "idh": "0,69",
+    "populacao": 14063,
+    "idh": 0.688,
     "idc": 0.532
   },
   {
     "municipio": "Itaocara",
     "prefeito": "Manoel Queiroz Faria",
     "secretarioAssistenciaSocial": "Edilene Rodrigues Da Silva Sampaio",
-    "populacao": 22.899,
-    "idh": "0,71",
+    "populacao": 22899,
+    "idh": 0.713,
     "idc": 0.551
   },
   {
     "municipio": "Itaperuna",
     "prefeito": "Marcus Vinícius De Oliveira Pinto",
     "secretarioAssistenciaSocial": "Camila Andrade Pires",
-    "populacao": 95.841,
-    "idh": "0,73",
+    "populacao": 95841,
+    "idh": 0.73,
     "idc": 0.564
   },
   {
     "municipio": "Itatiaia",
     "prefeito": "Eduardo Guedes Da Silva",
     "secretarioAssistenciaSocial": "Raquel De Fátima Silva Rocha",
-    "populacao": 28.783,
-    "idh": "0,74",
+    "populacao": 28783,
+    "idh": 0.737,
     "idc": 0.568
   },
   {
     "municipio": "Japeri",
     "prefeito": "Carlos Moraes Costa",
     "secretarioAssistenciaSocial": "Marcio Rodrigues Rosa",
-    "populacao": 95.492,
-    "idh": "0,66",
+    "populacao": 95492,
+    "idh": 0.659,
     "idc": 0.512
   },
   {
     "municipio": "Laje do Muriaé",
     "prefeito": "Rivelino Da Silva Bueno",
     "secretarioAssistenciaSocial": "Adilson Fernandes Da Silva",
-    "populacao": 7.487,
-    "idh": "0,67",
+    "populacao": 7487,
+    "idh": 0.668,
     "idc": 0.517
   },
   {
     "municipio": "Macaé",
     "prefeito": "Aluizio Dos Santos Junior",
     "secretarioAssistenciaSocial": "Tatiana De Oliveira Pires",
-    "populacao": 206.728,
-    "idh": "0,76",
+    "populacao": 206728,
+    "idh": 0.764,
     "idc": 0.589
   },
   {
     "municipio": "Macuco",
     "prefeito": "Bruno Boaretto",
     "secretarioAssistenciaSocial": "Claudia Bonan Taveira Pinaud",
-    "populacao": 5.269,
-    "idh": "0,7",
+    "populacao": 5269,
+    "idh": 0.703,
     "idc": 0.543
   },
   {
     "municipio": "Magé",
     "prefeito": "Rafael Santos De Souza (Rafael Tubarão)",
     "secretarioAssistenciaSocial": "Bianca Gonçalves Vasconcellos De Souza",
-    "populacao": 227.322,
-    "idh": "0,71",
+    "populacao": 227322,
+    "idh": 0.709,
     "idc": 0.549
   },
   {
     "municipio": "Mangaratiba",
     "prefeito": "Aarão De Moura Brito Neto",
     "secretarioAssistenciaSocial": "Leandro De Paula Silva",
-    "populacao": 36.456,
-    "idh": "0,75",
+    "populacao": 36456,
+    "idh": 0.753,
     "idc": 0.583
   },
   {
     "municipio": "Maricá",
     "prefeito": "Fabiano Taques Horta",
     "secretarioAssistenciaSocial": "Jorge Luiz Cordeiro Da Costa",
-    "populacao": 127.461,
-    "idh": "0,77",
+    "populacao": 127461,
+    "idh": 0.765,
     "idc": 0.59
   },
   {
     "municipio": "Mendes",
     "prefeito": "Rogério Riente",
     "secretarioAssistenciaSocial": "Ana Luiza Matias De Oliveira",
-    "populacao": 17.935,
-    "idh": "0,74",
+    "populacao": 17935,
+    "idh": 0.736,
     "idc": 0.568
   },
   {
     "municipio": "Mesquita",
     "prefeito": "Jorge Lúcio Ferreira Miranda",
     "secretarioAssistenciaSocial": "Luiza Cristina Quaresma De Oliveira Vaz",
-    "populacao": 168.376,
-    "idh": "0,74",
+    "populacao": 168376,
+    "idh": 0.737,
     "idc": 0.569
   },
   {
     "municipio": "Miguel Pereira",
     "prefeito": "Andre Portugues",
     "secretarioAssistenciaSocial": "Adriana Pinto De Afonseca",
-    "populacao": 24.642,
-    "idh": "0,75",
+    "populacao": 24642,
+    "idh": 0.745,
     "idc": 0.575
   },
   {
     "municipio": "Miracema",
     "prefeito": "Clovis Tostes De Barros",
     "secretarioAssistenciaSocial": "Sérgio Salim Amim",
-    "populacao": 26.843,
-    "idh": "0,71",
+    "populacao": 26843,
+    "idh": 0.713,
     "idc": 0.551
   },
   {
     "municipio": "Natividade",
     "prefeito": "Severiano Antônio Dos Santos Rezende",
     "secretarioAssistenciaSocial": "Ana Maria Fonseca Da Silva Rezende",
-    "populacao": 15.082,
-    "idh": "0,73",
+    "populacao": 15082,
+    "idh": 0.73,
     "idc": 0.565
   },
   {
     "municipio": "Nilópolis",
     "prefeito": "Farid Abrão",
     "secretarioAssistenciaSocial": "Michelle Azeredo Da Silva",
-    "populacao": 157.425,
-    "idh": "0,75",
+    "populacao": 157425,
+    "idh": 0.753,
     "idc": 0.582
   },
   {
     "municipio": "Niterói",
     "prefeito": "Rodrigo Neves Barreto",
     "secretarioAssistenciaSocial": "Verônica Dos Santos Lima",
-    "populacao": 487.562,
-    "idh": "0,84",
+    "populacao": 487562,
+    "idh": 0.837,
     "idc": 0.641
   },
   {
     "municipio": "Nova Friburgo",
     "prefeito": "Renato Pinheiro Bravo",
     "secretarioAssistenciaSocial": "Christiano Pereira Huguenin",
-    "populacao": 182.082,
-    "idh": "0,75",
+    "populacao": 182082,
+    "idh": 0.745,
     "idc": 0.576
   },
   {
     "municipio": "Nova Iguaçu",
     "prefeito": "Rogerio Lisboa",
     "secretarioAssistenciaSocial": "Danilo Gonçalves Costa",
-    "populacao": 796.257,
-    "idh": "0,71",
+    "populacao": 796257,
+    "idh": 0.713,
     "idc": 0.552
   },
   {
     "municipio": "Paracambi",
     "prefeito": "Lucimar Cristina Da Silva Ferreira",
     "secretarioAssistenciaSocial": "Aline Otilia Soares Ferreira Benevenuto",
-    "populacao": 47.124,
-    "idh": "0,72",
+    "populacao": 47124,
+    "idh": 0.72,
     "idc": 0.557
   },
   {
     "municipio": "Paraíba do Sul",
     "prefeito": "Alessandro Cronge Bouzada",
     "secretarioAssistenciaSocial": "Elaine Cristina Arruda Aguiar",
-    "populacao": 41.084,
-    "idh": "0,7",
+    "populacao": 41084,
+    "idh": 0.702,
     "idc": 0.544
   },
   {
     "municipio": "Parati",
     "prefeito": "Carlos José Gama Miranda",
     "secretarioAssistenciaSocial": "Valdecir Machado Ramiro",
-    "populacao": 37.533,
-    "idh": "0,69",
+    "populacao": 37533,
+    "idh": 0.693,
     "idc": 0.535
   },
   {
     "municipio": "Paty do Alferes",
     "prefeito": "Eurico Pinheiro Bernardes Neto",
     "secretarioAssistenciaSocial": "Jeanne Marisete Teixeira Bernardes",
-    "populacao": 26.359,
-    "idh": "0,67",
+    "populacao": 26359,
+    "idh": 0.671,
     "idc": 0.52
   },
   {
     "municipio": "Petrópolis",
     "prefeito": "Bernardo Rossi",
     "secretarioAssistenciaSocial": "Denise Maria Respeita Quintella Coelho",
-    "populacao": 295.917,
-    "idh": "0,75",
+    "populacao": 295917,
+    "idh": 0.745,
     "idc": 0.575
   },
   {
     "municipio": "Pinheiral",
     "prefeito": "Ednardo Barbosa Oliveira",
     "secretarioAssistenciaSocial": "Patricia Rivello Garcia",
-    "populacao": 22.719,
-    "idh": "0,72",
+    "populacao": 22719,
+    "idh": 0.715,
     "idc": 0.552
   },
   {
     "municipio": "Piraí",
     "prefeito": "Luiz Antonio Da Silva Neves",
     "secretarioAssistenciaSocial": "Heloisa Souza Lima Machado",
-    "populacao": 26.314,
-    "idh": "0,71",
+    "populacao": 26314,
+    "idh": 0.708,
     "idc": 0.546
   },
   {
     "municipio": "Porciúncula",
     "prefeito": "Leonardo Paes Barreto Coutinho",
     "secretarioAssistenciaSocial": "Maria Antonieta Gomes Correa",
-    "populacao": 17.76,
-    "idh": "0,7",
+    "populacao": 17760,
+    "idh": 0.697,
     "idc": 0.539
   },
   {
     "municipio": "Porto Real",
     "prefeito": "Jorge Serfiotis",
     "secretarioAssistenciaSocial": "Valéria Ribeiro De Carvalho",
-    "populacao": 16.592,
-    "idh": "0,71",
+    "populacao": 16592,
+    "idh": 0.713,
     "idc": 0.551
   },
   {
     "municipio": "Quatis",
     "prefeito": "Raimundo De Souza",
     "secretarioAssistenciaSocial": "Rosana Luisa De Bem Almeida",
-    "populacao": 12.793,
-    "idh": "0,69",
+    "populacao": 12793,
+    "idh": 0.69,
     "idc": 0.533
   },
   {
     "municipio": "Queimados",
     "prefeito": "Carlos De França Vilela",
     "secretarioAssistenciaSocial": "Elton Teixeira Rosa Da Silva",
-    "populacao": 137.962,
-    "idh": "0,68",
+    "populacao": 137962,
+    "idh": 0.68,
     "idc": 0.527
   },
   {
     "municipio": "Quissamã",
     "prefeito": "Maria De Fátima Pacheco",
     "secretarioAssistenciaSocial": "Tania Regina Dos Santos Magalhães",
-    "populacao": 20.242,
-    "idh": "0,7",
+    "populacao": 20242,
+    "idh": 0.704,
     "idc": 0.543
   },
   {
     "municipio": "Resende",
     "prefeito": "Diogo Balieiro Diniz",
     "secretarioAssistenciaSocial": "Jéssica Pavone Carrijo Muller",
-    "populacao": 119.769,
-    "idh": "0,77",
+    "populacao": 119769,
+    "idh": 0.768,
     "idc": 0.592
   },
   {
     "municipio": "Rio Bonito",
     "prefeito": "José Luiz Alves Antunes",
     "secretarioAssistenciaSocial": "Lílian De Araujo Alves Antunes",
-    "populacao": 55.551,
-    "idh": "0,71",
+    "populacao": 55551,
+    "idh": 0.71,
     "idc": 0.55
   },
   {
     "municipio": "Rio Claro",
     "prefeito": "José Osmar De Almeida",
     "secretarioAssistenciaSocial": "Julio Cesar Rocha De Camargo Castro",
-    "populacao": 17.425,
-    "idh": "0,68",
+    "populacao": 17425,
+    "idh": 0.683,
     "idc": 0.529
   },
   {
     "municipio": "Rio Das Flores",
     "prefeito": "Vicente De Paula De Souza Guedes",
     "secretarioAssistenciaSocial": "Tereza Cristina Meyer Cabral Machado",
-    "populacao": 8.561,
-    "idh": "0,68",
+    "populacao": 8561,
+    "idh": 0.68,
     "idc": 0.525
   },
   {
     "municipio": "Rio Das Ostras",
     "prefeito": "Carlos Augusto Carvalho Balthazar",
     "secretarioAssistenciaSocial": "Elizabeth Bousquet Schott",
-    "populacao": 105.676,
-    "idh": "0,77",
+    "populacao": 105676,
+    "idh": 0.773,
     "idc": 0.593
   },
   {
     "municipio": "Rio de Janeiro",
     "prefeito": "Marcelo Bezerra Crivella",
     "secretarioAssistenciaSocial": "Maria Teresa Bergher",
-    "populacao": "6.320.446",
-    "idh": "0,8",
+    "populacao": 6320446,
+    "idh": 0.799,
     "idc": 0.614
   },
   {
     "municipio": "Santa Maria Madalena",
     "prefeito": "Carlos Alberto De Matos Botelho",
     "secretarioAssistenciaSocial": "Carlos Roberto Mello Lula Lamego",
-    "populacao": 10.321,
-    "idh": "0,67",
+    "populacao": 10321,
+    "idh": 0.668,
     "idc": 0.518
   },
   {
     "municipio": "Santo Antônio de Pádua",
     "prefeito": "Josias Quintal De Oliveira",
     "secretarioAssistenciaSocial": "Maria Tertuliana De Souza Oliveira",
-    "populacao": 40.589,
-    "idh": "0,72",
+    "populacao": 40589,
+    "idh": 0.718,
     "idc": 0.555
   },
   {
     "municipio": "São Fidélis",
     "prefeito": "Amarildo Henrique Alcântara",
     "secretarioAssistenciaSocial": "Victor Mauro Cruz",
-    "populacao": 37.543,
-    "idh": "0,69",
+    "populacao": 37543,
+    "idh": 0.691,
     "idc": 0.533
   },
   {
     "municipio": "São Francisco de Itabapoana",
     "prefeito": "Francimara Azeredo Da Silva Barbosa Lemos",
     "secretarioAssistenciaSocial": "Fagner Azeredo Da Silva",
-    "populacao": 41.354,
-    "idh": "0,64",
+    "populacao": 41354,
+    "idh": 0.639,
     "idc": 0.497
   },
   {
     "municipio": "São Gonçalo",
     "prefeito": "José Luiz Nanci",
     "secretarioAssistenciaSocial": "Marlos Luiz De Araujo Costa",
-    "populacao": 999.728,
-    "idh": "0,74",
+    "populacao": 999728,
+    "idh": 0.739,
     "idc": 0.571
   },
   {
     "municipio": "São João da Barra",
     "prefeito": "Carla Maria Machado Dos Santos",
     "secretarioAssistenciaSocial": "Claudia Maria Falcao Carvalho",
-    "populacao": 32.747,
-    "idh": "0,67",
+    "populacao": 32747,
+    "idh": 0.671,
     "idc": 0.518
   },
   {
     "municipio": "São João de Meriti",
     "prefeito": "João Ferreira Neto",
     "secretarioAssistenciaSocial": "Roberta Ferreira De Queiroz",
-    "populacao": 458.673,
-    "idh": "0,72",
+    "populacao": 458673,
+    "idh": 0.719,
     "idc": 0.555
   },
   {
     "municipio": "São José de Ubá",
     "prefeito": "Marcionilio Botelho Moreira",
     "secretarioAssistenciaSocial": "Maria Adriana Silva Verdan Moreira",
-    "populacao": 7.003,
-    "idh": "0,65",
+    "populacao": 7003,
+    "idh": 0.652,
     "idc": 0.505
   },
   {
     "municipio": "São José do Vale do Rio Preto",
     "prefeito": "Gilberto Martins Esteves",
     "secretarioAssistenciaSocial": "Aparecida De Fatima Moreira Esteves",
-    "populacao": 20.251,
-    "idh": "0,66",
+    "populacao": 20251,
+    "idh": 0.66,
     "idc": 0.512
   },
   {
     "municipio": "São Pedro da Aldeia",
     "prefeito": "Cláudio Vasque Chumbinho Dos Santos",
     "secretarioAssistenciaSocial": "Ester Marques Chumbinho Dos Santos",
-    "populacao": 87.875,
-    "idh": "0,71",
+    "populacao": 87875,
+    "idh": 0.712,
     "idc": 0.551
   },
   {
     "municipio": "São Sebastião do Alto",
     "prefeito": "Carlos Otavio Da Silva Rodrigues",
     "secretarioAssistenciaSocial": "Ely Pinto Lopes",
-    "populacao": 8.895,
-    "idh": "0,65",
+    "populacao": 8895,
+    "idh": 0.646,
     "idc": 0.501
   },
   {
     "municipio": "Sapucaia",
     "prefeito": "Fabricio Dos Santos Baião",
     "secretarioAssistenciaSocial": "Cleuza Rodrigues Galluzzi",
-    "populacao": 17.525,
-    "idh": "0,68",
+    "populacao": 17525,
+    "idh": 0.675,
     "idc": 0.522
   },
   {
     "municipio": "Saquarema",
     "prefeito": "Manoela Ramos De Souza Gomes Alves",
     "secretarioAssistenciaSocial": "Eliane Alves De Aquino",
-    "populacao": 74.234,
-    "idh": "0,71",
+    "populacao": 74234,
+    "idh": 0.709,
     "idc": 0.549
   },
   {
     "municipio": "Seropédica",
     "prefeito": "Anabal Barbosa De Souza",
     "secretarioAssistenciaSocial": "Fernanda Raquel Dos Santos Monteiro Moffati",
-    "populacao": 78.186,
-    "idh": "0,71",
+    "populacao": 78186,
+    "idh": 0.713,
     "idc": 0.553
   },
   {
     "municipio": "Silva Jardim",
     "prefeito": "Wanderson Gimenes Alexandre",
     "secretarioAssistenciaSocial": "Sebastião Da Silva Rocha",
-    "populacao": 21.349,
-    "idh": "0,65",
+    "populacao": 21349,
+    "idh": 0.654,
     "idc": 0.508
   },
   {
     "municipio": "Sumidouro",
     "prefeito": "Eliésio Peres Da Silva",
     "secretarioAssistenciaSocial": "Jéssica Dos Santos De Moura Pereira Jasmim",
-    "populacao": 14.9,
-    "idh": "0,61",
+    "populacao": 14900,
+    "idh": 0.611,
     "idc": 0.474
   },
   {
     "municipio": "Tanguá",
     "prefeito": "Valber Luiz Marcelo De Carvalho",
     "secretarioAssistenciaSocial": "Daniel Silveira Silva Izabel",
-    "populacao": 30.732,
-    "idh": "0,65",
+    "populacao": 30732,
+    "idh": 0.654,
     "idc": 0.508
   },
   {
     "municipio": "Teresópolis",
     "prefeito": "Mario De Oliveira Tricano",
     "secretarioAssistenciaSocial": "Carla Cavalcanti Tricano",
-    "populacao": 163.746,
-    "idh": "0,73",
+    "populacao": 163746,
+    "idh": 0.73,
     "idc": 0.564
   },
   {
     "municipio": "Trajano de Morais",
     "prefeito": "Rodrigo Freire Viana",
     "secretarioAssistenciaSocial": "Juliana Pais Esteves Freire Viana",
-    "populacao": 10.289,
-    "idh": "0,67",
+    "populacao": 10289,
+    "idh": 0.667,
     "idc": 0.516
   },
   {
     "municipio": "Três Rios",
     "prefeito": "Josimar Salles",
     "secretarioAssistenciaSocial": "Gilberto Garcia Golfeto",
-    "populacao": 77.432,
-    "idh": "0,73",
+    "populacao": 77432,
+    "idh": 0.725,
     "idc": 0.559
   },
   {
     "municipio": "Valença",
     "prefeito": "Luiz Fernando Furtado Da Graça",
     "secretarioAssistenciaSocial": "Roseli Da Silva Moreira",
-    "populacao": 71.843,
-    "idh": "0,74",
+    "populacao": 71843,
+    "idh": 0.738,
     "idc": 0.571
   },
   {
     "municipio": "Varre-sai",
     "prefeito": "Silvestre José Gorini",
     "secretarioAssistenciaSocial": "Isabela Louvain Fabri Moraes",
-    "populacao": 9.475,
-    "idh": "0,66",
+    "populacao": 9475,
+    "idh": 0.659,
     "idc": 0.512
   },
   {
     "municipio": "Vassouras",
     "prefeito": "Severino Ananias Dias Filho",
     "secretarioAssistenciaSocial": "Rosa Maria Coelho De Almeida",
-    "populacao": 34.41,
-    "idh": "0,71",
+    "populacao": 34410,
+    "idh": 0.714,
     "idc": 0.551
   },
   {
     "municipio": "Volta Redonda",
     "prefeito": "Elderson Ferreira Da Silva",
     "secretarioAssistenciaSocial": "Maycon César Inácio Abrantes",
-    "populacao": 257.803,
-    "idh": "0,77",
+    "populacao": 257803,
+    "idh": 0.771,
     "idc": 0.593
   },
   {
     "municipio": "ESTADO DO RIO DE JANEIRO",
     "prefeito": "Luiz Fernando de Souza",
     "secretarioAssistenciaSocial": "Gustavo Reis Ferreira",
-    "populacao": "15.989.929",
-    "idh": "0,761",
+    "populacao": 15989929,
+    "idh": 0.761,
     "idc": 0.587
   }
 ]

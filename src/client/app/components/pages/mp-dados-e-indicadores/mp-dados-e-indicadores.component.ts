@@ -31,8 +31,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   // campos computados
   indicadoresOrcamentariosDoMunicipio: IIndicadoresOrcamentarios;
   indicadoresSociaisDoMunicipio:       IIndicadoresSociais;
-  idh: IIDH;
-  populacao: IPopulacao;
+  dadosGerais: IDadosGerais;
   equipamentos: IEquipamento[];
   contagemCentrosPOP:      number;
   contagemCRAS:            number;
@@ -119,20 +118,15 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     }
 
     // encontra IDH do município
-    this.idh = this.idhs.find(idh => idh.municipio == this.municipio);
-    if (this.idh == null) {
-      this.idh = {
+    this.dadosGerais = this.blocoDadosGerais.find(dadosGerais => dadosGerais.municipio === this.municipio);
+    if (this.dadosGerais === null) {
+      this.dadosGerais = {
         'municipio': '§ não encontrado §',
-        'idh': -1,
-      };
-    }
-
-    // encontra população do município
-    this.populacao = this.populacoes.find(populacao => populacao.municipio == this.municipio);
-    if (this.populacao == null) {
-      this.populacao = {
-        'municipio': '§ não encontrado §',
+        'prefeito': '§ não encontrado §',
+        'secretarioAssistenciaSocial': '§ não encontrado §',
         'populacao': -1,
+        'idh': -1,
+        'idc': -1
       };
     }
 
@@ -1543,198 +1537,751 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     },
   ];
 
-
-  // TODO cópia de idh_20170810.json até que se implemente como serviço
-  idhs: IIDH[] = [
-    {'municipio': 'Rio de Janeiro - RJ', 'idh': 0.761},
-    {'municipio': 'Rio de Janeiro', 'idh': 0.799},
-    {'municipio': 'Rio das Ostras', 'idh': 0.773},
-    {'municipio': 'Volta Redonda', 'idh': 0.771},
-    {'municipio': 'Resende', 'idh': 0.768},
-    {'municipio': 'Maricá', 'idh': 0.765},
-    {'municipio': 'Macaé', 'idh': 0.764},
-    {'municipio': 'Iguaba Grande', 'idh': 0.761},
-    {'municipio': 'Nilópolis', 'idh': 0.753},
-    {'municipio': 'Mangaratiba', 'idh': 0.753},
-    {'municipio': 'Petrópolis', 'idh': 0.745},
-    {'municipio': 'Miguel Pereira', 'idh': 0.745},
-    {'municipio': 'Nova Friburgo', 'idh': 0.745},
-    {'municipio': 'São Gonçalo', 'idh': 0.739},
-    {'municipio': 'Valença', 'idh': 0.738},
-    {'municipio': 'Mesquita', 'idh': 0.737},
-    {'municipio': 'Itatiaia', 'idh': 0.737},
-    {'municipio': 'Mendes', 'idh': 0.736},
-    {'municipio': 'Cabo Frio', 'idh': 0.735},
-    {'municipio': 'Arraial do Cabo', 'idh': 0.733},
-    {'municipio': 'Barra do Piraí', 'idh': 0.733},
-    {'municipio': 'Bom Jesus do Itabapoana', 'idh': 0.732},
-    {'municipio': 'Itaperuna', 'idh': 0.730},
-    {'municipio': 'Natividade', 'idh': 0.730},
-    {'municipio': 'Teresópolis', 'idh': 0.730},
-    {'municipio': 'Cordeiro', 'idh': 0.729},
-    {'municipio': 'Barra Mansa', 'idh': 0.729},
-    {'municipio': 'Armação dos Búzios', 'idh': 0.728},
-    {'municipio': 'Casimiro de Abreu', 'idh': 0.726},
-    {'municipio': 'Três Rios', 'idh': 0.725},
-    {'municipio': 'Angra dos Reis', 'idh': 0.742},
-    {'municipio': 'Engenheiro Paulo de Frontin', 'idh': 0.722},
-    {'municipio': 'Paracambi', 'idh': 0.720},
-    {'municipio': 'São João de Meriti', 'idh': 0.719},
-    {'municipio': 'Araruama', 'idh': 0.718},
-    {'municipio': 'Santo Antônio de Pádua', 'idh': 0.718},
-    {'municipio': 'Campos dos Goytacazes', 'idh': 0.716},
-    {'municipio': 'Pinheiral', 'idh': 0.715},
-    {'municipio': 'Itaguaí', 'idh': 0.715},
-    {'municipio': 'Vassouras', 'idh': 0.714},
-    {'municipio': 'Seropédica', 'idh': 0.713},
-    {'municipio': 'Porto Real', 'idh': 0.713},
-    {'municipio': 'Nova Iguaçu', 'idh': 0.713},
-    {'municipio': 'Miracema', 'idh': 0.713},
-    {'municipio': 'Itaocara', 'idh': 0.713},
-    {'municipio': 'Carapebus', 'idh': 0.713},
-    {'municipio': 'São Pedro da Aldeia', 'idh': 0.712},
-    {'municipio': 'Conceição de Macabu', 'idh': 0.712},
-    {'municipio': 'Duque de Caxias', 'idh': 0.711},
-    {'municipio': 'Rio Bonito', 'idh': 0.710},
-    {'municipio': 'Magé', 'idh': 0.709},
-    {'municipio': 'Saquarema', 'idh': 0.709},
-    {'municipio': 'Cantagalo', 'idh': 0.709},
-    {'municipio': 'Piraí', 'idh': 0.708},
-    {'municipio': 'Quissamã', 'idh': 0.704},
-    {'municipio': 'Macuco', 'idh': 0.703},
-    {'municipio': 'Paraíba do Sul', 'idh': 0.702},
-    {'municipio': 'Cachoeiras de Macacu', 'idh': 0.700},
-    {'municipio': 'Guapimirim', 'idh': 0.698},
-    {'municipio': 'Porciúncula', 'idh': 0.697},
-    {'municipio': 'Carmo', 'idh': 0.696},
-    {'municipio': 'Itaboraí', 'idh': 0.693},
-    {'municipio': 'Paraty', 'idh': 0.693},
-    {'municipio': 'Aperibé', 'idh': 0.692},
-    {'municipio': 'Cambuci', 'idh': 0.691},
-    {'municipio': 'São Fidélis', 'idh': 0.691},
-    {'municipio': 'Quatis', 'idh': 0.690},
-    {'municipio': 'Italva', 'idh': 0.688},
-    {'municipio': 'Comendador Levy Gasparian', 'idh': 0.685},
-    {'municipio': 'Areal', 'idh': 0.684},
-    {'municipio': 'Belford Roxo', 'idh': 0.684},
-    {'municipio': 'Rio Claro', 'idh': 0.683},
-    {'municipio': 'Rio das Flores', 'idh': 0.680},
-    {'municipio': 'Queimados', 'idh': 0.680},
-    {'municipio': 'Sapucaia', 'idh': 0.675},
-    {'municipio': 'Paty do Alferes', 'idh': 0.671},
-    {'municipio': 'São João da Barra', 'idh': 0.671},
-    {'municipio': 'Laje do Muriaé', 'idh': 0.668},
-    {'municipio': 'Santa Maria Madalena', 'idh': 0.668},
-    {'municipio': 'Trajano de Moraes', 'idh': 0.667},
-    {'municipio': 'Bom Jardim', 'idh': 0.660},
-    {'municipio': 'São José do Vale do Rio Preto', 'idh': 0.660},
-    {'municipio': 'Duas Barras', 'idh': 0.659},
-    {'municipio': 'Japeri', 'idh': 0.659},
-    {'municipio': 'Varre-Sai', 'idh': 0.659},
-    {'municipio': 'Tanguá', 'idh': 0.654},
-    {'municipio': 'Silva Jardim', 'idh': 0.654},
-    {'municipio': 'São José de Ubá', 'idh': 0.652},
-    {'municipio': 'Cardoso Moreira', 'idh': 0.648},
-    {'municipio': 'São Sebastião do Alto', 'idh': 0.646},
-    {'municipio': 'São Francisco de Itabapoana', 'idh': 0.639},
-    {'municipio': 'Sumidouro', 'idh': 0.611},
-  ];
-
-  // TODO cópia de populacao_20170810.json até que se implemente como serviço
-  populacoes: IPopulacao[] = [
-    {'municipio': 'Rio de Janeiro - RJ', 'populacao': 16231365},
-    {'municipio': 'Rio de Janeiro', 'populacao': 6476631},
-    {'municipio': 'São Gonçalo', 'populacao': 1038081},
-    {'municipio': 'Duque de Caxias', 'populacao': 882729},
-    {'municipio': 'Nova Iguaçu', 'populacao': 807492},
-    {'municipio': 'Niterói', 'populacao': 496696},
-    {'municipio': 'São João de Meriti', 'populacao': 483128},
-    {'municipio': 'Belford Roxo', 'populacao': 481127},
-    {'municipio': 'Campos dos Goytacazes', 'populacao': 460624},
-    {'municipio': 'Petrópolis', 'populacao': 298142},
-    {'municipio': 'Volta Redonda', 'populacao': 262970},
-    {'municipio': 'Magé', 'populacao': 236319},
-    {'municipio': 'Itaboraí', 'populacao': 229007},
-    {'municipio': 'Nova Friburgo', 'populacao': 220082},
-    {'municipio': 'Macaé', 'populacao': 219564},
-    {'municipio': 'Cabo Frio', 'populacao': 208451},
-    {'municipio': 'Angra dos Reis', 'populacao': 188276},
-    {'municipio': 'Barra Mansa', 'populacao': 179915},
-    {'municipio': 'Mesquita', 'populacao': 176566},
-    {'municipio': 'Teresópolis', 'populacao': 172040},
-    {'municipio': 'Nilópolis', 'populacao': 158309},
-    {'municipio': 'Maricá', 'populacao': 146549},
-    {'municipio': 'Queimados', 'populacao': 143632},
-    {'municipio': 'Rio das Ostras', 'populacao': 131976},
-    {'municipio': 'Resende', 'populacao': 125214},
-    {'municipio': 'Araruama', 'populacao': 122865},
-    {'municipio': 'Itaguaí', 'populacao': 119143},
-    {'municipio': 'Japeri', 'populacao': 99863},
-    {'municipio': 'Itaperuna', 'populacao': 99021},
-    {'municipio': 'São Pedro da Aldeia', 'populacao': 96920},
-    {'municipio': 'Barra do Piraí', 'populacao': 96865},
-    {'municipio': 'Seropédica', 'populacao': 82892},
-    {'municipio': 'Saquarema', 'populacao': 82359},
-    {'municipio': 'Três Rios', 'populacao': 79264},
-    {'municipio': 'Valença', 'populacao': 73725},
-    {'municipio': 'Rio Bonito', 'populacao': 57615},
-    {'municipio': 'Guapimirim', 'populacao': 56515},
-    {'municipio': 'Cachoeiras de Macacu', 'populacao': 56290},
-    {'municipio': 'Paracambi', 'populacao': 49521},
-    {'municipio': 'Paraíba do Sul', 'populacao': 42356},
-    {'municipio': 'São Francisco de Itabapoana', 'populacao': 41291},
-    {'municipio': 'Santo Antônio de Pádua', 'populacao': 41178},
-    {'municipio': 'Mangaratiba', 'populacao': 40779},
-    {'municipio': 'Paraty', 'populacao': 40478},
-    {'municipio': 'Casimiro de Abreu', 'populacao': 40305},
-    {'municipio': 'São Fidélis', 'populacao': 37703},
-    {'municipio': 'Bom Jesus do Itabapoana', 'populacao': 35964},
-    {'municipio': 'Vassouras', 'populacao': 35432},
-    {'municipio': 'São João da Barra', 'populacao': 34583},
-    {'municipio': 'Tanguá', 'populacao': 32426},
-    {'municipio': 'Armação dos Búzios', 'populacao': 31067},
-    {'municipio': 'Itatiaia', 'populacao': 30240},
-    {'municipio': 'Arraial do Cabo', 'populacao': 29097},
-    {'municipio': 'Conceição de Macabu', 'populacao': 27924},
-    {'municipio': 'Piraí', 'populacao': 27838},
-    {'municipio': 'Paty do Alferes', 'populacao': 26818},
-    {'municipio': 'Miracema', 'populacao': 26665},
-    {'municipio': 'Bom Jardim', 'populacao': 26278},
-    {'municipio': 'Iguaba Grande', 'populacao': 25901},
-    {'municipio': 'Miguel Pereira', 'populacao': 24842},
-    {'municipio': 'Pinheiral', 'populacao': 23887},
-    {'municipio': 'Itaocara', 'populacao': 22779},
-    {'municipio': 'Silva Jardim', 'populacao': 21307},
-    {'municipio': 'Cordeiro', 'populacao': 21063},
-    {'municipio': 'São José do Vale do Rio Preto', 'populacao': 20916},
-    {'municipio': 'Quissamã', 'populacao': 20700},
-    {'municipio': 'Cantagalo', 'populacao': 19759},
-    {'municipio': 'Porto Real', 'populacao': 18266},
-    {'municipio': 'Carmo', 'populacao': 18200},
-    {'municipio': 'Mendes', 'populacao': 18099},
-    {'municipio': 'Porciúncula', 'populacao': 18059},
-    {'municipio': 'Rio Claro', 'populacao': 17826},
-    {'municipio': 'Sapucaia', 'populacao': 17606},
-    {'municipio': 'Sumidouro', 'populacao': 15127},
-    {'municipio': 'Natividade', 'populacao': 15013},
-    {'municipio': 'Carapebus', 'populacao': 14888},
-    {'municipio': 'Cambuci', 'populacao': 14836},
-    {'municipio': 'Italva', 'populacao': 14442},
-    {'municipio': 'Engenheiro Paulo de Frontin', 'populacao': 13626},
-    {'municipio': 'Quatis', 'populacao': 13543},
-    {'municipio': 'Cardoso Moreira', 'populacao': 12558},
-    {'municipio': 'Areal', 'populacao': 11970},
-    {'municipio': 'Duas Barras', 'populacao': 11121},
-    {'municipio': 'Aperibé', 'populacao': 11023},
-    {'municipio': 'Varre-Sai', 'populacao': 10402},
-    {'municipio': 'Trajano de Moraes', 'populacao': 10350},
-    {'municipio': 'Santa Maria Madalena', 'populacao': 10225},
-    {'municipio': 'São Sebastião do Alto', 'populacao': 9054},
-    {'municipio': 'Rio das Flores', 'populacao': 8892},
-    {'municipio': 'Comendador Levy Gasparian', 'populacao': 8250},
-    {'municipio': 'Laje do Muriaé', 'populacao': 7298},
-    {'municipio': 'São José de Ubá', 'populacao': 7206},
-    {'municipio': 'Macuco', 'populacao': 5398},
+  blocoDadosGerais : IDadosGerais[] = [
+    {
+      'municipio': 'Angra dos Reis',
+      'prefeito': 'Fernando Antônio Ceciliano Jordão',
+      'secretarioAssistenciaSocial': 'Munir Francisco',
+      'populacao': 169511,
+      'idh': 0.724,
+      'idc': 0.56
+    },
+    {
+      'municipio': 'Aperibé',
+      'prefeito': 'Flávio Diniz Berriel',
+      'secretarioAssistenciaSocial': 'Vanessa Garcia Correa',
+      'populacao': 10213,
+      'idh': 0.692,
+      'idc': 0.535
+    },
+    {
+      'municipio': 'Araruama',
+      'prefeito': 'Livia Soares Bello Da Silva',
+      'secretarioAssistenciaSocial': 'João Baptista De Araujo Filho',
+      'populacao': 112008,
+      'idh': 0.718,
+      'idc': 0.556
+    },
+    {
+      'municipio': 'Areal',
+      'prefeito': 'Flávio Magdalena Bravo',
+      'secretarioAssistenciaSocial': 'Marcos Antonio Ribeiro',
+      'populacao': 11423,
+      'idh': 0.684,
+      'idc': 0.529
+    },
+    {
+      'municipio': 'Armação dos Búzios',
+      'prefeito': 'Andre Granado',
+      'secretarioAssistenciaSocial': 'João De Melo Carrilho',
+      'populacao': 27560,
+      'idh': 0.728,
+      'idc': 0.563
+    },
+    {
+      'municipio': 'Arraial do Cabo',
+      'prefeito': 'Renato Martins Vianna',
+      'secretarioAssistenciaSocial': 'Sergio Lopes De Oliveira Carvalho',
+      'populacao': 27715,
+      'idh': 0.733,
+      'idc': 0.567
+    },
+    {
+      'municipio': 'Barra do Piraí',
+      'prefeito': 'Mario Reis Esteves',
+      'secretarioAssistenciaSocial': 'Paloma Blunk Dos Reis',
+      'populacao': 94778,
+      'idh': 0.733,
+      'idc': 0.567
+    },
+    {
+      'municipio': 'Barra Mansa',
+      'prefeito': 'Rodrigo Drable',
+      'secretarioAssistenciaSocial': 'Ruth Cristina Coutinho Henriques De Lima Rebello',
+      'populacao': 177813,
+      'idh': 0.729,
+      'idc': 0.563
+    },
+    {
+      'municipio': 'Belford Roxo',
+      'prefeito': 'Wagner Dos Santos Carneiro',
+      'secretarioAssistenciaSocial': 'Daniela Moté De Souza Carneiro',
+      'populacao': 469332,
+      'idh': 0.684,
+      'idc': 0.531
+    },
+    {
+      'municipio': 'Bom Jardim',
+      'prefeito': 'Antonio Claret Gonçalves Figueira',
+      'secretarioAssistenciaSocial': 'Flávio De Almeida E Albuquerque',
+      'populacao': 25333,
+      'idh': 0.66,
+      'idc': 0.512
+    },
+    {
+      'municipio': 'Bom Jesus do Itabapoana',
+      'prefeito': 'Roberto Elias Figueiredo Salim Filho',
+      'secretarioAssistenciaSocial': 'Gisele Ferreira Da Silva Garcia',
+      'populacao': 35411,
+      'idh': 0.732,
+      'idc': 0.564
+    },
+    {
+      'municipio': 'Cabo Frio',
+      'prefeito': 'Marquinho Mendes',
+      'secretarioAssistenciaSocial': 'Romulo Vidal Dos Anjos',
+      'populacao': 186227,
+      'idh': 0.735,
+      'idc': 0.568
+    },
+    {
+      'municipio': 'Cachoeiras de Macacu',
+      'prefeito': 'Mauro  Cezar De Castro Soares',
+      'secretarioAssistenciaSocial': 'Gilvana Azevedo Miranda',
+      'populacao': 54273,
+      'idh': 0.7,
+      'idc': 0.542
+    },
+    {
+      'municipio': 'Cambuci',
+      'prefeito': 'Agnaldo Vieira Mello',
+      'secretarioAssistenciaSocial': 'Fatima De Souza Vieira',
+      'populacao': 14827,
+      'idh': 0.691,
+      'idc': 0.535
+    },
+    {
+      'municipio': 'Campos dos Goytacazes',
+      'prefeito': 'Rafael Paes Barbosa Diniz Nogueira',
+      'secretarioAssistenciaSocial': 'Sana Gimenes Alvarenga Domingues',
+      'populacao': 463731,
+      'idh': 0.716,
+      'idc': 0.551
+    },
+    {
+      'municipio': 'Cantagalo',
+      'prefeito': 'Guga De Paula',
+      'secretarioAssistenciaSocial': 'Jorge Braz Cardoso Ferreira',
+      'populacao': 19830,
+      'idh': 0.709,
+      'idc': 0.547
+    },
+    {
+      'municipio': 'Carapebus',
+      'prefeito': 'Christiane Miranda De Andrade Cordeiro',
+      'secretarioAssistenciaSocial': 'Cíntia Camargo Barcelos',
+      'populacao': 13359,
+      'idh': 0.713,
+      'idc': 0.551
+    },
+    {
+      'municipio': 'Cardoso Moreira',
+      'prefeito': 'Gilson Nunes Siqueira',
+      'secretarioAssistenciaSocial': 'Fausto Da Rocha Pereira',
+      'populacao': 12600,
+      'idh': 0.648,
+      'idc': 0.502
+    },
+    {
+      'municipio': 'Carmo',
+      'prefeito': 'Cesar Ladeira',
+      'secretarioAssistenciaSocial': 'Silvio Murad De Onofre',
+      'populacao': 17434,
+      'idh': 0.696,
+      'idc': 0.537
+    },
+    {
+      'municipio': 'Casimiro de Abreu',
+      'prefeito': 'Paulo Cezar Dames Passos',
+      'secretarioAssistenciaSocial': 'Leila Marcia Barbosa De Souza',
+      'populacao': 35347,
+      'idh': 0.726,
+      'idc': 0.559
+    },
+    {
+      'municipio': 'Comendador Levy Gasparian',
+      'prefeito': 'Valter Luis Lavinas Ribeiro',
+      'secretarioAssistenciaSocial': 'Cristina Bonforte Serpa Vasconcelos',
+      'populacao': 8180,
+      'idh': 0.685,
+      'idc': 0.531
+    },
+    {
+      'municipio': 'Conceição de Macabu',
+      'prefeito': 'Cláudio Eduardo Barbosa Linhares',
+      'secretarioAssistenciaSocial': 'Marilia Nunes Bastos',
+      'populacao': 21211,
+      'idh': 0.712,
+      'idc': 0.55
+    },
+    {
+      'municipio': 'Cordeiro',
+      'prefeito': 'Luciano Ramos Pinto',
+      'secretarioAssistenciaSocial': 'Leticia Ramos Reis',
+      'populacao': 20430,
+      'idh': 0.729,
+      'idc': 0.564
+    },
+    {
+      'municipio': 'Duas Barras',
+      'prefeito': 'Luiz Carlos Botelho Lutterbach',
+      'secretarioAssistenciaSocial': 'Maria Eliza De Jesus Lutterbach',
+      'populacao': 10930,
+      'idh': 0.659,
+      'idc': 0.511
+    },
+    {
+      'municipio': 'Duque de Caxias',
+      'prefeito': 'Washington Reis De Oliveira',
+      'secretarioAssistenciaSocial': 'Aline Ferreira Batista Ribeiro',
+      'populacao': 855048,
+      'idh': 0.711,
+      'idc': 0.55
+    },
+    {
+      'municipio': 'Engenheiro Paulo de Frontin',
+      'prefeito': 'Jauldo De Souza Balthazar Ferreira',
+      'secretarioAssistenciaSocial': 'Alexsandra Antunes da Silva Figueiredo',
+      'populacao': 13237,
+      'idh': 0.722,
+      'idc': 0.558
+    },
+    {
+      'municipio': 'Guapimirim',
+      'prefeito': 'Jocelito Pereira De Oliveira',
+      'secretarioAssistenciaSocial': 'Paula Francinete Machado De Jesus',
+      'populacao': 51483,
+      'idh': 0.698,
+      'idc': 0.541
+    },
+    {
+      'municipio': 'Iguaba Grande',
+      'prefeito': 'Ana Grasiella Moreira Figueiredo Magalhães',
+      'secretarioAssistenciaSocial': 'Ilana Feitosa S.Lobo',
+      'populacao': 22851,
+      'idh': 0.761,
+      'idc': 0.586
+    },
+    {
+      'municipio': 'Itaboraí',
+      'prefeito': 'Sadinoel Oliveira Gomes Souza',
+      'secretarioAssistenciaSocial': 'Roberto Mattos da Costa',
+      'populacao': 218008,
+      'idh': 0.693,
+      'idc': 0.537
+    },
+    {
+      'municipio': 'Itaguaí',
+      'prefeito': 'Carlo Busatto Júnior',
+      'secretarioAssistenciaSocial': 'Maria Izabel Lopes Ribeiro',
+      'populacao': 109091,
+      'idh': 0.715,
+      'idc': 0.554
+    },
+    {
+      'municipio': 'Italva',
+      'prefeito': 'Margareth De Souza Rodrigues Soares',
+      'secretarioAssistenciaSocial': 'Luis Carlos da Costa Molais',
+      'populacao': 14063,
+      'idh': 0.688,
+      'idc': 0.532
+    },
+    {
+      'municipio': 'Itaocara',
+      'prefeito': 'Manoel Queiroz Faria',
+      'secretarioAssistenciaSocial': 'Edilene Rodrigues Da Silva Sampaio',
+      'populacao': 22899,
+      'idh': 0.713,
+      'idc': 0.551
+    },
+    {
+      'municipio': 'Itaperuna',
+      'prefeito': 'Marcus Vinícius De Oliveira Pinto',
+      'secretarioAssistenciaSocial': 'Camila Andrade Pires',
+      'populacao': 95841,
+      'idh': 0.73,
+      'idc': 0.564
+    },
+    {
+      'municipio': 'Itatiaia',
+      'prefeito': 'Eduardo Guedes Da Silva',
+      'secretarioAssistenciaSocial': 'Raquel De Fátima Silva Rocha',
+      'populacao': 28783,
+      'idh': 0.737,
+      'idc': 0.568
+    },
+    {
+      'municipio': 'Japeri',
+      'prefeito': 'Carlos Moraes Costa',
+      'secretarioAssistenciaSocial': 'Marcio Rodrigues Rosa',
+      'populacao': 95492,
+      'idh': 0.659,
+      'idc': 0.512
+    },
+    {
+      'municipio': 'Laje do Muriaé',
+      'prefeito': 'Rivelino Da Silva Bueno',
+      'secretarioAssistenciaSocial': 'Adilson Fernandes Da Silva',
+      'populacao': 7487,
+      'idh': 0.668,
+      'idc': 0.517
+    },
+    {
+      'municipio': 'Macaé',
+      'prefeito': 'Aluizio Dos Santos Junior',
+      'secretarioAssistenciaSocial': 'Tatiana De Oliveira Pires',
+      'populacao': 206728,
+      'idh': 0.764,
+      'idc': 0.589
+    },
+    {
+      'municipio': 'Macuco',
+      'prefeito': 'Bruno Boaretto',
+      'secretarioAssistenciaSocial': 'Claudia Bonan Taveira Pinaud',
+      'populacao': 5269,
+      'idh': 0.703,
+      'idc': 0.543
+    },
+    {
+      'municipio': 'Magé',
+      'prefeito': 'Rafael Santos De Souza (Rafael Tubarão)',
+      'secretarioAssistenciaSocial': 'Bianca Gonçalves Vasconcellos De Souza',
+      'populacao': 227322,
+      'idh': 0.709,
+      'idc': 0.549
+    },
+    {
+      'municipio': 'Mangaratiba',
+      'prefeito': 'Aarão De Moura Brito Neto',
+      'secretarioAssistenciaSocial': 'Leandro De Paula Silva',
+      'populacao': 36456,
+      'idh': 0.753,
+      'idc': 0.583
+    },
+    {
+      'municipio': 'Maricá',
+      'prefeito': 'Fabiano Taques Horta',
+      'secretarioAssistenciaSocial': 'Jorge Luiz Cordeiro Da Costa',
+      'populacao': 127461,
+      'idh': 0.765,
+      'idc': 0.59
+    },
+    {
+      'municipio': 'Mendes',
+      'prefeito': 'Rogério Riente',
+      'secretarioAssistenciaSocial': 'Ana Luiza Matias De Oliveira',
+      'populacao': 17935,
+      'idh': 0.736,
+      'idc': 0.568
+    },
+    {
+      'municipio': 'Mesquita',
+      'prefeito': 'Jorge Lúcio Ferreira Miranda',
+      'secretarioAssistenciaSocial': 'Luiza Cristina Quaresma De Oliveira Vaz',
+      'populacao': 168376,
+      'idh': 0.737,
+      'idc': 0.569
+    },
+    {
+      'municipio': 'Miguel Pereira',
+      'prefeito': 'Andre Portugues',
+      'secretarioAssistenciaSocial': 'Adriana Pinto De Afonseca',
+      'populacao': 24642,
+      'idh': 0.745,
+      'idc': 0.575
+    },
+    {
+      'municipio': 'Miracema',
+      'prefeito': 'Clovis Tostes De Barros',
+      'secretarioAssistenciaSocial': 'Sérgio Salim Amim',
+      'populacao': 26843,
+      'idh': 0.713,
+      'idc': 0.551
+    },
+    {
+      'municipio': 'Natividade',
+      'prefeito': 'Severiano Antônio Dos Santos Rezende',
+      'secretarioAssistenciaSocial': 'Ana Maria Fonseca Da Silva Rezende',
+      'populacao': 15082,
+      'idh': 0.73,
+      'idc': 0.565
+    },
+    {
+      'municipio': 'Nilópolis',
+      'prefeito': 'Farid Abrão',
+      'secretarioAssistenciaSocial': 'Michelle Azeredo Da Silva',
+      'populacao': 157425,
+      'idh': 0.753,
+      'idc': 0.582
+    },
+    {
+      'municipio': 'Niterói',
+      'prefeito': 'Rodrigo Neves Barreto',
+      'secretarioAssistenciaSocial': 'Verônica Dos Santos Lima',
+      'populacao': 487562,
+      'idh': 0.837,
+      'idc': 0.641
+    },
+    {
+      'municipio': 'Nova Friburgo',
+      'prefeito': 'Renato Pinheiro Bravo',
+      'secretarioAssistenciaSocial': 'Christiano Pereira Huguenin',
+      'populacao': 182082,
+      'idh': 0.745,
+      'idc': 0.576
+    },
+    {
+      'municipio': 'Nova Iguaçu',
+      'prefeito': 'Rogerio Lisboa',
+      'secretarioAssistenciaSocial': 'Danilo Gonçalves Costa',
+      'populacao': 796257,
+      'idh': 0.713,
+      'idc': 0.552
+    },
+    {
+      'municipio': 'Paracambi',
+      'prefeito': 'Lucimar Cristina Da Silva Ferreira',
+      'secretarioAssistenciaSocial': 'Aline Otilia Soares Ferreira Benevenuto',
+      'populacao': 47124,
+      'idh': 0.72,
+      'idc': 0.557
+    },
+    {
+      'municipio': 'Paraíba do Sul',
+      'prefeito': 'Alessandro Cronge Bouzada',
+      'secretarioAssistenciaSocial': 'Elaine Cristina Arruda Aguiar',
+      'populacao': 41084,
+      'idh': 0.702,
+      'idc': 0.544
+    },
+    {
+      'municipio': 'Parati',
+      'prefeito': 'Carlos José Gama Miranda',
+      'secretarioAssistenciaSocial': 'Valdecir Machado Ramiro',
+      'populacao': 37533,
+      'idh': 0.693,
+      'idc': 0.535
+    },
+    {
+      'municipio': 'Paty do Alferes',
+      'prefeito': 'Eurico Pinheiro Bernardes Neto',
+      'secretarioAssistenciaSocial': 'Jeanne Marisete Teixeira Bernardes',
+      'populacao': 26359,
+      'idh': 0.671,
+      'idc': 0.52
+    },
+    {
+      'municipio': 'Petrópolis',
+      'prefeito': 'Bernardo Rossi',
+      'secretarioAssistenciaSocial': 'Denise Maria Respeita Quintella Coelho',
+      'populacao': 295917,
+      'idh': 0.745,
+      'idc': 0.575
+    },
+    {
+      'municipio': 'Pinheiral',
+      'prefeito': 'Ednardo Barbosa Oliveira',
+      'secretarioAssistenciaSocial': 'Patricia Rivello Garcia',
+      'populacao': 22719,
+      'idh': 0.715,
+      'idc': 0.552
+    },
+    {
+      'municipio': 'Piraí',
+      'prefeito': 'Luiz Antonio Da Silva Neves',
+      'secretarioAssistenciaSocial': 'Heloisa Souza Lima Machado',
+      'populacao': 26314,
+      'idh': 0.708,
+      'idc': 0.546
+    },
+    {
+      'municipio': 'Porciúncula',
+      'prefeito': 'Leonardo Paes Barreto Coutinho',
+      'secretarioAssistenciaSocial': 'Maria Antonieta Gomes Correa',
+      'populacao': 17760,
+      'idh': 0.697,
+      'idc': 0.539
+    },
+    {
+      'municipio': 'Porto Real',
+      'prefeito': 'Jorge Serfiotis',
+      'secretarioAssistenciaSocial': 'Valéria Ribeiro De Carvalho',
+      'populacao': 16592,
+      'idh': 0.713,
+      'idc': 0.551
+    },
+    {
+      'municipio': 'Quatis',
+      'prefeito': 'Raimundo De Souza',
+      'secretarioAssistenciaSocial': 'Rosana Luisa De Bem Almeida',
+      'populacao': 12793,
+      'idh': 0.69,
+      'idc': 0.533
+    },
+    {
+      'municipio': 'Queimados',
+      'prefeito': 'Carlos De França Vilela',
+      'secretarioAssistenciaSocial': 'Elton Teixeira Rosa Da Silva',
+      'populacao': 137962,
+      'idh': 0.68,
+      'idc': 0.527
+    },
+    {
+      'municipio': 'Quissamã',
+      'prefeito': 'Maria De Fátima Pacheco',
+      'secretarioAssistenciaSocial': 'Tania Regina Dos Santos Magalhães',
+      'populacao': 20242,
+      'idh': 0.704,
+      'idc': 0.543
+    },
+    {
+      'municipio': 'Resende',
+      'prefeito': 'Diogo Balieiro Diniz',
+      'secretarioAssistenciaSocial': 'Jéssica Pavone Carrijo Muller',
+      'populacao': 119769,
+      'idh': 0.768,
+      'idc': 0.592
+    },
+    {
+      'municipio': 'Rio Bonito',
+      'prefeito': 'José Luiz Alves Antunes',
+      'secretarioAssistenciaSocial': 'Lílian De Araujo Alves Antunes',
+      'populacao': 55551,
+      'idh': 0.71,
+      'idc': 0.55
+    },
+    {
+      'municipio': 'Rio Claro',
+      'prefeito': 'José Osmar De Almeida',
+      'secretarioAssistenciaSocial': 'Julio Cesar Rocha De Camargo Castro',
+      'populacao': 17425,
+      'idh': 0.683,
+      'idc': 0.529
+    },
+    {
+      'municipio': 'Rio das Flores',
+      'prefeito': 'Vicente De Paula De Souza Guedes',
+      'secretarioAssistenciaSocial': 'Tereza Cristina Meyer Cabral Machado',
+      'populacao': 8561,
+      'idh': 0.68,
+      'idc': 0.525
+    },
+    {
+      'municipio': 'Rio das Ostras',
+      'prefeito': 'Carlos Augusto Carvalho Balthazar',
+      'secretarioAssistenciaSocial': 'Elizabeth Bousquet Schott',
+      'populacao': 105676,
+      'idh': 0.773,
+      'idc': 0.593
+    },
+    {
+      'municipio': 'Rio de Janeiro',
+      'prefeito': 'Marcelo Bezerra Crivella',
+      'secretarioAssistenciaSocial': 'Maria Teresa Bergher',
+      'populacao': 6320446,
+      'idh': 0.799,
+      'idc': 0.614
+    },
+    {
+      'municipio': 'Santa Maria Madalena',
+      'prefeito': 'Carlos Alberto De Matos Botelho',
+      'secretarioAssistenciaSocial': 'Carlos Roberto Mello Lula Lamego',
+      'populacao': 10321,
+      'idh': 0.668,
+      'idc': 0.518
+    },
+    {
+      'municipio': 'Santo Antônio de Pádua',
+      'prefeito': 'Josias Quintal De Oliveira',
+      'secretarioAssistenciaSocial': 'Maria Tertuliana De Souza Oliveira',
+      'populacao': 40589,
+      'idh': 0.718,
+      'idc': 0.555
+    },
+    {
+      'municipio': 'São Fidélis',
+      'prefeito': 'Amarildo Henrique Alcântara',
+      'secretarioAssistenciaSocial': 'Victor Mauro Cruz',
+      'populacao': 37543,
+      'idh': 0.691,
+      'idc': 0.533
+    },
+    {
+      'municipio': 'São Francisco de Itabapoana',
+      'prefeito': 'Francimara Azeredo Da Silva Barbosa Lemos',
+      'secretarioAssistenciaSocial': 'Fagner Azeredo Da Silva',
+      'populacao': 41354,
+      'idh': 0.639,
+      'idc': 0.497
+    },
+    {
+      'municipio': 'São Gonçalo',
+      'prefeito': 'José Luiz Nanci',
+      'secretarioAssistenciaSocial': 'Marlos Luiz De Araujo Costa',
+      'populacao': 999728,
+      'idh': 0.739,
+      'idc': 0.571
+    },
+    {
+      'municipio': 'São João da Barra',
+      'prefeito': 'Carla Maria Machado Dos Santos',
+      'secretarioAssistenciaSocial': 'Claudia Maria Falcao Carvalho',
+      'populacao': 32747,
+      'idh': 0.671,
+      'idc': 0.518
+    },
+    {
+      'municipio': 'São João de Meriti',
+      'prefeito': 'João Ferreira Neto',
+      'secretarioAssistenciaSocial': 'Roberta Ferreira De Queiroz',
+      'populacao': 458673,
+      'idh': 0.719,
+      'idc': 0.555
+    },
+    {
+      'municipio': 'São José de Ubá',
+      'prefeito': 'Marcionilio Botelho Moreira',
+      'secretarioAssistenciaSocial': 'Maria Adriana Silva Verdan Moreira',
+      'populacao': 7003,
+      'idh': 0.652,
+      'idc': 0.505
+    },
+    {
+      'municipio': 'São José do Vale do Rio Preto',
+      'prefeito': 'Gilberto Martins Esteves',
+      'secretarioAssistenciaSocial': 'Aparecida De Fatima Moreira Esteves',
+      'populacao': 20251,
+      'idh': 0.66,
+      'idc': 0.512
+    },
+    {
+      'municipio': 'São Pedro da Aldeia',
+      'prefeito': 'Cláudio Vasque Chumbinho Dos Santos',
+      'secretarioAssistenciaSocial': 'Ester Marques Chumbinho Dos Santos',
+      'populacao': 87875,
+      'idh': 0.712,
+      'idc': 0.551
+    },
+    {
+      'municipio': 'São Sebastião do Alto',
+      'prefeito': 'Carlos Otavio Da Silva Rodrigues',
+      'secretarioAssistenciaSocial': 'Ely Pinto Lopes',
+      'populacao': 8895,
+      'idh': 0.646,
+      'idc': 0.501
+    },
+    {
+      'municipio': 'Sapucaia',
+      'prefeito': 'Fabricio Dos Santos Baião',
+      'secretarioAssistenciaSocial': 'Cleuza Rodrigues Galluzzi',
+      'populacao': 17525,
+      'idh': 0.675,
+      'idc': 0.522
+    },
+    {
+      'municipio': 'Saquarema',
+      'prefeito': 'Manoela Ramos De Souza Gomes Alves',
+      'secretarioAssistenciaSocial': 'Eliane Alves De Aquino',
+      'populacao': 74234,
+      'idh': 0.709,
+      'idc': 0.549
+    },
+    {
+      'municipio': 'Seropédica',
+      'prefeito': 'Anabal Barbosa De Souza',
+      'secretarioAssistenciaSocial': 'Fernanda Raquel Dos Santos Monteiro Moffati',
+      'populacao': 78186,
+      'idh': 0.713,
+      'idc': 0.553
+    },
+    {
+      'municipio': 'Silva Jardim',
+      'prefeito': 'Wanderson Gimenes Alexandre',
+      'secretarioAssistenciaSocial': 'Sebastião Da Silva Rocha',
+      'populacao': 21349,
+      'idh': 0.654,
+      'idc': 0.508
+    },
+    {
+      'municipio': 'Sumidouro',
+      'prefeito': 'Eliésio Peres Da Silva',
+      'secretarioAssistenciaSocial': 'Jéssica Dos Santos De Moura Pereira Jasmim',
+      'populacao': 14900,
+      'idh': 0.611,
+      'idc': 0.474
+    },
+    {
+      'municipio': 'Tanguá',
+      'prefeito': 'Valber Luiz Marcelo De Carvalho',
+      'secretarioAssistenciaSocial': 'Daniel Silveira Silva Izabel',
+      'populacao': 30732,
+      'idh': 0.654,
+      'idc': 0.508
+    },
+    {
+      'municipio': 'Teresópolis',
+      'prefeito': 'Mario De Oliveira Tricano',
+      'secretarioAssistenciaSocial': 'Carla Cavalcanti Tricano',
+      'populacao': 163746,
+      'idh': 0.73,
+      'idc': 0.564
+    },
+    {
+      'municipio': 'Trajano de Morais',
+      'prefeito': 'Rodrigo Freire Viana',
+      'secretarioAssistenciaSocial': 'Juliana Pais Esteves Freire Viana',
+      'populacao': 10289,
+      'idh': 0.667,
+      'idc': 0.516
+    },
+    {
+      'municipio': 'Três Rios',
+      'prefeito': 'Josimar Salles',
+      'secretarioAssistenciaSocial': 'Gilberto Garcia Golfeto',
+      'populacao': 77432,
+      'idh': 0.725,
+      'idc': 0.559
+    },
+    {
+      'municipio': 'Valença',
+      'prefeito': 'Luiz Fernando Furtado Da Graça',
+      'secretarioAssistenciaSocial': 'Roseli Da Silva Moreira',
+      'populacao': 71843,
+      'idh': 0.738,
+      'idc': 0.571
+    },
+    {
+      'municipio': 'Varre-sai',
+      'prefeito': 'Silvestre José Gorini',
+      'secretarioAssistenciaSocial': 'Isabela Louvain Fabri Moraes',
+      'populacao': 9475,
+      'idh': 0.659,
+      'idc': 0.512
+    },
+    {
+      'municipio': 'Vassouras',
+      'prefeito': 'Severino Ananias Dias Filho',
+      'secretarioAssistenciaSocial': 'Rosa Maria Coelho De Almeida',
+      'populacao': 34410,
+      'idh': 0.714,
+      'idc': 0.551
+    },
+    {
+      'municipio': 'Volta Redonda',
+      'prefeito': 'Elderson Ferreira Da Silva',
+      'secretarioAssistenciaSocial': 'Maycon César Inácio Abrantes',
+      'populacao': 257803,
+      'idh': 0.771,
+      'idc': 0.593
+    },
+    {
+      'municipio': 'Rio de Janeiro - RJ',
+      'prefeito': 'Luiz Fernando de Souza',
+      'secretarioAssistenciaSocial': 'Gustavo Reis Ferreira',
+      'populacao': 15989929,
+      'idh': 0.761,
+      'idc': 0.587
+    }
   ];
 
   // TODO cópia de centro_pop_20170810.json
@@ -2391,8 +2938,8 @@ interface IDadosGerais {
   municipio: string;
   prefeito: string;
   secretarioAssistenciaSocial: string;
-  populacao: string; //Erro no JSON
-  idh: string; //Erro no JSON
+  populacao: number;
+  idh: number;
   idc: number;
 }
 
@@ -2408,18 +2955,6 @@ interface IIndicadoresOrcamentarios {
   programasUtilizado:    number;
   programasNaoUtilizado: number;
   programasTotal:        number;
-}
-
-// TODO refatorar como serviço
-interface IIDH {
-  municipio: string;
-  idh:       number;
-}
-
-// TODO refatorar como serviço
-interface IPopulacao {
-  municipio: string;
-  populacao: number;
 }
 
 // TODO refatorar como serviço
