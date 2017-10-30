@@ -46,20 +46,22 @@
 }
 
 .dimensao {
-  font-family: 'Roboto-Condensed';
-  font-size: 140%;
-  line-height: 90%;
-  font-weight: bold;
+  font-family: 'Raleway';
+  font-size: 130%;
+  line-height: .91em;
+  font-weight: 500;
   word-wrap: normal;
+  color: #264467;
 }
 
 .pesoHeader {
-  font-family: 'Roboto-Condensed';
-  font-size: 100%;
-  font-weight: bold;
+  font-family: 'Raleway';
+  font-size: 90%;
+  font-weight: 500;
   line-height: 90%;
   word-wrap: normal;
   padding-left: 0em!important;
+  color: #264467;
 }
 
 .pesoValor {
@@ -73,9 +75,9 @@
 }
 
 .info {
-  font-family: 'Roboto-Condensed-Light';
-  font-size: 100%;
-  line-height: 95%;
+  font-family: 'Raleway';
+  font-size: 80%;
+  line-height: 1.2em;
 }
 
 .barra {
@@ -104,8 +106,8 @@ p {
 }
 
 .ajusta_elemento{
-  width: 11em!important;
-  height: 14em !important;
+  width: 11em;
+  height: 14em ;
   padding: 1.5rem;
 
 }

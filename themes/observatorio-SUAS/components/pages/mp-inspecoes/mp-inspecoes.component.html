@@ -17,13 +17,13 @@
           <div class="card-block">
             <div class="row" >
                 <div class="col-xl-2 col-md-3 col-sm-6" style="padding-left: 0.8rem">
-                  <div class="row" id="data1">Início</div>
+                  <div class="row" id="data1">Início *</div>
                   <div class="row" id="data">
                     <p-calendar #calendarInicio [(ngModel)]="dataInicio" id="date1" [locale]="pt" dateFormat="mm/yy" [monthNavigator]="true" [yearNavigator]="true" [yearRange]="yearRange" [showIcon]="true" ></p-calendar>
                   </div>
                 </div>
                 <div class="col-xl-2 col-md-3 col-sm-6" style="padding-left: 0.8rem">
-                  <div class="row" id="data3">Fim</div>
+                  <div class="row" id="data3">Fim *</div>
                   <div class="row" id="data4">
                     <p-calendar #calendarFim [(ngModel)]="dateFim" id="date2" [locale]="pt" dateFormat="mm/yy" [monthNavigator]="true" [yearNavigator]="true" [yearRange]="yearRange" [showIcon]="true"></p-calendar>
                   </div>
@@ -33,7 +33,7 @@
 
                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12" >
                   <div class="row" style="padding-left: .6rem">
-                    Tipo de inspeção
+                    Tipo de inspeção *
                   </div>
                   <div class="row" id="select-inspecao">
 
@@ -58,7 +58,7 @@
                 <!-- selecionar -->
                 <div class="col-xl-4 col-md-4">
                   <div class="row" style="padding-left: 15px">
-                    Eixos
+                    Eixos *
                   </div>
                   <div class="form-group" [ngSwitch]="crasSelected===false && creasSelected===false && centropopSelected===false">
                     <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="eixos"  defaultLabel="Selecionar Eixo" maxSelectedLabels= "2" selectedItemsLabel="{0} Eixos selecionados"></p-multiSelect>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="col-xl-4 col-md-4">
                   <div class="row" style="padding-left: 15px">
-                    Municípios
+                    Municípios *
                   </div>
                   <div class="form-group" [ngSwitch]="crasSelected===false && creasSelected===false && centropopSelected===false">
                     <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="municipios"  defaultLabel="Selecionar Municipio" maxSelectedLabels= "2" selectedItemsLabel="{0} Municipios selecionados"></p-multiSelect>
@@ -77,7 +77,7 @@
 
                 <div class="col-xl-4 col-md-4">
                   <div class="row" style="padding-left: 15px">
-                    Equipamento
+                    Equipamento *
                   </div>
                   <div class="form-group" [ngSwitch]="crasSelected===false && creasSelected===false && centropopSelected===false">
                       <p-multiSelect *ngSwitchCase="true" [disabled]="true" [options]="equipamentos"  defaultLabel="Selecionar Equipamento" maxSelectedLabels= "2" selectedItemsLabel="{0} Equipamentos selecionados"></p-multiSelect>
