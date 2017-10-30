@@ -221,7 +221,7 @@ p{
 }
 .text-min{
   font-size: .8rem;
-  font-family: 'Raleway';
+  font-family: 'Roboto-Condensed';
   text-align: left;
   padding-right: .5rem;
   font-weight: 500;
@@ -259,7 +259,8 @@ p{
   text-transform: uppercase;
 }
 .numero-destacado{
-  @extend .nome-pessoal;
+  color: rgb(5, 127, 178);
+  font-family: 'Roboto-Condensed';
   font-size: 1.1rem;
   font-weight: bold;
 }
