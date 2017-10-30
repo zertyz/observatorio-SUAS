@@ -38,6 +38,9 @@ input:checked + .slider {
   .vt-blue{
     color:white;
   }
+  .keyword{
+    color: white;
+  }
 }
 
 //END SWITCH
@@ -100,6 +103,7 @@ hr {
 section {
   position: relative;
   padding-top: 37px;
+  padding-bottom: .7em;
 }
 
 section.positioned {
@@ -160,6 +164,7 @@ table > th:first-child div{
 .p-2{
   font-size: .9rem;
   padding: 0!important;
+  color: #0d2b48;
 }
 .pesoHeader {
   font-family: 'Roboto-Condensed';
@@ -177,25 +182,23 @@ table > th:first-child div{
 }
 .hw1{
   font-size: 1.683em;
-  font-family: Roboto-Condensed;
+  font-family: 'Raleway';
 }
 
 .nome-eq{
   color: rgb(5, 127, 178);
-  font-family: 'Roboto-Condensed';
+  font-family: 'Raleway';
   font-size: .9rem;
   line-height: 90%;
   font-weight: bold;
   margin-top: 4%;
   padding-left: 1rem;
 }
-.nome-eq{
-  font-size: .8rem;
-}
+
 
 .h-text{
   font-size: 1.14vw;
-  font-family: Roboto-Condensed;
+  font-family: 'Raleway';
 }
 .pw-3{
   font-size: .6rem;
@@ -204,28 +207,28 @@ table > th:first-child div{
 
 }
 p{
-  padding-left: 1rem;
+  padding-left: .7em;
   line-height: initial;
   padding-top: 5px;
-  font-family: Roboto-Condensed;
+  font-family: 'Raleway';
   text-align: center;
 }
 .p-text{
-  font-family: Roboto-Condensed-Light;
+  font-family: 'Raleway';
   text-align: left;
-  padding-right:0;
-  font-size: .696rem;
+  font-size: .66rem;
   min-width: 6.2rem;
 }
 .text-min{
   font-size: .8rem;
-  font-family: Roboto-Condensed-Light;
+  font-family: 'Raleway';
   text-align: left;
   padding-right: .5rem;
+  font-weight: 500;
 }
 .nome-pessoal{
   color: rgb(5, 127, 178);
-  font-family: 'Roboto-Condensed';
+  font-family: 'Raleway';
   font-size: 1.2vw;
 }
 .valor-tabela{
@@ -238,9 +241,11 @@ p{
   height: 0.1rem;
 }
 .keyword{
-  font-family: 'Roboto-Condensed';
+  font-family: 'Raleway';
   font-size: .965rem;
   text-transform: uppercase;
+  font-weight: 600;
+  color: #0d2b48;
 }
 .keyword1{
   @extend .keyword;
@@ -248,9 +253,9 @@ p{
 }
 .header{
   @extend .h-text;
-  padding: 0 0 !important;
+  padding: 0 0 ;
   margin-bottom: 0;
-  padding-left: 1.0rem!important;
+  padding-left: 1.0rem;
   text-transform: uppercase;
 }
 .numero-destacado{
@@ -341,6 +346,12 @@ div.col-md-4{
     white-space: nowrap;
     font-size: .9rem;
   }
+  .box-text{
+    height: 108px;
+  }
+  .subtitulo{
+    font-size: .85em;
+  }
 }
 
 @media(max-width:767px){
@@ -390,8 +401,9 @@ div.col-md-4{
     padding-left: 0rem;
 
   }
-  .keyword{
-  font-size: 12px;
+  p.keyword{
+    font-size: 12px;
+    line-height: 1.5em;
   }
   .padding-subtitulo{
     padding-left: .8rem
@@ -446,8 +458,6 @@ div.col-md-4{
   }
 
   .subtitulo{
-    font-size: .90vw;
-    white-space: nowrap;
     display: table;
   }
 
@@ -459,7 +469,7 @@ div.col-md-4{
     height: 25rem;
   }
 
-  .container {
+  section >.container {
     overflow-y: auto;
     height: 350px;
   }

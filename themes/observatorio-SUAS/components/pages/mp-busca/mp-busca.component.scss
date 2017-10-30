@@ -24,6 +24,7 @@
 
 #_mprjbusca_WAR_mprjbuscaportlet_buscar{
   width: 100%;
+  height: 2.88em;
 }
 
 #_mprjbusca_WAR_mprjbuscaportlet_keywords_param{
@@ -46,7 +47,9 @@
   margin-top: 1.2rem;
   width: 100%;
 }
-
+.btn-primario{
+  padding: 0;
+}
 .totalRes {
   color: #a3afbf;
   font-size: 14px;
