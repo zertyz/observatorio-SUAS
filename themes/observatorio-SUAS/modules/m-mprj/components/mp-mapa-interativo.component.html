@@ -10,7 +10,7 @@
 <div *ngIf="dropdown">
   <div class='selectdiv'>
     <select  #selectElem [(ngModel)] = "elementoClicado" (change)="singleSelect(selectElem.value)">
-      <option *ngFor="let elemento of elementosOrdenados; let i = index;" [value]="elemento.nome">{{elemento.nome}}</option>
+      <option *ngFor="let elemento of elementosOrdenados;" [value]="elemento.nome">{{elemento.nome}}</option>
     </select>
   </div>
 </div>

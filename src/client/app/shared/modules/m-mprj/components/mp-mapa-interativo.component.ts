@@ -55,7 +55,7 @@ export class MPMapaInterativoComponent {
 
   elementosSelecionados: number[] = [];
   elementoHover:         string   = '';
-  elementoClicado:       string   = '';
+  elementoClicado:       string   = 'Rio de Janeiro - RJ'
   elementosOrdenados:    any[];
 
   //constructor(private geoService: WorldMapService) {}
@@ -67,7 +67,8 @@ export class MPMapaInterativoComponent {
   ngOnChanges() {
 
     // sorted array for the select
-    this.elementosOrdenados = this.municipios.sort((e1, e2) => e1.nome > e2.nome ? 1 : -1);
+    this.municipios = this.municipios.sort((e1, e2) => e1.nome > e2.nome ? 1 : -1);
+    this.elementosOrdenados = this.municipios.slice();
     this.elementosOrdenados.unshift({
       nome: this.estado,
       path: ''
