@@ -47,11 +47,12 @@
 
 .dimensao {
   font-family: 'Raleway';
-  font-size: 130%;
+  font-size: 100%;
   line-height: .91em;
   font-weight: 500;
   word-wrap: normal;
   color: #264467;
+  text-transform: uppercase;
 }
 
 .pesoHeader {
@@ -63,6 +64,22 @@
   padding-left: 0em!important;
   color: #264467;
 }
+.font-rating{
+  font-family: 'Roboto-Condensed';
+  font-size: 1.7em;
+  line-height: 90%;
+  font-weight: normal;
+  right: 2%;
+  word-wrap: normal;
+}
+
+.text-rating{
+  font-size: .8em;
+  text-transform: uppercase;
+  padding: .5em;
+
+}
+
 
 .pesoValor {
   font-family: 'Roboto-Condensed';

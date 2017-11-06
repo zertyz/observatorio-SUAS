@@ -15,7 +15,10 @@
 .img-responsive{
   width: 4em;
   height: 4em;
-  padding: .4em;
+  padding-right:.4em;
+  padding-left:.4em;
+  padding-top:.4em;
+  padding-bottom:.4em;
 }
 .link {
   position: relative;
@@ -82,11 +85,6 @@
   float: right;
 }
 
-.ajusta_elemento{
-  width: 11em;
-  height: 14em;
-  padding: 1.5rem;
-}
 
 .dimensao {
   font-family: 'Raleway';
@@ -191,6 +189,7 @@ div mp-link{
 div > span{
   padding-bottom: .9rem;
 }
+
 @media (max-width: 575px) {
   .img-envolvida{
     display: none;
