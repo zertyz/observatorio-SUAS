@@ -145,6 +145,9 @@ th div{
 table > th:first-child div{
   border: none;
 }
+div> tbody > tr{
+  line-height: 3.1em;
+}
 
 // Styles Cards
 .card{
@@ -157,7 +160,7 @@ table > th:first-child div{
 }
 .card-block{
   height: 100%;
-  padding: 1.7rem;
+  padding: 1.3rem;
 }
 
 // Sytles Fonts
@@ -467,7 +470,7 @@ div.col-md-4{
   }
 
   .card{
-    height: 25rem;
+    height: 26.8rem;
   }
 
   section >.container {

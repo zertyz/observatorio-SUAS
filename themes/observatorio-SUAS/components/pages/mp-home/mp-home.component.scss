@@ -63,7 +63,7 @@
   font-family: 'Roboto-Condensed';
   text-transform: uppercase;
   color: whitesmoke;
-  font-size: 4.2rem;
+  font-size: 3.9rem;
 }
 
 .number{
@@ -201,12 +201,6 @@ div > span{
     height: auto;
     padding-bottom: 1em;
   }
-  .keyword-small {
-    font-size: 53%;
-  }
-  .number{
-    font-size: 1.5em;
-  }
 
 }
 
@@ -217,7 +211,7 @@ div > span{
   .titulo {  font-size: 1.3rem;  }
 }
 
-@media (min-width:992px )and (max-width: 1199px) {
+@media (min-width:768px )and (max-width: 1199px) {
   .texto{
     font-size: 83%;
   }
@@ -230,4 +224,14 @@ div > span{
   .keyword-municipio{
     font-size: .73em;
   }
+  .macro-card ,.card-special{
+    height: 34em!important;
+  }
+
+}
+@media (min-width: 1880px) {
+  .img-envolvida{
+    width: 100%;
+  }
+
 }
