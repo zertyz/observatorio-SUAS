@@ -1955,7 +1955,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.544
     },
     {
-      'municipio': 'Parati',
+      'municipio': 'Paraty',
       'prefeito': 'Carlos José Gama Miranda',
       'secretarioAssistenciaSocial': 'Valdecir Machado Ramiro',
       'populacao': 37533,
