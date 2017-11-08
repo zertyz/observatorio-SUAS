@@ -14,16 +14,13 @@
 }
 
 .bordas {
-  border-bottom: 1px dotted;
-  border-bottom-color: #2e3a48;
-  height: 8.8rem;
+
+  height: 6.8rem;
   width: 100%;
   max-width: 100%;
 }
-
-.mapa{
-  width:20%;
-  float: right;
+.img-fluid{
+  padding-top: 2em;
 }
 
 .municipio{
@@ -35,7 +32,7 @@
 }
 .notaAtual {
   font-family: 'Roboto-Condensed-Light';
-  font-size: 280%;
+  font-size: 200%;
   margin-top: 10%;
   text-align: right;
 }
@@ -50,16 +47,22 @@
 }
 .posicao {
   font-family: 'Roboto-Condensed';
-  font-size: 280%;
+  font-size: 250%;
   line-height: 90%;
   width: 5%;
+  white-space: nowrap;
 }
 
 .ultimaNota {
   font-family: 'Roboto-Condensed-Light';
   font-size: 200%;
 }
-
+.card{
+  margin: 0 !important;
+  margin-bottom: .4em!important;
+  border-radius: 0!important;
+  padding: 10px;
+}
 h4{
   font-size: 280%;
   font-weight: normal;
