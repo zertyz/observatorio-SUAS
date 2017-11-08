@@ -78,6 +78,9 @@ export const MutuaInstanceProjectModulesActivationConfiguration: IInstanceProjec
   // módulos do projeto Edificando o Controle Interno
   {moduleName: 'MPRJModule', htmlEnabled: true, mobileEnabled: false},
 
+  // módulos do projeto Edificando o Controle Interno
+  {moduleName: 'MEdificandoOControleInternoModule', htmlEnabled: true, mobileEnabled: false},
+
 ];
 
 // app components

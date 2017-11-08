@@ -48,7 +48,9 @@ import { AccordionModule,AutoCompleteModule,BlockUIModule,BreadcrumbModule,Butto
 let PRIMENG_MODULES: any[] = [AccordionModule,AutoCompleteModule,BlockUIModule,BreadcrumbModule,ButtonModule,CalendarModule,CarouselModule,ChartModule,CheckboxModule,CodeHighlighterModule,ConfirmDialogModule,ContextMenuModule,DataGridModule,DataListModule,DataScrollerModule,DataTableModule,DialogModule,DragDropModule,DropdownModule,EditorModule,FieldsetModule,FileUploadModule,GalleriaModule,GMapModule,GrowlModule,InplaceModule,InputMaskModule,InputSwitchModule,InputTextareaModule,InputTextModule,LightboxModule,ListboxModule,MegaMenuModule,MenubarModule,MenuModule,MessagesModule,MultiSelectModule,OrderListModule,OverlayPanelModule,PaginatorModule,PanelMenuModule,PanelModule,PasswordModule,PickListModule,ProgressBarModule,RadioButtonModule,RatingModule,ScheduleModule,SelectButtonModule,SharedModule,SlideMenuModule,SliderModule,SpinnerModule,SplitButtonModule,StepsModule,TabMenuModule,TabViewModule,TerminalModule,TieredMenuModule,ToggleButtonModule,ToolbarModule,TooltipModule,TreeModule,TreeTableModule,TriStateCheckboxModule];
 // MPRJModule
 import { MPRJModule } from '../modules/m-mprj/m-mprj.module';
+// MEdificandoOControleInternoModule
+import { MEdificandoOControleInternoModule } from '../modules/m-edificando-o-controle-interno/m-edificando-o-controle-interno.module';
 
-export const MutuaExportedModules: any[] = [MNg2AdminModule.forRoot(),BrowserAnimationsModule,NgbModule.forRoot(),...PRIMENG_MODULES,MPRJModule.forRoot()];
+export const MutuaExportedModules: any[] = [MNg2AdminModule.forRoot(),BrowserAnimationsModule,NgbModule.forRoot(),...PRIMENG_MODULES,MPRJModule.forRoot(),MEdificandoOControleInternoModule.forRoot()];
 
 export const MutuaAppComponent: any = NG2AppComponent;
