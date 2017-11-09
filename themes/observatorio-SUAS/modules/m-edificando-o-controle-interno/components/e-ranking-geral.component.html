@@ -2,7 +2,7 @@
 <div class="card">
   <li *ngFor="let notas of rankingOrdenado; let posicao = index" [class.select]=" posicao === selectRanking"(click)="onSelect(posicao)">
     <div class="card">
-      <a [routerLink]="['/ranking-completo', notas.municipio, dimensao]" style="padding:2%;">
+      <a [routerLink]="['/ranking', notas.municipio, dimensao]" style="padding:2%;">
 
         <div class="container">
           <div class="bordas">

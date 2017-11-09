@@ -17,7 +17,7 @@ import { GradacoesDeCores } from '../../../shared/modules/m-edificando-o-control
   templateUrl: 'mp-ranking.component.html',
   styleUrls: ['mp-ranking.component.css']
 })
-export class MPRankingComponent implements OnInit{
+export class MPRankingComponent implements OnInit {
 
   municipio: string;
   dimensao:  string;
@@ -38,7 +38,7 @@ export class MPRankingComponent implements OnInit{
   trocaRanking(novaDimensao: string) {
     this.municipio = '0';
     this.dimensao = novaDimensao;
-    this.routerext.navigate([`/mp-ranking-completo/0/${novaDimensao}`]);
+    this.routerext.navigate([`/mp-ranking/0/${novaDimensao}`]);
   }
 
 }
