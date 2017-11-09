@@ -51,9 +51,9 @@ export class GradacoesDeCores {
 
   // gradações -- os valores em 'faixas' denotam o limite superior da nota
   private gradacoes:       number   = 6;
-  private faixas:          number[] = [2,                                   4,                                    6,                                            7.5,                                           9,                                      10];
-  private classesCSSCores: string[] = ['notaEmProjeto',                     'notaEmAlicerce',                     'notaConstrucaoIniciada',                     'notaConstrucaoAdiantada',                     'notaEmAcabamento',                     'notaConstruido'];
-  private imgsConstrucao:  string[] = ['Predio Estagio 1 - Em Projeto.png', 'Predio Estagio 2 - Em Alicerce.png', 'Predio Estagio 3 - Construção Iniciada.png', 'Predio Estagio 4 - Construção Adiantada.png', 'Predio Estagio 5 - Em Acabamento.png', 'Predio Estagio 6 - Construído.png'];
+  private faixas:          number[] = [2,                                   4,                                    6,                                            7.5,                                            9,                                      10];
+  private classesCSSCores: string[] = ['notaEmProjeto',                     'notaEmAlicerce',                     'notaConstrucaoIniciada',                     'notaConstrucaoAdiantada',                      'notaEmAcabamento',                     'notaConstruido'];
+  private imgsConstrucao:  string[] = ['Ilustracao_SUAS_fase_1.png',        'Ilustracao_SUAS_fase_2.png',         'Ilustracao_SUAS_fase_3.png',                 'Ilustracao_SUAS_fase_4.png',                   'Ilustracao_SUAS_fase_5.png',           'Ilustracao_SUAS_fase_6.png'];
   private animaConstrucao: string[] = ['bounceInDown', 'fadeInDown', 'flipInY', 'rotateInDownRight', 'rotateInDownLeft', 'zoomInDown']
 
   constructor() {
