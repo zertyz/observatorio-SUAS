@@ -1,11 +1,11 @@
 .notasHeader {
-  font-family: 'Roboto-Condensed';
-  font-size: 70%;
+  font-family: 'Raleway Light';
+  font-size: 58%;
   line-height: 90%;
   vertical-align: top;
   text-align: right;
   padding-top: 3%;
-  color: black;
+  color: #0d2b48;
 }
 
 .ultimaNota {
@@ -29,12 +29,13 @@
 
 
 td.dimensao{
-  font-family: 'Roboto-Condensed';
-  font-weight: bold;
-  font-size: 140%;
+  font-family: 'Raleway';
+  font-weight: 500;
+  font-size: 120%;
   line-height: 90%;
   padding-left: 3%;
   width:10rem!important;
+  color: #0d2b48;
 }
 
 .alinhamento-dir{
@@ -48,7 +49,7 @@ td.dimensao{
 .card{
   margin: .04em !important;
   border-radius: 0!important;
-  padding: 10px;
+  padding: 5px;
 }
 td{
   padding-bottom: 2.5%;

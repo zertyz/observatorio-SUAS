@@ -1,15 +1,16 @@
 .backImg {
   position: relative;
   z-index: 1;
-  top: 0;
-  left: 0;
-  min-width: 100% !important;
+  top: 55px;
+  left: -60px;
+  min-width: 130% !important;
 }
 
 .title {
   font-family: 'Roboto-Condensed-Bold';
   font-size: 200%;
   line-height: 80%;
+  color: #0d2b48;
 }
 
 .subtitle {
