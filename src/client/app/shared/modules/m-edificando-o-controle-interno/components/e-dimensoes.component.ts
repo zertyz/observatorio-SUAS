@@ -57,11 +57,11 @@ export class EDimensoesComponent implements OnInit {
     //['geral',                    'Classificação Geral'],
     ['financiamento',                 'Financiamento'],
     ['controleSocial',                'Controle Social'],
-    ['gestao',                        'Gestao'],
-    ['numeroEquipamentos',            'Numero Equipamentos'],
-    ['coberturaBolsaFamilia',         'Cobertura do Bolsa Familia'],
-    ['coberturaCadastroUnico',        'Cobertura do Cadastro Unico'],
-    ['beneficiosEventuais',           'Beneficios Eventuais'],
+    ['gestao',                        'Gestão'],
+    ['numeroEquipamentos',            'Número Equipamentos'],
+    ['coberturaBolsaFamilia',         'Cobertura do Bolsa Família'],
+    ['coberturaCadastroUnico',        'Cobertura do Cadastro Único'],
+    ['beneficiosEventuais',           'Benefícios Eventuais'],
   ];
 
   public errorMessage: string = null;
