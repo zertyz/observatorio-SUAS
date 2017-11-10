@@ -26,32 +26,34 @@
 
 .municipio{
   font-family: 'Raleway';
-  font-size: 140%;
+  font-size: 1.2em;
   line-height: 90%;
   padding-left: 3%;
   width: 120%;
   color: #0d2b48;
+  font-weight: 500;
 }
 
 .notaAtual {
   font-family: 'Roboto-Condensed-Light';
-  font-size: 200%;
+  font-size: 2.3em;
   margin-top: 10%;
   text-align: right;
 }
 
 .notasHeader {
   font-family: 'Raleway Light';
-  font-size: 58%;
-  line-height: 90%;
+  font-size: .55em;
+  line-height: 100%;
   text-align: right;
   padding-top: 3%;
   color: #0d2b48;
+  font-weight: 700;
 }
 
 .posicao {
   font-family: 'Roboto-Condensed';
-  font-size: 250%;
+  font-size: 1.9em;
   line-height: 90%;
   width: 5%;
   white-space: nowrap;
@@ -67,7 +69,7 @@
   margin: 0 !important;
   margin-bottom: .4em!important;
   border-radius: 0!important;
-  padding: 10px;
+  padding: 1px;
 
 }
 
@@ -126,12 +128,7 @@ ul li a{
     font-size: 130%;
     width: 140%;
   }
-  .notaAtual {
-    font-size: 150%;
-  }
-  .notasHeader {
-    font-size: 70%;
-  }
+
   .posicao {
     font-size: 180%;
   }
