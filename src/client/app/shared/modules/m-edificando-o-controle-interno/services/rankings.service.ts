@@ -33,7 +33,7 @@ import { IDadosMunicipio } from './IDadosMunicipio';
 @Injectable()
 export class RankingsService {
 
-  private rankingsJsonFileURL: string = `${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/dados/rankings_20170614.json`;
+  private rankingsJsonFileURL: string = `${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/dados/rankings_20171110.json`;
   private dadosMunicipiosJsonFileURL: string = `${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/dados/dados_municipios_20170614.json`;
 
   constructor(private http: Http) {}

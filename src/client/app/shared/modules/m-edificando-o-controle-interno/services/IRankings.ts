@@ -1,33 +1,24 @@
 /** <pre>
- * IRankings.ts
+ * edificandoOControleInterno/IRankings.ts
  * ============
- * (created by luiz on Ter, jun, 06, 2017)
+ * (created by coppola on Sex, Nov, 10, 2017)
  *
- * Representa um registro de 'rankings_20170614.json', a saber:
- *  {municipio:, geral:, auditoria:, ouvidoria:, correicao:, controladoria:, estrutura:, planejamento:, transparencia:, auxilioAoControleExterno:, orcamento:, regulamentacao:, autonomia:, concretizacao:, abrangencia:, resolutividade:, iniciativaLouvavel:}
+ * Representa um registro de 'rankings_20171110.json', a saber:
+ *  {municipio:, financiamento:, controleSocial:, gestao:, numeroEquipamentos:, coberturaBolsaFamilia:, coberturaCadastroUnico:, beneficiosEventuais:, geral:}
  *
  * @see RelatedClass(es)
- * @author luiz
+ * @author coppola
  */
 
 export interface IRankings {
   municipio: string;
   // dimensões
+  financiamento: number;
+  controleSocial: number;
+  gestao: number;
+  numeroEquipamentos: number;
+  coberturaBolsaFamilia: number;
+  coberturaCadastroUnico: number;
+  beneficiosEventuais: number;
   geral: number;
-  auditoria: number;
-  ouvidoria: number;
-  correicao: number;
-  controladoria: number;
-  estrutura: number;
-  planejamento: number;
-  transparencia: number;
-  auxilioAoControleExterno: number;
-  orcamento: number;
-  regulamentacao: number;
-  autonomia: number;
-  concretizacao: number;
-  abrangencia: number;
-  resolutividade: number;
-  iniciativaLouvavel: number;
-  evolucao: number;
 };

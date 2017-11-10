@@ -55,22 +55,13 @@ export class EDimensoesComponent implements OnInit {
   // transformações do nome do campo para o título, na ordem em que devem aparecer.
   public mapaDeCamposParaTitulos: string[][] = [
     //['geral',                    'Classificação Geral'],
-    ['auditoria',                'Auditoria' ,
-     'ouvidoria',                'Ouvidoria'],
-    ['correicao',                'Correição' ,
-     'controladoria',            'Controladoria'],
-    ['transparencia',            'Transparência' ,
-     'auxilioAoControleExterno', 'Auxílio ao Controle Externo'],
-    ['estrutura',                'Estrutura' ,
-     'abrangencia',              'Abrangência'],
-    ['autonomia',                'Autonomia' ,
-     'regulamentacao',           'Regulamentação'],
-    ['orcamento',                'Orçamento' ,
-     'planejamento',             'Planejamento'],
-    ['evolucao',                 'Evolução' ,
-     'resolutividade',           'Resolutividade'],
-    ['concretizacao',            'Concretização de Políticas Públicas' ,
-     'iniciativaLouvavel',       'Iniciativa Louvável'],
+    ['financiamento',                 'Financiamento'],
+    ['controleSocial',                'Controle Social'],
+    ['gestao',                        'Gestao'],
+    ['numeroEquipamentos',            'Numero Equipamentos'],
+    ['coberturaBolsaFamilia',         'Cobertura do Bolsa Familia'],
+    ['coberturaCadastroUnico',        'Cobertura do Cadastro Unico'],
+    ['beneficiosEventuais',           'Beneficios Eventuais'],
   ];
 
   public errorMessage: string = null;
@@ -80,23 +71,14 @@ export class EDimensoesComponent implements OnInit {
               private gradacoes: GradacoesDeCores) {
     this.notas = {
       municipio: 'desconhecida',
-      geral: -1,
-      auditoria: -1,
-      ouvidoria: -1,
-      correicao: -1,
-      controladoria: -1,
-      estrutura: -1,
-      evolucao: -1,
-      planejamento: -1,
-      transparencia: -1,
-      auxilioAoControleExterno: -1,
-      orcamento: -1,
-      regulamentacao: -1,
-      autonomia: -1,
-      concretizacao: -1,
-      abrangencia: -1,
-      resolutividade: -1,
-      iniciativaLouvavel: -1,
+      financiamento:           -1,
+      controleSocial:          -1,
+      gestao:                  -1,
+      numeroEquipamentos:      -1,
+      coberturaBolsaFamilia:   -1,
+      coberturaCadastroUnico:  -1,
+      beneficiosEventuais:     -1,
+      geral:                   -1
     };
 
     rankingsService.fetchRankings().subscribe(response => {

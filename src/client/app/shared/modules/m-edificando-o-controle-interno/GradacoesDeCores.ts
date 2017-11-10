@@ -26,22 +26,13 @@ export class GradacoesDeCores {
   // transformações do nome do campo para o título, na ordem em que devem aparecer.
   public listaDeDimensoesETitulos: string[][] = [
     ['geral',                    'Geral'],
-    ['auditoria',                'Auditoria'],
-    ['ouvidoria',                'Ouvidoria'],
-    ['correicao',                'Correição'],
-    ['controladoria',            'Controladoria'],
-    ['transparencia',            'Transparência'],
-    ['auxilioAoControleExterno', 'Auxílio ao Controle Externo'],
-    ['estrutura',                'Estrutura'],
-    ['abrangencia',              'Abrangência'],
-    ['autonomia',                'Autonomia'],
-    ['regulamentacao',           'Regulamentação'],
-    ['orcamento',                'Orçamento'],
-    ['planejamento',             'Planejamento'],
-    ['evolucao',                 'Evolução'],
-    ['resolutividade',           'Resolutividade'],
-    ['concretizacao',            'Concretização de Políticas Públicas'],
-    ['iniciativaLouvavel',       'Iniciativa Louvável'],
+    ['financiamento',            'Financiamento'],
+    ['controleSocial',           'Controle Social'],
+    ['gestao',                   'Gestao'],
+    ['numeroEquipamentos',       'Numero Equipamentos'],
+    ['coberturaBolsaFamilia',    'Cobertura do Bolsa Familia'],
+    ['coberturaCadastroUnico',   'Cobertura do Cadastro Unico'],
+    ['beneficiosEventuais',      'Beneficios Eventuais'],
   ];
   public mapaDeDimensoesParaTitulos: any = {};
 
