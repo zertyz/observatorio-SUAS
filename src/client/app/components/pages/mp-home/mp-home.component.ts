@@ -36,6 +36,6 @@ export class MPHomeComponent {
         this.top10Notas[i]   = rankings[i].geral;
       }
     }, error => this.errorMessage = < any > error);
-  };
+  }
 
 }
