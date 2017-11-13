@@ -11,7 +11,7 @@
           <img src="./assets/img/Logo_SUAS.png" class="img-responsive ajusta_elemento">
           <img src="./assets/img/CAO-logo.png" class="img-responsive" style="width: 196px;height: auto;">
         </figure>
-          <!--/Temporario-->
+        <!--/Temporario-->
       </div>
       <div class="row">
         <p><br/></p>
@@ -96,7 +96,7 @@
                 <tr>
                   <td><img class="icone img-responsive" src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
                   <td style="background-color: #fa8b60;border-bottom: 3px solid whitesmoke;">
-                    <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">pontos de irreguladores </div>
+                    <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">inconsistências</div>
                     <div class="row">
                       <div class="col-5 number " style="padding: 1em 0em 0em 1em;" >25%
                         <div class="keyword-small">total</div>
@@ -108,7 +108,7 @@
                 <tr>
                   <td><img class="icone img-responsive" src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
                   <td style="background-color: #b08b0d;border-bottom: 3px solid whitesmoke;">
-                    <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">inconsitências</div>
+                    <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">pontos de atenção</div>
                     <div class="row">
                       <div class="col-5 number" style="padding: 1em 0em 0em 1em;">25%
                         <div class="keyword-small">total</div>
@@ -133,13 +133,18 @@
           </div>
           <div class="card card-special">
             <div class="row">
+              <div *ngIf="errorMessage != null" class="alert alert-danger">
+                <b>Erro obtendo dados:</b> {{errorMessage}}
+              </div>
+            </div>
+            <div class="row">
               <div class="col-md-6 col-xs-12" style="padding: 0.2em">
                 <div class="card micro-card">
                   <tr>
                     <td class="barra-horizontal pesoValor" >01</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[0]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[0])"> {{(top10Notas[0] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
@@ -149,8 +154,8 @@
                   <tr>
                     <td class="barra-horizontal pesoValor" >02</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[1]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[1])"> {{(top10Notas[1] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
@@ -160,8 +165,8 @@
                   <tr>
                     <td class="barra-horizontal pesoValor" >03</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[2]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[2])"> {{(top10Notas[2] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
@@ -171,8 +176,8 @@
                   <tr>
                     <td class="barra-horizontal pesoValor" >04</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[3]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[3])"> {{(top10Notas[3] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
@@ -182,8 +187,8 @@
                   <tr>
                     <td class="barra-horizontal pesoValor" >05</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[4]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[4])"> {{(top10Notas[4] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
@@ -193,8 +198,8 @@
                   <tr>
                     <td class="barra-horizontal pesoValor" >06</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[5]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[5])"> {{(top10Notas[5] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
@@ -204,8 +209,8 @@
                   <tr>
                     <td class="barra-horizontal pesoValor" >07</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[6]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[6])"> {{(top10Notas[6] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
@@ -215,8 +220,8 @@
                   <tr>
                     <td class="barra-horizontal pesoValor" >08</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[7]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[7])"> {{(top10Notas[7] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
@@ -226,8 +231,8 @@
                   <tr>
                     <td class="barra-horizontal pesoValor" >09</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[8]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[8])"> {{(top10Notas[8] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
@@ -237,8 +242,8 @@
                   <tr>
                     <td class="barra-horizontal pesoValor" >10</td>
                     <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
+                      <div class="col-12 keyword-municipio" >{{top10Cidades[9]}}</div>
+                      <div class="col-12 pesoHeader" [ngClass]="gradacoes.getCSSClass(top10Notas[9])"> {{(top10Notas[9] | number: '1.2-2').replace(".",",").replace("10,00", "10")}} </div>
                     </td>
                   </tr>
                 </div>
