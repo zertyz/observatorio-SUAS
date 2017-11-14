@@ -73,6 +73,7 @@ a{
 .keyword-municipio{
   @extend .keyword;
   color: black;
+  text-align: left;
 }
 
 .number-big{
@@ -118,7 +119,7 @@ a{
   word-wrap: normal;
   padding-left: 0em!important;
   padding-top: .7em;
-  padding-right: .33em;
+  padding-right: 1.33em;
 }
 
 .pesoValor {
