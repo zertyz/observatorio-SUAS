@@ -1,9 +1,16 @@
-
+a{
+  color: #6c757d;
+}
 .text-blue{
   color: rgb(5, 127, 178);
   text-align: left;
 }
+.td-home{
+  background-color: #2d3743;
+  width: 76%;
+  border-bottom: 3px solid whitesmoke;
 
+}
 .texto {
   font-family: 'Raleway';
   font-size: 98%;
@@ -14,11 +21,20 @@
 }
 .img-responsive{
   width: 4em;
-  height: 4em;
   padding-right:.4em;
   padding-left:.4em;
   padding-top:.4em;
   padding-bottom:.4em;
+  max-width: 100%;
+}
+.icone {
+  width:5rem;
+  padding-right:.4em;
+  padding-left:.4em;
+  padding-top:.4em;
+  padding-bottom:.4em;
+  max-width: 100%;
+
 }
 .link {
   position: relative;
@@ -229,9 +245,5 @@ div > span{
   }
 
 }
-@media (min-width: 1880px) {
-  .img-envolvida{
-    width: 100%;
-  }
 
-}
+

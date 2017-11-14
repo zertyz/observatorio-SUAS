@@ -16,16 +16,16 @@
 
 .ajusta_elemento{
   width: 11em!important;
-  height: 14em !important;
-  padding: 0.5em 0.1em 0em 1em!important;
+  height: auto;
 }
 
 .img-envolvida {
   float: right;
   shape-outside: url("../assets/img/Ilustracao_SUAS_fase_6.png");
-  shape-margin: 5%;
+  shape-margin: 10%;
   shape-image-threshold: 0.5;
-  width: 111%;
+  width: 34em;
+  max-width: 64%;
 }
 
 div.borderedR{
