@@ -14,7 +14,7 @@
         </div>
         <div class="row">
           <div class="col-lg-7 col-md-12">
-            <input class="field-input" id="_mprjbusca_WAR_mprjbuscaportlet_keywords_param" name="_mprjbusca_WAR_mprjbuscaportlet_keywords_param" title="keywords_param" type="text" value="" style="height: 28px; margin-right: 10px; border-radius: 0 !important; border-color: #A9A9A9; box-shadow: none;" onfocus="removeLabel()">
+            <input [ngModel]="pesquisa" class="field-input" id="_mprjbusca_WAR_mprjbuscaportlet_keywords_param" name="_mprjbusca_WAR_mprjbuscaportlet_keywords_param" title="keywords_param" type="text" value="" style="height: 28px; margin-right: 10px; border-radius: 0 !important; border-color: #A9A9A9; box-shadow: none;" onfocus="removeLabel()">
           </div>
           <div class="col-lg-3 col-md-12">
             <select class="field-select" id="_mprjbusca_WAR_mprjbuscaportlet_filtro_param" name="_mprjbusca_WAR_mprjbuscaportlet_filtro_param" title="filtro_param" style="height: 38px !important; margin-right: 10px; border-radius: 0 !important; border-color: #A9A9A9; box-shadow: none;">
@@ -22,58 +22,31 @@
               <option class="" value="legislacao"> Legislação </option>
               <option class="" value="orcamentos"> Orçamentos </option>
               <option class="" value="orcamentos"> Peças de Atuação </option>
+              <option class="" value="orcamentos"> Inspeções </option>
             </select>
           </div>
           <div class="col-lg-2 col-md-5">
-            <button class="btn-primario" id="_mprjbusca_WAR_mprjbuscaportlet_buscar" type="submit"> Buscar </button>
+            <button type="submit" class="btn-primario" id="_mprjbusca_WAR_mprjbuscaportlet_buscar"> Buscar </button>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row" style="padding-left: 1rem">
-    Resultados da busca <div class="totalRes">(x Resultados encontrados)</div>
+    Resultados da busca <div class="totalRes">({{resultadosEncontrados}} Resultados encontrados)</div>
   </div>
   <div class="row">
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="card">
-        <div class="card-block alinha-card" >
-          <img class="img-fluid" src="./assets/img/icones/Icones_Tela_1_Legislação_2.png">
-          <p class="text-blue"> LEI FEDERAL</p>
-          <span> Lei Nº 8.742 de Dezembro de 1993</span>
-          <button class="btn-secundario">Acessar</button>
+
+      <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of documentosProcurados">
+        <div class="card">
+          <div class="card-block alinha-card" >
+            <img class="img-fluid" src="./assets/img/icones/Icones_Tela_1_Legislação_2.png">
+            <p class="text-blue"> LEI FEDERAL</p>
+            <span>{{item}}</span>
+            <button class="btn-secundario">Acessar</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="card">
-        <div class="card-block alinha-card">
-          <img class="img-fluid" src="./assets/img/icones/Icones_Tela_1_Legislação_2.png">
-          <p class="text-blue"> LEI FEDERAL</p>
-          <span> Lei Nº 8.742 de Dezembro de 1993</span>
-          <button class="btn-secundario">Acessar</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="card">
-        <div class="card-block alinha-card">
-          <img class="img-fluid"  src="./assets/img/icones/Icones_Tela_1_Legislação_2.png">
-          <p class="text-blue"> LEI FEDERAL</p>
-          <span> Lei Nº 8.742 de Dezembro de 1993</span>
-          <button class="btn-secundario">Acessar</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="card">
-        <div class="card-block alinha-card">
-          <img class="img-fluid" src="./assets/img/icones/Icones_Tela_1_Legislação_2.png">
-          <p class="text-blue"> LEI FEDERAL</p>
-          <span> Lei Nº 8.742 de Dezembro de 1993</span>
-          <button class="btn-secundario">Acessar</button>
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>
