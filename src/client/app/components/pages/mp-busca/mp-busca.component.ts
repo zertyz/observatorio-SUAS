@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
 import { ActivatedRoute } from '@angular/router';
+import { Input } from '@angular/core';
 
 import { Injector } from '@angular/core';
 import { Config, RouterExtensions } from '../../../modules/core/index';
@@ -16,10 +17,14 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
 })
 export class MPBuscaComponent {
 
-  public documentos: string[] = ['lei da batata', 'lei da cenoura', ' orcamento do aipim', 'inspecao do tomate'];
-  public documentosProcurados: string[] = [];
+  @Input() selectedRedirection: string   = '';
+
+  private documentos: string[] = ['lei da batata', 'lei da cenoura', ' orcamento do aipim', 'inspecao do tomate'];
+  private documentosProcurados: string[] = [];
   private resultadosEncontrados: number = 0;
   private pesquisa :string;
+  private categoria: string = '';
+  private campoPesquisa: string = '';
 
   constructor(private injector: Injector, public routerext: RouterExtensions, private route: ActivatedRoute) {}
 
@@ -45,8 +50,11 @@ export class MPBuscaComponent {
     }
   }
 
-  pesquisar() {
-    this.searchIt(this.pesquisa);
+  onSubmit() {
+    let pesquisa = document.getElementsByName('pesquisa')[0].value;
+    let categoria = document.getElementsByName('categoria')[0].value;
+    let url : string = window.location.href.split('busca')[0] + 'busca/'+ categoria +'/' + pesquisa;
+    window.location.replace(url);
   }
 
 }
