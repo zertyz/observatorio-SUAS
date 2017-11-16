@@ -1,13 +1,19 @@
 <div class="container-fluid full">
 
   <div class="row">
-    <div class="col-xl-2 col-1">
-      <figure>
-        <img src="./assets/img/Logo_SUAS.png" class="img-responsive ajusta_elemento">
-        <img src="./assets/img/CAO-CIDADANIA-LOGO-blue.png" class="img-responsive" style="width: 196px;height: auto;">
-      </figure>
+    <div class="col-xl-2 col-2 ">
+        <div class="row">
+          <figure>
+            <img src="./assets/img/Logo_SUAS.png" class="img-responsive ajusta_elemento">
+            <img src="./assets/img/CAO-CIDADANIA-LOGO-blue.png"  style="width: 150px;height: auto;margin-left: 1em;">
+          </figure>
+          <!--/Temporario-->
+        </div>
+        <div class="row">
+          <p><br/></p>
+        </div>
     </div>
-    <div class="col-xl-10">
+    <div class="col-xl-10  col-11">
 
       <div class="col-xl-12">
         <div class="row t-padding">
@@ -27,12 +33,12 @@
                   <td>
 
                     <div class="row ">
-                      <div class="col-2 ">
+                      <div class="col-xl-3  col-2">
                         <figure >
                           <img class="ajusta_imagem" src="./assets/img/icones/{{dimensao}}.png" align="left">
                         </figure>
                       </div>
-                      <div ngbDropdown class="d-inline-block col-10">
+                      <div ngbDropdown class="col-xl-9 col-10 d-inline-block ">
                         <span class="title">Ranking </span>
                         <div class='selectdiv'>
                           <select  #selectElem [(ngModel)] = "dimensao" (change)="trocaRanking(selectElem.value)">

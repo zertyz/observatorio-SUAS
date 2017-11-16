@@ -84,10 +84,7 @@ div.borderedL{
     border-color:transparent;
     padding-right: 0 !important;
   }
-  div.row{
-    padding-left: 2rem!important;
 
-  }
 }
 
 @media(min-width:768px){
@@ -97,12 +94,7 @@ div.borderedL{
   }
 }
 
-@media (min-width: 600px) and (max-width: 991px){
-  div.container-fluid{
-    padding-top: 50px!important;
-  }
 
-}
 
 @media (min-width: 991px) and (max-width: 1380px){
   td.dimensao{

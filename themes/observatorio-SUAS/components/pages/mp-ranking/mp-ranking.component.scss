@@ -1,4 +1,4 @@
-;
+
 .img-fluid{
   padding-top: 2em!important;
 }
@@ -31,7 +31,6 @@
 .ajusta_imagem{
   width: 4em;
   box-sizing: border-box;
-  padding-right: 35%;
 }
 
 .outrosRankings {
@@ -91,16 +90,22 @@ select::-ms-expand {
 
   font-family: 'Raleway';
   line-height: 100%;
-  font-size: 1.683em;
+  font-size: 1.583em;
   font-weight: bold;
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
   width: 100%;
-  height: 1.2em;
   max-height: 5.3em;
   white-space: inherit;
   color: #0d2b48;
 }
 
 // } Dropdown personalizado
+@media(max-width: 1199px) {
+  .ajusta_imagem{
+    width: 6em;
+    max-width: 100%;
+  }
+
+}
