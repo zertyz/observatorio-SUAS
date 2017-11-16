@@ -6,6 +6,11 @@ export const MPBuscaRoutes: Array<any> = [
     component: MPBuscaComponent
   },
   {
+    path: 'busca/:categoria',
+    redirectTo: '/busca/:categoria/0'
+  },
+  {
     path: 'busca',
-    redirectTo: '/busca/0/0'},
+    redirectTo: '/busca/0/0'
+  }
 ];
