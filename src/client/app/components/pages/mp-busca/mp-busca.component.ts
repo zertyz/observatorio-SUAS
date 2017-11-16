@@ -81,25 +81,51 @@ export class MPBuscaComponent {
     this.route.params.subscribe(params => {
       this.pesquisa = params['pesquisa'];
       this.categoria = params['categoria'];
-      this.pesquisar(this.pesquisa);
+      this.pesquisar(this.categoria, this.pesquisa);
     });
 
   }
 
-  public pesquisar(value: string): void {
+  public pesquisar(categoria: string, value: string): void {
     if(value === '0') {
-      this.documentosProcurados = this.documentos;
-      this.resultadosEncontrados = this.documentos.length;
-    }else {
-      for (let i: number = 0; i<this.documentos.length; i++) {
-        if (this.documentos[i].nome.toUpperCase().indexOf(value.toUpperCase()) !== -1) {
-          this.documentosProcurados.push(this.documentos[i]);
-          this.resultadosEncontrados++;
-        } else {
-          for(let j: number = 0; j<this.documentos[i].palavraschave.length;j++) {
-            if (this.documentos[i].palavraschave[j].toUpperCase().indexOf(value.toUpperCase()) !== -1) {
+      if(categoria === '0'){
+        this.documentosProcurados = this.documentos;
+        this.resultadosEncontrados = this.documentos.length;
+      }else {
+        for (let i: number = 0; i<this.documentos.length; i++) {
+            if (this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) {
               this.documentosProcurados.push(this.documentos[i]);
               this.resultadosEncontrados++;
+            }
+        }
+      }
+      
+    }else {
+      if(categoria === '0'){
+        for (let i: number = 0; i<this.documentos.length; i++) {
+          if (this.documentos[i].nome.toUpperCase().indexOf(value.toUpperCase()) !== -1) {
+            this.documentosProcurados.push(this.documentos[i]);
+            this.resultadosEncontrados++;
+          } else {
+            for(let j: number = 0; j<this.documentos[i].palavraschave.length;j++) {
+              if (this.documentos[i].palavraschave[j].toUpperCase().indexOf(value.toUpperCase()) !== -1) {
+                this.documentosProcurados.push(this.documentos[i]);
+                this.resultadosEncontrados++;
+              }
+            }
+          }
+        }
+      }else {
+        for (let i: number = 0; i<this.documentos.length; i++) {
+          if (this.documentos[i].nome.toUpperCase().indexOf(value.toUpperCase()) !== -1 && this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) {
+            this.documentosProcurados.push(this.documentos[i]);
+            this.resultadosEncontrados++;
+          } else {
+            for(let j: number = 0; j<this.documentos[i].palavraschave.length;j++) {
+              if (this.documentos[i].palavraschave[j].toUpperCase().indexOf(value.toUpperCase()) !== -1 && this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) {
+                this.documentosProcurados.push(this.documentos[i]);
+                this.resultadosEncontrados++;
+              }
             }
           }
         }
