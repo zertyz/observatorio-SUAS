@@ -19,32 +19,89 @@ export class MPBuscaComponent {
 
   @Input() selectedRedirection: string   = '';
 
-  private documentos: string[] = ['lei da batata', 'lei da cenoura', ' orcamento do aipim', 'inspecao do tomate'];
-  private documentosProcurados: string[] = [];
+  private documentosProcurados: IPesquisa[] = [];
   private resultadosEncontrados: number = 0;
   private pesquisa :string;
   private categoria: string = '';
-  private campoPesquisa: string = '';
+
+  private documentos: IPesquisa[] = [
+    {
+      'nome':'Lei Federal de Orçamento',
+      'arquivo':'leideorcamentof.pdf',
+      'palavraschave': ['lei', 'orcamento','federal', '2017' ],
+      'categoria': 'legislacao'
+    },
+    {
+      'nome':'Lei Estadual de Orçamento',
+      'arquivo':'leideorcamentoe.pdf',
+      'palavraschave': ['lei', 'orcamento','estadual', '2017' ],
+      'categoria': 'legislacao',
+    },
+    {
+      'nome':'Orçamento Federal de 2017',
+      'arquivo':'orcamentof2017.pdf',
+      'palavraschave': ['federal', 'orcamento', '2017' ],
+      'categoria': 'orcamentos',
+    },
+    {
+      'nome':'Orçamento Federal de 2017',
+      'arquivo':'leideorcamentof2016.pdf',
+      'palavraschave': ['lei', 'federal', 'orcamento', '2016' ],
+      'categoria': 'orcamentos',
+    },
+    {
+      'nome':'Peça de Atuação sobre Assistencia Social',
+      'arquivo':'pecaSuas.pdf',
+      'palavraschave': ['peça', 'suas', '1998' ],
+      'categoria': 'pecasdeatuacao',
+    },
+    {
+      'nome':'Cartilha do SUAS',
+      'arquivo':'cartilha.pdf',
+      'palavraschave': ['suas', 'cartilha', '1998' ],
+      'categoria': 'pecasdeatuacao',
+    },
+    {
+      'nome':'Inspeção CRAS Bangu',
+      'arquivo':'inspecaoBangu.pdf',
+      'palavraschave': ['inspecao', 'CRAS', '2017', 'Bangu' ],
+      'categoria': 'inspecoes',
+    },
+    {
+      'nome':'Inspeção CREAS Chatuba',
+      'arquivo':'inspecaoChatuba.pdf',
+      'palavraschave': ['Inspeção', 'CREAS', '2017', 'Chatuba' ],
+      'categoria': 'inspecoes',
+    },
+  ];
 
   constructor(private injector: Injector, public routerext: RouterExtensions, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.pesquisa = params['pesquisa'];
-      this.searchIt(this.pesquisa);
+      this.categoria = params['categoria'];
+      this.pesquisar(this.pesquisa);
     });
 
   }
 
-  public searchIt(value: string): void {
+  public pesquisar(value: string): void {
     if(value === '0') {
       this.documentosProcurados = this.documentos;
       this.resultadosEncontrados = this.documentos.length;
     }else {
       for (let i: number = 0; i<this.documentos.length; i++) {
-        if (this.documentos[i].indexOf(value) !== -1) {
+        if (this.documentos[i].nome.toUpperCase().indexOf(value.toUpperCase()) !== -1) {
           this.documentosProcurados.push(this.documentos[i]);
           this.resultadosEncontrados++;
+        } else {
+          for(let j: number = 0; j<this.documentos[i].palavraschave.length;j++) {
+            if (this.documentos[i].palavraschave[j].toUpperCase().indexOf(value.toUpperCase()) !== -1) {
+              this.documentosProcurados.push(this.documentos[i]);
+              this.resultadosEncontrados++;
+            }
+          }
         }
       }
     }
@@ -57,4 +114,12 @@ export class MPBuscaComponent {
     window.location.replace(url);
   }
 
+}
+
+// TODO refatorar como serviço
+interface IPesquisa {
+  nome:         string;
+  arquivo:      string;
+  palavraschave: string[];
+  categoria:    string;
 }
