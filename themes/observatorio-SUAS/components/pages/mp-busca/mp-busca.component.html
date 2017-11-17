@@ -37,12 +37,15 @@
   </div>
   <div class="row">
 
-      <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of documentosProcurados">
+      <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let documento of documentosProcurados">
         <div class="card">
           <div class="card-block alinha-card" >
-            <img class="img-fluid" src="./assets/img/icones/Icones_Tela_1_Legislação_2.png">
-            <p class="text-blue"> LEI FEDERAL</p>
-            <span>{{item.nome}}</span>
+            <img class="img-fluid" src="./assets/img/icones/Icones_Tela_1_{{documento.categoria}}.png">
+            <p class="text-blue" *ngIf="documento.categoria==='legislacao'"> Lei Federal</p>
+            <p class="text-blue" *ngIf="documento.categoria==='orcamentos'"> Orçamento</p>
+            <p class="text-blue" *ngIf="documento.categoria==='pecasdeatuacao'"> Manual/Cartilha</p>
+            <p class="text-blue" *ngIf="documento.categoria==='inspecoes'"> Inspeção</p>
+            <span>{{documento.nome}}</span>
             <button class="btn-secundario">Acessar</button>
           </div>
         </div>
