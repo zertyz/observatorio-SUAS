@@ -22,89 +22,33 @@
       </div>
       <div class="card" id="altura">
         <div class="card-block" >
-          <p-accordion>
-            <p-accordionTab styleClass="classAccordion" header="1. O que é o Cadastro Único?">
-              O Cadastro Único para Programas Sociais do Governo Federal é um instrumento que identifica e
-              caracteriza as famílias com renda mensal de até meio salário mínimo por pessoa ou de três salários
-              mínimos no total.Dessaforma,o Cadastro Único possibilita conhecer a realidades ocioeconômica dessas
-              famílias,trazendo informações de todo o núcleo familiar,das características do domicílio,das formas de
-              acesso a serviços públicos essenciais e também dados de cada um dos componentes da família.
-              <br/> <br/>
-              O Cadastro Único,regulamentado pelo Decreto nº6.135/07 e coordenado pelo Ministério do Desenvolvimento
-              Social e Combate à Fome(MDS),deve ser obrigatoriamente utilizado para seleção de
-              beneficiários e integração de programas sociais do Governo Federal,como o Bolsa Família.
-              Suas informações podem também ser utilizadas pelos governos estaduais e municipais para obter o diagnóstico
-              socio econômico das famílias cadastrads, possibilitando a análise das suas principais necessidades.
-              Famílias com renda superior a meio salário mínimo também podem ser inscritas,desde que sua inserção
-              esteja vinculada à inclusão e/ou permanência em programas sociais implementados pelo poder público
-              nas três esferas do Governo.
+
+          <div class="row" style="padding-bottom: .8vw">
+            <label class="button-switch barra"  style="margin-left:auto; border-top: 1px solid #2e3a48">
+              <input type="radio" name="radio" checked="checked" (click)="selectTipo('cras')" id="check1">
+              <span class="slider">
+                <div  class="keyword" style="text-align: right">CRAS</div>
+              </span>
+            </label>
+            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+              <input type="radio" name="radio" (click)="selectTipo('creas')" id="check2">
+              <span class="slider">
+                <div  class="keyword" style="text-align: right">CREAS</div>
+              </span>
+            </label>
+            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+              <input type="radio" name="radio" (click)="selectTipo('centroPop')" id="check3">
+              <span class="slider">
+                <div  class="keyword" style="text-align: right">CENTRO POP</div>
+              </span>
+            </label>
+          </div>
+
+
+          <p-accordion *ngFor="let pergunta of perguntasExibidas">
+            <p-accordionTab styleClass="classAccordion" header="{{pergunta.pergunta}}">
+              {{pergunta.resposta}}
             </p-accordionTab>
-
-            <p-accordionTab header="2. quais os dias e horários de funcionamento dos CRAS?">
-              De acordo com o Ministério do Desenvolvimento Social e Combate à Fome, o CRAS deve funcionar, no mínimo, por 40 horas semanais, 5 dias por semana, 8 horas por dia. Somente é considerado que o CRAS está em funcionamento por 8 horas se houver a presença da equipe de referência completa durante este período. O horário pode ser flexível, permitindo que o equipamento funcione nos finais de semana e horários noturnos, desde que isso ocorra para possibilitar uma maior participação das famílias e da comunidade nos programas, serviços e projetos operacionalizados nessa unidade. O horário de funcionamento do CRAS deve ser decidido em conjunto com as famílias referenciadas, ser amplamente divulgado e manter regularidade. Não é recomendável, por exemplo, um novo horário de funcionamento em um curto período de tempo.
-            </p-accordionTab>
-
-            <p-accordionTab header="3. DIAS DA SEMANA QUE O CRAS FUNCIONA?">
-              De acordo com o Ministério do Desenvolvimento Social e Combate à Fome, o CRAS, O CRAS funciona 5 dias por semana.\n\nPeríodo de funcionamento:  Período mínimo de 5 dias por semana, 8 horas diárias, sendo que a unidade deverá necessariamente funcionar no período diurno podendo eventualmente executar atividades complementares à noite, com possibilidade de funcionar em feriados e finais de semana.
-            </p-accordionTab>
-            <p-accordionTab header="4. O CRAS ESTÁ LOCALIZADO EM ÁREA DE CONCENTRAÇÃO DE SITUAÇÕES DE VULNERABILIDADE E RISCO SOCIAL?">
-              A localização do CRAS é fator determinante para que ele viabilize, de forma descentralizada, o acesso aos direitos socioassistenciais. O CRAS deve ser instalado prioritariamente em locais de maior concentração de famílias em situação de vulnerabilidade, com concentração de famílias com renda per capita mensal de até ½ salário mínimo, com presença significativa de famílias e indivíduos beneficiários dos programas de transferências de renda, como o BPC - Benefício de Prestação Continuada, Bolsa Família e outros, conforme indicadores definidos na Norma Operacional Básica - NOBSUAS/2005. Cada município deve identificar o(s) território(s) de vulnerabilidade social e nele(s) implantar um CRAS, a fim de aproximar os serviços oferecidos aos usuários.
-            </p-accordionTab>
-            <p-accordionTab header="5. QUAL O TERRITÓRIO ABRANGIDO PELO CRAS?">
-              O território é delimitado a partir dos locais de residência das famílias referenciadas aos equipamentos. Os territórios têm histórias e características diferenciadas. Por isso, é importante reconhecer potencialidades e vulnerabilidades, bem como situações de risco presente. O planejamento da(s) área(s) de cobertura do CRAS, pelo gestor municipal, é de extrema importância, ou seja, é preciso delimitar os bairros, as ruas que definam o território de abrangência do CRAS, bem como o número de famílias que ele referencia. O número de famílias pode ser aproximado. Pode-se utilizar o como instrumento neste planejamento.
-
-            </p-accordionTab>
-            <p-accordionTab header="6. QUAL A CAPACIDADE DE REFERENCIAMENTO DESTE CRAS?">
-              Família referenciada é a unidade de medida de famílias que vivem em territórios vulneráveis e são elegíveis ao atendimento ofertado no CRAS instalado nessas localidades. A capacidade de referenciamento diz respeito ao número de famílias que potencialmente poderão fazer uso dos serviços ofertados no CRAS de determinada localidade, no decorrer do tempo. A definição do número de famílias a serem referenciadas aos CRAS, e, portanto do território de abrangência do CRAS, deve guardar relação com o porte do município, como prevê a NOB-SUAS. No caso dos municípios de médio e grande porte e metrópoles, faz-se necessário analisar se todos os territórios têm 5.000 famílias, ou se a organização intraurbana do município, em territórios de vulnerabilidade, acarretou constituição de alguns territórios menores (devido a obstáculos geográficos, problemas sociais, dentre outros). Nesses casos, pode haver CRAS que referenciam até 2.500 famílias, em municípios de médios e grandes portes e metrópoles. Por exemplo: determinado CRAS de uma metrópole pode referenciar 2.500 famílias e não 5.000 famílias, se estudos intraurbanos indicarem esta necessidade.A NOB/SUAS estabelece os seguintes parâmetros para o referenciamento: Em municípios de Pequeno Porte I cada CRAS pode referenciar até 2.500 famílias;\nEm municípios de Pequeno Porte II cada CRAS pode referenciar até 3.500 famílias; \nEm municípios de Médio, Grande porte ou Metrópoles – Cada CRAS pode referenciar até 5.000 famílias.
-
-            </p-accordionTab>
-            <p-accordionTab header="7. OS PRONTUÁRIOS INDIVIDUALIZADOS CONTAM COM ESPAÇO RESERVADO E DE ACESSO RESTRITO À EQUIPE PARA GUARDA?">
-              Sigilo profissional conforme Artigo 2º alínea b da lei 8.662 de 7 de julho de 1993 do código de ética do assistente social.
-
-            </p-accordionTab >
-
-            <p-accordionTab header="O QUE É O SERVIÇO DE PROTEÇÃO E ATENDIMENTO INTEGRAL À FAMÍLIA – PAIF?">
-              O Serviço de Proteção e Atendimento Integral à Família (PAIF) é um trabalho de caráter continuado que visa a fortalecer a função de proteção das famílias, prevenindo a ruptura de laços, promovendo o acesso e usufruto de direitos e contribuindo para a melhoria da qualidade de vida. Dentre os objetivos do PAIF, destacam-se o fortalecimento da função protetiva da família; a prevenção da ruptura dos vínculos familiares e comunitários; a promoção de ganhos sociais e materiais às famílias; a promoção do acesso a benefícios, programas de transferência de renda e serviços socioassistenciais; e o apoio a famílias que possuem, dentre seus membros, indivíduos que necessitam de cuidados, por meio da promoção de espaços coletivos de escuta e troca de vivências familiares. O PAIF tem como público famílias em situação de vulnerabilidade social. São prioritários no atendimento os beneficiários que atendem aos critérios de participação de programas de transferência de renda e benefícios assistenciais e pessoas com deficiência e/ou pessoas idosas que vivenciam situações de fragilidade.  Suas ações são desenvolvidas por meio do trabalho social com famílias, apreendendo as origens, os significados atribuídos e as possibilidades de enfrentamento das situações de vulnerabilidade vivenciadas, contribuindo para sua proteção de forma integral. O trabalho social do PAIF deve utilizar-se também de ações nas áreas culturais para o cumprimento de seus objetivos, de modo a ampliar o universo informacional e proporcionar novas vivências às famílias usuárias do serviço. As ações do PAIF não devem possuir caráter terapêutico.  Para efeito dos registros de informação de que trata a Resolução CIT 04/2011, entende-se por acompanhamento familiar do PAIF, as atividades desempenhadas por meio de atendimentos sistemáticos, e planejadas com objetivos estabelecidos, que possibilitem às famílias/indivíduos o acesso a um espaço onde possam refletir sobre sua realidade, construir novos projetos de vida e transformar suas relações, sejam elas familiares ou comunitárias. Trata-se, portanto, de um processo de caráter continuado e planejado, por período de tempo determinado, no qual, a partir da compreensão das vulnerabilidades, demandas e potencialidades apresentadas pela família, são definidas estratégias de ação e objetivos a serem alcançados. O acompanhamento familiar pode materializar-se a partir do atendimento sistemático e planejado de um ou mais membros do grupo familiar. Geralmente, o acompanhamento realiza-se por meio da participação sistemática da família em atividades coletivas desenvolvidas no âmbito do PAIF, mas em circunstâncias específicas, o acompanhamento pode realizar-se de forma particularizada com uma família, sem que a esma esteja participando das atividades coletivas do PAIF. Portanto, o que caracteriza o acompanhamento é, fundamentalmente, o contato sistemático e planejado com a família, orientado ao alcance de objetivos estabelecidos.
-            </p-accordionTab>
-            <p-accordionTab header="O QUE É O  SERVIÇO DE CONVIVÊNCIA E FORTALECIMENTO DE VÍNCULOS – SCFV?">
-              O Serviço de Convivência e Fortalecimento de Vínculos é um serviço realizado em grupos, de modo a garantir aquisições progressivas a seus usuários, de acordo com seu ciclo de vida, a fim de complementar o trabalho social com famílias e prevenir a ocorrência de situações de risco social. Possui caráter preventivo e proativo, pautado na defesa e afirmação dos direitos e no desenvolvimento de capacidades e potencialidades, com vistas ao alcance de alternativas emancipatórias para o enfrentamento da vulnerabilidade social. Este serviço é complementar ao serviço do PAIF. A Tipificação Nacional de Serviços Socioassistenciais estabelece que o Serviço de Convivência e Fortalecimento de Vínculos destina-se aos seguintes públicos, conforme a faixa etária: crianças de 0 até seis anos; crianças e adolescentes de 6 a 14 anos; adolescentes/jovens de 15 a 17 anos; para jovens/adultos de 18 a 59 anos e pessoas idosas com idade igual ou superior a 60 anos
-            </p-accordionTab>
-
-            <p-accordionTab header="SÃO DESENVOLVIDOS NESTE CRAS OUTROS SERVIÇOS SOCIOASSISTENCIAIS">
-              Serviços socioassistenciais são aqueles de caráter continuado, tipificados nacionalmente pela Resolução CNAS nº 109/2009. \n\nGrupos e Oficinas com Famílias: Consiste em encontros previamente organizados, com objetivos de curto prazo a serem atingidos, com um conjunto de famílias, por meio de seus responsáveis ou outros representantes, sob a condução de técnicos de nível superior do CRAS, com o intuito de suscitar uma reflexão sobre um tema de interesse das famílias, sobre vulnerabilidades e riscos ou potencialidades identificados no território, contribuindo para o alcance de aquisições, em especial o fortalecimento dos laços comunitários, o acesso a direitos, o protagonismo, a participação social e para a prevenção a riscos. As oficinas com famílias favorecem o processo de problematização e reflexão crítica de questões muitas vezes cristalizadas, naturalizadas e individualizadas, possibilita o entendimento de que os problemas vivenciados particularmente ou por uma família são problemas que atingem outros indivíduos e outras famílias; contextualiza situações de vulnerabilidade e risco; e assegura a reflexão sobre direitos sociais, possibilitando uma nova compreensão e interação com a realidade vivida, negando-se a condição de passividade, favorecendo processos de mudança e de desenvolvimento do protagonismo e da autonomia e prevenindo a ocorrência de situações de risco social. \n\nPalestras: Consiste em exposições orais e/ou audiovisuais a respeito de um tema, conforme expectativas e necessidades de um grupo de famílias, seus membros ou a um grupo de pessoas na comunidade, com objetivo de sensibilizar e mobilizar para alguma questão ou para divulgar e incentivar a participação em outras atividades socioassistenciais e socioeducativas. \n\nCampanhas ou eventos comunitários: Campanhas referem-se a um conjunto de procedimentos dirigidos para a sensibilização e informação sobre temáticas relacionadas aos direitos socioassistenciais, com o objetivo de induzir uma reflexão crítica, identificar e fortalecer os recursos de uma coletividade e prevenir a ocorrência de vulnerabilidades e/ou riscos sociais. Eventos Comunitários são ações que objetivam promover a defesa de direitos, o estímulo à convivência comunitária, o repasse de informações, a valorização da cultura local ou de grupos culturais e das potencialidades do território. \n\nApoio para obtenção de Documentação pessoal: Consiste na orientação e no estabelecimento de fluxos e sistemáticas de encaminhamento de indivíduos para os órgãos responsáveis pela emissão de documentação pessoal. \n\nEncaminhamento de famílias ou indivíduos para a rede de serviço socioassistencial: Consiste no estabelecimento de fluxos e sistemáticas de encaminhamentos de famílias ou indivíduos para o efetivo atendimento das demandas dos usuários do SUAS, por meio da articulação do CRAS com outras unidades da rede de serviço socioassistencial, tanto da Proteção Social Básica, como Centros de Convivência para Idosos, quanto da Proteção Social Especial, como os CREAS, consolidando, assim, a rede de proteção socioassistencial para as famílias referenciadas ao CRAS. Encaminhamento de famílias ou indivíduos para outras políticas públicas. Consiste no estabelecimento de fluxos e sistemáticas de encaminhamento de famílias ou indivíduos para o efetivo atendimento das demandas dos usuários do SUAS, por meio da articulação do CRAS com serviços de outras políticas públicas setoriais do município, tais como postos de documentação, escolas, postos de saúde, centros de qualificação profissional, etc., possibilitando maior acesso das famílias referenciadas ao CRAS aos direitos sociais. \n\nAtividades realizadas: Realizar acompanhamento de famílias; Realizar visitas domiciliares; Acompanhamento prioritário das famílias em descumprimento de condicionalidades do PBF; Realizar oficinas/grupos de convivência com famílias; Acompanhamento prioritário a famílias com beneficiários do BPC e benefícios eventuais; Realizar Atividades de gestão do Território, articulando a rede de proteção social básica; Realizar busca ativa; Orientação/acompanhamento para inserção no BPC; Encaminhamento para inserção de famílias no CadÚnico;
-            </p-accordionTab>
-
-            <p-accordionTab header="O QUE SÃO PROGRAMAS OU PROJETOS DE ASSISTÊNCIA SOCIAL?">
-              Programas: Ações integradas e complementares delimitadas em um tempo, espaço, e voltadas para qualificar e melhorar os benefícios e serviços. \n\nProjetos: Buscam subsidiar financeiramente e tecnicamente iniciativas que garantam meios e capacidades produtivas para melhoria da qualidade de subsistência.
-            </p-accordionTab>
-
-            <p-accordionTab header="PODEM SER DESENVOLVIDAS AÇÕES DE OUTRAS POLITICAS SETORIAIS NO CRAS?">
-              São atividades continuadas que visam a melhoria de vida da população e cujas ações estejam voltadas para as necessidades básicas da população, observando os princípios, objetivos e diretrizes da LOAS.
-            </p-accordionTab>
-
-            <p-accordionTab header="O que é o Beneficio de Prestação Continuada?">
-              Benefício de Prestação Continuada (BPC): O BPC é um benefício da Política de Assistência Social, individual, não vitalício e intransferível, que garante a transferência mensal, de um salário mínimo, ao idoso e a pessoa com deficiência, com impedimentos de longo prazo, de natureza física, mental, intelectual ou sensorial, que comprovem não possuir meios para prover a própria manutenção, nem de tê-la provida pela família.
-            </p-accordionTab>
-
-            <p-accordionTab header="COMO A GESTAO TERRITORIAL DEVE OCORRER NOS CRAS?">
-              Segundo pactuação expressa na Resolução CIT nº. 05/2010, todos os CRAS devem realizar atividades de Gestão Territorial. Isto significa conhecer e organizar o que está disponível no território visando seu melhor aproveitamento. Para tal dever ser feito um mapeamento das situações de vulnerabilidade, dos serviços existentes e das potencialidades do território e promovida a articulação com esta rede mapeada para definição de fluxos de atendimento e troca de informações. Esta função é essencial para garantir atendimento integral às Famílias e para fortalecer o caráter de referencia do CRAS.\n\nGestão do Território: O CRAS possui, dentre suas funções exclusivas, a gestão territorial da rede socioassistencial de proteção social básica. Nesse sentido, demanda do coordenador do CRAS e sua equipe técnica um adequado conhecimento do território, a organização e articulação das unidades da rede socioassistencial a ele referenciadas e o gerenciamento do acolhimento, inserção, do encaminhamento e acompanhamento dos usuários. Este bloco busca avaliar a gestão territorial deste CRAS. \n\nMapa do território de abrangência do CRAS: Consiste na representação, em escala menor, de um terreno, município ou território, contendo os bairros que compõem, com indicação da localização do CRAS, e dos demais serviços socioassistenciais e políticas públicas disponíveis no território e nas proximidades. Esse mapa deve ser afixado em um local visível. Procura espontânea: Trata-se da situação na qual a busca pelos serviços do CRAS é motivada pelo próprio usuário sem que ele tenha sido alvo de busca ativa por parte da equipe de referência do CRAS.
-            </p-accordionTab>
-
-            <p-accordionTab header="O que é BUSCA ATIVA  NO CRAS?">
-              Busca ativa: Constitui uma das ações de gestão territorial da proteção básica do CRAS. Tem por objetivo promover a atuação preventiva, disponibilizar serviços próximos do local de moradia das famílias, identificar famílias no perfil e sem acesso a benefícios ou transferência de renda, identificar famílias não inseridas no CadÚnico, racionalizar as ofertas e traduzir o referenciamente dos serviços ao CRAS em ação concreta, tornando a principal unidade pública de proteção básica, uma referência para a população local. A busca ativa é uma atividade estratégica do SUAS. Deve, portanto, ser coordenada pela Secretaria Municipal (ou do DF) e ser tratada em reuniões regulares com participação dos coordenadores de CRAS, conforme se verá adiante. No âmbito do Plano Brasil sem Miséria, a atividade de busca ativa será potencializada por meio de parcerias com outras políticas setoriais e apoio da sociedade civil. Para tal, a Prefeitura Municipal ou Governo do DF deverá conferir ao gestor da política de assistência social a coordenação da busca ativa, definir fluxos intersetoriais e procedimentos de tratamento das informações, competências e responsabilidades dos atores envolvidos, bem como equipar o órgão gestor de Assistência Social (responsável pela coordenação) com recursos humanos e materiais para execução exitosa de tal tarefa. Busca ativa constitui uma das ações de gestão territorial da proteção básica do CRAS. Tem por objetivo promover a atuação preventiva, disponibilizar serviços próximos do local de moradia das famílias, identificar famílias no perfil e sem acesso a benefícios ou transferência de renda, identificar famílias não inseridas no CadÚnico, racionalizar as ofertas e traduzir o referenciamente dos serviços ao CRAS em ação concreta, tornando a principal unidade pública de proteção básica, uma referência para a população local. A busca ativa é uma atividade estratégica do SUAS. Deve, portanto, ser coordenada pela Secretaria Municipal (ou do DF) e ser tratada em reuniões regulares com participação dos coordenadores de CRAS, conforme se verá adiante. No âmbito do Plano Brasil sem Miséria, a atividade de busca ativa será potencializada por meio de parcerias com outras políticas setoriais e apoio da sociedade civil. Para tal, a Prefeitura Municipal ou Governo do DF deverá conferir ao gestor da política de assistência social a coordenação da busca ativa, definir fluxos intersetoriais e procedimentos de tratamento das informações, competências e responsabilidades dos atores envolvidos, bem como equipar o órgão gestor de Assistência Social (responsável pela coordenação) com recursos humanos e materiais para execução exitosa de tal tarefa.
-            </p-accordionTab>
-
-            <p-accordionTab header="A BUSCA ATIVA É ATIVIDADE OBRIGATÓRIA NO CRAS?">
-              A Busca ativa é uma atividade obrigatória do CRAS, conforme pactuado na Resolução CIT nº 05/2010.  Entende-se por busca ativa a procura intencional, realizada pela equipe de referência do CRAS, das ocorrências que incidem sob o território. A busca ativa pode ser utilizada para identificar situações de vulnerabilidade e risco social, para conhecer os serviços disponíveis, para identificar beneficiários de programas de transferência de renda, localizar potenciais usuários para os serviços, entre outras finalidades.
-            </p-accordionTab>
-
-            <p-accordionTab header="ESTE CRAS REALIZA VISITA DOMICILIAR?">
-              As Visitas Domiciliares consistem no procedimento que compõe algumas ações do PAIF, com destaque para a acolhida e para a ação particularizada (com uma família ou com alguns membros de uma mesma família). A visita domiciliar possibilita aos técnicos conhecer a realidade dos territórios, as formas de convivência comunitária, os arranjos familiares. Além de permitir o aprofundamento de intervenções que nem sempre são possíveis coletivamente, como é o caso de mobilização das redes sociais de apoio à família. A visita domiciliar deve ser realizada com o consentimento da família. Sugere-se, para facilitar o desenvolvimento do processo de comunicação, o estabelecimento, sempre que possível, de um contato prévio entre os profissionais e a família e o agendamento da visita domiciliar.
-            </p-accordionTab>
-
-
-
-
           </p-accordion>
 
         </div>
@@ -129,7 +73,7 @@
               <p>Cartilha do SUAS</p>
             </div>
             <div class=" col-3">
-              <button [routerLink]="['/busca']" class="btn-secundario">ver</button>
+              <button [routerLink]="['/busca/pecasdeatuacao/0']" class="btn-secundario">ver</button>
             </div>
           </div>
           <div class="row">
@@ -141,7 +85,7 @@
               <p>Manual de inspeção CRAS</p>
             </div>
             <div class="col-3">
-              <button [routerLink]="['/busca']" class="btn-secundario">ver</button>
+              <button [routerLink]="['/busca/pecasdeatuacao/0']" class="btn-secundario">ver</button>
             </div>
           </div>
         </div>
