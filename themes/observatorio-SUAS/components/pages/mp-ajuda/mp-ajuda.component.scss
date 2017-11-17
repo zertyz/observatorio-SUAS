@@ -2,7 +2,7 @@
 
 .button-switch {
   position: relative;
-  width:33%;
+  width:32%;
   display: inline-block;
 }
 
@@ -22,10 +22,10 @@
 
 span.slider:hover {
   color: white;
-  background-color: #057fb2;
+  background-color:#2e3a48;
   border-color: #057fb2;
 
-    .vt-blue{
+    .keyword{
       color:white;
     }
 }
@@ -35,9 +35,6 @@ input:checked + .slider {
   background-color: #057fb2;
   border-color: #057fb2;
 
-  .vt-blue{
-    color:white;
-  }
   .keyword{
     color: white;
   }
@@ -49,7 +46,7 @@ input:checked + .slider {
   font-family: 'Raleway';
   font-size: 1.5rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   color: #0d2b48;
   text-align: center;
 }
