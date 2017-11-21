@@ -91,7 +91,6 @@ div > a{
     border: 1px solid #d1d7dc;
     background: #fafafa !important;
     color: black;
-    line-height: 3.4vw;
     margin-bottom: .2rem;
   }
   a{
@@ -101,6 +100,11 @@ div > a{
   .ui-widget-content{
     background: white;
     border:none;
+  }
+  .ui-accordion .ui-accordion-header a{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    box-sizing: content-box;
   }
   input {
     line-height: 1.5rem!important;

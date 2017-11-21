@@ -28,6 +28,9 @@ span.slider:hover {
     .keyword{
       color:white;
     }
+  .vt-blue{
+    color: white;
+  }
 }
 
 input:checked + .slider {
@@ -36,6 +39,9 @@ input:checked + .slider {
   border-color: #057fb2;
 
   .keyword{
+    color: white;
+  }
+  .vt-blue{
     color: white;
   }
 }
@@ -188,7 +194,7 @@ div> tbody > tr{
 .nome-eq{
   color: rgb(5, 127, 178);
   font-family: 'Raleway';
-  font-size: .9rem;
+  font-size: .7rem;
   line-height: 90%;
   font-weight: bold;
   margin-top: 4%;
