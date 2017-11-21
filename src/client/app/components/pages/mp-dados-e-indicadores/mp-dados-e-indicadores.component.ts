@@ -8032,9 +8032,9 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   blocoDadosGerais : IDadosGerais[] = [
     {
-      'municipio': 'Angra dos Reis',
+      'municipio': 'Angra Dos Reis',
       'prefeito': 'Fernando Antônio Ceciliano Jordão',
-      'secretarioAssistenciaSocial': 'Munir Francisco',
+      'secretarioAssistenciaSocial': 'Célia Cristina Amorim Silva Jordão',
       'populacao': 169511,
       'idh': 0.724,
       'idc': 0.56
@@ -8064,7 +8064,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.529
     },
     {
-      'municipio': 'Armação dos Búzios',
+      'municipio': 'Armação Dos Búzios',
       'prefeito': 'Andre Granado',
       'secretarioAssistenciaSocial': 'João De Melo Carrilho',
       'populacao': 27560,
@@ -8138,13 +8138,13 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Cambuci',
       'prefeito': 'Agnaldo Vieira Mello',
-      'secretarioAssistenciaSocial': 'Fatima De Souza Vieira',
+      'secretarioAssistenciaSocial': 'Fátima De Souza Vieira',
       'populacao': 14827,
       'idh': 0.691,
       'idc': 0.535
     },
     {
-      'municipio': 'Campos dos Goytacazes',
+      'municipio': 'Campos Dos Goytacazes',
       'prefeito': 'Rafael Paes Barbosa Diniz Nogueira',
       'secretarioAssistenciaSocial': 'Sana Gimenes Alvarenga Domingues',
       'populacao': 463731,
@@ -8162,7 +8162,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Carapebus',
       'prefeito': 'Christiane Miranda De Andrade Cordeiro',
-      'secretarioAssistenciaSocial': 'Cíntia Camargo Barcelos',
+      'secretarioAssistenciaSocial': 'Cintia Camargo Barcelos',
       'populacao': 13359,
       'idh': 0.713,
       'idc': 0.551
@@ -8186,7 +8186,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Casimiro de Abreu',
       'prefeito': 'Paulo Cezar Dames Passos',
-      'secretarioAssistenciaSocial': 'Leila Marcia Barbosa De Souza',
+      'secretarioAssistenciaSocial': 'Rosana Lélia de Souza Santos Machado',
       'populacao': 35347,
       'idh': 0.726,
       'idc': 0.559
@@ -8194,7 +8194,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Comendador Levy Gasparian',
       'prefeito': 'Valter Luis Lavinas Ribeiro',
-      'secretarioAssistenciaSocial': 'Cristina Bonforte Serpa Vasconcelos',
+      'secretarioAssistenciaSocial': 'Cristina Bonfort',
       'populacao': 8180,
       'idh': 0.685,
       'idc': 0.531
@@ -8210,7 +8210,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Cordeiro',
       'prefeito': 'Luciano Ramos Pinto',
-      'secretarioAssistenciaSocial': 'Leticia Ramos Reis',
+      'secretarioAssistenciaSocial': 'Maria de Fátima Lovise Rohen Hermesdorff',
       'populacao': 20430,
       'idh': 0.729,
       'idc': 0.564
@@ -8218,7 +8218,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Duas Barras',
       'prefeito': 'Luiz Carlos Botelho Lutterbach',
-      'secretarioAssistenciaSocial': 'Maria Eliza De Jesus Lutterbach',
+      'secretarioAssistenciaSocial': 'Maria Eliza De Jesus Luttberbach',
       'populacao': 10930,
       'idh': 0.659,
       'idc': 0.511
@@ -8226,7 +8226,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Duque de Caxias',
       'prefeito': 'Washington Reis De Oliveira',
-      'secretarioAssistenciaSocial': 'Aline Ferreira Batista Ribeiro',
+      'secretarioAssistenciaSocial': 'Roseli Ramos Duarte Fernandes',
       'populacao': 855048,
       'idh': 0.711,
       'idc': 0.55
@@ -8234,7 +8234,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Engenheiro Paulo de Frontin',
       'prefeito': 'Jauldo De Souza Balthazar Ferreira',
-      'secretarioAssistenciaSocial': 'Alexsandra Antunes da Silva Figueiredo',
+      'secretarioAssistenciaSocial': 'Ana Paula Melo Gouveia B. Ferreira',
       'populacao': 13237,
       'idh': 0.722,
       'idc': 0.558
@@ -8250,7 +8250,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Iguaba Grande',
       'prefeito': 'Ana Grasiella Moreira Figueiredo Magalhães',
-      'secretarioAssistenciaSocial': 'Ilana Feitosa S.Lobo',
+      'secretarioAssistenciaSocial': 'Ilana Feitosa S. Lobo',
       'populacao': 22851,
       'idh': 0.761,
       'idc': 0.586
@@ -8258,7 +8258,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Itaboraí',
       'prefeito': 'Sadinoel Oliveira Gomes Souza',
-      'secretarioAssistenciaSocial': 'Roberto Mattos da Costa',
+      'secretarioAssistenciaSocial': 'Edilson Francisco dos Santos',
       'populacao': 218008,
       'idh': 0.693,
       'idc': 0.537
@@ -8274,7 +8274,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Italva',
       'prefeito': 'Margareth De Souza Rodrigues Soares',
-      'secretarioAssistenciaSocial': 'Luis Carlos da Costa Molais',
+      'secretarioAssistenciaSocial': 'Leila Porto Camara',
       'populacao': 14063,
       'idh': 0.688,
       'idc': 0.532
@@ -8298,7 +8298,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Itatiaia',
       'prefeito': 'Eduardo Guedes Da Silva',
-      'secretarioAssistenciaSocial': 'Raquel De Fátima Silva Rocha',
+      'secretarioAssistenciaSocial': 'Ebison Diettrich de São Cristóvão',
       'populacao': 28783,
       'idh': 0.737,
       'idc': 0.568
@@ -8314,7 +8314,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Laje do Muriaé',
       'prefeito': 'Rivelino Da Silva Bueno',
-      'secretarioAssistenciaSocial': 'Adilson Fernandes Da Silva',
+      'secretarioAssistenciaSocial': 'Neide Barbosa Bernardo',
       'populacao': 7487,
       'idh': 0.668,
       'idc': 0.517
@@ -8330,7 +8330,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Macuco',
       'prefeito': 'Bruno Boaretto',
-      'secretarioAssistenciaSocial': 'Claudia Bonan Taveira Pinaud',
+      'secretarioAssistenciaSocial': 'Luiz Claudio Gomes de Souza',
       'populacao': 5269,
       'idh': 0.703,
       'idc': 0.543
@@ -8362,7 +8362,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Mendes',
       'prefeito': 'Rogério Riente',
-      'secretarioAssistenciaSocial': 'Ana Luiza Matias De Oliveira',
+      'secretarioAssistenciaSocial': 'Ana Luiza Matias',
       'populacao': 17935,
       'idh': 0.736,
       'idc': 0.568
@@ -8378,7 +8378,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Miguel Pereira',
       'prefeito': 'Andre Portugues',
-      'secretarioAssistenciaSocial': 'Adriana Pinto De Afonseca',
+      'secretarioAssistenciaSocial': 'Adriana Pinto B. Afonseca',
       'populacao': 24642,
       'idh': 0.745,
       'idc': 0.575
@@ -8386,7 +8386,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Miracema',
       'prefeito': 'Clovis Tostes De Barros',
-      'secretarioAssistenciaSocial': 'Sérgio Salim Amim',
+      'secretarioAssistenciaSocial': 'Rosimeire Utrini Vieira',
       'populacao': 26843,
       'idh': 0.713,
       'idc': 0.551
@@ -8418,7 +8418,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Nova Friburgo',
       'prefeito': 'Renato Pinheiro Bravo',
-      'secretarioAssistenciaSocial': 'Christiano Pereira Huguenin',
+      'secretarioAssistenciaSocial': 'Roberto Wermelinger',
       'populacao': 182082,
       'idh': 0.745,
       'idc': 0.576
@@ -8434,7 +8434,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Paracambi',
       'prefeito': 'Lucimar Cristina Da Silva Ferreira',
-      'secretarioAssistenciaSocial': 'Aline Otilia Soares Ferreira Benevenuto',
+      'secretarioAssistenciaSocial': 'Aline Otília Soares Ferreira Benevenuto',
       'populacao': 47124,
       'idh': 0.72,
       'idc': 0.557
@@ -8448,9 +8448,9 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.544
     },
     {
-      'municipio': 'Paraty',
+      'municipio': 'Parati',
       'prefeito': 'Carlos José Gama Miranda',
-      'secretarioAssistenciaSocial': 'Valdecir Machado Ramiro',
+      'secretarioAssistenciaSocial': 'Waldeci Ramiro',
       'populacao': 37533,
       'idh': 0.693,
       'idc': 0.535
@@ -8466,7 +8466,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Petrópolis',
       'prefeito': 'Bernardo Rossi',
-      'secretarioAssistenciaSocial': 'Denise Maria Respeita Quintella Coelho',
+      'secretarioAssistenciaSocial': 'Denise Maria Respeita Quintella Coellho',
       'populacao': 295917,
       'idh': 0.745,
       'idc': 0.575
@@ -8474,7 +8474,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Pinheiral',
       'prefeito': 'Ednardo Barbosa Oliveira',
-      'secretarioAssistenciaSocial': 'Patricia Rivello Garcia',
+      'secretarioAssistenciaSocial': 'Patrícia Rivello Garcia',
       'populacao': 22719,
       'idh': 0.715,
       'idc': 0.552
@@ -8490,7 +8490,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Porciúncula',
       'prefeito': 'Leonardo Paes Barreto Coutinho',
-      'secretarioAssistenciaSocial': 'Maria Antonieta Gomes Correa',
+      'secretarioAssistenciaSocial': 'Rosângela Moraes dos Santos',
       'populacao': 17760,
       'idh': 0.697,
       'idc': 0.539
@@ -8506,7 +8506,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Quatis',
       'prefeito': 'Raimundo De Souza',
-      'secretarioAssistenciaSocial': 'Rosana Luisa De Bem Almeida',
+      'secretarioAssistenciaSocial': 'Rosana Deise De Bem Almeida',
       'populacao': 12793,
       'idh': 0.69,
       'idc': 0.533
@@ -8530,7 +8530,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Resende',
       'prefeito': 'Diogo Balieiro Diniz',
-      'secretarioAssistenciaSocial': 'Jéssica Pavone Carrijo Muller',
+      'secretarioAssistenciaSocial': 'Jéssica Pavone Carriio Muller',
       'populacao': 119769,
       'idh': 0.768,
       'idc': 0.592
@@ -8552,7 +8552,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.529
     },
     {
-      'municipio': 'Rio das Flores',
+      'municipio': 'Rio Das Flores',
       'prefeito': 'Vicente De Paula De Souza Guedes',
       'secretarioAssistenciaSocial': 'Tereza Cristina Meyer Cabral Machado',
       'populacao': 8561,
@@ -8560,7 +8560,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.525
     },
     {
-      'municipio': 'Rio das Ostras',
+      'municipio': 'Rio Das Ostras',
       'prefeito': 'Carlos Augusto Carvalho Balthazar',
       'secretarioAssistenciaSocial': 'Elizabeth Bousquet Schott',
       'populacao': 105676,
@@ -8570,7 +8570,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Rio de Janeiro',
       'prefeito': 'Marcelo Bezerra Crivella',
-      'secretarioAssistenciaSocial': 'Maria Teresa Bergher',
+      'secretarioAssistenciaSocial': 'Pedro Henrique Fernandes da Silva',
       'populacao': 6320446,
       'idh': 0.799,
       'idc': 0.614
@@ -8602,7 +8602,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'São Francisco de Itabapoana',
       'prefeito': 'Francimara Azeredo Da Silva Barbosa Lemos',
-      'secretarioAssistenciaSocial': 'Fagner Azeredo Da Silva',
+      'secretarioAssistenciaSocial': 'Fagner Azeredo Da Silva Barbosa Lemos',
       'populacao': 41354,
       'idh': 0.639,
       'idc': 0.497
@@ -8634,7 +8634,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'São José de Ubá',
       'prefeito': 'Marcionilio Botelho Moreira',
-      'secretarioAssistenciaSocial': 'Maria Adriana Silva Verdan Moreira',
+      'secretarioAssistenciaSocial': 'Maria Adriana Silva Verdun Moreira',
       'populacao': 7003,
       'idh': 0.652,
       'idc': 0.505
@@ -8642,7 +8642,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'São José do Vale do Rio Preto',
       'prefeito': 'Gilberto Martins Esteves',
-      'secretarioAssistenciaSocial': 'Aparecida De Fatima Moreira Esteves',
+      'secretarioAssistenciaSocial': 'Aparecida De Fátima Moreira Esteves',
       'populacao': 20251,
       'idh': 0.66,
       'idc': 0.512
@@ -8658,7 +8658,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'São Sebastião do Alto',
       'prefeito': 'Carlos Otavio Da Silva Rodrigues',
-      'secretarioAssistenciaSocial': 'Ely Pinto Lopes',
+      'secretarioAssistenciaSocial': 'Stela Dutra Fialho Chagas',
       'populacao': 8895,
       'idh': 0.646,
       'idc': 0.501
@@ -8666,7 +8666,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Sapucaia',
       'prefeito': 'Fabricio Dos Santos Baião',
-      'secretarioAssistenciaSocial': 'Cleuza Rodrigues Galluzzi',
+      'secretarioAssistenciaSocial': 'Cleuza Rodrigues Galuzzi',
       'populacao': 17525,
       'idh': 0.675,
       'idc': 0.522
@@ -8674,7 +8674,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Saquarema',
       'prefeito': 'Manoela Ramos De Souza Gomes Alves',
-      'secretarioAssistenciaSocial': 'Eliane Alves De Aquino',
+      'secretarioAssistenciaSocial': 'Eliane Alves Aquino',
       'populacao': 74234,
       'idh': 0.709,
       'idc': 0.549
@@ -8682,7 +8682,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Seropédica',
       'prefeito': 'Anabal Barbosa De Souza',
-      'secretarioAssistenciaSocial': 'Fernanda Raquel Dos Santos Monteiro Moffati',
+      'secretarioAssistenciaSocial': 'Neuza Cezario dos Santos',
       'populacao': 78186,
       'idh': 0.713,
       'idc': 0.553
@@ -8698,7 +8698,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Sumidouro',
       'prefeito': 'Eliésio Peres Da Silva',
-      'secretarioAssistenciaSocial': 'Jéssica Dos Santos De Moura Pereira Jasmim',
+      'secretarioAssistenciaSocial': 'Abner Soares Jasmim',
       'populacao': 14900,
       'idh': 0.611,
       'idc': 0.474
@@ -8706,7 +8706,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Tanguá',
       'prefeito': 'Valber Luiz Marcelo De Carvalho',
-      'secretarioAssistenciaSocial': 'Daniel Silveira Silva Izabel',
+      'secretarioAssistenciaSocial': 'Daiana Silveira Silva Izabel',
       'populacao': 30732,
       'idh': 0.654,
       'idc': 0.508
@@ -8714,7 +8714,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Teresópolis',
       'prefeito': 'Mario De Oliveira Tricano',
-      'secretarioAssistenciaSocial': 'Carla Cavalcanti Tricano',
+      'secretarioAssistenciaSocial': 'Tania Iorio de Rezende',
       'populacao': 163746,
       'idh': 0.73,
       'idc': 0.564
@@ -8730,7 +8730,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Três Rios',
       'prefeito': 'Josimar Salles',
-      'secretarioAssistenciaSocial': 'Gilberto Garcia Golfeto',
+      'secretarioAssistenciaSocial': 'Luis Alberto Barbosa',
       'populacao': 77432,
       'idh': 0.725,
       'idc': 0.559
