@@ -247,7 +247,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
           cadUnicoBeneficiosEventuais:       indicadoresSociais[19] == 'SIM' ? true : false,
           cadUnicoPAIF:                      indicadoresSociais[20] == 'SIM' ? true : false,
           cadUnicoPAEF:                      indicadoresSociais[21] == 'SIM' ? true : false,
-      };
+        };
       })[0];
 
     // preenche estrutura de dados dos gráfico PSE
@@ -630,7 +630,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     },
     {
       "anoOrcamento": 2016,
-      "municipio": "Angra Dos Reis",
+      "municipio": "Angra dos Reis",
       "programasTotal": 157494,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 157494,
@@ -1190,7 +1190,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     },
     {
       "anoOrcamento": 2016,
-      "municipio": "Campos Dos Goytacazes",
+      "municipio": "Campos dos Goytacazes",
       "programasTotal": 127460,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 127460,
@@ -2710,7 +2710,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     },
     {
       "anoOrcamento": 2016,
-      "municipio": "Parati",
+      "municipio": "Paraty",
       "programasTotal": -2,
       "programasNaoUtilizado": -2,
       "programasUtilizado": -2,
@@ -4350,7 +4350,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     },
     {
       "anoOrcamento": 2017,
-      "municipio": "Angra Dos Reis",
+      "municipio": "Angra dos Reis",
       "programasTotal": 183300,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 183300,
@@ -4910,7 +4910,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     },
     {
       "anoOrcamento": 2017,
-      "municipio": "Campos Dos Goytacazes",
+      "municipio": "Campos dos Goytacazes",
       "programasTotal": 8300,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 8300,
@@ -6430,7 +6430,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     },
     {
       "anoOrcamento": 2017,
-      "municipio": "Parati",
+      "municipio": "Paraty",
       "programasTotal": -2,
       "programasNaoUtilizado": -2,
       "programasUtilizado": -2,
@@ -8032,7 +8032,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
 
   blocoDadosGerais : IDadosGerais[] = [
     {
-      'municipio': 'Angra Dos Reis',
+      'municipio': 'Angra dos Reis',
       'prefeito': 'Fernando Antônio Ceciliano Jordão',
       'secretarioAssistenciaSocial': 'Célia Cristina Amorim Silva Jordão',
       'populacao': 169511,
@@ -8144,7 +8144,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.535
     },
     {
-      'municipio': 'Campos Dos Goytacazes',
+      'municipio': 'Campos dos Goytacazes',
       'prefeito': 'Rafael Paes Barbosa Diniz Nogueira',
       'secretarioAssistenciaSocial': 'Sana Gimenes Alvarenga Domingues',
       'populacao': 463731,
@@ -8448,7 +8448,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.544
     },
     {
-      'municipio': 'Parati',
+      'municipio': 'Paraty',
       'prefeito': 'Carlos José Gama Miranda',
       'secretarioAssistenciaSocial': 'Waldeci Ramiro',
       'populacao': 37533,
@@ -8804,13 +8804,13 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   // TODO cópia de cras_20170810.json
   crases: string[][] = [
 //  ['Município', 'Porte_pop2010', 'ident_1_Nome', 'ident_2_TPLog', 'ident_3_Endereço', 'ident_4_Núm', 'ident_5_Comp', 'ident_6_Bairro', 'ident_8_CEP', 'ident_12_Tel'],
-    ['Angra Dos Reis', 'Grande', 'CRAS Frade', 'Rua', 'Julieta Conceição Reis', '142', '', 'Frade', '23946020', '(24)3369655'],
-    ['Angra Dos Reis', 'Grande', 'CRAS Belém', 'Rodovia', 'mario covas s/n', '0', '', 'Belém', '23933005', '(24)3368463'],
-    ['Angra Dos Reis', 'Grande', 'CRAS Monsuaba', 'Rua', 'Manoel de Souza Lima', '248', '', 'Monsuaba', '23916075', '(24)3366109'],
-    ['Angra Dos Reis', 'Grande', 'CRAS Bracuí', 'Rua', 'Três Amigos', '32', '', 'Bracuhy', '23943150', '(24)3363189'],
-    ['Angra Dos Reis', 'Grande', 'CRAS Campo Belo', 'Rua', 'das Margaridas', '21', '', 'Campo Belo', '23900000', '(24)3377773'],
-    ['Angra Dos Reis', 'Grande', 'CRAS Nova Angra', 'Avenida', 'Jose Fausto de Queiroz', '5', '', 'japuiba', '23934087', '(24)3377188'],
-    ['Angra Dos Reis', 'Grande', 'CRAS Parque Mambucaba', 'Rua', 'Limeira', '96', '', 'Parque Mambucaba', '23900000', '(24)3362443'],
+    ['Angra dos Reis', 'Grande', 'CRAS Frade', 'Rua', 'Julieta Conceição Reis', '142', '', 'Frade', '23946020', '(24)3369655'],
+    ['Angra dos Reis', 'Grande', 'CRAS Belém', 'Rodovia', 'mario covas s/n', '0', '', 'Belém', '23933005', '(24)3368463'],
+    ['Angra dos Reis', 'Grande', 'CRAS Monsuaba', 'Rua', 'Manoel de Souza Lima', '248', '', 'Monsuaba', '23916075', '(24)3366109'],
+    ['Angra dos Reis', 'Grande', 'CRAS Bracuí', 'Rua', 'Três Amigos', '32', '', 'Bracuhy', '23943150', '(24)3363189'],
+    ['Angra dos Reis', 'Grande', 'CRAS Campo Belo', 'Rua', 'das Margaridas', '21', '', 'Campo Belo', '23900000', '(24)3377773'],
+    ['Angra dos Reis', 'Grande', 'CRAS Nova Angra', 'Avenida', 'Jose Fausto de Queiroz', '5', '', 'japuiba', '23934087', '(24)3377188'],
+    ['Angra dos Reis', 'Grande', 'CRAS Parque Mambucaba', 'Rua', 'Limeira', '96', '', 'Parque Mambucaba', '23900000', '(24)3362443'],
     ['Aperibé', 'Pequeno I', 'CRAS CENTRO', 'Rua', 'ANIBAL CORTES', '46', 'CASA', 'CENTRO', '28495000', '(22)3864160'],
     ['Aperibé', 'Pequeno I', 'CRAS PORTO DAS BARCAS', 'Rua', 'DIOMAR BAIRRAL', '1240', 'CASA', 'PORTO DAS BARCAS', '28495000', '(22)3861364'],
     ['Aperibé', 'Pequeno I', 'CRAS PONTE SECA', 'Rua', 'Genocy Coelho da Silva', '0', '', 'PONTE SECA', '28495000', '(22)3864417'],
@@ -8867,19 +8867,19 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Cachoeiras de Macacu', 'Médio', 'CRAS - Japuíba', 'Praça', 'Macedo Soares', '0', '', 'Japuiba', '28680000', '(21)2745534'],
     ['Cambuci', 'Pequeno I', 'CRAS 1', 'Parque', 'de Exposições - Pavilhão 1', '1', '', 'Guarani', '28430000', '(22)2767208'],
     ['Cambuci', 'Pequeno I', 'CRAS 2', 'Rua', 'Muniz de Medeiros', '91', '', 'CENTRO SÃO JOÃO DO PARAÍSO', '28450000', '(22)3855139'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS URURAÍ', 'Rua', 'RUA JOSÉ PEREIRA', '51', '', 'URURAÍ', '28000000', '(22)2728394'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS Codin', 'Rua', 'G', '15', '', 'Codin', '28090630', '(22)2739595'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS TRAVESSÃO', 'Rua', 'ANTONIO LUIZ DA SILVEIRA', '482', '', 'TRAVESSÃO DE CAMPOS', '28175000', '(22)2748511'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS Chatuba', 'Rua', 'Maçaranduba', '0', 'Condomínio Oswaldo Gregório', 'Chatuba', '28100000', '(22)2724631'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS Goitacazes', 'Rodovia', 'RAUL SOUTO MAIOR', '49', '', 'Goitacazes', '28030045', '(22)2731918'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS JARDIM CARIOCA', 'Travessa', 'SANTO ELIAS', '0', '', 'JARDIM CARIOCA', '28080385', '(22)2725361'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS Penha', 'Rua', 'Rossine Quintanilha Chagas', '0', '', 'Penha', '28021001', '(22)2724812'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS CUSTODÓPOLIS', 'Rua', 'POETA  MARINHO', '7', '', 'CUSTODOPOLIS', '28080090', '(22)2723349'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS JOCKEY', 'Rua', 'Professor Alvaro Barcelos', '0', '', 'Jockey II', '28020307', '(22)9817505'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS MORRO DO CÔCO', 'Rua', 'Nilo Peçanha', '0', '', 'Morro do Coco', '28178000', '(22)9771453'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS Parque Guarús', 'Rua', 'Rio Bonito', '5', '', 'Parque Guarús', '28070645', '(22)2731754'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS MATADOURO', 'Rua', 'Adão Pereira Nunes', '0', '', 'MATADOURO', '28015472', '(22)2731344'],
-    ['Campos Dos Goytacazes', 'Grande', 'CRAS ESPLANADA', 'Rua', 'VALTER SALES', '0', '', 'PQ ESPLANADA', '28000100', '(22)2732288'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS URURAÍ', 'Rua', 'RUA JOSÉ PEREIRA', '51', '', 'URURAÍ', '28000000', '(22)2728394'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS Codin', 'Rua', 'G', '15', '', 'Codin', '28090630', '(22)2739595'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS TRAVESSÃO', 'Rua', 'ANTONIO LUIZ DA SILVEIRA', '482', '', 'TRAVESSÃO DE CAMPOS', '28175000', '(22)2748511'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS Chatuba', 'Rua', 'Maçaranduba', '0', 'Condomínio Oswaldo Gregório', 'Chatuba', '28100000', '(22)2724631'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS Goitacazes', 'Rodovia', 'RAUL SOUTO MAIOR', '49', '', 'Goitacazes', '28030045', '(22)2731918'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS JARDIM CARIOCA', 'Travessa', 'SANTO ELIAS', '0', '', 'JARDIM CARIOCA', '28080385', '(22)2725361'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS Penha', 'Rua', 'Rossine Quintanilha Chagas', '0', '', 'Penha', '28021001', '(22)2724812'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS CUSTODÓPOLIS', 'Rua', 'POETA  MARINHO', '7', '', 'CUSTODOPOLIS', '28080090', '(22)2723349'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS JOCKEY', 'Rua', 'Professor Alvaro Barcelos', '0', '', 'Jockey II', '28020307', '(22)9817505'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS MORRO DO CÔCO', 'Rua', 'Nilo Peçanha', '0', '', 'Morro do Coco', '28178000', '(22)9771453'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS Parque Guarús', 'Rua', 'Rio Bonito', '5', '', 'Parque Guarús', '28070645', '(22)2731754'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS MATADOURO', 'Rua', 'Adão Pereira Nunes', '0', '', 'MATADOURO', '28015472', '(22)2731344'],
+    ['Campos dos Goytacazes', 'Grande', 'CRAS ESPLANADA', 'Rua', 'VALTER SALES', '0', '', 'PQ ESPLANADA', '28000100', '(22)2732288'],
     ['Cantagalo', 'Pequeno I', 'CRAS NOVO HORIZONTE', 'Rua', 'RUA F', '0', 'PRÉDIO', 'NOVO HORIZONTE', '28500000', '(22)2555200'],
     ['Cantagalo', 'Pequeno I', 'CRAS SANTO ANTONIO', 'Rua', 'PROF: MANOEL VIEIRA BAPTISTA', '237', 'PRÉDIO', 'SANTO ANTONIO', '28500000', '(22)2555110'],
     ['Cantagalo', 'Pequeno I', 'CRAS Centro', 'Travessa', 'Luiz Carlos Falcão', '0', '', 'Centro', '28500000', '(22)2555485'],
@@ -9262,7 +9262,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   // TODO cópia de creas_20170810.json
   creases: string[][] = [
 //  ['Município', 'Porte_pop2010', 'ident1', 'ident2', 'ident3', 'ident4', 'ident5', 'ident6', 'ident8', 'ident12'],
-    ['Angra Dos Reis', 'Grande', 'CREAS Angra dos Reis', 'Rua', '11 DE JUNHO', '51', '', 'CENTRO', '23900-170', '(24) 3365-5167'],
+    ['Angra dos Reis', 'Grande', 'CREAS Angra dos Reis', 'Rua', '11 DE JUNHO', '51', '', 'CENTRO', '23900-170', '(24) 3365-5167'],
     ['Aperibé', 'Pequeno I', 'CREAS', 'Rua', 'FRANCISCO HENRIQUE DE SOUZA', '535', '', 'PALMEIRAS', '28495-000', '(22) 3864-1606'],
     ['Araruama', 'Grande', 'CREAS - Centro de Referência Especializado de Assistência Social', 'Rua', 'Rua República do Chile', '437', '', 'Centro', '28970-000', '(22) 2664-1706'],
     ['Areal', 'Pequeno I', 'CREAS Amaurílio Jairo de Lima', 'Rua', 'Joao Pedro da Silveira', '235', '', 'Centro', '25845-000', '(24) 2257-2963'],
@@ -9278,9 +9278,9 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Cabo Frio', 'Grande', 'CREAS CENTRO DE REFERÊNCIA ESPECIALIZADO DE ASSISTÊNCIA SOCIAL', 'Rua', 'Alemanha', '132', 'casa 01', 'Jardim Caiçara', '28910-370', '(22) 2645-3106'],
     ['Cachoeiras de Macacu', 'Médio', 'CREAS - Cachoeiras de Macacu', 'Rua', 'ANICIO MONTEIRO DA SILVA', '0', '', 'CENTRO', '28680-000', '(21) 2649-3076'],
     ['Cambuci', 'Pequeno I', 'CREAS', 'Avenida', 'José de Souza Faria', '220', '', 'Floresta', '28430-000', '(22) 2767-3247'],
-    ['Campos Dos Goytacazes', 'Grande', 'CREAS I', 'Avenida', 'Carmem Carneiro', '1050', '', 'JARDIM CARIOCA', '28083-510', '(22) 2733-2992'],
-    ['Campos Dos Goytacazes', 'Grande', 'CREAS II', 'Rua', 'Rua dos Goytacazes', '618', '', 'TURF CLUB', '28000-100', '(22) 2728-0123'],
-    ['Campos Dos Goytacazes', 'Grande', 'CREAS III', 'Rua', 'Av. José Alves de Azevedo', '216', '', 'CENTRO', '28000-100', '(22) 2735-3925'],
+    ['Campos dos Goytacazes', 'Grande', 'CREAS I', 'Avenida', 'Carmem Carneiro', '1050', '', 'JARDIM CARIOCA', '28083-510', '(22) 2733-2992'],
+    ['Campos dos Goytacazes', 'Grande', 'CREAS II', 'Rua', 'Rua dos Goytacazes', '618', '', 'TURF CLUB', '28000-100', '(22) 2728-0123'],
+    ['Campos dos Goytacazes', 'Grande', 'CREAS III', 'Rua', 'Av. José Alves de Azevedo', '216', '', 'CENTRO', '28000-100', '(22) 2735-3925'],
     ['Cantagalo', 'Pequeno I', 'CREAS', 'Rua', 'Nair Jacinta', '0', '', 'São José', '28500-000', '(22) 2555-1763'],
     ['Carapebus', 'Pequeno I', 'CREAS', 'Rua', 'RUA PRATA MANCEBO', '30', '', 'Centro', '27998-000', '(22) 2768-3050'],
     ['Cardoso Moreira', 'Pequeno I', 'CREAS', 'Rua', 'Rua Donatila Vilela Marins.', '0', '', 'centro', '28180-000', '(22) 2785-1639'],
@@ -9330,7 +9330,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     //    0             1                     2                         3        4       5       6          7           8             9                   10                    11                         12                     13                          14                                15                                    16                          17                      18                        19             20       21                22                        23
 //  ['MUNICÍPIO', 'PREFEITO', 'SECRETÁRIO DE ASSISTÊNCIA SOCIAL', 'POPULAÇÃO', 'IDH', 'CRAS', 'CREAS', 'CENTRO POP', 'Total ', '% do Estado', 'Famílias Vulneráveis', '% da População do Município', '% do Estado', ' Famílias Beneficiárias', '% da População do Município', '% Cobertura - Perfil Cad.Único', '% Cobertura - Perfil Bolsa Família', 'Valor Total Repassado', '  Famílias Registradas', 'Benefícios Eventuais', 'PAIF', 'PAEFI', 'Total de Beneficiários', 'Valor Total Repassado'],
     ['Rio de Janeiro - RJ', 'Luiz Fernando de Souza', 'Gustavo Reis Ferreira', '16.231.365', '0,76', '453', '116', '19', '588', '100', '1.430.427', '', '8,95', '804.641', '5,03', '9,64', '56,25', 'R$ 1.588.104.562,00', '1.560.055', '', '', '', '319.056', 'R$ 298.419.232,44'],
-    ['Angra Dos Reis', 'Fernando Antônio Ceciliano Jordão', 'Munir Francisco', '177.101', '0,72', '7', '1', '0', '8', '1,36', '14.911', '8,42', '1,04', '10.495', '5,93', '116,66', '70,38', 'R$ 22.424.211,00', '19.669', 'SIM', 'SIM', 'SIM', '2.760', 'R$ 2.574.492,98'],
+    ['Angra dos Reis', 'Fernando Antônio Ceciliano Jordão', 'Munir Francisco', '177.101', '0,72', '7', '1', '0', '8', '1,36', '14.911', '8,42', '1,04', '10.495', '5,93', '116,66', '70,38', 'R$ 22.424.211,00', '19.669', 'SIM', 'SIM', 'SIM', '2.760', 'R$ 2.574.492,98'],
     ['Aperibé', 'Flávio Diniz Berriel', 'Vanessa Garcia Correa', '10.545', '0,69', '3', '1', '0', '4', '0,68', '1.276', '12,10', '0,09', '686', '6,51', '93,46', '53,76', 'R$ 1.362.195,00', '1.476', 'SIM', 'SIM', 'SIM', '155', 'R$ 144.298,14'],
     ['Araruama', 'Livia Soares Bello Da Silva', 'João Baptista De Araujo Filho', '116.418', '0,72', '5', '1', '1', '7', '1,19', '12.712', '10,92', '0,89', '9.494', '8,16', '115,7', '74,69', 'R$ 21.452.175,00', '17.227', 'NÃO', 'SIM', 'SIM', '3.370', 'R$ 3.151.888,96'],
     ['Areal', 'Flávio Magdalena Bravo', 'Marcos Antonio Ribeiro', '11.654', '0,68', '2', '1', '0', '3', '0,51', '1.291', '11,08', '0,09', '929', '7,97', '115,98', '71,96', 'R$ 1.838.362,00', '1.850', 'SIM', 'SIM', 'SIM', '203', 'R$ 189.275,00'],
@@ -9344,7 +9344,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Cabo Frio', 'Marquinho Mendes', 'Romulo Vidal Dos Anjos', '195.197', '0,74', '8', '1', '0', '9', '1,53', '17.062', '8,74', '1,19', '9.350', '4,79', '91,18', '54,8', 'R$ 20.736.423,00', '19.317', 'SIM', 'SIM', 'SIM', '3.214', 'R$ 3.005.628,72'],
     ['Cachoeiras de Macacu', 'Mauro  Cezar De Castro Soares ', 'Gilvana Azevedo Miranda', '55.139', '0,70', '3', '1', '0', '4', '0,68', '6.205', '11,25', '0,43', '4.555', '8,26', '116,65', '73,41', 'R$ 10.571.956,00', '7.689', 'SIM', 'SIM', 'SIM', '1.409', 'R$ 1.315.072,05'],
     ['Cambuci', 'Agnaldo Vieira Mello', 'Fatima De Souza Vieira', '14.851', '0,69', '2', '1', '0', '3', '0,51', '2.031', '13,68', '0,14', '1.342', '9,04', '108,31', '66,08', 'R$ 2.667.839,00', '2.560', 'SIM', 'SIM', 'SIM', '348', 'R$ 326.076,00'],
-    ['Campos Dos Goytacazes', 'Rafael Paes Barbosa Diniz Nogueira', 'Sana Gimenes Alvarenga Domingues', '472.300', '0,72', '13', '3', '1', '17', '2,89', '55.809', '11,82', '3,90', '31.530', '6,68', '85,33', '56,5', 'R$ 65.688.718,00', '58.009', 'SIM', 'SIM', 'SIM', '8.836', 'R$ 8.267.856,57'],
+    ['Campos dos Goytacazes', 'Rafael Paes Barbosa Diniz Nogueira', 'Sana Gimenes Alvarenga Domingues', '472.300', '0,72', '13', '3', '1', '17', '2,89', '55.809', '11,82', '3,90', '31.530', '6,68', '85,33', '56,5', 'R$ 65.688.718,00', '58.009', 'SIM', 'SIM', 'SIM', '8.836', 'R$ 8.267.856,57'],
     ['Cantagalo', ' Guga De Paula', 'Jorge Braz Cardoso Ferreira', '19.830', '0,71', '3', '1', '0', '4', '0,68', '2.026', '10,22', '0,14', '1.071', '5,40', '82,13', '52,86', 'R$ 2.035.484,00', '2.197', 'SIM', 'SIM', 'SIM', '469', 'R$ 437.813,80'],
     ['Carapebus', 'Christiane Miranda De Andrade Cordeiro', 'Cíntia Camargo Barcelos', '14.024', '0,71', '2', '1', '0', '3', '0,51', '1.276', '9,10', '0,09', '809', '5,77', '111,59', '63,4', 'R$ 1.631.643,00', '1.901', 'SIM', 'SIM', 'SIM', '275', 'R$ 257.666,00'],
     ['Cardoso Moreira', 'Gilson Nunes Siqueira', 'Fausto Da Rocha Pereira', '12.601', '0,65', '2', '1', '0', '3', '0,51', '1.887', '14,98', '0,13', '926', '7,35', '82,31', '49,07', 'R$ 1.603.250,00', '1.718', 'SIM', 'SIM', 'SIM', '501', 'R$ 469.437,00'],
