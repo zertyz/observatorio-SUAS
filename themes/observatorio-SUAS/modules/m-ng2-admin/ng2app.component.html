@@ -1,36 +1,30 @@
 <div platform >
-
   <nav>
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-5 col-4 ">
-
           <a  class="navbar-brand logo-completo" href="http://www.mprj.mp.br/home">
             <img class="img-fluid" style="margin-left:17%; padding: 1em;" alt="MPRJ-image" src="./assets/img/logo_mprj2.png">
           </a>
           <a  class="navbar-brand logo-mini" href="http://www.mprj.mp.br/home">
             <img class="img-fluid" style="margin-left:5%;padding: 1em;" alt="MPRJ-image" src="./assets/img/logo_mini_mprj.png">
           </a>
-
         </div>
 
         <div class="col-xl-7 col-7" id="show-desktop">
           <div style="padding-top: 1%">
-
             <a [routerLink]="['/']"                      [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Início</a>
             <a [routerLink]="['/dados-e-indicadores']"   [routerLinkActive]="['router-link-active']"                                         >Dados e Indicadores</a>
             <a [routerLink]="['/busca/inspecoes']"       [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Inspeções</a>
             <a [routerLink]="['/ranking']"               [routerLinkActive]="['router-link-active']"                                         >Ranking</a>
             <a [routerLink]="['/metodologia']"           [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Metodologia</a>
             <a [routerLink]="['/ajuda']"                 [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Ajuda</a>
-
           </div>
         </div>
 
         <div class="col-lg-7 col-8" id="show-burger">
           <input class="burger-check " id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
           <div id="navigation1" class="navigation ">
-
             <ul>
               <li><a [routerLink]="['/']"                      [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Início</a></li>
               <li><a [routerLink]="['/dados-e-indicadores']"   [routerLinkActive]="['router-link-active']"                                         >Dados e Indicadores</a></li>
@@ -39,14 +33,14 @@
               <li><a [routerLink]="['/metodologia']"           [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Metodologia</a></li>
               <li><a [routerLink]="['/ajuda']"                 [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Ajuda</a></li>
             </ul>
-
           </div>
         </div>
       </div>
     </div>
   </nav>
-      <router-outlet ></router-outlet>
 
+  <mp-subscribe></mp-subscribe>
+  <router-outlet ></router-outlet>
   <!-- Footer -->
   <footer class="bd-footer text-muted footer-alig align-items-end ">
     <div class="container-fluid">
@@ -55,30 +49,22 @@
           <p>© 2017 Ministério Público do Rio de Janeiro. Av. Marechal Câmara, n° 370
             Centro - Rio de Janeiro, RJ - Brasil - CEP 20020-080 - Telefone: (21) 2550-9050</p>
         </div>
-
-
         <div align ="right" style="padding-top: .455vw; " class="links-footer col-lg-8 col-md-4 col-sm-4">
-
           <a href="https://www.facebook.com/MPRJ.Oficial" target="_blank">
             <img width="32px" height="auto"src="http://www.mprj.mp.br/mprj-responsiveflat-theme/images/comum/rodape/icon_facebook.png" alt="Link para o facebook do MPRJ.">
           </a>
-
           <a href="https://twitter.com/mp_rj" target="_blank">
             <img width="32px"height="auto" src="http://www.mprj.mp.br/mprj-responsiveflat-theme/images/comum/rodape/icon_twitter.png" alt="Link para o twitter do MPRJ.">
           </a>
-
           <a href="https://www.youtube.com/user/MinisterioPublicoRJ" target="_blank">
             <img width="32px" height="auto" src="http://www.mprj.mp.br/mprj-responsiveflat-theme/images/comum/rodape/icon_youtube.png" alt="Link para o youtube do MPRJ.">
           </a>
-
           <a href="https://www.flickr.com/photos/mprj_mp/" target="_blank">
             <img width=" 32px" height="auto" src="http://www.mprj.mp.br/mprj-responsiveflat-theme/images/comum/rodape/icon_flickr.png" alt="Link para o flickr do MPRJ.">
           </a>
-
         </div>
       </div>
     </div>
   </footer>
-
 </div>
 

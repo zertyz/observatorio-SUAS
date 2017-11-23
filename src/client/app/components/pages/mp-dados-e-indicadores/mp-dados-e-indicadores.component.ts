@@ -8570,7 +8570,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     {
       'municipio': 'Rio de Janeiro',
       'prefeito': 'Marcelo Bezerra Crivella',
-      'secretarioAssistenciaSocial': 'Maria Teresa Bergher',
+      'secretarioAssistenciaSocial': 'Pedro Henrique Fernandes da Silva',
       'populacao': 6320446,
       'idh': 0.799,
       'idc': 0.614
@@ -9397,7 +9397,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Rio Claro', 'José Osmar De Almeida', 'Julio Cesar Rocha De Camargo Castro', '17.606', '0,68', '2', '1', '0', '3', '0,51', '1.928', '10,95', '0,13', '631', '3,58', '50,76', '32,73', 'R$ 1.025.388,00', '1.521', 'SIM', 'SIM', 'SIM', '235', 'R$ 220.195,00'],
     ['Rio Das Flores', 'Vicente De Paula De Souza Guedes', 'Tereza Cristina Meyer Cabral Machado', '8.703', '0,68', '2', '1', '0', '3', '0,51', '1.018', '11,70', '0,07', '627', '7,20', '116,54', '61,59', 'R$ 1.440.662,00', '1.303', 'NÃO', 'SIM', 'SIM', '129', 'R$ 119.936,00'],
     ['Rio Das Ostras', 'Carlos Augusto Carvalho Balthazar', 'Elizabeth Bousquet Schott', '116.134', '0,77', '4', '1', '0', '5', '0,85', '7.107', '6,12', '0,50', '4.822', '4,15', '116,78', '67,85', 'R$ 8.774.782,00', '13.369', 'SIM', 'SIM', 'SIM', '1.572', 'R$ 1.471.296,91'],
-    ['Rio de Janeiro', 'Marcelo Bezerra Crivella', 'Maria Teresa Bergher', '6.390.290', '0,8', '47', '14', '2', '63', '10,71', '458.625', '7,18', '32,06', '237.054', '3,71', '80,82', '51,69', 'R$ 424.256.328,00', '487.222', 'NÃO', 'SIM', 'SIM', '106.618', 'R$ 99.771.463,98'],
+    ['Rio de Janeiro', 'Marcelo Bezerra Crivella', 'Pedro Henrique Fernandes da Silva', '6.390.290', '0,8', '47', '14', '2', '63', '10,71', '458.625', '7,18', '32,06', '237.054', '3,71', '80,82', '51,69', 'R$ 424.256.328,00', '487.222', 'NÃO', 'SIM', 'SIM', '106.618', 'R$ 99.771.463,98'],
     ['Santa Maria Madalena', 'Carlos Alberto De Matos Botelho', 'Carlos Roberto Mello Lula Lamego', '10.298', '0,67', '3', '0', '0', '3', '0,51', '1.291', '12,54', '0,09', '590', '5,73', '71,17', '45,7', 'R$ 1.270.459,00', '1.140', 'SIM', 'SIM', 'NÃO', '262', 'R$ 245.494,00'],
     ['Santo Antônio de Pádua', 'Josias Quintal De Oliveira', 'Maria Tertuliana De Souza Oliveira', '40.876', '0,72', '2', '1', '0', '3', '0,51', '4.602', '11,26', '0,32', '2.164', '5,29', '85,77', '47,02', 'R$ 4.305.828,00', '4.237', 'SIM', 'SIM', 'SIM', '1.209', 'R$ 1.126.626,01'],
     ['São Fidélis', 'Amarildo Henrique Alcântara', 'Victor Mauro Cruz', '37.657', '0,69', '2', '1', '0', '3', '0,51', '4.207', '11,17', '0,29', '3.049', '8,10', '114,32', '72,47', 'R$ 6.300.913,00', '5.501', 'SIM', 'SIM', 'SIM', '710', 'R$ 664.334,00'],
