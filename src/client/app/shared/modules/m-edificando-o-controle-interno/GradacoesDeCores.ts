@@ -45,7 +45,7 @@ export class GradacoesDeCores {
   private faixas:          number[] = [2,                                   4,                                    6,                                            7.5,                                            9,                                      10];
   private classesCSSCores: string[] = ['notaEmProjeto',                     'notaEmAlicerce',                     'notaConstrucaoIniciada',                     'notaConstrucaoAdiantada',                      'notaEmAcabamento',                     'notaConstruido'];
   private imgsConstrucao:  string[] = ['Ilustracao_SUAS_fase_1.png',        'Ilustracao_SUAS_fase_2.png',         'Ilustracao_SUAS_fase_3.png',                 'Ilustracao_SUAS_fase_4.png',                   'Ilustracao_SUAS_fase_5.png',           'Ilustracao_SUAS_fase_6.png'];
-  private animaConstrucao: string[] = ['bounceInDown', 'fadeInDown', 'flipInY', 'rotateInDownRight', 'rotateInDownLeft', 'zoomInDown']
+  private animaConstrucao: string[] = ['slideInUp', 'slideInUp', 'slideInUp', 'slideInUp', 'slideInUp', 'slideInUp']
 
   constructor() {
     for (let campo of this.listaDeDimensoesETitulos) {
@@ -66,7 +66,7 @@ export class GradacoesDeCores {
   /** Faz a mesma coisa que 'getCSSClass(nota), porém adiciona animações baseadas em delay'.
    *  Usada pelo componente 'e-dimensoes' para mostrar várias notas. */
   public getAnimacaoCSSClass(nota: number, delay: number): any {
-    let ngClass = {'animated': true, 'bounceIn': true};
+    let ngClass = {'animated': true, 'slideInUp': true};
     ngClass['anim'+delay]      = true;
     ngClass[this.getCSSClass(nota)] = true;
     return ngClass;
