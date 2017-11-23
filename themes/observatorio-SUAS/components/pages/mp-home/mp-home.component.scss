@@ -74,6 +74,7 @@ a{
   @extend .keyword;
   color: black;
   text-align: left;
+  font-weight: 600;
 }
 
 .number-big{
@@ -113,13 +114,13 @@ a{
 
 .pesoHeader {
   font-family: 'Roboto-Condensed';
-  font-size: 130%;
+  font-size: 150%;
   font-weight: normal;
   line-height: 90%;
   word-wrap: normal;
-  padding-left: 0em!important;
   padding-top: .7em;
   padding-right: 1.33em;
+  text-align: right;
 }
 
 .pesoValor {
