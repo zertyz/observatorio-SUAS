@@ -1,6 +1,10 @@
 a{
   color: #6c757d;
 }
+.lei{
+  margin-top: 14px;
+  margin-bottom: 0px;
+}
 .text-blue{
   color: rgb(5, 127, 178);
   text-align: left;
@@ -74,7 +78,6 @@ a{
   @extend .keyword;
   color: black;
   text-align: left;
-  font-weight: 600;
 }
 
 .number-big{
@@ -114,13 +117,13 @@ a{
 
 .pesoHeader {
   font-family: 'Roboto-Condensed';
-  font-size: 150%;
+  font-size: 130%;
   font-weight: normal;
   line-height: 90%;
   word-wrap: normal;
+  padding-left: 0em!important;
   padding-top: .7em;
   padding-right: 1.33em;
-  text-align: right;
 }
 
 .pesoValor {

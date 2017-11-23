@@ -21,7 +21,10 @@
             <select [ngModel]="categoria" class="field-select" id="_mprjbusca_WAR_mprjbuscaportlet_filtro_param" name="categoria" title="filtro_param" style="height: 38px !important; margin-right: 10px; border-radius: 0 !important; border-color: #A9A9A9; box-shadow: none;">
               <option class="" value="0"> Todas as Categorias </option>
               <option class="" value="legislacao"> Legislação </option>
-              <option class="" value="orcamentos"> Orçamentos </option>
+              <!--  Categorias que devem ser inseridas
+              <option class="" value="orcamentomunicipal"> Orçamento Municipal </option>
+              <option class="" value="orcamentoestadual"> Orçamento Estadual </option> -->
+              <option class="" value="orcamentos"> Repasse Financeiro Federal </option> <!--Foi renomeada, esse é o nome que deve permanecer. Marcos, favor renomear o valor da categoria para manter funcional-->
               <option class="" value="pecasdeatuacao"> Peças de Atuação </option>
               <option class="" value="inspecoes"> Inspeções </option>
             </select>
@@ -43,7 +46,7 @@
           <div class="card-block alinha-card" >
             <img class="img-fluid" src="./assets/img/icones/Icones_Tela_1_{{documento.categoria}}.png">
             <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='legislacao'"> Legislação</p>
-            <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='orcamentos'"> Orçamento</p>
+            <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='orcamentos'"> Repasse Financeiro Federal</p>
             <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='pecasdeatuacao'"> Manual/Cartilha</p>
             <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='inspecoes'"> Inspeção</p>
             <span>{{documento.nome}}</span>
