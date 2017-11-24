@@ -177,11 +177,11 @@ const MutuaAvailableComponentsConfiguration: IMutuaAvailableComponentsConfigurat
     source: '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.component',
     routes: '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.routes',
   },
-  // Inspeções
+  /*// Inspeções
   MPInspecoesComponent: {
     source: '../../components/pages/mp-inspecoes/mp-inspecoes.component',
     routes: '../../components/pages/mp-inspecoes/mp-inspecoes.routes',
-  },
+  },*/
   // Busca
   MPBuscaComponent: {
     source: '../../components/pages/mp-busca/mp-busca.component',

@@ -2572,9 +2572,10 @@ export class MPBuscaComponent {
   }
 
   onSubmit() {
-    let pesquisa = document.getElementsByName('pesquisa')[0].value;
-    let categoria = document.getElementsByName('categoria')[0].value;
-    let url : string = window.location.href.split('busca')[0] + 'busca/'+ categoria +'/' + pesquisa;
+    let campoPesquisa = document.getElementById('_mprjbusca_WAR_mprjbuscaportlet_keywords_param2') as HTMLInputElement;
+    let campoCategoria = document.getElementsByName('categoria')[0] as HTMLInputElement;
+    let url : string = window.location.href.split('busca')[0] + 'busca/'+ campoCategoria.value +'/' + campoPesquisa.value;
+
     window.location.replace(url);
   }
 

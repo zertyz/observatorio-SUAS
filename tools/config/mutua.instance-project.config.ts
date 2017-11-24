@@ -58,7 +58,7 @@ export const MutuaInstanceProjectComponentsActivationConfiguration: IInstancePro
   // componentes do projeto observatorio-SUAS
   {componentName: 'MPHomeComponent',              htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPDadosEIndicadoresComponent', htmlEnabled: true,  mobileEnabled: true},
-  {componentName: 'MPInspecoesComponent',         htmlEnabled: true,  mobileEnabled: true},
+  // {componentName: 'MPInspecoesComponent',         htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPBuscaComponent',             htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPAjudaComponent',             htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPRankingComponent',           htmlEnabled: true,  mobileEnabled: true},
