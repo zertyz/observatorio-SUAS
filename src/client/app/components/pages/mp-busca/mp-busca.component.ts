@@ -1,13 +1,11 @@
 // libs
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs/Observable';
+import { Component } from '@angular/core';
 
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Input } from '@angular/core';
 
 import { Injector } from '@angular/core';
-import { Config, RouterExtensions } from '../../../modules/core/index';
+import { RouterExtensions } from '../../../modules/core/index';
 
 @Component({
   moduleId: module.id,
@@ -18,11 +16,12 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
 export class MPBuscaComponent {
 
   @Input() selectedRedirection: string   = '';
+  @Input()  pesquisa :string = '';
+  @Input() categoria: string = '';
 
   private documentosProcurados: IPesquisa[] = [];
   private resultadosEncontrados: number = 0;
-  private pesquisa :string = '';
-  private categoria: string = '';
+
 
   private documentos: IPesquisa[] = [
     {
@@ -2517,7 +2516,8 @@ export class MPBuscaComponent {
     }
   ];
 
-  constructor(private injector: Injector, public routerext: RouterExtensions, private route: ActivatedRoute) {}
+  constructor(private injector: Injector, public routerext: RouterExtensions, private route: ActivatedRoute,
+              private router: Router,) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -2529,16 +2529,20 @@ export class MPBuscaComponent {
   }
 
   public pesquisar(categoria: string, value: string): void {
+    this.documentosProcurados = [];
     if(value === '0') {
       if(categoria === '0') {
         this.documentosProcurados = this.documentos;
         this.resultadosEncontrados = this.documentos.length;
       }else {
         for (let i: number = 0; i<this.documentos.length; i++) {
-            if (this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) {
-              this.documentosProcurados.push(this.documentos[i]);
-              this.resultadosEncontrados++;
-            }
+          if (this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) {
+            this.documentosProcurados.push(this.documentos[i]);
+            this.resultadosEncontrados++;
+          }else if(categoria.toUpperCase().indexOf('ORCAMENTO') !== -1 && ((this.documentos[i].categoria.toUpperCase().indexOf('REPASSE')) !== -1 )) {
+            this.documentosProcurados.push(this.documentos[i]);
+            this.resultadosEncontrados++;
+          }
         }
       }
 
@@ -2549,22 +2553,22 @@ export class MPBuscaComponent {
             this.documentosProcurados.push(this.documentos[i]);
             this.resultadosEncontrados++;
           } else {
-              if (this.documentos[i].palavrasChave.toUpperCase().indexOf(value.toUpperCase()) !== -1) {
-                this.documentosProcurados.push(this.documentos[i]);
-                this.resultadosEncontrados++;
-              }
+            if (this.documentos[i].palavrasChave.toUpperCase().indexOf(value.toUpperCase()) !== -1) {
+              this.documentosProcurados.push(this.documentos[i]);
+              this.resultadosEncontrados++;
+            }
           }
         }
       }else {
         for (let i: number = 0; i<this.documentos.length; i++) {
-          if (this.documentos[i].nome.toUpperCase().indexOf(value.toUpperCase()) !== -1 && this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) {
+          if (this.documentos[i].nome.toUpperCase().indexOf(value.toUpperCase()) !== -1 && (( this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) || (categoria.toUpperCase().indexOf('ORCAMENTO') !== -1) && ((this.documentos[i].categoria.toUpperCase().indexOf('REPASSE')) !== -1 ) )) {
             this.documentosProcurados.push(this.documentos[i]);
             this.resultadosEncontrados++;
           } else {
-              if (this.documentos[i].palavrasChave.toUpperCase().indexOf(value.toUpperCase()) !== -1 && this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) {
-                this.documentosProcurados.push(this.documentos[i]);
-                this.resultadosEncontrados++;
-              }
+            if (this.documentos[i].palavrasChave.toUpperCase().indexOf(value.toUpperCase()) !== -1 && ((this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) || (categoria.toUpperCase().indexOf('ORCAMENTO') !== -1) && ((this.documentos[i].categoria.toUpperCase().indexOf('REPASSE')) !== -1 ) )) {
+              this.documentosProcurados.push(this.documentos[i]);
+              this.resultadosEncontrados++;
+            }
           }
         }
       }
@@ -2572,11 +2576,10 @@ export class MPBuscaComponent {
   }
 
   onSubmit() {
+    this.resultadosEncontrados = 0;
     let campoPesquisa = document.getElementById('_mprjbusca_WAR_mprjbuscaportlet_keywords_param2') as HTMLInputElement;
     let campoCategoria = document.getElementsByName('categoria')[0] as HTMLInputElement;
-    let url : string = window.location.href.split('busca')[0] + 'busca/'+ campoCategoria.value +'/' + campoPesquisa.value;
-
-    window.location.replace(url);
+    this.pesquisar(campoCategoria.value, campoPesquisa.value);
   }
 
 }
