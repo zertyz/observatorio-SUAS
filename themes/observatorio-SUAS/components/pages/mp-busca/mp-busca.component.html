@@ -51,7 +51,7 @@
             <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='cartilha'"> Manual/Cartilha</p>
             <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='inspecoes'"> Inspeção</p>
             <span>{{documento.nome}}</span>
-              <a href= "../../src/client/assets/dados/20171121/{{documento.arquivo}}" target="_blank">
+              <a href= "./assets/dados/20171121/{{documento.arquivo}}" download="{{documento.arquivo}}" target="_blank">
                 <button class="btn-secundario botao-download">Acessar</button>
               </a>
           </div>

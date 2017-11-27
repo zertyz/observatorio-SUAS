@@ -21,7 +21,7 @@ export class MPBuscaComponent {
 
   private documentosProcurados: IPesquisa[] = [];
   private resultadosEncontrados: number = 0;
-  private pesquisa :string;
+  private pesquisa :string = '';
   private categoria: string = '';
 
   private documentos: IPesquisa[] = [
