@@ -4,6 +4,7 @@ a{
 .lei{
   margin-top: 14px;
   margin-bottom: 0px;
+  text-transform: uppercase;
 }
 .text-blue{
   color: rgb(5, 127, 178);
@@ -54,7 +55,7 @@ a{
 }
 
 .superior {
-  background: url('//assets/img/borda_veja_mais.png') no-repeat right 2.2rem;
+  background: url('./assets/img/borda_veja_mais.png') no-repeat right 2.2rem;
 
   height: 3rem;
   margin-top: 0!important;
@@ -78,6 +79,7 @@ a{
   @extend .keyword;
   color: black;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .number-big{
