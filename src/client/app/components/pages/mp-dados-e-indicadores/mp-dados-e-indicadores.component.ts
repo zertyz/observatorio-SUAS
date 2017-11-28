@@ -49,6 +49,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   graficoPisoAlto1:           any;
   graficoPisoAlto2:           any;
   graficoPisoTransicao:       any;
+  graficoResumoOrcamentario:  any;
 
   opcoesGraficos: any = {
     legend: {
@@ -82,7 +83,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   computaCampos() {
 
     // encontra indicadores orçamentários do município
-    this.indicadoresOrcamentariosDoMunicipio = this.indicadoresOrcamentarios.find(indicadores => indicadores.municipio === this.municipio&&indicadores.anoOrcamento===2017);
+    this.indicadoresOrcamentariosDoMunicipio = this.indicadoresOrcamentarios.find(indicadores => indicadores.municipio === this.municipio&&indicadores.anoOrcamento===2016);
     if (this.indicadoresOrcamentariosDoMunicipio == null) {
       this.indicadoresOrcamentariosDoMunicipio = {
         'anoOrcamento': -2,
@@ -420,11 +421,11 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     };
 
     // preenche estrutura de dados do gráfico Programas
-    this.graficoProgramas = {
+    this.graficoResumoOrcamentario = {
       labels: ['Verba Utilizada', 'Verba não utilizada'],
       datasets: [
         {
-          data: [this.indicadoresOrcamentariosDoMunicipio.programasUtilizado, this.indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado],
+          data: [this.indicadoresOrcamentariosDoMunicipio.totalPago, this.indicadoresOrcamentariosDoMunicipio.totalBloqueado],
           backgroundColor: [
             '#117011',
             '#660000',
@@ -4070,7 +4071,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     },
     {
       "anoOrcamento": 2016,
-      "municipio": "Trajano de Morais",
+      "municipio": "Trajano de Moraes",
       "programasTotal": -2,
       "programasNaoUtilizado": -2,
       "programasUtilizado": -2,
@@ -7790,7 +7791,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     },
     {
       "anoOrcamento": 2017,
-      "municipio": "Trajano de Morais",
+      "municipio": "Trajano de Moraes",
       "programasTotal": 25000,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 25000,
@@ -8720,7 +8721,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.564
     },
     {
-      'municipio': 'Trajano de Morais',
+      'municipio': 'Trajano de Moraes',
       'prefeito': 'Rodrigo Freire Viana',
       'secretarioAssistenciaSocial': 'Juliana Pais Esteves Freire Viana',
       'populacao': 10289,

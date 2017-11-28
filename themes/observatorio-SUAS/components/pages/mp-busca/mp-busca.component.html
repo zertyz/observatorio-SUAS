@@ -42,7 +42,7 @@
     </div>
       <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let documento of documentosProcurados">
         <div class="card">
-          <div class="card-block alinha-card" >
+          <div class=" alinha-card" >
             <img class="img-fluid" src="./assets/img/icones/Icones_Tela_1_{{documento.categoria}}.png">
             <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='legislacao'"> Legislação</p>
             <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='orcamentoMunicipal'"> Orçamento Municipal</p>
@@ -51,10 +51,11 @@
             <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='cartilha'"> Manual/Cartilha</p>
             <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='inspecoes'"> Inspeção</p>
             <span>{{documento.nome}}</span>
-              <a href= "./assets/dados/20171121/{{documento.arquivo}}" download="{{documento.arquivo}}" target="_blank">
-                <button class="btn-secundario botao-download">Acessar</button>
-              </a>
+
           </div>
+          <a href= "./assets/dados/20171121/{{documento.arquivo}}" download="{{documento.arquivo}}" target="_blank">
+            <button class="btn-secundario botao-download">Acessar</button>
+          </a>
         </div>
       </div>
 

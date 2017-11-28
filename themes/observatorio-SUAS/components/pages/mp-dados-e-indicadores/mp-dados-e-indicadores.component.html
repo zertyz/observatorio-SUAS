@@ -527,14 +527,14 @@
                 </tr>
                 <tr>
                   <th scope="row" class="keyword" style="text-align: left; padding-top: 1.8vw">Resumo orçamentário</th>
-                  <td class="barra vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
+                  <td class="barra vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.totalPago)}}</td>
                   <td class="barra vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
-                  <td class="vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
+                  <td class="vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.totalBloqueado)}}</td>
                   <td class="vt-red">
                     <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoProgramas" [options]="opcoesGraficos"></p-chart>
+                      <p-chart type="doughnut"  [data]="graficoResumoOrcamentario" [options]="opcoesGraficos"></p-chart>
                     </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.programasTotal, indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</div>
+                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.totalPago, indicadoresOrcamentariosDoMunicipio.totalBloqueado)}}</div>
                   </td>
                 </tr>
                 </tbody>

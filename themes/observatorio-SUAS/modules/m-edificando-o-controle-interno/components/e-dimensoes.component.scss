@@ -36,7 +36,7 @@ td.dimensao{
   font-size: 120%;
   line-height: 90%;
   padding-left: 3%;
-  width:14rem!important;
+  width:14rem;
   color: #0d2b48;
 }
 
@@ -99,7 +99,7 @@ div.borderedL{
 @media (min-width: 991px) and (max-width: 1380px){
   td.dimensao{
   font-size: 110%;
-  min-width:4rem!important;
+  min-width:4rem;
 }
 
 .notaAtual {
