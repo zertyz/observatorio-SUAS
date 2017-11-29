@@ -268,7 +268,7 @@ export class MPBuscaComponent {
       'arquivo': 'Resolucao CNAS 034 de 19 de novembro de 2013.pdf',
       'palavrasChave': 'CapacitaSUAS',
       'categoria': 'legislacao',
-      'nome': 'Resolução 034/2014'
+      'nome': 'Resolução 034/2013'
     },
     {
       'arquivo': 'Resolucao CNAS 034 de 28 de novembro de 2011.pdf',
@@ -343,217 +343,217 @@ export class MPBuscaComponent {
       'nome': 'Resolução 001/2016'
     },
     {
-      'arquivo': 'Resoluçao CNAS 004 de 11 de fevereiro de 2014.PDF',
+      'arquivo': 'Resolucao CNAS 004 de 11 de fevereiro de 2014.pdf',
       'palavrasChave': 'Rede de Serviços (Programas e Projetos)',
       'categoria': 'legislacao',
       'nome': 'Resolução 004/2014'
     },
     {
-      'arquivo': 'Resoluçao CNAS 009 de 15 de abril de 2014.pdf',
+      'arquivo': 'Resolucao CNAS 009 de 15 de abril de 2014.pdf',
       'palavrasChave': 'Recursos Humanos',
       'categoria': 'legislacao',
       'nome': 'Resolução 009/2014'
     },
     {
-      'arquivo': 'Resoluçao CNAS 032 de 11de dezembro de 2014.pdf',
+      'arquivo': 'Resolucao CNAS 032 de 11 de dezembro de 2014.pdf',
       'palavrasChave': 'Plano de Acolhimento',
       'categoria': 'legislacao',
       'nome': 'Resolução 032/2014'
     },
     {
-      'arquivo': 'Resolução CNAS - CONANDA 001 de 15 de dezembro de 2016.pdf',
+      'arquivo': 'Resolucao CNAS - CONANDA 001 de 15 de dezembro de 2016.pdf',
       'palavrasChave': 'Criança e adolescente em situação de rua',
       'categoria': 'legislacao',
       'nome': 'Resolução Conjunta 001/2016'
     },
     {
-      'arquivo': 'Resolução CNAS 002 de 16 de março de 2017.pdf',
+      'arquivo': 'Resolucao CNAS 002 de 16 de março de 2017.pdf',
       'palavrasChave': 'Pacto de Aprimoramento do Sistema Único de Assistência Social',
       'categoria': 'legislacao',
       'nome': 'Resolução 002/2017'
     },
     {
-      'arquivo': 'Resolução CNAS 003 de 19 de abril de 2017.pdf',
+      'arquivo': 'Resolucao CNAS 003 de 19 de abril de 2017.pdf',
       'palavrasChave': 'Promoção do Acesso ao Mundo do Trabalho - Programa ACESSUAS , Programa ACESSUAS',
       'categoria': 'legislacao',
       'nome': 'Resolução 003/2017'
     },
     {
-      'arquivo': 'Resolução CNAS 006 de 13 de abril de 2016.pdf',
+      'arquivo': 'Resolucao CNAS 006 de 13 de abril de 2016.pdf',
       'palavrasChave': 'SUAS – PNEP/SUAS',
       'categoria': 'legislacao',
       'nome': 'Resolução 006/2016'
     },
     {
-      'arquivo': 'Resolução CNAS 008 de 04 de agosto de 2015.pdf',
+      'arquivo': 'Resolucao CNAS 008 de 04 de agosto de 2015.pdf',
       'palavrasChave': 'Controle Social',
       'categoria': 'legislacao',
       'nome': 'Resolução 008/2015'
     },
     {
-      'arquivo': 'RESOLUÇÃO CNAS 010 de 14 de julho de 2016.pdf',
+      'arquivo': 'Resolucao CNAS 010 de 14 de julho de 2016.pdf',
       'palavrasChave': 'resolução CNAS, microcefalia, BPC, benefício de prestação continuada',
       'categoria': 'legislacao',
       'nome': 'Resolução 010/2016'
     },
     {
-      'arquivo': 'Resolução CNAS 012 de 10 de marco de 2010.pdf',
+      'arquivo': 'Resolucao CNAS 012 de 10 de marco de 2010.pdf',
       'palavrasChave': 'Certificados- Renovação e pedidos prematuros',
       'categoria': 'legislacao',
       'nome': 'Resolução 012/2010'
     },
     {
-      'arquivo': 'Resolução CNAS 015 de 17 de maio de 2012.pdf',
+      'arquivo': 'Resolucao CNAS 015 de 17 de maio de 2012.pdf',
       'palavrasChave': 'Reordenamento de Serviços',
       'categoria': 'legislacao',
       'nome': 'Resolução 015/2012'
     },
     {
-      'arquivo': 'Resolução CNAS 015 de 23 de agosto de 2016.pdf',
+      'arquivo': 'Resolucao CNAS 015 de 23 de agosto de 2016.pdf',
       'palavrasChave': 'serviços, programas, projetos e benefícios da Política de Assistência Social',
       'categoria': 'legislacao',
       'nome': 'Resolução 015/2016'
     },
     {
-      'arquivo': 'Resolução CNAS 017 de 26 de fevereiro de 2002.pdf',
+      'arquivo': 'Resolucao CNAS 017 de 26 de fevereiro de 2002.pdf',
       'palavrasChave': 'Certidões',
       'categoria': 'legislacao',
       'nome': 'Resolução 017/2002'
     },
     {
-      'arquivo': 'Resolução CNAS 019 de 24 de novembro de 2016 - Institui o Programa Primeira Infância no SUAS.pdf',
+      'arquivo': 'Resolucao CNAS 019 de 24 de novembro de 2016 - Institui o Programa Primeira Infância no SUAS.pdf',
       'palavrasChave': 'Programa Primeira Infância',
       'categoria': 'legislacao',
       'nome': 'Resolução 019/2016'
     },
     {
-      'arquivo': 'Resolução CNAS 020 de 24 de novembro de 2016.pdf',
+      'arquivo': 'Resolucao CNAS 020 de 24 de novembro de 2016.pdf',
       'palavrasChave': 'Programa Primeira Infância',
       'categoria': 'legislacao',
       'nome': 'Resolução 020/2016'
     },
     {
-      'arquivo': 'Resolução CNAS 023 de 16 de fevereiro de 2006.pdf',
+      'arquivo': 'Resolucao CNAS 023 de 16 de fevereiro de 2006.pdf',
       'palavrasChave': 'Trabalhadores do SUAS',
       'categoria': 'legislacao',
       'nome': 'Resolução 023/2006'
     },
     {
-      'arquivo': 'Resolução CNAS 025 de 15 de dezembro de 2016 - Altera a Resolução nº 18 de 24 de maio de 2012.pdf',
+      'arquivo': 'Resolucao CNAS 025 de 15 de dezembro de 2016 - Altera a Resolução nº 18 de 24 de maio de 2012.pdf',
       'palavrasChave': 'ACESSUAS-TRABALHO',
       'categoria': 'legislacao',
       'nome': 'Resolução 025/2016'
     },
     {
-      'arquivo': 'Resolução CNAS 028 de 18 de fevereiro de 2004 .pdf',
+      'arquivo': 'Resolucao CNAS 028 de 18 de fevereiro de 2004.pdf',
       'palavrasChave': '',
       'categoria': 'legislacao',
       'nome': 'Resolução 028/2004'
     },
     {
-      'arquivo': 'Resolução CNAS 032 de 31 de outubro 2013.pdf',
+      'arquivo': 'Resolucao CNAS 032 de 31 de outubro 2013.pdf',
       'palavrasChave': 'Pacto de Aprimoramento e Gestão',
       'categoria': 'legislacao',
       'nome': 'Resolução 032/2013'
     },
     {
-      'arquivo': 'Resolução CNAS 033 de 24 de fevereiro de 1999.pdf',
+      'arquivo': 'Resolucao CNAS 033 de 24 de fevereiro de 1999.pdf',
       'palavrasChave': 'Certificado',
       'categoria': 'legislacao',
       'nome': 'Resolução 033/1999'
     },
     {
-      'arquivo': 'RESOLUÇÃO CNAS 034 DE 10 DE JUNHO DE 1994.pdf',
+      'arquivo': 'Resolucao CNAS 034 DE 10 DE JUNHO DE 1994.pdf',
       'palavrasChave': '',
       'categoria': 'legislacao',
       'nome': 'Resolução 034/1994'
     },
     {
-      'arquivo': 'Resolução CNAS 038 de 22 de maio de 1995.pdf',
+      'arquivo': 'Resolucao CNAS 038 de 22 de maio de 1995.pdf',
       'palavrasChave': '',
       'categoria': 'legislacao',
       'nome': 'Resolução 038/1995'
     },
     {
-      'arquivo': 'Resolução CNAS 053 de 04 de março de 1999.pdf',
+      'arquivo': 'Resolucao CNAS 053 de 04 de março de 1999.pdf',
       'palavrasChave': '',
       'categoria': 'legislacao',
       'nome': 'Resolução 053/1999'
     },
     {
-      'arquivo': 'Resolução CNAS 066 de 11 de setembro de 2008.pdf',
+      'arquivo': 'Resolucao CNAS 066 de 11 de setembro de 2008.pdf',
       'palavrasChave': 'Certidões',
       'categoria': 'legislacao',
       'nome': 'Resolução 066/2008'
     },
     {
-      'arquivo': 'Resolução CNAS 081 de 14 de novembro de 2008.pdf',
+      'arquivo': 'Resolucao CNAS 081 de 14 de novembro de 2008.pdf',
       'palavrasChave': 'Co-financiamento',
       'categoria': 'legislacao',
       'nome': 'Resolução 081/2008'
     },
     {
-      'arquivo': 'Resolução CNAS 112 de 24 de junho de 2005.pdf',
+      'arquivo': 'Resolucao CNAS 112 de 24 de junho de 2005.pdf',
       'palavrasChave': 'Entidade',
       'categoria': 'legislacao',
       'nome': 'Resolução 112/2005'
     },
     {
-      'arquivo': 'Resolução CNAS 116 de 19 de maio de 1999.pdf',
+      'arquivo': 'Resolucao CNAS 116 de 19 de maio de 1999.pdf',
       'palavrasChave': 'Gratuidade de Entidade Beneficente',
       'categoria': 'legislacao',
       'nome': 'Resolução 116/1999'
     },
     {
-      'arquivo': 'Resolução CNAS 130 de 15 de julho de 2005.pdf',
+      'arquivo': 'Resolucao CNAS 130 de 15 de julho de 2005.pdf',
       'palavrasChave': 'NOB/SUAS 2005',
       'categoria': 'legislacao',
       'nome': 'Resolução 130/2005'
     },
     {
-      'arquivo': 'Resolução CNAS 144 de 15 de  outubro de 2004.pdf',
+      'arquivo': 'Resolucao CNAS 144 de 15 de  outubro de 2004.pdf',
       'palavrasChave': 'Manual de Prossedimento- Registro e Certificado',
       'categoria': 'legislacao',
       'nome': 'Resolução 144/2004'
     },
     {
-      'arquivo': 'Resolução CNAS 155 de 16 de outubro de 2002.pdf',
+      'arquivo': 'Resolucao CNAS 155 de 16 de outubro de 2002.pdf',
       'palavrasChave': 'Certidões',
       'categoria': 'legislacao',
       'nome': 'Resolução 155/2002'
     },
     {
-      'arquivo': 'Resolução CNAS 165 de 19 de novembro de 2004.pdf',
+      'arquivo': 'Resolucao CNAS 165 de 19 de novembro de 2004.pdf',
       'palavrasChave': 'Certidões',
       'categoria': 'legislacao',
       'nome': 'Resolução 165/2004'
     },
     {
-      'arquivo': 'Resolução CNAS 177 de 20 de novembro de 2002.pdf',
+      'arquivo': 'Resolucao CNAS 177 de 20 de novembro de 2002.pdf',
       'palavrasChave': 'Certidões',
       'categoria': 'legislacao',
       'nome': 'Resolução 177/2002'
     },
     {
-      'arquivo': 'Resolução CNAS 182 de  20 de julho de 1999.pdf',
+      'arquivo': 'Resolucao CNAS 182 de  20 de julho de 1999.pdf',
       'palavrasChave': 'Municipalização da Assistência Social',
       'categoria': 'legislacao',
       'nome': 'Resolução 182/1999'
     },
     {
-      'arquivo': 'Resolução CNAS 188 de 20 de outubro de 2005.pdf',
+      'arquivo': 'Resolucao CNAS 188 de 20 de outubro de 2005.pdf',
       'palavrasChave': 'Convênio',
       'categoria': 'legislacao',
       'nome': 'Resolução 188/2005'
     },
     {
-      'arquivo': 'Resolução CNAS 278 de 20 de outubro de 1999.pdf',
+      'arquivo': 'Resolucao CNAS 278 de 20 de outubro de 1999.pdf',
       'palavrasChave': 'Fundo  Nacional',
       'categoria': 'legislacao',
       'nome': 'Resolução 278/1999'
     },
     {
-      'arquivo': 'Resolução Conjunta CNAS e CONANDA 001 de 07 de junho de 2017.pdf',
+      'arquivo': 'Resolucao Conjunta CNAS e CONANDA 001 de 07 de junho de 2017.pdf',
       'palavrasChave': 'Crianças e adolescentes em situação de rua',
       'categoria': 'legislacao',
       'nome': 'Resolução Conjunta 001/2017'
@@ -2239,10 +2239,10 @@ export class MPBuscaComponent {
       'nome': 'Orçamento 2016 - Nilópolis'
     },
     {
-      'arquivo': 'NITEROI_2016.pdf',
+      'arquivo': 'NITEROI_2015.pdf',
       'palavrasChave': '',
       'categoria': 'orcamentoMunicipal',
-      'nome': 'Orçamento 2016 - Niterói'
+      'nome': 'Orçamento 2015 - Niterói'
     },
     {
       'arquivo': 'NOVA FRIBURGO_2016.pdf',

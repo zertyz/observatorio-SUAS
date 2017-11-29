@@ -270,7 +270,7 @@
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasVulneraveis}}</div>
                   </td>
                   <td class=" barraH"width="30%">
-                    <p class="keyword" *ngIf="estadoSelected===false"> % da população do municipio</p>
+                    <p class="keyword" *ngIf="estadoSelected===false"> % da população do município</p>
                     <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasVulneraveisMunicipio}}%</div>
                   </td>
                   <td class="barraH border-equipamento"style="padding-right: 3%" width="25%">
@@ -285,8 +285,8 @@
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasBolsaFamilia}}</div>
                   </td>
                   <td class="barraH">
-                    <p class="keyword"> % da população</p>
-                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
+                    <p class="keyword"  *ngIf="estadoSelected===false"> % da população do município</p>
+                    <div class="vt-porcentagem"  *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
                   </td>
                   <td class="barraH border-equipamento" style="padding-right: 3%" width="25%">
                     <p class="keyword">% cobertura</p>
@@ -329,7 +329,7 @@
                     <h3 class="p-2">Benefícios eventuais</h3>
                     <p class="p-text">Indica se Programas Eventuais de Benefícios são disponibilizados para o ente</p>
                   </td>
-                  <td>
+                  <td  *ngIf="estadoSelected===false">
                     <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoBeneficiosEventuais?'sim':'nao')+'.png'" width="50rem">
                   </td>
                 </tr>
@@ -341,7 +341,7 @@
                     <h3 class="p-2">PAIF</h3>
                     <p class="p-text">Indica se o serviço de Proteção e Atenção Integral à Família está implantado no ente </p>
                   </td>
-                  <td>
+                  <td  *ngIf="estadoSelected===false">
                     <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAIF?'sim':'nao')+'.png'" width="50rem">
                   </td>
                 </tr>
@@ -350,10 +350,10 @@
                     <img class="img-fluid" src="./assets/img/icones/paefi_70px.png">
                   </td>
                   <td>
-                    <h3 class="p-2">PAEF</h3>
+                    <h3 class="p-2">PAEFI</h3>
                     <p class="p-text">Indica se o serviço de Proteção e Atenção Especializado à Família está implantado no ente </p>
                   </td>
-                  <td>
+                  <td *ngIf="estadoSelected===false">
                     <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAEF?'sim':'nao')+'.png'" width="50">
                   </td>
                 </tr>
@@ -528,7 +528,7 @@
                 <tr>
                   <th scope="row" class="keyword" style="text-align: left; padding-top: 1.8vw">Resumo orçamentário</th>
                   <td class="barra vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.totalPago)}}</td>
-                  <td class="barra vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
+                  <td class="barra vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.totalUtilizado)}}</td>
                   <td class="vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.totalBloqueado)}}</td>
                   <td class="vt-red">
                     <div class="height-graphic">

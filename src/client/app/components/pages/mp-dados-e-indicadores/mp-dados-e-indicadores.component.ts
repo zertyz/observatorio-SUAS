@@ -123,6 +123,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         'pisoTransicaoMediaComplexidadeUtilizado': -2,
         'totalPago': -2,
         'totalBloqueado':-2,
+        'totalUtilizado':-2,
         'pBloqueio': -2,
       };
     }
@@ -241,9 +242,9 @@ export class MPDadosEIndicadoresComponent implements OnInit {
           pFamiliasVulneraveisEstado:        indicadoresSociais[12],
           nFamiliasBolsaFamilia:             indicadoresSociais[13],
           pFamiliasBolsaFamiliaMunicipio:    indicadoresSociais[14],
-          pFamiliasBolsaFamiliaCobertura:    indicadoresSociais[16],
+          pFamiliasBolsaFamiliaCobertura:    indicadoresSociais[15],
           nFamiliasCadastroUnico:            indicadoresSociais[18],
-          pFamiliasCadastroUnicoCobertura:   indicadoresSociais[15],
+          pFamiliasCadastroUnicoCobertura:   indicadoresSociais[16],
           nBeneficiariosPrestacaoContinuada: indicadoresSociais[22],
           cadUnicoBeneficiosEventuais:       indicadoresSociais[19] == 'SIM' ? true : false,
           cadUnicoPAIF:                      indicadoresSociais[20] == 'SIM' ? true : false,
@@ -425,7 +426,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       labels: ['Verba Utilizada', 'Verba não utilizada'],
       datasets: [
         {
-          data: [this.indicadoresOrcamentariosDoMunicipio.totalPago, this.indicadoresOrcamentariosDoMunicipio.totalBloqueado],
+          data: [this.indicadoresOrcamentariosDoMunicipio.totalUtilizado, this.indicadoresOrcamentariosDoMunicipio.totalBloqueado],
           backgroundColor: [
             '#117011',
             '#660000',
@@ -591,46 +592,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   indicadoresOrcamentarios: IIndicadoresOrcamentarios[] = [
     {
       "anoOrcamento": 2016,
-      "municipio": "Rio de Janeiro - RJ",
-      "programasTotal": 352500,
-      "programasNaoUtilizado": 0,
-      "programasUtilizado": 352500,
-      "pseMediaComplexidadeTotal": 120315,
-      "pseMediaComplexidadeNaoUtilizado": 0,
-      "pseMediaComplexidadeUtilizado": 120315,
-      "pseAltaComplexidadeTotal": 7216797.54,
-      "pseAltaComplexidadeNaoUtilizado": 0,
-      "pseAltaComplexidadeUtilizado": 7216797.54,
-      "psbTotal": -2,
-      "psbNaoUtilizado": -2,
-      "psbUtilizado": -2,
-      "gestaoSuasTotal": 126924.08,
-      "gestaoSuasNaoUtilizado": 0,
-      "gestaoSuasUtilizado": 126924.08,
-      "gestaoBolsaFamiliaTotal": 471489.94,
-      "gestaoBolsaFamiliaNaoUtilizado": 0,
-      "gestaoBolsaFamiliaUtilizado": 471489.94,
-      "pisoBasicoFixoTotal": -2,
-      "pisoBasicoFixoNaoUtilizado": -2,
-      "pisoBasicoFixoUtilizado": -2,
-      "pisoBasicoVariavelTotal": -2,
-      "pisoBasicoVariavelNaoUtilizado": -2,
-      "pisoBasicoVariavelUtilizado": -2,
-      "pisoAltaComplexidade1Total": -2,
-      "pisoAltaComplexidade1NaoUtilizado": -2,
-      "pisoAltaComplexidade1Utilizado": -2,
-      "pisoAltaComplexidade2Total": -2,
-      "pisoAltaComplexidade2NaoUtilizado": -2,
-      "pisoAltaComplexidade2Utilizado": -2,
-      "pisoTransicaoMediaComplexidadeTotal": -2,
-      "pisoTransicaoMediaComplexidadeNaoUtilizado": -2,
-      "pisoTransicaoMediaComplexidadeUtilizado": -2,
-      "totalPago": 8288026.56,
-      "totalBloqueado": 0,
-      "pBloqueio": 0
-    },
-    {
-      "anoOrcamento": 2016,
       "municipio": "Angra dos Reis",
       "programasTotal": 157494,
       "programasNaoUtilizado": 0,
@@ -667,6 +628,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1884323.84,
       "totalBloqueado": 580620,
+      "totalUtilizado": 1303703.84,
       "pBloqueio": 30.81
     },
     {
@@ -707,6 +669,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 291828.94,
       "totalBloqueado": 0,
+      "totalUtilizado": 291828.94,
       "pBloqueio": 0
     },
     {
@@ -747,6 +710,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 2518738.09,
       "totalBloqueado": 292230.84,
+      "totalUtilizado": 2226507.25,
       "pBloqueio": 11.6
     },
     {
@@ -787,11 +751,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 92354.26,
       "totalBloqueado": 30000,
+      "totalUtilizado": 62354.26,
       "pBloqueio": 32.48
     },
     {
       "anoOrcamento": 2016,
-      "municipio": "Armação Dos Búzios",
+      "municipio": "Armação dos Búzios",
       "programasTotal": -2,
       "programasNaoUtilizado": -2,
       "programasUtilizado": -2,
@@ -827,6 +792,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 531549.01,
       "totalBloqueado": 487445,
+      "totalUtilizado": 44104.01,
       "pBloqueio": 91.7
     },
     {
@@ -867,6 +833,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 242778.42,
       "totalBloqueado": 89056.64,
+      "totalUtilizado": 153721.78,
       "pBloqueio": 36.68
     },
     {
@@ -907,6 +874,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1068217.08,
       "totalBloqueado": 351702.12,
+      "totalUtilizado": 716514.96,
       "pBloqueio": 32.92
     },
     {
@@ -947,6 +915,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1965492.01,
       "totalBloqueado": 0,
+      "totalUtilizado": 1965492.01,
       "pBloqueio": 0
     },
     {
@@ -987,6 +956,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 5554323.26,
       "totalBloqueado": 481723.6,
+      "totalUtilizado": 5072599.66,
       "pBloqueio": 8.67
     },
     {
@@ -1027,6 +997,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 475242.51,
       "totalBloqueado": 211060,
+      "totalUtilizado": 264182.51,
       "pBloqueio": 44.41
     },
     {
@@ -1067,6 +1038,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 839463.17,
       "totalBloqueado": 0,
+      "totalUtilizado": 839463.17,
       "pBloqueio": 0
     },
     {
@@ -1107,6 +1079,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1925607.29,
       "totalBloqueado": 282117.2,
+      "totalUtilizado": 1643490.09,
       "pBloqueio": 14.65
     },
     {
@@ -1147,6 +1120,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 868783.55,
       "totalBloqueado": 0,
+      "totalUtilizado": 868783.55,
       "pBloqueio": 0
     },
     {
@@ -1187,6 +1161,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 513197.64,
       "totalBloqueado": 290550,
+      "totalUtilizado": 222647.64,
       "pBloqueio": 56.62
     },
     {
@@ -1227,6 +1202,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 6245612.69,
       "totalBloqueado": 0,
+      "totalUtilizado": 6245612.69,
       "pBloqueio": 0
     },
     {
@@ -1267,6 +1243,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": 5425.96,
       "totalPago": 333023.89,
       "totalBloqueado": 0,
+      "totalUtilizado": 333023.89,
       "pBloqueio": 0
     },
     {
@@ -1307,6 +1284,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 179986.04,
       "totalBloqueado": 0,
+      "totalUtilizado": 179986.04,
       "pBloqueio": 0
     },
     {
@@ -1347,6 +1325,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 260837.11,
       "totalBloqueado": 0,
+      "totalUtilizado": 260837.11,
       "pBloqueio": 0
     },
     {
@@ -1387,6 +1366,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 414940.14,
       "totalBloqueado": 20925,
+      "totalUtilizado": 394015.14,
       "pBloqueio": 5.04
     },
     {
@@ -1427,6 +1407,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 339454.67,
       "totalBloqueado": 188305,
+      "totalUtilizado": 151149.67,
       "pBloqueio": 55.47
     },
     {
@@ -1467,6 +1448,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 320424.4,
       "totalBloqueado": 198252.49,
+      "totalUtilizado": 122171.91,
       "pBloqueio": 61.87
     },
     {
@@ -1507,6 +1489,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 473329.83,
       "totalBloqueado": 233213.1,
+      "totalUtilizado": 240116.73,
       "pBloqueio": 49.27
     },
     {
@@ -1547,6 +1530,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 618245.3,
       "totalBloqueado": 91944.2,
+      "totalUtilizado": 526301.1,
       "pBloqueio": 14.87
     },
     {
@@ -1587,6 +1571,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 224342.88,
       "totalBloqueado": 54053.7,
+      "totalUtilizado": 170289.18,
       "pBloqueio": 24.09
     },
     {
@@ -1627,6 +1612,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 6021842.32,
       "totalBloqueado": 3605328.65,
+      "totalUtilizado": 2416513.67,
       "pBloqueio": 59.87
     },
     {
@@ -1667,6 +1653,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 363516.97,
       "totalBloqueado": 161811.67,
+      "totalUtilizado": 201705.3,
       "pBloqueio": 44.51
     },
     {
@@ -1707,6 +1694,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 674340.2,
       "totalBloqueado": 75000,
+      "totalUtilizado": 599340.2,
       "pBloqueio": 11.12
     },
     {
@@ -1747,6 +1735,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 435503.41,
       "totalBloqueado": 0,
+      "totalUtilizado": 435503.41,
       "pBloqueio": 0
     },
     {
@@ -1787,6 +1776,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 2356316.19,
       "totalBloqueado": 0,
+      "totalUtilizado": 2356316.19,
       "pBloqueio": 0
     },
     {
@@ -1827,6 +1817,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1687017.4,
       "totalBloqueado": 711944.5,
+      "totalUtilizado": 975072.9,
       "pBloqueio": 42.2
     },
     {
@@ -1867,6 +1858,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": 446,
       "totalPago": 120162.66,
       "totalBloqueado": 0,
+      "totalUtilizado": 120162.66,
       "pBloqueio": 0
     },
     {
@@ -1907,6 +1899,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 630752.85,
       "totalBloqueado": 83728.8,
+      "totalUtilizado": 547024.05,
       "pBloqueio": 13.27
     },
     {
@@ -1947,6 +1940,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1626952.48,
       "totalBloqueado": 193502.3,
+      "totalUtilizado": 1433450.18,
       "pBloqueio": 11.89
     },
     {
@@ -1987,6 +1981,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 467580.76,
       "totalBloqueado": 36000,
+      "totalUtilizado": 431580.76,
       "pBloqueio": 7.7
     },
     {
@@ -2027,6 +2022,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1418527.2,
       "totalBloqueado": 0,
+      "totalUtilizado": 1418527.2,
       "pBloqueio": 0
     },
     {
@@ -2067,6 +2063,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": 1135.6,
       "totalPago": 249650.68,
       "totalBloqueado": 12000,
+      "totalUtilizado": 237650.68,
       "pBloqueio": 4.81
     },
     {
@@ -2107,6 +2104,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 3183408.43,
       "totalBloqueado": 2755206.31,
+      "totalUtilizado": 428202.12,
       "pBloqueio": 86.55
     },
     {
@@ -2147,6 +2145,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": 527.02,
       "totalPago": 211308.6,
       "totalBloqueado": 148015.01,
+      "totalUtilizado": 63293.59,
       "pBloqueio": 70.05
     },
     {
@@ -2187,6 +2186,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 3756909.6,
       "totalBloqueado": 2918523.28,
+      "totalUtilizado": 838386.32,
       "pBloqueio": 77.68
     },
     {
@@ -2227,6 +2227,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 381517.51,
       "totalBloqueado": 0,
+      "totalUtilizado": 381517.51,
       "pBloqueio": 0
     },
     {
@@ -2267,6 +2268,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1206302.58,
       "totalBloqueado": 0,
+      "totalUtilizado": 1206302.58,
       "pBloqueio": 0
     },
     {
@@ -2307,6 +2309,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 553843.66,
       "totalBloqueado": 78962.8,
+      "totalUtilizado": 474880.86,
       "pBloqueio": 14.26
     },
     {
@@ -2347,6 +2350,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1385156.61,
       "totalBloqueado": 95133.86,
+      "totalUtilizado": 1290022.75,
       "pBloqueio": 6.87
     },
     {
@@ -2387,6 +2391,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 413037.42,
       "totalBloqueado": 355010.95,
+      "totalUtilizado": 58026.47,
       "pBloqueio": 85.95
     },
     {
@@ -2427,6 +2432,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 509991.62,
       "totalBloqueado": 0,
+      "totalUtilizado": 509991.62,
       "pBloqueio": 0
     },
     {
@@ -2467,6 +2473,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 505106.76,
       "totalBloqueado": 242081.5,
+      "totalUtilizado": 263025.26,
       "pBloqueio": 47.93
     },
     {
@@ -2507,6 +2514,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1505221.51,
       "totalBloqueado": 0,
+      "totalUtilizado": 1505221.51,
       "pBloqueio": 0
     },
     {
@@ -2547,6 +2555,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 4830672.38,
       "totalBloqueado": 250500,
+      "totalUtilizado": 4580172.38,
       "pBloqueio": 5.19
     },
     {
@@ -2587,6 +2596,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 2642446.63,
       "totalBloqueado": 2225499.53,
+      "totalUtilizado": 416947.1,
       "pBloqueio": 84.22
     },
     {
@@ -2627,6 +2637,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": 7454.46,
       "totalPago": 6439677.9,
       "totalBloqueado": 0,
+      "totalUtilizado": 6439677.9,
       "pBloqueio": 0
     },
     {
@@ -2667,6 +2678,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 653933.42,
       "totalBloqueado": 51837.5,
+      "totalUtilizado": 602095.92,
       "pBloqueio": 7.93
     },
     {
@@ -2707,6 +2719,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": 1176,
       "totalPago": 609391.89,
       "totalBloqueado": 473754.47,
+      "totalUtilizado": 135637.42,
       "pBloqueio": 77.74
     },
     {
@@ -2747,6 +2760,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 619471.76,
       "totalBloqueado": 354951.8,
+      "totalUtilizado": 264519.96,
       "pBloqueio": 57.3
     },
     {
@@ -2787,6 +2801,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 454049.85,
       "totalBloqueado": 78680,
+      "totalUtilizado": 375369.85,
       "pBloqueio": 17.33
     },
     {
@@ -2827,6 +2842,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 2005065.97,
       "totalBloqueado": 0,
+      "totalUtilizado": 2005065.97,
       "pBloqueio": 0
     },
     {
@@ -2867,6 +2883,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 404001.13,
       "totalBloqueado": 69753.6,
+      "totalUtilizado": 334247.53,
       "pBloqueio": 17.27
     },
     {
@@ -2907,6 +2924,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 349484.1,
       "totalBloqueado": 191369.8,
+      "totalUtilizado": 158114.3,
       "pBloqueio": 54.76
     },
     {
@@ -2947,6 +2965,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 495768.82,
       "totalBloqueado": 254229.2,
+      "totalUtilizado": 241539.62,
       "pBloqueio": 51.28
     },
     {
@@ -2987,6 +3006,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 398229.59,
       "totalBloqueado": 193980.01,
+      "totalUtilizado": 204249.58,
       "pBloqueio": 48.71
     },
     {
@@ -3027,6 +3047,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 164838.11,
       "totalBloqueado": 5108.04,
+      "totalUtilizado": 159730.07,
       "pBloqueio": 3.1
     },
     {
@@ -3067,6 +3088,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1401006.48,
       "totalBloqueado": 167700,
+      "totalUtilizado": 1233306.48,
       "pBloqueio": 11.97
     },
     {
@@ -3107,6 +3129,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 580514.98,
       "totalBloqueado": 485767,
+      "totalUtilizado": 94747.98,
       "pBloqueio": 83.68
     },
     {
@@ -3147,6 +3170,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1627884.21,
       "totalBloqueado": 0,
+      "totalUtilizado": 1627884.21,
       "pBloqueio": 0
     },
     {
@@ -3187,6 +3211,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": 392,
       "totalPago": 893720.44,
       "totalBloqueado": 0,
+      "totalUtilizado": 893720.44,
       "pBloqueio": 0
     },
     {
@@ -3227,11 +3252,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 255288.21,
       "totalBloqueado": 0,
+      "totalUtilizado": 255288.21,
       "pBloqueio": 0
     },
     {
       "anoOrcamento": 2016,
-      "municipio": "Rio Das Flores",
+      "municipio": "Rio das Flores",
       "programasTotal": -2,
       "programasNaoUtilizado": -2,
       "programasUtilizado": -2,
@@ -3267,11 +3293,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 133058.75,
       "totalBloqueado": 0,
+      "totalUtilizado": 133058.75,
       "pBloqueio": 0
     },
     {
       "anoOrcamento": 2016,
-      "municipio": "Rio Das Ostras",
+      "municipio": "Rio das Ostras",
       "programasTotal": 2120,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 2120,
@@ -3307,6 +3334,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1045120.73,
       "totalBloqueado": 308368.2,
+      "totalUtilizado": 736752.53,
       "pBloqueio": 29.51
     },
     {
@@ -3347,6 +3375,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": 270611.23,
       "totalPago": 42256518.8,
       "totalBloqueado": 0,
+      "totalUtilizado": 42256518.8,
       "pBloqueio": 0
     },
     {
@@ -3387,6 +3416,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 168254.66,
       "totalBloqueado": 89700,
+      "totalUtilizado": 78554.66,
       "pBloqueio": 53.31
     },
     {
@@ -3427,6 +3457,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 482954.42,
       "totalBloqueado": 213139.24,
+      "totalUtilizado": 269815.18,
       "pBloqueio": 44.13
     },
     {
@@ -3467,6 +3498,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 613820.07,
       "totalBloqueado": 0,
+      "totalUtilizado": 613820.07,
       "pBloqueio": 0
     },
     {
@@ -3507,6 +3539,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 771688.82,
       "totalBloqueado": 0,
+      "totalUtilizado": 771688.82,
       "pBloqueio": 0
     },
     {
@@ -3547,6 +3580,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 9552220.48,
       "totalBloqueado": 0,
+      "totalUtilizado": 9552220.48,
       "pBloqueio": 0
     },
     {
@@ -3587,6 +3621,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 929456.29,
       "totalBloqueado": 666275.26,
+      "totalUtilizado": 263181.03,
       "pBloqueio": 71.68
     },
     {
@@ -3627,6 +3662,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 2795748.96,
       "totalBloqueado": 2091093.1,
+      "totalUtilizado": 704655.86,
       "pBloqueio": 74.8
     },
     {
@@ -3667,6 +3703,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 173944.16,
       "totalBloqueado": 0,
+      "totalUtilizado": 173944.16,
       "pBloqueio": 0
     },
     {
@@ -3707,6 +3744,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 209713.67,
       "totalBloqueado": 80700,
+      "totalUtilizado": 129013.67,
       "pBloqueio": 38.48
     },
     {
@@ -3747,6 +3785,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1229359.63,
       "totalBloqueado": 76459.44,
+      "totalUtilizado": 1152900.19,
       "pBloqueio": 6.22
     },
     {
@@ -3787,6 +3826,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 367655.21,
       "totalBloqueado": 0,
+      "totalUtilizado": 367655.21,
       "pBloqueio": 0
     },
     {
@@ -3827,6 +3867,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 499415.14,
       "totalBloqueado": 0,
+      "totalUtilizado": 499415.14,
       "pBloqueio": 0
     },
     {
@@ -3867,6 +3908,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 692893.41,
       "totalBloqueado": 0,
+      "totalUtilizado": 692893.41,
       "pBloqueio": 0
     },
     {
@@ -3907,6 +3949,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 839910.39,
       "totalBloqueado": 0,
+      "totalUtilizado": 839910.39,
       "pBloqueio": 0
     },
     {
@@ -3947,6 +3990,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 426215.89,
       "totalBloqueado": 39511.26,
+      "totalUtilizado": 386704.63,
       "pBloqueio": 9.27
     },
     {
@@ -3987,6 +4031,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 333189.45,
       "totalBloqueado": 225907.69,
+      "totalUtilizado": 107281.76,
       "pBloqueio": 67.8
     },
     {
@@ -4027,6 +4072,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 353827.32,
       "totalBloqueado": 0,
+      "totalUtilizado": 353827.32,
       "pBloqueio": 0
     },
     {
@@ -4067,11 +4113,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1115956.38,
       "totalBloqueado": 0,
+      "totalUtilizado": 1115956.38,
       "pBloqueio": 0
     },
     {
       "anoOrcamento": 2016,
-      "municipio": "Trajano de Moraes",
+      "municipio": "Trajano de Morais",
       "programasTotal": -2,
       "programasNaoUtilizado": -2,
       "programasUtilizado": -2,
@@ -4107,6 +4154,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 232492.65,
       "totalBloqueado": 0,
+      "totalUtilizado": 232492.65,
       "pBloqueio": 0
     },
     {
@@ -4147,6 +4195,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": 1402,
       "totalPago": 901645.22,
       "totalBloqueado": 0,
+      "totalUtilizado": 901645.22,
       "pBloqueio": 0
     },
     {
@@ -4187,11 +4236,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1102496.94,
       "totalBloqueado": 113655.2,
+      "totalUtilizado": 988841.74,
       "pBloqueio": 10.31
     },
     {
       "anoOrcamento": 2016,
-      "municipio": "Varre-sai",
+      "municipio": "Varre-Sai",
       "programasTotal": -2,
       "programasNaoUtilizado": -2,
       "programasUtilizado": -2,
@@ -4227,6 +4277,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 128062.65,
       "totalBloqueado": 0,
+      "totalUtilizado": 128062.65,
       "pBloqueio": 0
     },
     {
@@ -4267,6 +4318,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 623972.81,
       "totalBloqueado": 489457.57,
+      "totalUtilizado": 134515.24,
       "pBloqueio": 78.44
     },
     {
@@ -4307,29 +4359,30 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 3015947.02,
       "totalBloqueado": 0,
+      "totalUtilizado": 3015947.02,
       "pBloqueio": 0
     },
     {
-      "anoOrcamento": 2017,
+      "anoOrcamento": 2016,
       "municipio": "Rio de Janeiro - RJ",
-      "programasTotal": 1643500,
+      "programasTotal": 352500,
       "programasNaoUtilizado": 0,
-      "programasUtilizado": 1643500,
-      "pseMediaComplexidadeTotal": 16042,
+      "programasUtilizado": 352500,
+      "pseMediaComplexidadeTotal": 120315,
       "pseMediaComplexidadeNaoUtilizado": 0,
-      "pseMediaComplexidadeUtilizado": 16042,
-      "pseAltaComplexidadeTotal": 3142396.72,
+      "pseMediaComplexidadeUtilizado": 120315,
+      "pseAltaComplexidadeTotal": 7216797.54,
       "pseAltaComplexidadeNaoUtilizado": 0,
-      "pseAltaComplexidadeUtilizado": 3142396.72,
+      "pseAltaComplexidadeUtilizado": 7216797.54,
       "psbTotal": -2,
       "psbNaoUtilizado": -2,
       "psbUtilizado": -2,
-      "gestaoSuasTotal": -2,
-      "gestaoSuasNaoUtilizado": -2,
-      "gestaoSuasUtilizado": -2,
-      "gestaoBolsaFamiliaTotal": 313521.9,
+      "gestaoSuasTotal": 126924.08,
+      "gestaoSuasNaoUtilizado": 0,
+      "gestaoSuasUtilizado": 126924.08,
+      "gestaoBolsaFamiliaTotal": 471489.94,
       "gestaoBolsaFamiliaNaoUtilizado": 0,
-      "gestaoBolsaFamiliaUtilizado": 313521.9,
+      "gestaoBolsaFamiliaUtilizado": 471489.94,
       "pisoBasicoFixoTotal": -2,
       "pisoBasicoFixoNaoUtilizado": -2,
       "pisoBasicoFixoUtilizado": -2,
@@ -4345,8 +4398,9 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeTotal": -2,
       "pisoTransicaoMediaComplexidadeNaoUtilizado": -2,
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
-      "totalPago": 5115460.62,
+      "totalPago": 8288026.56,
       "totalBloqueado": 0,
+      "totalUtilizado": 8288026.56,
       "pBloqueio": 0
     },
     {
@@ -4387,6 +4441,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 880163.69,
       "totalBloqueado": 187580,
+      "totalUtilizado": 692583.69,
       "pBloqueio": 21.31
     },
     {
@@ -4427,6 +4482,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 190890.41,
       "totalBloqueado": 0,
+      "totalUtilizado": 190890.41,
       "pBloqueio": 0
     },
     {
@@ -4467,6 +4523,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1073657.87,
       "totalBloqueado": 0,
+      "totalUtilizado": 1073657.87,
       "pBloqueio": 0
     },
     {
@@ -4507,11 +4564,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 107708.45,
       "totalBloqueado": 0,
+      "totalUtilizado": 107708.45,
       "pBloqueio": 0
     },
     {
       "anoOrcamento": 2017,
-      "municipio": "Armação Dos Búzios",
+      "municipio": "Armação dos Búzios",
       "programasTotal": 37500,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 37500,
@@ -4547,6 +4605,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 228362.54,
       "totalBloqueado": 178125,
+      "totalUtilizado": 50237.54,
       "pBloqueio": 78
     },
     {
@@ -4587,6 +4646,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 78159.44,
       "totalBloqueado": 0,
+      "totalUtilizado": 78159.44,
       "pBloqueio": 0
     },
     {
@@ -4627,6 +4687,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 690046.22,
       "totalBloqueado": 0,
+      "totalUtilizado": 690046.22,
       "pBloqueio": 0
     },
     {
@@ -4667,6 +4728,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 820535.75,
       "totalBloqueado": 0,
+      "totalUtilizado": 820535.75,
       "pBloqueio": 0
     },
     {
@@ -4707,6 +4769,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 2551873.43,
       "totalBloqueado": 0,
+      "totalUtilizado": 2551873.43,
       "pBloqueio": 0
     },
     {
@@ -4747,6 +4810,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 161451.54,
       "totalBloqueado": 39000,
+      "totalUtilizado": 122451.54,
       "pBloqueio": 24.16
     },
     {
@@ -4787,6 +4851,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 319056.79,
       "totalBloqueado": 0,
+      "totalUtilizado": 319056.79,
       "pBloqueio": 0
     },
     {
@@ -4827,6 +4892,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 450643.46,
       "totalBloqueado": 223650,
+      "totalUtilizado": 226993.46,
       "pBloqueio": 49.63
     },
     {
@@ -4867,6 +4933,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 308500.63,
       "totalBloqueado": 0,
+      "totalUtilizado": 308500.63,
       "pBloqueio": 0
     },
     {
@@ -4907,6 +4974,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 207958.57,
       "totalBloqueado": 125800,
+      "totalUtilizado": 82158.57,
       "pBloqueio": 60.49
     },
     {
@@ -4947,6 +5015,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1747776.06,
       "totalBloqueado": 0,
+      "totalUtilizado": 1747776.06,
       "pBloqueio": 0
     },
     {
@@ -4987,6 +5056,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 202219.58,
       "totalBloqueado": 62262.25,
+      "totalUtilizado": 139957.33,
       "pBloqueio": 30.79
     },
     {
@@ -5027,6 +5097,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 144719.1,
       "totalBloqueado": 32850,
+      "totalUtilizado": 111869.1,
       "pBloqueio": 22.7
     },
     {
@@ -5067,6 +5138,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 70466.77,
       "totalBloqueado": 0,
+      "totalUtilizado": 70466.77,
       "pBloqueio": 0
     },
     {
@@ -5107,6 +5179,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 121735.93,
       "totalBloqueado": 16275,
+      "totalUtilizado": 105460.93,
       "pBloqueio": 13.37
     },
     {
@@ -5147,6 +5220,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 169508.51,
       "totalBloqueado": 0,
+      "totalUtilizado": 169508.51,
       "pBloqueio": 0
     },
     {
@@ -5187,6 +5261,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 161289,
       "totalBloqueado": 0,
+      "totalUtilizado": 161289,
       "pBloqueio": 0
     },
     {
@@ -5227,6 +5302,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 261450.6,
       "totalBloqueado": 65531,
+      "totalUtilizado": 195919.6,
       "pBloqueio": 25.06
     },
     {
@@ -5267,6 +5343,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 115298.28,
       "totalBloqueado": 0,
+      "totalUtilizado": 115298.28,
       "pBloqueio": 0
     },
     {
@@ -5307,6 +5384,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 61373.15,
       "totalBloqueado": 0,
+      "totalUtilizado": 61373.15,
       "pBloqueio": 0
     },
     {
@@ -5347,6 +5425,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 527545.96,
       "totalBloqueado": 50600,
+      "totalUtilizado": 476945.96,
       "pBloqueio": 9.59
     },
     {
@@ -5387,6 +5466,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 229764.6,
       "totalBloqueado": 141303.88,
+      "totalUtilizado": 88460.72,
       "pBloqueio": 61.5
     },
     {
@@ -5427,6 +5507,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 333533.06,
       "totalBloqueado": 0,
+      "totalUtilizado": 333533.06,
       "pBloqueio": 0
     },
     {
@@ -5467,6 +5548,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 260369.5,
       "totalBloqueado": 0,
+      "totalUtilizado": 260369.5,
       "pBloqueio": 0
     },
     {
@@ -5507,6 +5589,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 901543.19,
       "totalBloqueado": 0,
+      "totalUtilizado": 901543.19,
       "pBloqueio": 0
     },
     {
@@ -5547,6 +5630,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 310529.26,
       "totalBloqueado": 0,
+      "totalUtilizado": 310529.26,
       "pBloqueio": 0
     },
     {
@@ -5587,6 +5671,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 153797.16,
       "totalBloqueado": 53155.83,
+      "totalUtilizado": 100641.33,
       "pBloqueio": 34.56
     },
     {
@@ -5627,6 +5712,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 299350.09,
       "totalBloqueado": 0,
+      "totalUtilizado": 299350.09,
       "pBloqueio": 0
     },
     {
@@ -5667,6 +5753,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 513907.64,
       "totalBloqueado": 0,
+      "totalUtilizado": 513907.64,
       "pBloqueio": 0
     },
     {
@@ -5707,6 +5794,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 136006.05,
       "totalBloqueado": 0,
+      "totalUtilizado": 136006.05,
       "pBloqueio": 0
     },
     {
@@ -5747,6 +5835,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 309104.18,
       "totalBloqueado": 50000,
+      "totalUtilizado": 259104.18,
       "pBloqueio": 16.18
     },
     {
@@ -5787,6 +5876,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 145435.38,
       "totalBloqueado": 0,
+      "totalUtilizado": 145435.38,
       "pBloqueio": 0
     },
     {
@@ -5827,6 +5917,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1277430.6,
       "totalBloqueado": 1055790.61,
+      "totalUtilizado": 221639.99,
       "pBloqueio": 82.65
     },
     {
@@ -5867,6 +5958,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 67221.84,
       "totalBloqueado": 41775,
+      "totalUtilizado": 25446.84,
       "pBloqueio": 62.14
     },
     {
@@ -5907,6 +5999,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1238037.16,
       "totalBloqueado": 791457.76,
+      "totalUtilizado": 446579.4,
       "pBloqueio": 63.93
     },
     {
@@ -5947,6 +6040,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 174764.53,
       "totalBloqueado": 25000,
+      "totalUtilizado": 149764.53,
       "pBloqueio": 14.3
     },
     {
@@ -5987,6 +6081,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 705118.51,
       "totalBloqueado": 0,
+      "totalUtilizado": 705118.51,
       "pBloqueio": 0
     },
     {
@@ -6027,6 +6122,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 157632.42,
       "totalBloqueado": 0,
+      "totalUtilizado": 157632.42,
       "pBloqueio": 0
     },
     {
@@ -6067,6 +6163,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 346762.65,
       "totalBloqueado": 0,
+      "totalUtilizado": 346762.65,
       "pBloqueio": 0
     },
     {
@@ -6107,6 +6204,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 211334.22,
       "totalBloqueado": 141759.75,
+      "totalUtilizado": 69574.47,
       "pBloqueio": 67.08
     },
     {
@@ -6147,6 +6245,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 225652.25,
       "totalBloqueado": 0,
+      "totalUtilizado": 225652.25,
       "pBloqueio": 0
     },
     {
@@ -6187,6 +6286,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 134210.36,
       "totalBloqueado": 53257.5,
+      "totalUtilizado": 80952.86,
       "pBloqueio": 39.68
     },
     {
@@ -6227,6 +6327,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 321638.05,
       "totalBloqueado": 0,
+      "totalUtilizado": 321638.05,
       "pBloqueio": 0
     },
     {
@@ -6267,6 +6368,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 2538958.28,
       "totalBloqueado": 0,
+      "totalUtilizado": 2538958.28,
       "pBloqueio": 0
     },
     {
@@ -6307,6 +6409,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 697465.6,
       "totalBloqueado": 474101.76,
+      "totalUtilizado": 223363.84,
       "pBloqueio": 67.97
     },
     {
@@ -6347,6 +6450,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 3370585.39,
       "totalBloqueado": 0,
+      "totalUtilizado": 3370585.39,
       "pBloqueio": 0
     },
     {
@@ -6387,6 +6491,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 235524.29,
       "totalBloqueado": 0,
+      "totalUtilizado": 235524.29,
       "pBloqueio": 0
     },
     {
@@ -6427,6 +6532,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 228015.33,
       "totalBloqueado": 132570.19,
+      "totalUtilizado": 95445.14,
       "pBloqueio": 58.14
     },
     {
@@ -6467,6 +6573,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 175916.34,
       "totalBloqueado": 0,
+      "totalUtilizado": 175916.34,
       "pBloqueio": 0
     },
     {
@@ -6507,6 +6614,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 111880.21,
       "totalBloqueado": 0,
+      "totalUtilizado": 111880.21,
       "pBloqueio": 0
     },
     {
@@ -6547,6 +6655,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 445807.26,
       "totalBloqueado": 0,
+      "totalUtilizado": 445807.26,
       "pBloqueio": 0
     },
     {
@@ -6587,6 +6696,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 182784.63,
       "totalBloqueado": 23251.2,
+      "totalUtilizado": 159533.43,
       "pBloqueio": 12.72
     },
     {
@@ -6627,6 +6737,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 129437.21,
       "totalBloqueado": 62081.4,
+      "totalUtilizado": 67355.81,
       "pBloqueio": 47.96
     },
     {
@@ -6667,6 +6778,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 207810.23,
       "totalBloqueado": 70056.4,
+      "totalUtilizado": 137753.83,
       "pBloqueio": 33.71
     },
     {
@@ -6707,6 +6819,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 247858.22,
       "totalBloqueado": 101260.85,
+      "totalUtilizado": 146597.37,
       "pBloqueio": 40.85
     },
     {
@@ -6747,6 +6860,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 68649.74,
       "totalBloqueado": 729.72,
+      "totalUtilizado": 67920.02,
       "pBloqueio": 1.06
     },
     {
@@ -6787,6 +6901,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 611016.72,
       "totalBloqueado": 59100,
+      "totalUtilizado": 551916.72,
       "pBloqueio": 9.67
     },
     {
@@ -6827,6 +6942,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 174175.09,
       "totalBloqueado": 79500.4,
+      "totalUtilizado": 94674.69,
       "pBloqueio": 45.64
     },
     {
@@ -6867,6 +6983,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 433097.34,
       "totalBloqueado": 0,
+      "totalUtilizado": 433097.34,
       "pBloqueio": 0
     },
     {
@@ -6907,6 +7024,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 196368.99,
       "totalBloqueado": 0,
+      "totalUtilizado": 196368.99,
       "pBloqueio": 0
     },
     {
@@ -6947,11 +7065,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 54334.64,
       "totalBloqueado": 0,
+      "totalUtilizado": 54334.64,
       "pBloqueio": 0
     },
     {
       "anoOrcamento": 2017,
-      "municipio": "Rio Das Flores",
+      "municipio": "Rio das Flores",
       "programasTotal": 25000,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 25000,
@@ -6987,11 +7106,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 101401.91,
       "totalBloqueado": 0,
+      "totalUtilizado": 101401.91,
       "pBloqueio": 0
     },
     {
       "anoOrcamento": 2017,
-      "municipio": "Rio Das Ostras",
+      "municipio": "Rio das Ostras",
       "programasTotal": 1880,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 1880,
@@ -7027,6 +7147,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 267271.99,
       "totalBloqueado": 0,
+      "totalUtilizado": 267271.99,
       "pBloqueio": 0
     },
     {
@@ -7067,6 +7188,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 27149399.35,
       "totalBloqueado": 0,
+      "totalUtilizado": 27149399.35,
       "pBloqueio": 0
     },
     {
@@ -7107,6 +7229,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 69779.96,
       "totalBloqueado": 0,
+      "totalUtilizado": 69779.96,
       "pBloqueio": 0
     },
     {
@@ -7147,6 +7270,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 223809.88,
       "totalBloqueado": 51652.2,
+      "totalUtilizado": 172157.68,
       "pBloqueio": 23.08
     },
     {
@@ -7187,6 +7311,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 231453.41,
       "totalBloqueado": 0,
+      "totalUtilizado": 231453.41,
       "pBloqueio": 0
     },
     {
@@ -7227,6 +7352,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 368521.45,
       "totalBloqueado": 25000,
+      "totalUtilizado": 343521.45,
       "pBloqueio": 6.78
     },
     {
@@ -7267,6 +7393,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 7860299.53,
       "totalBloqueado": 0,
+      "totalUtilizado": 7860299.53,
       "pBloqueio": 0
     },
     {
@@ -7307,6 +7434,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 87085.51,
       "totalBloqueado": 2200,
+      "totalUtilizado": 84885.51,
       "pBloqueio": 2.53
     },
     {
@@ -7347,6 +7475,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 195971.1,
       "totalBloqueado": 34600,
+      "totalUtilizado": 161371.1,
       "pBloqueio": 17.66
     },
     {
@@ -7387,6 +7516,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 154934.96,
       "totalBloqueado": 0,
+      "totalUtilizado": 154934.96,
       "pBloqueio": 0
     },
     {
@@ -7427,6 +7557,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 118558.31,
       "totalBloqueado": 0,
+      "totalUtilizado": 118558.31,
       "pBloqueio": 0
     },
     {
@@ -7467,6 +7598,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 387375.17,
       "totalBloqueado": 0,
+      "totalUtilizado": 387375.17,
       "pBloqueio": 0
     },
     {
@@ -7507,6 +7639,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 247870.39,
       "totalBloqueado": 0,
+      "totalUtilizado": 247870.39,
       "pBloqueio": 0
     },
     {
@@ -7547,6 +7680,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 136128.26,
       "totalBloqueado": 0,
+      "totalUtilizado": 136128.26,
       "pBloqueio": 0
     },
     {
@@ -7587,6 +7721,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 493882.07,
       "totalBloqueado": 166125,
+      "totalUtilizado": 327757.07,
       "pBloqueio": 33.64
     },
     {
@@ -7627,6 +7762,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 471617.8,
       "totalBloqueado": 0,
+      "totalUtilizado": 471617.8,
       "pBloqueio": 0
     },
     {
@@ -7667,6 +7803,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 324066.25,
       "totalBloqueado": 22840.84,
+      "totalUtilizado": 301225.41,
       "pBloqueio": 7.05
     },
     {
@@ -7707,6 +7844,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 120584.59,
       "totalBloqueado": 73518.44,
+      "totalUtilizado": 47066.15,
       "pBloqueio": 60.97
     },
     {
@@ -7747,6 +7885,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 399314.57,
       "totalBloqueado": 115400,
+      "totalUtilizado": 283914.57,
       "pBloqueio": 28.9
     },
     {
@@ -7787,11 +7926,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 457442.62,
       "totalBloqueado": 251444.19,
+      "totalUtilizado": 205998.43,
       "pBloqueio": 54.97
     },
     {
       "anoOrcamento": 2017,
-      "municipio": "Trajano de Moraes",
+      "municipio": "Trajano de Morais",
       "programasTotal": 25000,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 25000,
@@ -7827,6 +7967,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 95833.51,
       "totalBloqueado": 0,
+      "totalUtilizado": 95833.51,
       "pBloqueio": 0
     },
     {
@@ -7867,6 +8008,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 354883.96,
       "totalBloqueado": 0,
+      "totalUtilizado": 354883.96,
       "pBloqueio": 0
     },
     {
@@ -7907,11 +8049,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 474364.25,
       "totalBloqueado": 0,
+      "totalUtilizado": 474364.25,
       "pBloqueio": 0
     },
     {
       "anoOrcamento": 2017,
-      "municipio": "Varre-sai",
+      "municipio": "Varre-Sai",
       "programasTotal": 25000,
       "programasNaoUtilizado": 0,
       "programasUtilizado": 25000,
@@ -7947,6 +8090,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 91621.17,
       "totalBloqueado": 1730.4,
+      "totalUtilizado": 89890.77,
       "pBloqueio": 1.89
     },
     {
@@ -7987,6 +8131,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 281196.37,
       "totalBloqueado": 189341.92,
+      "totalUtilizado": 91854.45,
       "pBloqueio": 67.33
     },
     {
@@ -8027,6 +8172,48 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       "pisoTransicaoMediaComplexidadeUtilizado": -2,
       "totalPago": 1674201.27,
       "totalBloqueado": 0,
+      "totalUtilizado": 1674201.27,
+      "pBloqueio": 0
+    },
+    {
+      "anoOrcamento": 2017,
+      "municipio": "Rio de Janeiro - RJ",
+      "programasTotal": 1643500,
+      "programasNaoUtilizado": 0,
+      "programasUtilizado": 1643500,
+      "pseMediaComplexidadeTotal": 16042,
+      "pseMediaComplexidadeNaoUtilizado": 0,
+      "pseMediaComplexidadeUtilizado": 16042,
+      "pseAltaComplexidadeTotal": 3142396.72,
+      "pseAltaComplexidadeNaoUtilizado": 0,
+      "pseAltaComplexidadeUtilizado": 3142396.72,
+      "psbTotal": -2,
+      "psbNaoUtilizado": -2,
+      "psbUtilizado": -2,
+      "gestaoSuasTotal": -2,
+      "gestaoSuasNaoUtilizado": -2,
+      "gestaoSuasUtilizado": -2,
+      "gestaoBolsaFamiliaTotal": 313521.9,
+      "gestaoBolsaFamiliaNaoUtilizado": 0,
+      "gestaoBolsaFamiliaUtilizado": 313521.9,
+      "pisoBasicoFixoTotal": -2,
+      "pisoBasicoFixoNaoUtilizado": -2,
+      "pisoBasicoFixoUtilizado": -2,
+      "pisoBasicoVariavelTotal": -2,
+      "pisoBasicoVariavelNaoUtilizado": -2,
+      "pisoBasicoVariavelUtilizado": -2,
+      "pisoAltaComplexidade1Total": -2,
+      "pisoAltaComplexidade1NaoUtilizado": -2,
+      "pisoAltaComplexidade1Utilizado": -2,
+      "pisoAltaComplexidade2Total": -2,
+      "pisoAltaComplexidade2NaoUtilizado": -2,
+      "pisoAltaComplexidade2Utilizado": -2,
+      "pisoTransicaoMediaComplexidadeTotal": -2,
+      "pisoTransicaoMediaComplexidadeNaoUtilizado": -2,
+      "pisoTransicaoMediaComplexidadeUtilizado": -2,
+      "totalPago": 5115460.62,
+      "totalBloqueado": 0,
+      "totalUtilizado": 5115460.62,
       "pBloqueio": 0
     }
   ];
@@ -8065,7 +8252,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.529
     },
     {
-      'municipio': 'Armação Dos Búzios',
+      'municipio': 'Armação dos Búzios',
       'prefeito': 'Andre Granado',
       'secretarioAssistenciaSocial': 'João De Melo Carrilho',
       'populacao': 27560,
@@ -8553,7 +8740,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.529
     },
     {
-      'municipio': 'Rio Das Flores',
+      'municipio': 'Rio das Flores',
       'prefeito': 'Vicente De Paula De Souza Guedes',
       'secretarioAssistenciaSocial': 'Tereza Cristina Meyer Cabral Machado',
       'populacao': 8561,
@@ -8561,7 +8748,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.525
     },
     {
-      'municipio': 'Rio Das Ostras',
+      'municipio': 'Rio das Ostras',
       'prefeito': 'Carlos Augusto Carvalho Balthazar',
       'secretarioAssistenciaSocial': 'Elizabeth Bousquet Schott',
       'populacao': 105676,
@@ -8745,7 +8932,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'idc': 0.571
     },
     {
-      'municipio': 'Varre-sai',
+      'municipio': 'Varre-Sai',
       'prefeito': 'Silvestre José Gorini',
       'secretarioAssistenciaSocial': 'Isabela Louvain Fabri Moraes',
       'populacao': 9475,
@@ -8822,9 +9009,9 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Araruama', 'Grande', 'CRAS DO OUTEIRO', 'Rua', 'Almirante Protógenes Guimarães', '679', '', 'Outeiro', '28970000', '(22)2665324'],
     ['Areal', 'Pequeno I', 'Centro de Referencia de Assistencia Social - Cras Amazonas', 'Rua', 'Inglaterra', '9', '', 'Amazonas', '25845000', '(24)2257202'],
     ['Areal', 'Pequeno I', 'Centro de Referencia da Assistencia Social - CRAS Centro', 'Rua', 'Manoel Cabral de Melo', '425', '', 'Centro', '25845000', '(24)2257290'],
-    ['Armação Dos Búzios', 'Pequeno II', 'CRAS José Gonçalves', 'Avenida', 'José Gonçalves', '44', '', 'José Gonçalves', '28950000', '(22)2633073'],
-    ['Armação Dos Búzios', 'Pequeno II', 'CRAS BAIA FORMOSA', 'Estrada', 'CABO FRIO BUZIOS', '1201', '', 'BAIA FORMOSA', '28950000', '(22)2633076'],
-    ['Armação Dos Búzios', 'Pequeno II', 'CRAS - RASA', 'Rua', 'ALVARO ELIDIO GONÇALVES', '317', 'À ESQUERDA DA ESTÁTUA DO ZUMBI', 'RASA', '28950000', '(22)2620895'],
+    ['Armação dos Búzios', 'Pequeno II', 'CRAS José Gonçalves', 'Avenida', 'José Gonçalves', '44', '', 'José Gonçalves', '28950000', '(22)2633073'],
+    ['Armação dos Búzios', 'Pequeno II', 'CRAS BAIA FORMOSA', 'Estrada', 'CABO FRIO BUZIOS', '1201', '', 'BAIA FORMOSA', '28950000', '(22)2633076'],
+    ['Armação dos Búzios', 'Pequeno II', 'CRAS - RASA', 'Rua', 'ALVARO ELIDIO GONÇALVES', '317', 'À ESQUERDA DA ESTÁTUA DO ZUMBI', 'RASA', '28950000', '(22)2620895'],
     ['Arraial do Cabo', 'Pequeno II', 'CRAS JOSÉ HENRIQUE DA SILVA', 'Rua', 'SÃO GENUÁRIO', '51', '', 'FIGUEIRA', '28930000', '(22)2662111'],
     ['Arraial do Cabo', 'Pequeno II', 'CRAS AMADO JULIÃO', 'Travessa', 'TOME DE SOUZA', '6', '', 'MORRO DA CABOCLA', '28930000', '(22)2622178'],
     ['Barra do Piraí', 'Médio', 'CRAS Areal', 'Rua', 'Teresopolis', '52', '', 'Areal', '27150090', '(24)2445154'],
@@ -9081,12 +9268,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Rio Bonito', 'Médio', 'CRAS ESPERANCA', 'Rua', '2', '0', 'PARQUE ANDREA', 'BOA ESPERANCA', '28810000', '(21)2747842'],
     ['Rio Claro', 'Pequeno I', 'CRAS PASSA TRÊS', 'Rua', 'VICTOR KONDER', '65', '4° DISTRITO', 'PASSA TRÊS', '27470000', '(24)3332171'],
     ['Rio Claro', 'Pequeno I', 'CRAS RIO CLARO', 'Praça', 'FAGUNDES VARELLA', '30', '1° DISTRITO', 'CENTRO', '27460000', '(24)3332119'],
-    ['Rio Das Flores', 'Pequeno I', 'Centro de Referência da Assistência Social do Centro', 'Rua', 'Coronel Ladislau Guedes', '7', '', 'Centro', '27660000', '(24)2458134'],
-    ['Rio Das Flores', 'Pequeno I', 'Centro de Referência da AssistÊncia Social de Tabôas', 'Alameda', 'Antonio S Avila', '18', '', 'Tabôas', '27665000', '(24)2458536'],
-    ['Rio Das Ostras', 'Grande', 'CRAS Rocha Leão', 'Rua', 'Isolino Almeida', '5', 'Cruzamento entre a RFFSA e a Rua Isolino Almeida', 'Rocha Leão', '28890000', '(22)2777143'],
-    ['Rio Das Ostras', 'Grande', 'CRAS Região Sul', 'Rua', 'Serafim Bastos', '0', 's/n', 'Cidade Beira Mar', '28890000', '(22)2771640'],
-    ['Rio Das Ostras', 'Grande', 'CRAS Região Norte', 'Rua', 'Peperônia', '82', 'Qd 56', 'Âncora', '28899563', '(22)2771570'],
-    ['Rio Das Ostras', 'Grande', 'CRAS Região Central', 'Rua', 'Três Marias, S/ N°', '0', '', 'Nova Cidade', '28890000', '(22)2771291'],
+    ['Rio das Flores', 'Pequeno I', 'Centro de Referência da Assistência Social do Centro', 'Rua', 'Coronel Ladislau Guedes', '7', '', 'Centro', '27660000', '(24)2458134'],
+    ['Rio das Flores', 'Pequeno I', 'Centro de Referência da AssistÊncia Social de Tabôas', 'Alameda', 'Antonio S Avila', '18', '', 'Tabôas', '27665000', '(24)2458536'],
+    ['Rio das Ostras', 'Grande', 'CRAS Rocha Leão', 'Rua', 'Isolino Almeida', '5', 'Cruzamento entre a RFFSA e a Rua Isolino Almeida', 'Rocha Leão', '28890000', '(22)2777143'],
+    ['Rio das Ostras', 'Grande', 'CRAS Região Sul', 'Rua', 'Serafim Bastos', '0', 's/n', 'Cidade Beira Mar', '28890000', '(22)2771640'],
+    ['Rio das Ostras', 'Grande', 'CRAS Região Norte', 'Rua', 'Peperônia', '82', 'Qd 56', 'Âncora', '28899563', '(22)2771570'],
+    ['Rio das Ostras', 'Grande', 'CRAS Região Central', 'Rua', 'Três Marias, S/ N°', '0', '', 'Nova Cidade', '28890000', '(22)2771291'],
     ['Rio de Janeiro', 'Metrópole', 'CRAS FRANCISCO SALES DE MESQUITA', 'Avenida', 'SARGENTO DE MILICIAS', '0', '', 'PAVUNA', '21525660', '(21)2407229'],
     ['Rio de Janeiro', 'Metrópole', 'CRAS CAIO FERNANDO ABREU', 'Avenida', 'DOS DEMOCRATICOS', '646', '', 'MANGUINHOS', '21050000', '(21)2293429'],
     ['Rio de Janeiro', 'Metrópole', 'CRAS DR. SOBRAL PINTO', 'Rua', 'DR LEAL', '706', 'TERREO', 'ENGENHO DE DENTRO', '20730380', '(21)3273037'],
@@ -9220,8 +9407,8 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Valença', 'Médio', 'CRAS VARGINHA', 'Rua', 'MACIEL NASCIMENTO,', '155', 'LOTE 1, QUADRA H', 'CHACRINHA', '27600000', '(24)2452800'],
     ['Valença', 'Médio', 'CRAS BARÃO DE JUPARANÃ', 'Rua', 'SILVIO CAMARGO', '14', 'CENTRO', 'DISTRITO DE BARÃO DE JUPARANÃ', '27640000', '(24)2471586'],
     ['Valença', 'Médio', 'CRAS CAMBOTA', 'Rua', 'PEDRO PONCIANO', '164', '', 'CAMBOTA', '27600000', '(24)2452431'],
-    ['Varre-sai', 'Pequeno I', 'CRAS I', 'Rua', 'João Ramos Pereira', '18', '', 'Centro', '28375000', '(22)3843310'],
-    ['Varre-sai', 'Pequeno I', 'CRAS II', 'Fazenda', 'Cruz da Ana', '0', '', 'Zona rural', '28375000', '(22)3843323'],
+    ['Varre-Sai', 'Pequeno I', 'CRAS I', 'Rua', 'João Ramos Pereira', '18', '', 'Centro', '28375000', '(22)3843310'],
+    ['Varre-Sai', 'Pequeno I', 'CRAS II', 'Fazenda', 'Cruz da Ana', '0', '', 'Zona rural', '28375000', '(22)3843323'],
     ['Vassouras', 'Pequeno II', 'CRAS REPRESA DO GRECCO', 'Rua', 'TIBURCIO BARBOSA', '818', '', 'GRECCO', '27700000', '(24)2491102'],
     ['Vassouras', 'Pequeno II', 'CRAS TOCA DOS LEÕES', 'Rua', 'B', '0', '', 'Toca dos Leoes', '27700000', '(24)2491196'],
     ['Vassouras', 'Pequeno II', 'CRAS Centro', 'Rua', 'JOSÉ DE OLIVEIRA CURA', '7', '', 'Centro', '27700000', '(24)2471357'],
@@ -9267,7 +9454,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Aperibé', 'Pequeno I', 'CREAS', 'Rua', 'FRANCISCO HENRIQUE DE SOUZA', '535', '', 'PALMEIRAS', '28495-000', '(22) 3864-1606'],
     ['Araruama', 'Grande', 'CREAS - Centro de Referência Especializado de Assistência Social', 'Rua', 'Rua República do Chile', '437', '', 'Centro', '28970-000', '(22) 2664-1706'],
     ['Areal', 'Pequeno I', 'CREAS Amaurílio Jairo de Lima', 'Rua', 'Joao Pedro da Silveira', '235', '', 'Centro', '25845-000', '(24) 2257-2963'],
-    ['Armação Dos Búzios', 'Pequeno II', 'CREAS - Armação dos Búzios', 'Estrada', 'JOSE BENTO RIBEIRO DANTAS', '4994', '', 'MANGUINHOS', '28950-000', '(22) 2623-1685'],
+    ['Armação dos Búzios', 'Pequeno II', 'CREAS - Armação dos Búzios', 'Estrada', 'JOSE BENTO RIBEIRO DANTAS', '4994', '', 'MANGUINHOS', '28950-000', '(22) 2623-1685'],
     ['Arraial do Cabo', 'Pequeno II', 'CREAS - ARRAIAL DO CABO', 'Rua', 'OSWALDO CRUZ', '62', '', 'centro', '28930-000', '(22) 2622-2500'],
     ['Barra do Piraí', 'Médio', 'CREAS Centro de Referencia Especializado de Assistencia Social', 'Rua', 'DONA GUILHERMINA', '45', '', 'CENTRO', '27120-080', '(24) 2444-4546'],
     ['Barra Mansa', 'Grande', 'CREAS BARRA MANSA', 'Rua', 'SANTOS DUMONT', '126', '', 'CENTRO', '27355-080', '(24) 3322-6534'],
@@ -9335,7 +9522,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Aperibé', 'Flávio Diniz Berriel', 'Vanessa Garcia Correa', '10.545', '0,69', '3', '1', '0', '4', '0,68', '1.276', '12,10', '0,09', '686', '6,51', '93,46', '53,76', 'R$ 1.362.195,00', '1.476', 'SIM', 'SIM', 'SIM', '155', 'R$ 144.298,14'],
     ['Araruama', 'Livia Soares Bello Da Silva', 'João Baptista De Araujo Filho', '116.418', '0,72', '5', '1', '1', '7', '1,19', '12.712', '10,92', '0,89', '9.494', '8,16', '115,7', '74,69', 'R$ 21.452.175,00', '17.227', 'NÃO', 'SIM', 'SIM', '3.370', 'R$ 3.151.888,96'],
     ['Areal', 'Flávio Magdalena Bravo', 'Marcos Antonio Ribeiro', '11.654', '0,68', '2', '1', '0', '3', '0,51', '1.291', '11,08', '0,09', '929', '7,97', '115,98', '71,96', 'R$ 1.838.362,00', '1.850', 'SIM', 'SIM', 'SIM', '203', 'R$ 189.275,00'],
-    ['Armação Dos Búzios', 'Andre Granado ', 'João De Melo Carrilho', '28.973', '0,73', '3', '1', '0', '4', '0,68', '2.354', '8,12', '0,16', '1.269', '4,38', '95,2', '53,91', 'R$ 2.290.627,00', '3.082', 'NÃO', 'SIM', 'SIM', '491', 'R$ 458.896,40'],
+    ['Armação dos Búzios', 'Andre Granado ', 'João De Melo Carrilho', '28.973', '0,73', '3', '1', '0', '4', '0,68', '2.354', '8,12', '0,16', '1.269', '4,38', '95,2', '53,91', 'R$ 2.290.627,00', '3.082', 'NÃO', 'SIM', 'SIM', '491', 'R$ 458.896,40'],
     ['Arraial do Cabo', 'Renato Martins Vianna', 'Sergio Lopes De Oliveira Carvalho', '28.295', '0,73', '2', '1', '0', '3', '0,51', '2.300', '8,13', '0,16', '1.593', '5,63', '115,69', '69,26', 'R$ 3.490.276,00', '4.495', 'SIM', 'SIM', 'SIM', '511', 'R$ 478.525,90'],
     ['Barra do Piraí', 'Mario Reis Esteves', 'Paloma Blunk Dos Reis', '95.726', '0,73', '4', '1', '0', '5', '0,85', '9.014', '9,42', '0,63', '4.457', '4,66', '83,23', '49,45', 'R$ 9.116.182,00', '8.045', 'SIM', 'SIM', 'SIM', '1.773', 'R$ 1.651.046,79'],
     ['Barra Mansa', 'Rodrigo Drable', 'Ruth Cristina Coutinho Henriques De Lima Rebello', '178.880', '0,73', '6', '1', '1', '8', '1,36', '15.802', '8,83', '1,10', '6.435', '3,60', '74,04', '40,72', 'R$ 12.581.416,00', '11.338', 'SIM', 'SIM', 'SIM', '2.036', 'R$ 1.904.454,20'],
@@ -9396,8 +9583,8 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Resende', 'Diogo Balieiro Diniz', 'Jéssica Pavone Carrijo Muller', '122.068', '0,77', '6', '1', '1', '8', '1,36', '9.015', '7,39', '0,63', '2.418', '1,98', '47,6', '26,82', 'R$ 4.288.277,00', '9.501', 'SIM', 'SIM', 'SIM', '2.237', 'R$ 2.090.523,97'],
     ['Rio Bonito', 'José Luiz Alves Antunes', 'Lílian De Araujo Alves Antunes', '56.436', '0,71', '3', '1', '0', '4', '0,68', '5.699', '10,10', '0,40', '3.469', '6,15', '96,85', '60,87', 'R$ 7.385.025,00', '6.998', 'SIM', 'SIM', 'SIM', '1.738', 'R$ 1.626.062,10'],
     ['Rio Claro', 'José Osmar De Almeida', 'Julio Cesar Rocha De Camargo Castro', '17.606', '0,68', '2', '1', '0', '3', '0,51', '1.928', '10,95', '0,13', '631', '3,58', '50,76', '32,73', 'R$ 1.025.388,00', '1.521', 'SIM', 'SIM', 'SIM', '235', 'R$ 220.195,00'],
-    ['Rio Das Flores', 'Vicente De Paula De Souza Guedes', 'Tereza Cristina Meyer Cabral Machado', '8.703', '0,68', '2', '1', '0', '3', '0,51', '1.018', '11,70', '0,07', '627', '7,20', '116,54', '61,59', 'R$ 1.440.662,00', '1.303', 'NÃO', 'SIM', 'SIM', '129', 'R$ 119.936,00'],
-    ['Rio Das Ostras', 'Carlos Augusto Carvalho Balthazar', 'Elizabeth Bousquet Schott', '116.134', '0,77', '4', '1', '0', '5', '0,85', '7.107', '6,12', '0,50', '4.822', '4,15', '116,78', '67,85', 'R$ 8.774.782,00', '13.369', 'SIM', 'SIM', 'SIM', '1.572', 'R$ 1.471.296,91'],
+    ['Rio das Flores', 'Vicente De Paula De Souza Guedes', 'Tereza Cristina Meyer Cabral Machado', '8.703', '0,68', '2', '1', '0', '3', '0,51', '1.018', '11,70', '0,07', '627', '7,20', '116,54', '61,59', 'R$ 1.440.662,00', '1.303', 'NÃO', 'SIM', 'SIM', '129', 'R$ 119.936,00'],
+    ['Rio das Ostras', 'Carlos Augusto Carvalho Balthazar', 'Elizabeth Bousquet Schott', '116.134', '0,77', '4', '1', '0', '5', '0,85', '7.107', '6,12', '0,50', '4.822', '4,15', '116,78', '67,85', 'R$ 8.774.782,00', '13.369', 'SIM', 'SIM', 'SIM', '1.572', 'R$ 1.471.296,91'],
     ['Rio de Janeiro', 'Marcelo Bezerra Crivella', 'Pedro Henrique Fernandes da Silva', '6.390.290', '0,8', '47', '14', '2', '63', '10,71', '458.625', '7,18', '32,06', '237.054', '3,71', '80,82', '51,69', 'R$ 424.256.328,00', '487.222', 'NÃO', 'SIM', 'SIM', '106.618', 'R$ 99.771.463,98'],
     ['Santa Maria Madalena', 'Carlos Alberto De Matos Botelho', 'Carlos Roberto Mello Lula Lamego', '10.298', '0,67', '3', '0', '0', '3', '0,51', '1.291', '12,54', '0,09', '590', '5,73', '71,17', '45,7', 'R$ 1.270.459,00', '1.140', 'SIM', 'SIM', 'NÃO', '262', 'R$ 245.494,00'],
     ['Santo Antônio de Pádua', 'Josias Quintal De Oliveira', 'Maria Tertuliana De Souza Oliveira', '40.876', '0,72', '2', '1', '0', '3', '0,51', '4.602', '11,26', '0,32', '2.164', '5,29', '85,77', '47,02', 'R$ 4.305.828,00', '4.237', 'SIM', 'SIM', 'SIM', '1.209', 'R$ 1.126.626,01'],
@@ -9420,7 +9607,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     ['Trajano de Moraes', 'Rodrigo Freire Viana', 'Juliana Pais Esteves Freire Viana', '10.327', '0,67', '2', '1', '0', '3', '0,51', '1.401', '13,57', '0,10', '959', '9,29', '107,51', '68,45', 'R$ 1.849.666,00', '1.492', 'NÃO', 'SIM', 'SIM', '287', 'R$ 268.919,00'],
     ['Três Rios', 'Josimar Salles', 'Gilberto Garcia Golfeto', '78.256', '0,73', '4', '1', '0', '5', '0,85', '7.155', '9,14', '0,50', '5.054', '6,46', '114,79', '70,64', 'R$ 12.587.620,00', '10.751', 'SIM', 'SIM', 'SIM', '1.001', 'R$ 936.026,02'],
     ['Valença', ' Luiz Fernando Furtado Da Graça', 'Roseli Da Silva Moreira', '72.679', '0,74', '3', '1', '0', '4', '0,68', '7.213', '9,92', '0,50', '5.023', '6,91', '116,54', '69,64', 'R$ 11.329.336,00', '8.463', 'SIM', 'SIM', 'SIM', '1.462', 'R$ 1.359.761,06'],
-    ['Varre-sai', 'Silvestre José Gorini', 'Isabela Louvain Fabri Moraes', '9.720', '0,66', '2', '0', '0', '2', '0,34', '1.352', '13,91', '0,09', '879', '9,04', '101,97', '65,01', 'R$ 1.575.692,00', '1.562', 'SIM', 'SIM', 'NÃO', '178', 'R$ 166.786,00'],
+    ['Varre-Sai', 'Silvestre José Gorini', 'Isabela Louvain Fabri Moraes', '9.720', '0,66', '2', '0', '0', '2', '0,34', '1.352', '13,91', '0,09', '879', '9,04', '101,97', '65,01', 'R$ 1.575.692,00', '1.562', 'SIM', 'SIM', 'NÃO', '178', 'R$ 166.786,00'],
     ['Vassouras', 'Severino Ananias Dias Filho', 'Rosa Maria Coelho De Almeida', '34.858', '0,71', '3', '1', '0', '4', '0,68', '3.509', '10,07', '0,25', '1.586', '4,55', '73,49', '45,2', 'R$ 2.825.859,00', '3.390', 'SIM', 'SIM', 'SIM', '853', 'R$ 792.328,36'],
     ['Volta Redonda', 'Elderson Ferreira Da Silva ', 'Maycon César Inácio Abrantes', '260.180', '0,77', '33', '1', '1', '35', '5,95', '17.858', '6,86', '1,25', '10.966', '4,21', '115,49', '61,41', 'R$ 24.633.994,00', '22.609', 'SIM', 'SIM', 'SIM', '3.439', 'R$ 3.199.831,11'],
   ];
@@ -9476,6 +9663,7 @@ interface IIndicadoresOrcamentarios {
   pisoTransicaoMediaComplexidadeUtilizado:    number;
   totalPago:                                  number;
   totalBloqueado:                             number;
+  totalUtilizado:                             number;
   pBloqueio:                                  number;
 }
 
