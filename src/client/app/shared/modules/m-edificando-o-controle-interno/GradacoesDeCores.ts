@@ -29,7 +29,7 @@ export class GradacoesDeCores {
     ['financiamento',            'Financiamento'],
     ['controleSocial',           'Controle Social'],
     ['gestao',                   'Gestão'],
-    ['numeroEquipamentos',       'Número Equipamentos'],
+    ['numeroEquipamentos',       'Número de Equipamentos'],
     ['coberturaBolsaFamilia',    'Cobertura do Bolsa Família'],
     ['coberturaCadastroUnico',   'Cobertura do Cadastro Único'],
     ['beneficiosEventuais',      'Benefícios Eventuais'],

@@ -267,7 +267,7 @@
                   <td class="barraH" width="10%"><img class="img-fluid2" src="./assets/img/icones/familias_vulneraveis_70px.png" align="left"></td>
                   <td class=" barraH height_line"width="35%">
                     <p class="keyword">Familias vulneráveis</p>
-                    <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasVulneraveis}}</div>
+                      <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasVulneraveis}}</div>
                   </td>
                   <td class=" barraH"width="30%">
                     <p class="keyword" *ngIf="estadoSelected===false"> % da população do município</p>
@@ -289,8 +289,8 @@
                     <div class="vt-porcentagem"  *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
                   </td>
                   <td class="barraH border-equipamento" style="padding-right: 3%" width="25%">
-                    <p class="keyword">% cobertura</p>
-                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaCobertura}}% </div>
+                    <p class="keyword" *ngIf="estadoSelected===false">% cobertura</p>
+                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaCobertura}}% </div>
                   </td>
 
                 </tr>
@@ -305,8 +305,8 @@
                     <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
                   </td>
                   <td class="border-equipamento barraH"style="padding-right: 3%" >
-                    <p class="keyword">% cobertura</p>
-                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasCadastroUnicoCobertura}}%</div>
+                    <p class="keyword" *ngIf="estadoSelected===false">% cobertura</p>
+                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasCadastroUnicoCobertura}}%</div>
                   </td>
                 </tr>
                 <tr>
