@@ -83,7 +83,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   computaCampos() {
 
     // encontra indicadores orçamentários do município
-    this.indicadoresOrcamentariosDoMunicipio = this.indicadoresOrcamentarios.find(indicadores => indicadores.municipio === this.municipio&&indicadores.anoOrcamento===2016);
+    this.indicadoresOrcamentariosDoMunicipio = this.indicadoresOrcamentarios.find(indicadores => indicadores.municipio === this.municipio && indicadores.anoOrcamento===2016);
     if (this.indicadoresOrcamentariosDoMunicipio == null) {
       this.indicadoresOrcamentariosDoMunicipio = {
         'anoOrcamento': -2,
@@ -227,7 +227,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       }));
 
     // computa total de equipamentos no estado
-    this.totalEquipamentosEstado = (this.centrosPOP.length) + (this.crases.length) + (this.creases.length);
+    this.totalEquipamentosEstado = (this.centrosPOP.length) + (this.creases.length)  +(this.crases.length);
 
     // computa indicadores sociais
     this.indicadoresSociaisDoMunicipio = this.indicadoresSociais
@@ -337,6 +337,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         }
       ],
     };
+
     this.graficoPisoAlto2 = {
       labels: ['Verba Utilizada', 'Verba não utilizada'],
       datasets: [
@@ -353,6 +354,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         }
       ],
     };
+
     this.graficoPisoTransicao = {
       labels: ['Verba Utilizada', 'Verba não utilizada'],
       datasets: [
@@ -369,6 +371,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         }
       ],
     };
+
 //preenche estrutura de dados do gráfico Gestão Bolsa Familia
     this.graficoGestaoBolsaFamilia = {
       labels: ['Verba Utilizada', 'Verba não utilizada'],
@@ -386,6 +389,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         }
       ],
     };
+
 //preenche estrutura de dados do gráfico gestão  SUAS
     this.graficoGestaoSUAS = {
       labels: ['Verba Utilizada', 'Verba não utilizada'],
@@ -403,6 +407,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         }
       ],
     };
+
     // preenche estrutura de dados do gráfico PSB
     this.graficoPSB = {
       labels: ['Verba Utilizada', 'Verba não utilizada'],
@@ -9450,67 +9455,122 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   // TODO cópia de creas_20170810.json
   creases: string[][] = [
 //  ['Município', 'Porte_pop2010', 'ident1', 'ident2', 'ident3', 'ident4', 'ident5', 'ident6', 'ident8', 'ident12'],
-    ['Angra dos Reis', 'Grande', 'CREAS Angra dos Reis', 'Rua', '11 DE JUNHO', '51', '', 'CENTRO', '23900-170', '(24) 3365-5167'],
-    ['Aperibé', 'Pequeno I', 'CREAS', 'Rua', 'FRANCISCO HENRIQUE DE SOUZA', '535', '', 'PALMEIRAS', '28495-000', '(22) 3864-1606'],
-    ['Araruama', 'Grande', 'CREAS - Centro de Referência Especializado de Assistência Social', 'Rua', 'Rua República do Chile', '437', '', 'Centro', '28970-000', '(22) 2664-1706'],
-    ['Areal', 'Pequeno I', 'CREAS Amaurílio Jairo de Lima', 'Rua', 'Joao Pedro da Silveira', '235', '', 'Centro', '25845-000', '(24) 2257-2963'],
-    ['Armação dos Búzios', 'Pequeno II', 'CREAS - Armação dos Búzios', 'Estrada', 'JOSE BENTO RIBEIRO DANTAS', '4994', '', 'MANGUINHOS', '28950-000', '(22) 2623-1685'],
-    ['Arraial do Cabo', 'Pequeno II', 'CREAS - ARRAIAL DO CABO', 'Rua', 'OSWALDO CRUZ', '62', '', 'centro', '28930-000', '(22) 2622-2500'],
-    ['Barra do Piraí', 'Médio', 'CREAS Centro de Referencia Especializado de Assistencia Social', 'Rua', 'DONA GUILHERMINA', '45', '', 'CENTRO', '27120-080', '(24) 2444-4546'],
-    ['Barra Mansa', 'Grande', 'CREAS BARRA MANSA', 'Rua', 'SANTOS DUMONT', '126', '', 'CENTRO', '27355-080', '(24) 3322-6534'],
-    ['Belford Roxo', 'Grande', 'CREAS - ANDRE LUIZ BONFIM DE ALENCAR', 'Estrada', 'DOUTOR PLÍNIO CASADO', '3968', '', 'CENTRO', '26130-621', '(21) 2761-6578'],
-    ['Belford Roxo', 'Grande', 'CREAS - IRMÃ FILOMENA', 'Rua', 'SILVA PEIXOTO', '10', 'Lt 10   Qd.J', 'PARQUE AMORIM', '26183-560', '(21) 2761-7233'],
-    ['Belford Roxo', 'Grande', 'CREAS LEONARDO TARGINO DO CARMO', 'Avenida', 'JOAQUIM DA COSTA LIMA', '2723', '', 'SANTA AMÉLIA', '26115-315', '(21) 3772-1812'],
-    ['Bom Jardim', 'Pequeno II', 'CREAS', 'Avenida', 'LEOPOLDO SILVA', '518', 'ANTIGA RUA NOVA', 'CENTRO', '28660-000', '(22) 2566-1125'],
-    ['Bom Jesus do Itabapoana', 'Pequeno II', 'CREAS Assistente Social Josy Ramos Amador', 'Praça', 'Governador Portela - Ed. Ferreira e Borges', '164', 'sala 107/108', 'centro', '28360-000', '(22) 3831-5352'],
-    ['Cabo Frio', 'Grande', 'CREAS CENTRO DE REFERÊNCIA ESPECIALIZADO DE ASSISTÊNCIA SOCIAL', 'Rua', 'Alemanha', '132', 'casa 01', 'Jardim Caiçara', '28910-370', '(22) 2645-3106'],
-    ['Cachoeiras de Macacu', 'Médio', 'CREAS - Cachoeiras de Macacu', 'Rua', 'ANICIO MONTEIRO DA SILVA', '0', '', 'CENTRO', '28680-000', '(21) 2649-3076'],
-    ['Cambuci', 'Pequeno I', 'CREAS', 'Avenida', 'José de Souza Faria', '220', '', 'Floresta', '28430-000', '(22) 2767-3247'],
-    ['Campos dos Goytacazes', 'Grande', 'CREAS I', 'Avenida', 'Carmem Carneiro', '1050', '', 'JARDIM CARIOCA', '28083-510', '(22) 2733-2992'],
-    ['Campos dos Goytacazes', 'Grande', 'CREAS II', 'Rua', 'Rua dos Goytacazes', '618', '', 'TURF CLUB', '28000-100', '(22) 2728-0123'],
-    ['Campos dos Goytacazes', 'Grande', 'CREAS III', 'Rua', 'Av. José Alves de Azevedo', '216', '', 'CENTRO', '28000-100', '(22) 2735-3925'],
-    ['Cantagalo', 'Pequeno I', 'CREAS', 'Rua', 'Nair Jacinta', '0', '', 'São José', '28500-000', '(22) 2555-1763'],
-    ['Carapebus', 'Pequeno I', 'CREAS', 'Rua', 'RUA PRATA MANCEBO', '30', '', 'Centro', '27998-000', '(22) 2768-3050'],
-    ['Cardoso Moreira', 'Pequeno I', 'CREAS', 'Rua', 'Rua Donatila Vilela Marins.', '0', '', 'centro', '28180-000', '(22) 2785-1639'],
-    ['Carmo', 'Pequeno I', 'CREAS NELSON LOPES CORRÊA', 'Rua', 'ABREU MAGALHAES', '137', '', 'CENTRO', '28640-000', '(22) 2537-2355'],
-    ['Casimiro de Abreu', 'Pequeno II', 'CREAS Casimiro de Abreu', 'Rua', 'Armindo Julio Mozer', '0', 'Fundos', 'Mataruna', '28860-000', '(22) 2778-3933'],
-    ['Comendador Levy Gasparian', 'Pequeno I', 'CREAS', 'Rua', 'EUCLIDES DANTAS WERNECK', '6', '', 'centro', '25870-000', '(24) 2254-2867'],
-    ['Conceição de Macabu', 'Pequeno II', 'CREAS', 'Rua', 'Rozendo Fontes Tavares', '100', '', 'Bocaina', '28740-000', '(22) 2779-4044'],
-    ['Cordeiro', 'Pequeno II', 'CREAS', 'Rua', 'Van Erven', '35', '', 'Centro', '28545-000', '(22) 2551-2600'],
-    ['Duas Barras', 'Pequeno I', 'CREAS', 'Rua', 'MONNERAT', '123', '', 'CENTRO', '28650-000', '(22) 2534-1741'],
-    ['Duque de Caxias', 'Grande', 'CREAS CENTENÁRIO', 'Rua', 'R. MANUEL VIEIRA', '0', 's/n', 'Vila Meriti', '25070-350', '(21) 2771-2879'],
-    ['Duque de Caxias', 'Grande', 'CREAS FIGUEIRA', 'Rodovia', 'WASHINGTON LUIS KM 109', '0', '', 'FIGUEIRA', '25213-005', '(21) 2773-2342'],
-    ['Duque de Caxias', 'Grande', 'CREAS Vila Maria Helena', 'Rua', 'Antenor', '100', '', 'Vila Maria Helena', '25251-750', '(21) 2676-1032'],
-    ['Engenheiro Paulo de Frontin', 'Pequeno I', 'CREAS', 'Rua', 'CORREA LIMA. 25', '25', '', 'CENTRO', '26650-000', '(24) 2463-1173'],
-    ['Guapimirim', 'Médio', 'CREAS Unidade Guapimirim', 'Rua', 'joão seixas júnior', '119', 'casa', 'parque freixal', '25940-000', '(21) 2632-6977'],
-    ['Iguaba Grande', 'Pequeno II', 'CREAS OSCAR MAGALHÃES', 'Rua', 'RUA ANTELIN TEIXEIRA DE CARVALHO', '140', '', 'ESTAÇÃO', '28960-000', '(22) 2624-8387'],
-    ['Itaboraí', 'Grande', 'CREAS CENTRO DE REFERÊCIA ESPECIALIZADO EM ASSISTÊNCIA SOCIAL', 'Rua', 'JOÃO CAETANO', '94', '', 'CENTRO', '24800-000', '(21) 3639-2080'],
-    ['Itaguaí', 'Grande', 'CREAS ITAGUAÍ', 'Rua', 'Maria Soares da Silva', '314', '', 'Parque Independência', '23812-525', '(21) 2687-4217'],
-    ['Itaocara', 'Pequeno II', 'CREAS', 'Rua', 'PRAÇA TOLEDO PIZZA', '68', 'CASA', 'CENTRO', '28570-000', '(22) 3861-3925'],
-    ['Itaperuna', 'Médio', 'CREAS DE ITAPERUNA', 'Praça', 'GETÚLIO VARGAS', '94', '1º ANDAR', 'CENTRO', '28300-000', '(22) 3824-6301'],
-    ['Itatiaia', 'Pequeno II', 'CREAS ITATIAIA', 'Rua', 'AV. DOS EXPEDICIONÁIOS', '539', 'CASA', 'CENTRO', '27580-000', '(24) 3352-3981'],
-    ['Japeri', 'Médio', 'CREAS JAPERI', 'Praça', 'MANUEL MARQUES', '10', 'loja 14', 'CENTRO', '26375-630', '(21) 2670-4243'],
-    ['Laje do Muriaé', 'Pequeno I', 'CREAS', 'Rua', 'Ferreira César', '195', '', 'Centro', '28350-000', '(22) 3829-1209'],
-    ['Macaé', 'Grande', 'CREAS MACAE', 'Rua', 'Rua Alfredo Backer', '640', '', 'centro', '27910-190', '(22) 2796-1102'],
-    ['Macaé', 'Grande', 'CREAS II', 'Rua', 'Ari de Carvalho', '0', 'loteamento Bosque Azul 2', 'Bosque Azul', '27971-754', '(22) 2796-1690'],
-    ['Magé', 'Grande', 'CREAS - Magé', 'Rua', 'Coronel Theotônio Botelho do Rego', '29', 'Magé', 'CENTRO', '25900-000', '(21) 3630-7220'],
-    ['Mangaratiba', 'Pequeno II', 'CREAS Mangaratiba', 'Rua', 'major Jose Caetano', '8182', 'CENTRO', 'MANGARATIBA', '23860-000', '(21) 2789-6014'],
-    ['Maricá', 'Grande', 'CREAS', 'Rua', '0 LOTE 10 QUADRA 03', '10', 'PARQUE ELDORADO', 'CENTRO', '24900-000', '(21) 2637-3769'],
-    ['Mendes', 'Pequeno I', 'CREAS', 'Rua', 'Dr. Felício dos Santos', '170', '', 'Centro - Fim do Ponto', '26700-000', '(24) 2465-7068'],
-    ['Mesquita', 'Grande', 'CREAS', 'Avenida', 'COELHO DA ROCHA Nº 1426', '1426', '', 'ROCHA SOBRINHO', '26572-481', '(21) 3765-2987'],
-    ['Miguel Pereira', 'Pequeno II', 'CREAS', 'Rua', 'Luiz Pamplona', '100', '', 'Centro', '26900-000', '(24) 2484-3676'],
-    ['Miracema', 'Pequeno II', 'CREAS', 'Praça', 'JOÃO ANTÔNIO HASSEL', '91', '', 'CENTRO', '28460-000', '(22) 3852-1890'],
-    ['Natividade', 'Pequeno I', 'CREAS - Lucia Regina Alvarez Pinto Ribeiro', 'Rua', 'Santo Expedito', '204', 'prédio', 'Sindicato', '28380-000', '(22) 3841-1630'],
-    ['Nilópolis', 'Grande', 'CREAS NILÓPOLIS - CENTRO DE REFERÊNCIA ESPECIALIZADO DE ASSISTÊNCIA SOCIAL', 'Rua', 'MANUEL RODRIGUES FONTINHA', '13', '', 'NOVA CIDADE', '26535-270', '(21) 3761-5514'],
-    ['Niterói', 'Grande', 'CREAS Centro', 'Avenida', 'Ernani do Amaral Peixoto', '901', '', 'CENTRO', '24020-073', '(21) 2717-4201'],
-    ['Niterói', 'Grande', 'CREAS Largo da Batalha', 'Rua', 'Reverendo Armando Ferreira', '19', '', 'Largo da Batalha', '24310-400', '(21) 2715-7257'],
-    ['Nova Friburgo', 'Grande', 'CREAS -NOVA FRIBURGO Centro de Referência Especializado de Assistência Social', 'Rua', 'PADRE MADUREIRA', '53', '', 'CENTRO', '28610-005', '(22) 2543-6305'],
-    ['Nova Iguaçu', 'Grande', 'CREAS - Centro de Referência Especializado da Assistência Social', 'Rua', 'MARIA LAURA S/N', '0', '', 'MOQUETA', '26285-390', '(21) 2698-1461'],
-    ['Nova Iguaçu', 'Grande', 'CREAS CAIOABA', 'Rua', 'Doutor SÁ REGO', '503', '', 'Caioaba', '26012-480', '(21) 2668-4517'],
-    ['Nova Iguaçu', 'Grande', 'CREAS DOM BOSCO', 'Rua', 'do Gelo', '59', '', 'Dom Bosco', '26295-054', '(21) 3794-8365'],
-    ['Nova Iguaçu', 'Grande', 'CREAS MIGUEL COUTO', 'Estrada', 'Luiz de Lemos', '2722', '', 'MIGUEL COUTO', '23113-000', '(21) 2769-1897'],
-    ['Paracambi', 'Pequeno II', 'CREAS - PARACAMBI', 'Rua', 'Dr. Soares Filho', '125', '', 'Centro', '26600-000', '(21) 2683-3074'],
-    ['Paraíba do Sul', 'Pequeno II', 'CREAS - Alair Pedroso', 'Rua', 'Visconde do Rio Novo', '149', 'Casa', 'Centro', '25850-000', '(24) 2263-5554'],
+    ['Angra dos Reis','Grande','CREAS Angra dos Reis','Rua','11 DE JUNHO','51','','CENTRO','23900-170','(24) 3365-5167'  ],
+    ['Aperibé','Pequeno I','CREAS','Rua','FRANCISCO HENRIQUE DE SOUZA','535','','PALMEIRAS','28495-000','(22) 3864-1606'  ],
+    ['Araruama','Grande','CREAS - Centro de Referência Especializado de Assistência Social','Rua','Rua República do Chile','437','','Centro','28970-000','(22) 2664-1706'  ],
+    ['Areal','Pequeno I','CREAS Amaurílio Jairo de Lima','Rua','Joao Pedro da Silveira','235','','Centro','25845-000','(24) 2257-2963'  ],
+    ['Armação dos Búzios','Pequeno II','CREAS - Armação dos Búzios','Estrada','JOSE BENTO RIBEIRO DANTAS','4994','','MANGUINHOS','28950-000','(22) 2623-1685'  ],
+    ['Arraial do Cabo','Pequeno II','CREAS - ARRAIAL DO CABO','Rua','OSWALDO CRUZ','62','','centro','28930-000','(22) 2622-2500'  ],
+    ['Barra do Piraí','Médio','CREAS Centro de Referencia Especializado de Assistencia Social','Rua','DONA GUILHERMINA','45','','CENTRO','27120-080','(24) 2444-4546'  ],
+    ['Barra Mansa','Grande','CREAS BARRA MANSA','Rua','SANTOS DUMONT','126','','CENTRO','27355-080','(24) 3322-6534'  ],
+    ['Belford Roxo','Grande','CREAS - ANDRE LUIZ BONFIM DE ALENCAR','Estrada','DOUTOR PLÍNIO CASADO','3968','','CENTRO','26130-621','(21) 2761-6578'  ],
+    ['Belford Roxo','Grande','CREAS - IRMÃ FILOMENA','Rua','SILVA PEIXOTO','10','Lt 10   Qd.J','PARQUE AMORIM','26183-560','(21) 2761-7233'  ],
+    ['Belford Roxo','Grande','CREAS LEONARDO TARGINO DO CARMO','Avenida','JOAQUIM DA COSTA LIMA','2723','','SANTA AMÉLIA','26115-315','(21) 3772-1812'  ],
+    ['Bom Jardim','Pequeno II','CREAS','Avenida','LEOPOLDO SILVA','518','ANTIGA RUA NOVA','CENTRO','28660-000','(22) 2566-1125'  ],
+    ['Bom Jesus do Itabapoana','Pequeno II','CREAS Assistente Social Josy Ramos Amador','Praça','Governador Portela - Ed. Ferreira e Borges','164','sala 107/108','centro','28360-000','(22) 3831-5352'  ],
+    ['Cabo Frio','Grande','CREAS CENTRO DE REFERÊNCIA ESPECIALIZADO DE ASSISTÊNCIA SOCIAL','Rua','Alemanha','132','casa 01','Jardim Caiçara','28910-370','(22) 2645-3106'  ],
+    ['Cachoeiras de Macacu','Médio','CREAS - Cachoeiras de Macacu','Rua','ANICIO MONTEIRO DA SILVA','0','','CENTRO','28680-000','(21) 2649-3076'  ],
+    ['Cambuci','Pequeno I','CREAS','Avenida','José de Souza Faria','220','','Floresta','28430-000','(22) 2767-3247'  ],
+    ['Campos dos Goytacazes','Grande','CREAS I','Avenida','Carmem Carneiro','1050','','JARDIM CARIOCA','28083-510','(22) 2733-2992'  ],
+    ['Campos dos Goytacazes','Grande','CREAS II','Rua','Rua dos Goytacazes','618','','TURF CLUB','28000-100','(22) 2728-0123'  ],
+    ['Campos dos Goytacazes','Grande','CREAS III','Rua','Av. José Alves de Azevedo','216','','CENTRO','28000-100','(22) 2735-3925'  ],
+    ['Cantagalo','Pequeno I','CREAS','Rua','Nair Jacinta','0','','São José','28500-000','(22) 2555-1763'  ],
+    ['Carapebus','Pequeno I','CREAS','Rua','RUA PRATA MANCEBO','30','','Centro','27998-000','(22) 2768-3050'  ],
+    ['Cardoso Moreira','Pequeno I','CREAS','Rua','Rua Donatila Vilela Marins.','0','','centro','28180-000','(22) 2785-1639'  ],
+    ['Carmo','Pequeno I','CREAS NELSON LOPES CORRÊA','Rua','ABREU MAGALHAES','137','','CENTRO','28640-000','(22) 2537-2355'  ],
+    ['Casimiro de Abreu','Pequeno II','CREAS Casimiro de Abreu','Rua','Armindo Julio Mozer','0','Fundos','Mataruna','28860-000','(22) 2778-3933'  ],
+    ['Comendador Levy Gasparian','Pequeno I','CREAS','Rua','EUCLIDES DANTAS WERNECK','6','','centro','25870-000','(24) 2254-2867'  ],
+    ['Conceição de Macabu','Pequeno II','CREAS','Rua','Rozendo Fontes Tavares','100','','Bocaina','28740-000','(22) 2779-4044'  ],
+    ['Cordeiro','Pequeno II','CREAS','Rua','Van Erven','35','','Centro','28545-000','(22) 2551-2600'  ],
+    ['Duas Barras','Pequeno I','CREAS','Rua','MONNERAT','123','','CENTRO','28650-000','(22) 2534-1741'  ],
+    ['Duque de Caxias','Grande','CREAS CENTENÁRIO','Rua','R. MANUEL VIEIRA','0','s/n','Vila Meriti','25070-350','(21) 2771-2879'  ],
+    ['Duque de Caxias','Grande','CREAS FIGUEIRA','Rodovia','WASHINGTON LUIS KM 109','0','','FIGUEIRA','25213-005','(21) 2773-2342'  ],
+    ['Duque de Caxias','Grande','CREAS Vila Maria Helena','Rua','Antenor','100','','Vila Maria Helena','25251-750','(21) 2676-1032'  ],
+    ['Engenheiro Paulo de Frontin','Pequeno I','CREAS','Rua','CORREA LIMA. 25','25','','CENTRO','26650-000','(24) 2463-1173'  ],
+    ['Guapimirim','Médio','CREAS Unidade Guapimirim','Rua','joão seixas júnior','119','casa','parque freixal','25940-000','(21) 2632-6977'  ],
+    ['Iguaba Grande','Pequeno II','CREAS OSCAR MAGALHÃES','Rua','RUA ANTELIN TEIXEIRA DE CARVALHO','140','','ESTAÇÃO','28960-000','(22) 2624-8387'  ],
+    ['Itaboraí','Grande','CREAS CENTRO DE REFERÊCIA ESPECIALIZADO EM ASSISTÊNCIA SOCIAL','Rua','JOÃO CAETANO','94','','CENTRO','24800-000','(21) 3639-2080'  ],
+    ['Itaguaí','Grande','CREAS ITAGUAÍ','Rua','Maria Soares da Silva','314','','Parque Independência','23812-525','(21) 2687-4217'  ],
+    ['Itaocara','Pequeno II','CREAS','Rua','PRAÇA TOLEDO PIZZA','68','CASA','CENTRO','28570-000','(22) 3861-3925'  ],
+    ['Itaperuna','Médio','CREAS DE ITAPERUNA','Praça','GETÚLIO VARGAS','94','1º ANDAR','CENTRO','28300-000','(22) 3824-6301'  ],
+    ['Itatiaia','Pequeno II','CREAS ITATIAIA','Rua','AV. DOS EXPEDICIONÁIOS','539','CASA','CENTRO','27580-000','(24) 3352-3981'  ],
+    ['Japeri','Médio','CREAS JAPERI','Praça','MANUEL MARQUES','10','loja 14','CENTRO','26375-630','(21) 2670-4243'  ],
+    ['Laje do Muriaé','Pequeno I','CREAS','Rua','Ferreira César','195','','Centro','28350-000','(22) 3829-1209'  ],
+    ['Macaé','Grande','CREAS MACAE','Rua','Rua Alfredo Backer','640','','centro','27910-190','(22) 2796-1102'  ],
+    ['Macaé','Grande','CREAS II','Rua','Ari de Carvalho','0','loteamento Bosque Azul 2','Bosque Azul','27971-754','(22) 2796-1690'  ],
+    ['Magé','Grande','CREAS - Magé','Rua','Coronel Theotônio Botelho do Rego','29','Magé','CENTRO','25900-000','(21) 3630-7220'  ],
+    ['Mangaratiba','Pequeno II','CREAS Mangaratiba','Rua','major Jose Caetano','8182','CENTRO','MANGARATIBA','23860-000','(21) 2789-6014'  ],
+    ['Maricá','Grande','CREAS','Rua','0 LOTE 10 QUADRA 03','10','PARQUE ELDORADO','CENTRO','24900-000','(21) 2637-3769'  ],
+    ['Mendes','Pequeno I','CREAS','Rua','Dr. Felício dos Santos','170','','Centro - Fim do Ponto','26700-000','(24) 2465-7068'  ],
+    ['Mesquita','Grande','CREAS','Avenida','COELHO DA ROCHA Nº 1426','1426','','ROCHA SOBRINHO','26572-481','(21) 3765-2987'  ],
+    ['Miguel Pereira','Pequeno II','CREAS','Rua','Luiz Pamplona','100','','Centro','26900-000','(24) 2484-3676'  ],
+    ['Miracema','Pequeno II','CREAS','Praça','JOÃO ANTÔNIO HASSEL','91','','CENTRO','28460-000','(22) 3852-1890'  ],
+    ['Natividade','Pequeno I','CREAS - Lucia Regina Alvarez Pinto Ribeiro','Rua','Santo Expedito','204','prédio','Sindicato','28380-000','(22) 3841-1630'  ],
+    ['Nilópolis','Grande','CREAS NILÓPOLIS - CENTRO DE REFERÊNCIA ESPECIALIZADO DE ASSISTÊNCIA SOCIAL','Rua','MANUEL RODRIGUES FONTINHA','13','','NOVA CIDADE','26535-270','(21) 3761-5514'  ],
+    ['Niterói','Grande','CREAS Centro','Avenida','Ernani do Amaral Peixoto','901','','CENTRO','24020-073','(21) 2717-4201'  ],
+    ['Niterói','Grande','CREAS Largo da Batalha','Rua','Reverendo Armando Ferreira','19','','Largo da Batalha','24310-400','(21) 2715-7257'  ],
+    ['Nova Friburgo','Grande','CREAS -NOVA FRIBURGO Centro de Referência Especializado de Assistência Social','Rua','PADRE MADUREIRA','53','','CENTRO','28610-005','(22) 2543-6305'  ],
+    ['Nova Iguaçu','Grande','CREAS - Centro de Referência Especializado da Assistência Social','Rua','MARIA LAURA S/N','0','','MOQUETA','26285-390','(21) 2698-1461'  ],
+    ['Nova Iguaçu','Grande','CREAS CAIOABA','Rua','Doutor SÁ REGO','503','','Caioaba','26012-480','(21) 2668-4517'  ],
+    ['Nova Iguaçu','Grande','CREAS DOM BOSCO','Rua','do Gelo','59','','Dom Bosco','26295-054','(21) 3794-8365'  ],
+    ['Nova Iguaçu','Grande','CREAS MIGUEL COUTO','Estrada','Luiz de Lemos','2722','','MIGUEL COUTO','23113-000','(21) 2769-1897'  ],
+    ['Paracambi','Pequeno II','CREAS - PARACAMBI','Rua','Dr. Soares Filho','125','','Centro','26600-000','(21) 2683-3074'  ],
+    ['Paraíba do Sul','Pequeno II','CREAS - Alair Pedroso','Rua','Visconde do Rio Novo','149','Casa','Centro','25850-000','(24) 2263-5554'  ],
+    ['Paraty','Pequeno II','CREAS','Rua','José Vieira Ramos','74','Lote 112','Fátima','23970-000','(24) 3371-1052'  ],
+    ['Paty do Alferes','Pequeno II','CREAS PATY DO ALFERES','Rua','Capitão Zenóbio da Costa','114','','CENTRO','26950-000','(24) 2485-1468'  ],
+    ['Petrópolis','Grande','CREAS CENTRO','Avenida','DOM PEDRO I','199','','CENTRO','25610-020','(24) 2246-3475'  ],
+    ['Pinheiral','Pequeno II','CREAS - PINHEIRAL','Rua','JOSÉ FARAH','88','CASA','CENTRO','27197-000','(24) 3356-4306'  ],
+    ['Piraí','Pequeno II','CREAS - Centro de Referência Especializado da Assistência Social','Rua','Bulhões de Carvalho','233','Frente','Casa Amarela','27175-000','(24) 2431-9967'  ],
+    ['Porciúncula','Pequeno I','CREAS CENTRO DE REFERÊNCIA ESPECIAL DE ASSISTÊNCIA SOCIAL','Rua','Ivon Mansur','163','','Centro','28390-000','(22) 3842-2942'  ],
+    ['Porto Real','Pequeno I','CREAS','Rua','Anselmo Martins','142','','Jardim Real','27570-000','(24) 3353-1492'  ],
+    ['Quatis','Pequeno I','CREAS DE QUATIS','Avenida','CORONEL JOSÉ LEITE','114','','CENTRO','27410-050','(24) 3353-2193'  ],
+    ['Queimados','Grande','CREAS QUEIMADOS','Rua','EUGENIO CASTANHEIRAS','176','','CENTRO','26383-090','(21) 2663-2251'  ],
+    ['Quissamã','Pequeno II','CREAS','Rua','BARÃO DE VILA FRANCA','244','','CENTRO','28735-000','(22) 2768-1565'  ],
+    ['Resende','Grande','CREAS  - Centro de Referência Especializado de Assistência Social','Avenida','Riachuelo','31','','Liberdade','27500-000','(24) 3360-9516'  ],
+    ['Rio Bonito','Médio','CREAS RIO BONITO','Rua','RUA MONSENHOR ANTÔNIO DE SOUZA GENS','55','CASA','CENTRO','28800-000','(21) 2734-0620'  ],
+    ['Rio Claro','Pequeno I','CREAS','Rua','MOZART CESAR VALE','102','','CENTRO','27440-000','(24) 3332-1196'  ],
+    ['Rio das Flores','Pequeno I','CREAS','Rua','Hilton Dutra Navarro','8','','Centro','27660-000','(24) 2458-1348'  ],
+    ['Rio das Ostras','Grande','CREAS - CENTRO DE REFERÊNCIA ESPECIALIZADO DE ASSISTÊNCIA SOCIAL','Rua','Araguaia','150','0','Balneário Remanso','28893-123','(22) 2771-6409'  ],
+    ['Rio de Janeiro','Metrópole','CREAS SIMONE DE BEAUVOIR','Rua','AMBIRE CAVALCANTE','95','','RIO COMPRIDO','20250-490','(21) 2273-2253'  ],
+    ['Rio de Janeiro','Metrópole','CREAS DANIELA PEREZ','Rua','NACIONAL','275','','TAQUARA','22710-091','(21) 2213-2471'  ],
+    ['Rio de Janeiro','Metrópole','CREAS PROFESSORA ALDAÍZA SPOSATI','Rua','PROFESSOR CARLOS WENCESLAU','211','','REALENGO','21715-000','(21) 3462-5661'  ],
+    ['Rio de Janeiro','Metrópole','CREAS NELSON CARNEIRO','Rua','PROFESSOR LACE','57','','RAMOS','21060-120','(21) 2573-2176'  ],
+    ['Rio de Janeiro','Metrópole','CREAS STELLA MARIS','Estrada','DOS MARACAJAS','973','','ILHA DO GOVERNADOR','21941-390','(21) 3083-4024'  ],
+    ['Rio de Janeiro','Metrópole','CREAS MARIA LINA DE CASTRO LIMA','Rua','SÃO SALVADOR','56','2º ANDAR','LARANJEIRAS','22231-130','(21) 2265-8165'  ],
+    ['Rio de Janeiro','Metrópole','CREAS PADRE GUILHERME DECAMINADA','Rua','LOPES DE MOURA','46','','SANTA CRUZ','23515-020','(21) 3157-4861'  ],
+    ['Rio de Janeiro','Metrópole','CREAS PROFESSORA MARCIA LOPES','Rua','CARVALHO DE SOUZA','274','','MADUREIRA','21350-180','(21) 3018-0636'  ],
+    ['Rio de Janeiro','Metrópole','CREAS ARLINDO RODRIGUES','Rua','DESEMBARGADOR ISIDRO','48','','TIJUCA','20521-160','(21) 2268-7115'  ],
+    ['Rio de Janeiro','Metrópole','CREAS WANDA ENGEL ADUAN','Estrada','PEDRO BORGES DE FREITAS','144','','IRAJÁ','21235-390','(21) 3452-2664'  ],
+    ['Rio de Janeiro','Metrópole','CREAS JOÃO MANOEL MONTEIRO','Estrada','DA MATRIZ S/N','0','SALAS 3. 4 e 5','PEDRA DE GUARATIBA','21026-000','(21) 3354-8317'  ],
+    ['Rio de Janeiro','Metrópole','CREAS JANETE CLAIR','Rua','DOUTOR LEAL','706','2º ANDAR','ENGENHO DE DENTRO','20730-380','(21) 3977-7152'  ],
+    ['Rio de Janeiro','Metrópole','CREAS ZILDA ARNS NEUMANN','Rua','CANDIDO MAGALHAES','88','CENTRO','CAMPO GRANDE','23050-270','(21) 3292-4450'  ],
+    ['Rio de Janeiro','Metrópole','CREAS JOÃO HELIO FERNANDES','Rua','LUIS COUTINHO CAVALCANTE','576','','GUADALUPE','21675-310','(21) 3355-7464'  ],
+    ['Santo Antônio de Pádua','Pequeno II','CREAS','Rua','Arthur Silva','94','','centro','28470-000','(22) 3853-1967'  ],
+    ['São Fidélis','Pequeno II','CREAS - São Fidélis','Praça','Filotéia Bragança','100','','São Vicente de Paulo','28400-000','(22) 2758-2408'  ],
+    ['São Francisco de Itabapoana','Pequeno II','CREAS','Rua','MANOEL PAES PAIVA','11','','CENTRO','28230-000','(22) 2789-2578'  ],
+    ['São Gonçalo','Metrópole','CREAS Arsenal','Rua','Expedicionário Elidio Rodrigues Pinto','250','','ARSENAL','20960-150','(21) 3605-1570'  ],
+    ['São Gonçalo','Metrópole','CREAS MUTONDO','Rua','maria candida','40','','mutondo','24440-440','(21) 3708-7954'  ],
+    ['São Gonçalo','Metrópole','CREAS Vista Alegre','Rua','São Pedro','2','','Vista Alegre','24440-440','(21) 3708-2114'  ],
+    ['São Gonçalo','Metrópole','CREAS Jardim Catarina','Rua','Leão Gambetá','553','lt27 qd45','Jardim Catarina','24717-111','(21) 3712-7148'  ],
+    ['São Gonçalo','Metrópole','CREAS Luiz Caçador','Avenida','TRINDADE','7','loja 02','luiz caçador','24440-440','(21) 3708-7845'  ],
+    ['São João da Barra','Pequeno II','CREAS','Rua','SÃO JOÃO','571','Casa','Centro','28200-000','(22) 2741-1006'  ],
+    ['São João de Meriti','Grande','CREAS Vilar dos Teles','Rua','ALDENOR RIBEIRO DE MATTOS','175','SALA 110','VILAR DOS TELES','25576-281','(21) 2651-2312'  ],
+    ['São João de Meriti','Grande','CREAS Centro','Rua','São João Batista','742','','Centro','25515-520','(21) 2656-8084'  ],
+    ['São José do Vale do Rio Preto','Pequeno II','CREAS','Rua','Paulo Franco Werneck','530','','Centro','25780-000','(24) 2224-4099'  ],
+    ['São Pedro da Aldeia','Médio','CREAS - Luiza Magdalena dos Santos','Travessa','Getulio Vargas','300','','Centro','28940-000','(22) 2627-6878'  ],
+    ['São Sebastião do Alto','Pequeno I','CREAS Centro de Referencia Especializado de Assistência Social','Avenida','Hélio Teixeira Vogas','233','loja','centro','28555-000','(22) 2556-1386'  ],
+    ['Sapucaia','Pequeno I','CREAS','Rua','Maurício de Abreu','171','','Centro','25880-000','(24) 2271-2163'  ],
+    ['Saquarema','Médio','CREAS SAQUAREMA','Rua','ROD. AMARAL PEIXOTO','4333','KM71','BACAXA','28993-000','(22) 2653-0167'  ],
+    ['Seropédica','Médio','CREAS JARDIM DAS ACÁCIAS','Rua','BR 465 - ANTIGA RIO SÃO PAULO','26','','CAMPO LINDO','23890-000','(21) 2682-3434'  ],
+    ['Silva Jardim','Pequeno II','CREAS SILVA JARDIM','Rua','AVENIDA 08 DE MAIO','718','','Centro','28820-000','(22) 2668-0529'  ],
+    ['Sumidouro','Pequeno I','CREAS','Rua','Doutor Ildebrando Ribeiro Moura','51','','Centro','28637-000','(22) 2531-1251'  ],
+    ['Tanguá','Pequeno II','CREAS','Rua','DEMERVAL GARCIA DE FREITAS','112','','CENTRO','24890-000','(21) 2747-2339'  ],
+    ['Teresópolis','Grande','CREAS TERESÓPOLIS','Rua','Tenente Luiz Meirelles','211','','CENTRO','25950-000','(21) 2742-8722'  ],
+    ['Trajano de Moraes','Pequeno I','CREAS','Rua','José de Moraes','0','','Centro','28750-000','(22) 2564-1202'  ],
+    ['Três Rios','Médio','CREAS','Rua','Jacinto Sobrinho','72','','Vila Isabel','25815-240','(24) 2255-1532'  ],
+    ['Valença','Médio','CREAS MONTE DOURO','Rua','HUMBERTO PENTAGNA','238','','MONTE DOURO','27600-000','(24) 2452-0468'  ],
+    ['Vassouras','Pequeno II','CREAS - Vassouras','Rua','Rua Dulce Helena Accioly','23','','Centro','27700-000','(24) 2471-2301'  ],
+    ['Volta Redonda','Grande','CREAS -Centro de Referência Especializado deAssistência Social','Rua','ANTONIO BARREIROS','232','','NOSSA SENHORA DAS GRAÇAS','27215-350','(24) 3347-2390'  ],
   ];
 
   // TODO cópia de indicadores_sociais_20170810.json
