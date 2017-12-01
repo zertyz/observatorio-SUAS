@@ -37,9 +37,6 @@
     Resultados da busca <div class="totalRes">({{resultadosEncontrados}} Resultados encontrados)</div>
   </div>
   <div class="row">
-    <div *ngFor="let documento of documentosProcurados;let i = index;">
-      <input type = "hidden" [ngModel]="documentosProcurados[i]" placeholder="documento"/>
-    </div>
       <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let documento of documentosProcurados">
         <div class="card">
           <div class=" alinha-card" >
