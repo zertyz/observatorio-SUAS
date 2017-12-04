@@ -1,42 +1,80 @@
 <div class="container-fluid full">
+
+  <mp-subscribe></mp-subscribe>
+
   <div class="row">
-    <p></p>
-  </div>
-  <div class="row">
-    <div class="col-xl-3 col-lg-3 col-md-6 col-xs-12 "style="max-height: 49rem">
-      <table>
-        <tr>
-          <td><a [routerLink]="['/']">
-            <img src="assets/img/Logo Edificando o Controle Interno.png" height="150px">
-          </a>
-          </td>
-          <td style="padding-left: 10%;"><span class="title">Ranking </span> <br/>
-            <!--<span class="dimensao">{{gradacoes.mapaDeDimensoesParaTitulos[dimensao]}}</span>-->
-            <br/><br/>
-            <div ngbDropdown class="d-inline-block">
-              <button class="btn btn-outline-primary outrosRankings" id="dropdownBasic1" ngbDropdownToggle>Outros rankings</button>
-              <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
-                <!--<button class="dropdown-item outrosRankings" *ngFor="let campo of gradacoes.listaDeDimensoesETitulos" (click)="trocaRanking(campo[0])">{{campo[1]}}</button>-->
+    <div class="col-xl-2 col-2 ">
+        <div class="row">
+          <figure>
+            <img src="./assets/img/Logo_SUAS.png" class="img-responsive ajusta_elemento">
+            <img class="img-logo" src="./assets/img/CAO-CIDADANIA-LOGO-blue.png" >
+          </figure>
+          <!--/Temporario-->
+        </div>
+        <div class="row">
+          <p><br/></p>
+        </div>
+    </div>
+    <div class="col-xl-10  col-11">
+
+      <div class="col-xl-12">
+        <div class="row t-padding">
+          <span class="titulo">ranking observatório suas</span>
+          <p class="box-text">Ranking de avaliação do indicadores referentes ao SUAS no municípios fluminenses. Para visualizar outros rankings,[
+            específicos para cada dimensão avaliada, utilize o menu identificado por três barras ao lado do nome do ranking abaixo.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-4 "style="max-height: 49rem">
+          <div class="card">
+            <div class="card-block">
+              <div class="micro-card">
+              <table width="100%">
+                <tr>
+                  <td>
+
+                    <div class="row ">
+                      <div class="col-xl-3  col-2">
+                        <figure >
+                          <img class="ajusta_imagem" src="./assets/img/icones/{{dimensao}}.png" align="left">
+                        </figure>
+                      </div>
+                      <div ngbDropdown class="col-xl-9 col-10 d-inline-block ">
+                        <span class="title">Ranking </span>
+                        <div class='selectdiv'>
+                          <select  #selectElem [(ngModel)] = "dimensao" (change)="trocaRanking(selectElem.value)">
+                            <option *ngFor="let campo of gradacoes.listaDeDimensoesETitulos;" [value]="campo[0]">{{campo[1]}}</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
               </div>
+              <!-- Outros Rankings -->
+              <e-ranking-geral dimensao="{{dimensao}}"> </e-ranking-geral>
             </div>
-          </td>
-        </tr>
-      </table>
+          </div>
+        </div>
 
-      <!-- Outros Rankings -->
-      <!--<e-ranking-geral dimensao="{{dimensao}}"> </e-ranking-geral>-->
+        <div class="col-xl-4 ">
+          <div class="card">
+            <div class="card-block">
+              <e-status-edificacao municipio="{{municipio}}" dimensao="{{dimensao}}"></e-status-edificacao>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4">
+          <div class="card">
+            <div class="card-block">
+              <e-dimensoes municipio="{{municipio}}" dimensao="{{dimensao}}" ordenacao="titulo"></e-dimensoes>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12">
-      <!--<e-status-edificacao municipio="{{municipio}}" dimensao="{{dimensao}}"></e-status-edificacao>-->
-    </div>
-
-    <div class="col-xl-5 col-lg-5 col-md-8 col-xs-12">
-      <!--<e-dimensoes municipio="{{municipio}}" dimensao="{{dimensao}}" ordenacao="titulo"></e-dimensoes>-->
-    </div>
-  </div>
-
-  <div class="row">
-    <br/><br/><br/><br/>
   </div>
 </div>

@@ -1,6 +1,6 @@
 .form-control{
   width: 100%;
-  background-color:darkgray;
+  background-color:white;
   color: #304051;
 }
 
@@ -11,38 +11,43 @@
 .form-group{
   padding-left:23%;
 }
+.number{
+  font-family: Roboto-Condensed;
+}
+
 
 .link {
 
   bottom: 0%;
   right: 2%;
-  font-family: 'Roboto-Condensed';
+  font-family: 'Raleway';
+  font-weight: 700;
   font-size: 150%;
   line-height: 90%;
-  text-align: right;
+  text-align: center;
   color: rgb(5, 127, 178);
   cursor: pointer;
 }
 
 .btn-primary-outline{
-border:none;
-background: transparent !important;
+  border:none;
+  background: transparent;
+  margin-top: 1.5em;
 }
 
 h3{
-  font-family: 'Roboto-Condensed';
-  font-size: 180%;
+  font-family: 'Raleway';
+  font-size: 135%;
   font-weight: bold;
-  line-height: 90%;
+
 }
 
 p{
-  text-align: right;
+  text-align:justify;
   padding: 0%;
   margin: 0%;
-  font-family: 'Roboto-Condensed-Light';
-  font-size: 80%;
-  line-height: 90%;
+  font-family: 'Raleway';
+
 }
 
 br{
@@ -53,12 +58,3 @@ a{
   color: #057fb2 !important;
 }
 
-@media(max-width:991px){
-  .img-envolvida {
-    shape-outside: url("./assets/img/Logo Edificando o Controle Interno.png");
-    content: url("./assets/img/ECI-logo.png")!important;
-    float: left;
-    shape-margin: 7%;
-    shape-image-threshold: 0.5;
-  }
-}

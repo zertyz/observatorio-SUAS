@@ -1,0 +1,66 @@
+.backImg {
+  position: relative;
+  z-index: 1;
+  top: 45px;
+  left: -35px;
+  width: 37em;
+  max-width: 110%;
+}
+
+.title {
+  font-family: 'Raleway';
+  font-size: 200%;
+  line-height: 80%;
+  color: #0d2b48;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: 'Raleway';
+  font-size: 120%;
+  line-height: 90%;
+}
+
+.dimensao {
+  font-family: 'Raleway';
+  font-size: 100%;
+  line-height: 70%;
+}
+
+.posicao {
+  font-family: 'Roboto-Condensed';
+  font-size: 180%;
+  line-height: 70%;
+}
+
+.nota {
+  font-family: 'Roboto-Condensed-Light';
+  font-size: 140%;
+  line-height: 70%;
+}
+
+.bordaEsquerda {
+  border-left: 1px solid #404040;
+  padding-left: 7%;
+}
+
+
+@media(max-width:1199px){
+  max-width: 100%;
+  .backImg{
+    position: inherit;
+    z-index: inherit;
+    top:inherit;
+    left: inherit;
+    width: 90%;
+    height: 90%;
+    padding-left: 5%;
+  }
+}
+@media(max-width:767px){
+.backImg {
+  position: relative!important;
+  max-width: 50% !important;
+  padding-left: 5%;
+  }
+}

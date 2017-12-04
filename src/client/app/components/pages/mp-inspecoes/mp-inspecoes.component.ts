@@ -50,7 +50,7 @@ export class MPInspecoesComponent {
       value: 'PROGRAMAS, PROJETOS, SERVIÇOS E BENEFÍCIOS'
     });*/
 
-    this.equipamentos = [];
+    // this.equipamentos = [];
 
   }
 
@@ -676,7 +676,7 @@ export class MPInspecoesComponent {
 
     let ele = document.getElementsByName('radio');
     for(var i= 0; i< ele.length; i++)
-      ele[i].checked = false;
+      // ele[i].checked = false;
 
     // this.dataInicio = null;
     this.calendarInicio.updateModel(null);//Seta o valor da Variavel data para Null

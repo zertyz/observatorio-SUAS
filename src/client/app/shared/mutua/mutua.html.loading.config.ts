@@ -13,26 +13,24 @@
 import { NG2AppComponent } from '../../shared/modules/m-ng2-admin/ng2app.component';
 import { MPHomeComponent } from '../../components/pages/mp-home/mp-home.component';
 import { MPDadosEIndicadoresComponent } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.component';
-import { MPInspecoesComponent } from '../../components/pages/mp-inspecoes/mp-inspecoes.component';
 import { MPBuscaComponent } from '../../components/pages/mp-busca/mp-busca.component';
 import { MPAjudaComponent } from '../../components/pages/mp-ajuda/mp-ajuda.component';
 import { MPRankingComponent } from '../../components/pages/mp-ranking/mp-ranking.component';
 import { MPMetodologiaComponent } from '../../components/pages/mp-metodologia/mp-metodologia.component';
 
-export const MutuaExportedComponents: any[] = [NG2AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent,MPInspecoesComponent,MPBuscaComponent,MPAjudaComponent,MPRankingComponent,MPMetodologiaComponent];
+export const MutuaExportedComponents: any[] = [NG2AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent,MPBuscaComponent,MPAjudaComponent,MPRankingComponent,MPMetodologiaComponent];
 
 // routes
 /////////
 
 import { MPHomeRoutes } from '../../components/pages/mp-home/mp-home.routes';
 import { MPDadosEIndicadoresRoutes } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.routes';
-import { MPInspecoesRoutes } from '../../components/pages/mp-inspecoes/mp-inspecoes.routes';
 import { MPBuscaRoutes } from '../../components/pages/mp-busca/mp-busca.routes';
 import { MPAjudaRoutes } from '../../components/pages/mp-ajuda/mp-ajuda.routes';
 import { MPRankingRoutes } from '../../components/pages/mp-ranking/mp-ranking.routes';
 import { MPMetodologiaRoutes } from '../../components/pages/mp-metodologia/mp-metodologia.routes';
 
-export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes,...MPInspecoesRoutes,...MPBuscaRoutes,...MPAjudaRoutes,...MPRankingRoutes,...MPMetodologiaRoutes];
+export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes,...MPBuscaRoutes,...MPAjudaRoutes,...MPRankingRoutes,...MPMetodologiaRoutes];
 
 // modules
 //////////
@@ -48,7 +46,9 @@ import { AccordionModule,AutoCompleteModule,BlockUIModule,BreadcrumbModule,Butto
 let PRIMENG_MODULES: any[] = [AccordionModule,AutoCompleteModule,BlockUIModule,BreadcrumbModule,ButtonModule,CalendarModule,CarouselModule,ChartModule,CheckboxModule,CodeHighlighterModule,ConfirmDialogModule,ContextMenuModule,DataGridModule,DataListModule,DataScrollerModule,DataTableModule,DialogModule,DragDropModule,DropdownModule,EditorModule,FieldsetModule,FileUploadModule,GalleriaModule,GMapModule,GrowlModule,InplaceModule,InputMaskModule,InputSwitchModule,InputTextareaModule,InputTextModule,LightboxModule,ListboxModule,MegaMenuModule,MenubarModule,MenuModule,MessagesModule,MultiSelectModule,OrderListModule,OverlayPanelModule,PaginatorModule,PanelMenuModule,PanelModule,PasswordModule,PickListModule,ProgressBarModule,RadioButtonModule,RatingModule,ScheduleModule,SelectButtonModule,SharedModule,SlideMenuModule,SliderModule,SpinnerModule,SplitButtonModule,StepsModule,TabMenuModule,TabViewModule,TerminalModule,TieredMenuModule,ToggleButtonModule,ToolbarModule,TooltipModule,TreeModule,TreeTableModule,TriStateCheckboxModule];
 // MPRJModule
 import { MPRJModule } from '../modules/m-mprj/m-mprj.module';
+// MEdificandoOControleInternoModule
+import { MEdificandoOControleInternoModule } from '../modules/m-edificando-o-controle-interno/m-edificando-o-controle-interno.module';
 
-export const MutuaExportedModules: any[] = [MNg2AdminModule.forRoot(),BrowserAnimationsModule,NgbModule.forRoot(),...PRIMENG_MODULES,MPRJModule.forRoot()];
+export const MutuaExportedModules: any[] = [MNg2AdminModule.forRoot(),BrowserAnimationsModule,NgbModule.forRoot(),...PRIMENG_MODULES,MPRJModule.forRoot(),MEdificandoOControleInternoModule.forRoot()];
 
 export const MutuaAppComponent: any = NG2AppComponent;

@@ -25,11 +25,11 @@
 
 .macro-card{
   @extend .card;
-  height: 36em;
+  //height: 47.5em;
   padding-left: 1.7em !important;
   padding-right: 1.7em !important;
   padding-top: 1em !important;
-  padding-bottom: 0em !important;
+  padding-bottom: 1em !important;
   margin-bottom: 5em;
 }
 
@@ -122,13 +122,6 @@ p {
   padding-left: 5%;
 }
 
-.ajusta_elemento{
-  width: 11em;
-  height: 14em ;
-  padding: 1.5rem;
-
-}
-
 .logo {
   position: fixed;
   top: 40%;
@@ -139,8 +132,11 @@ p {
 @media(max-width:1199px){
   div.borderedL { border-color: transparent;}
   div.borderedR { border-color: transparent;}
-  img.img-responsive { width:80%;}
   div.scroll { height: 75%;}
   div.barraH{border-color: transparent}
-  max-width: 100%;
+
+  .macro-card{
+    height: auto;
+    padding-bottom: 1em!important;
+  }
 }

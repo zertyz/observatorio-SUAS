@@ -58,7 +58,7 @@ export const MutuaInstanceProjectComponentsActivationConfiguration: IInstancePro
   // componentes do projeto observatorio-SUAS
   {componentName: 'MPHomeComponent',              htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPDadosEIndicadoresComponent', htmlEnabled: true,  mobileEnabled: true},
-  {componentName: 'MPInspecoesComponent',         htmlEnabled: true,  mobileEnabled: true},
+  // {componentName: 'MPInspecoesComponent',         htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPBuscaComponent',             htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPAjudaComponent',             htmlEnabled: true,  mobileEnabled: true},
   {componentName: 'MPRankingComponent',           htmlEnabled: true,  mobileEnabled: true},
@@ -77,6 +77,9 @@ export const MutuaInstanceProjectModulesActivationConfiguration: IInstanceProjec
 
   // módulos do projeto Edificando o Controle Interno
   {moduleName: 'MPRJModule', htmlEnabled: true, mobileEnabled: false},
+
+  // módulos do projeto Edificando o Controle Interno
+  {moduleName: 'MEdificandoOControleInternoModule', htmlEnabled: true, mobileEnabled: false},
 
 ];
 

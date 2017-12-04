@@ -1,33 +1,27 @@
+
 <div class="container-fluid" >
 
   <div class="row">
-    <p></p>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-2 col-sm-4 col-sub col-8">
+    <div class="col-xl-2 col-3">
       <div class="row">
         <figure>
           <img src="./assets/img/Logo_SUAS.png" class="img-responsive ajusta_elemento">
-          <img src="./assets/img/CAO-logo.png" class="img-responsive" style="width: 179px;height: auto;">
+          <img class="img-logo" src="./assets/img/CAO-CIDADANIA-LOGO-blue.png">
         </figure>
-          <!--/Temporario-->
+        <!--/Temporario-->
       </div>
       <div class="row">
         <p><br/></p>
       </div>
     </div>
 
-
-
-    <div class="col-lg-10 col-xs-12">
+    <div class="col-xl-10 col-12">
       <div class="row">
 
-        <div class="col-xl-9 col-lg-8">
+        <div class="col-xl-9 col-12">
           <div class="row t-padding">
             <span class="titulo">O Projeto</span>
-            <p class="box-text">Dori me Interimo adapare Dori me Ameno ameno latire Latiremo Dori me
-              Ameno Omenare imperavi ameno Dimere dimere matiro Matiremo ameno</p>
+            <p class="box-text">Informações Gerais sobre os objetivos e métricas do projeto</p>
           </div>
 
           <div class="superior ">
@@ -38,8 +32,11 @@
               <p class="texto">O <b>Observatório SUAS</b> pretende estruturar uma ação coordenada e estratégica do MPRJ para fiscalizar e exigir a implementação adequada da Assistência Social, bem como provocar a intervenção dos atores sociais vocacionados para esta política pública.</p>
               <p class="texto">Dentre os objetivos pretendidos, destacam-se:</p>
               <div class="row">
-                <div class="col-sm-6 col-12 ">
+                <div class="col-12  ">
                   <ul class="texto" style="list-style:inside">
+                    <figure>
+                      <img class="img-envolvida" src="./assets/img/Ilustracao_SUAS.png">
+                    </figure>
                     <li>Exigir a implementação integral da Política de Assistência Social;</li>
                     <li>Construir uma metodologia de trabalho nova;</li>
                     <li>Criar indicadores para dimensionamento da oferta e da demanda;</li>
@@ -48,72 +45,69 @@
                     <li>Articular parcerias com instâncias de controle social para fomentação da fiscalização do SUAS.</li>
                   </ul>
                 </div>
-                <div class="col-sm-6 hidden-xs">
-                  <figure>
-                    <img class="img-envolvida" src="./assets/img/Ilustracao_SUAS.png">
-                  </figure>
-                </div>
+
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-xl-3 col-lg-4">
+        <div class="col-xl-3 col-md-5 col-12">
           <div class="row t-padding">
             <span class="titulo">inspeções</span>
             <p class="box-text">Uma visão geral das inspeções já realizadas pela equipe Observatório SUAS</p>
           </div>
           <div class="superior ">
-            <a [routerLink]="['/inspecoes']">ver as inspeções </a>
+            <a [routerLink]="['/busca/inspecoes']">ver as inspeções </a>
           </div>
           <div class=" card macro-card align-content-center">
             <div class="card-block">
-              <table>
+              <table width="100%">
                 <tr>
-                  <td><img class="icone img-responsive" src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
-                  <td style="background-color: #2d3743; width: 100%; border-bottom: 3px solid whitesmoke;">
+                  <td ><img class="icone" src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
+                  <td class="td-home">
                     <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">inspecões</div>
                     <div class="row">
-                      <div class="col-5 number" style="padding: 1em 0em 0em 1em;">250
+                      <div class="col-5 number" style="padding: 1em 0em 0em 1em;">5330
                         <div class="keyword-small">questões</div>
                       </div>
-                      <div class="col-6 number-big" style=" text-align: right">5</div>
+                      <div class="col-7 number-big" style=" text-align: right"> 45</div>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td><img class="icone img-responsive" src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
+                  <td><img class="icone " src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
                   <td style="background-color: #b81d18;border-bottom: 3px solid whitesmoke;">
                     <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">irregularidades</div>
                     <div class="row">
-                      <div class="col-5 number" style="padding: 1em 0em 0em 1em;">25%
+                      <div class="col-4 number" style="padding: 1em 0em 0em 1em;">12%
                         <div class="keyword-small">total</div>
                       </div>
-                      <div class="col-6 number-big" style=" text-align: right">5</div>
+                      <div class="col-8 number-big" style=" text-align: right">661</div>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td><img class="icone img-responsive" src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
+                  <td><img class="icone " src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
                   <td style="background-color: #fa8b60;border-bottom: 3px solid whitesmoke;">
-                    <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">pontos de irreguladores </div>
+                    <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">inconsistências</div>
                     <div class="row">
-                      <div class="col-5 number " style="padding: 1em 0em 0em 1em;" >25%
+                      <div class="col-5 number " style="padding: 1em 0em 0em 1em;" >1%
                         <div class="keyword-small">total</div>
                       </div>
-                      <div class="col-6 number-big" style="text-align: right">5</div>
+                      <div class="col-7 number-big" style="text-align: right">69
+                      </div>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td><img class="icone img-responsive" src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
+                  <td><img class="icone " src="./assets/img/icones/inspecoes_70px.png" align="left"></td>
                   <td style="background-color: #b08b0d;border-bottom: 3px solid whitesmoke;">
-                    <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">inconsitências</div>
+                    <div class="keyword" style=" border-bottom: 1px solid whitesmoke;">pontos de atenção</div>
                     <div class="row">
-                      <div class="col-5 number" style="padding: 1em 0em 0em 1em;">25%
+                      <div class="col-4 number" style="padding: 1em 0em 0em 1em;">4%
                         <div class="keyword-small">total</div>
                       </div>
-                      <div class="col-6 number-big" style=" text-align: right">5</div>
+                      <div class="col-8 number-big" style=" text-align: right">237</div>
                     </div>
                   </td>
                 </tr>
@@ -121,175 +115,192 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
 
-        <div class="col-lg-6 ">
+        <div class="col-xl-6 col-md-7 col-12 ">
           <div class="row t-padding">
             <span class="titulo">ranking de municipios</span>
             <p class="box-text"> O ranking de avaliação dos indicadores referentes ao SUAS nos municipios fluminenses</p>
           </div>
           <div class="superior " >
-            <a [routerLink]="['/busca']">ver o ranking completo </a>
+            <a [routerLink]="['/ranking']">ver o ranking completo </a>
           </div>
           <div class="card card-special">
             <div class="row">
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >01</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
+              <div *ngIf="errorMessage != null" class="alert alert-danger">
+                <b>Erro obtendo dados:</b> {{errorMessage}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6" style="padding-right:.2em;margin-top: .388em">
+
+                <div class="borderedL">
+                  <h2 class="title ">Média Geral do Municípios</h2>
+                  <p></p>
+                  <div class="borderedL pesoHeader notaConstrucaoAdiantada" style="font-size: 2em;padding-left: .4em;margin-bottom: 1.8em"> 7,44 </div>
+                  <br/>
+
+                </div>
+                <div class="col-12" style="padding: 0.2em">
+                  <div class="card micro-card">
+                    <tr>
+                      <td width="75%">
+                        <div class="keyword-municipio">Financiamento</div>
+                      </td>
+                      <td width="25%">
+                        <div class="col-12  pesoHeader notaEmAcabamento" > 7,65 </div>
+                      </td>
+                    </tr>
+                  </div>
+                </div>
+                <div class="col-12" style="padding: 0.2em">
+                  <div class="card micro-card">
+                    <tr>
+                      <td width="75%">
+                        <div class=" keyword-municipio" >Gestão</div>
+                      </td>
+                      <td width="25%">
+                        <div class="col-12  pesoHeader notaConstrucaoIniciada"> 5,56 </div>
+                      </td>
+                    </tr>
+                  </div>
+                </div>
+                <div class="col-12" style="padding: 0.2em">
+                  <div class="card micro-card">
+                    <tr>
+                      <td width="75%">
+                        <div class="keyword-municipio" >Inspeções</div>
+                      </td>
+                      <td width="25%">
+                        <div class="col-12 pesoHeader" style="color:#868a71;">N/A</div>
+                      </td>
+                    </tr>
+                  </div>
+                </div>
+
+              </div>
+              <div class=" col-6" style="padding-left: 0.2em">
+
+                <div class="col-12" style="padding: 0.2em">
+                  <div class="card micro-card">
+                    <tr>
+                      <td width="75%">
+                        <div class=" keyword-municipio" >Número de Equipamentos</div>
+                      </td>
+                      <td width="25%">
+                        <div class=" col-12 pesoHeader notaConstruido"> 9,46</div>
+                      </td>
+                    </tr>
+                  </div>
+                </div>
+                <div class="col-12" style="padding: 0.2em">
+                  <div class="card micro-card">
+                    <tr>
+                      <td width="75%">
+                        <div class=" keyword-municipio" >Controle Social</div>
+                      </td>
+                      <td width="25%">
+                        <div class="col-12 pesoHeader notaEmAcabamento " >7,61 </div>
+                      </td>
+                    </tr>
+                  </div>
+                </div>
+                <div class="col-12" style="padding: 0.2em">
+                  <div class="card micro-card">
+                    <tr>
+                      <td width="75%">
+                        <div class=" keyword-municipio" >Cobertura do Bolsa Família</div>
+                      </td>
+                      <td width="25%">
+                        <div class="col-12  pesoHeader notaEmAcabamento"> 8,27</div>
+                      </td>
+                    </tr>
+                  </div>
+                </div>
+                <div class="col-12" style="padding: 0.2em">
+                  <div class="card micro-card">
+                    <tr>
+                      <td width="75%">
+                        <div class=" keyword-municipio" >Cobertura do Cadastro Único</div>
+                      </td>
+                      <td width="25%">
+                        <div class="col-12 pesoHeader notaConstrucaoAdiantada"> 7,49 </div>
+                      </td>
+                    </tr>
+                  </div>
+                </div>
+                <div class="col-12" style="padding: 0.2em">
+                  <div class="card micro-card">
+                    <tr>
+                      <td width="75%">
+                        <div class=" keyword-municipio" > Resolução de Benefício Eventuais </div>
+                      </td>
+                      <td width="25%">
+                        <div class="col-12 pesoHeader notaConstrucaoIniciada" > 5,65</div>
+                      </td>
+                    </tr>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >02</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >03</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >04</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >05</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >06</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >07</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >08</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >09</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                <div class="card micro-card">
-                  <tr>
-                    <td class="barra-horizontal pesoValor" >10</td>
-                    <td>
-                      <div class="col-12 keyword-municipio" >São francisco  de itabapoana</div>
-                      <div class="col-12 pesoHeader">7.4</div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
+
 
             </div>
           </div>
         </div>
 
-        <div class="col-lg-3 col-sm-6 col-12 ">
+        <div class="col-xl-3 col-sm-6 col-12 ">
           <div class="row t-padding">
             <span class="titulo">Legislação</span>
             <p class="box-text"> Toda a legislação utilizada como base para avaliação nas inspeções e rankings</p>
           </div>
           <div class="superior " >
-            <a [routerLink]="['/busca']">ver toda a legislação </a>
+            <a [routerLink]="['/busca/legislacao']">ver toda a legislação </a>
           </div>
-          <div class="card col ml-2">
-            <div class="card-block " style="line-height: 2em">
-              <p class="text-blue"> Lei Federal</p>
-              <span> Lei Nº 8.742 de Dezembro de 1993</span>
-              <p class="text-blue"> Lei Federal</p>
-              <span> Lei Nº 8.742 de Dezembro de 1993</span>
-              <p class="text-blue"> Lei Federal</p>
-              <span> Lei Nº 8.742 de Dezembro de 1993</span>
-              <p class="text-blue"> Lei Federal</p>
-              <span> Lei Nº 8.742 de Dezembro de 1993</span>
+          <div class="card">
+            <div class="card-block " style="line-height: 1.7em">
+              <p class="text-blue lei"> Resolução</p>
+              <a href= "./assets/Downloads/Legislações/Ano 2012/Resolucao CNAS 033 de 12 de dezembro de 2012.pdf" download="Resolucao CNAS 033 de 12 de dezembro de 2012" target="_blank"> NOB/SUAS RESOLUÇÃO CNAS Nº 33, DE 12 DE DEZEMBRO DE 2012.</a>
+              <p class="text-blue lei"> Lei Federal</p>
+              <a href= "./assets/Downloads/Legislações/Ano 1993/Loas 7 de dezembro de 1993.pdf" download="Loas  7 de dezembro de 1993" target="_blank"> LOAS LEI Nº 8.742, DE 7 DE DEZEMBRO DE 1993.</a>
+              <p class="text-blue lei"> Resolução</p>
+              <a href= "./assets/Downloads/Legislações/Ano 2004/Resolucao CNAS 145 de 15 de  outubro de 2004.pdf" download="Resolução CNAS 145 de 15 de  outubro de 2004" target="_blank"> PNAS RESOLUÇÃO CNAS Nº 145, DE 15 DE OUTUBRO DE 2004 (DOU 28/10/2004).</a>
+              <p class="text-blue lei"> Resolução</p>
+              <a href= "./assets/Downloads/Legislações/Ano 2006/Resolucao CNAS 269 de 13 de dezembro de 2006.pdf" download="Resolucao CNAS 269 de 13 de dezembro de 2006" target="_blank"> NOB-RH/SUAS RESOLUÇÃO CNAS Nº 269, DE 13 DE DEZEMBRO DE 2006.</a>
+
             </div>
           </div>
         </div>
 
-        <div class="col-lg-3 col-sm-6 col-12 ">
+        <div class="col-xl-3 col-sm-6 col-12 ">
           <div class="row t-padding">
             <span class="titulo">orçamento</span>
             <p class="box-text"> Todos os orçamentos municipais e dos programas  federais e estaduais</p>
           </div>
           <div class="superior " >
-            <a [routerLink]="['/busca']">ver todos os orçamentos </a>
+            <a [routerLink]="['/busca/orcamento']">ver todos os orçamentos </a>
           </div>
           <div class="card ">
             <div class="card-block" style="line-height: 2em">
-              <p class="text-blue"> Orçamento 2016</p>
-              <span> União</span>
-              <p class="text-blue"> Orçamento 2017</p>
-              <span> União</span>
-              <p class="text-blue"> Orçamento 2016</p>
-              <span> Estado do Rio de Janeiro</span>
-              <p class="text-blue"> Orçamento 2016</p>
-              <span> Municipal</span>
+
+              <p class="text-blue lei"> Orçamento Municipal </p>
+              <a href= "./assets/dados/20171121/RIO DE JANEIRO_2016.pdf" download="RIO DE JANEIRO" target="_blank">
+              <span>Orçamento 2016 - Rio de Janeiro</span>
+              </a>
+
+              <p  class="text-blue lei"> Orçamento Municipal</p>
+              <a href= "./assets/dados/20171121/CAMPOS DOS GOYTACAZES_2016.pdf" download="CAMPOS DOS GOYTACAZES" target="_blank">
+              <span>Orçamento 2016 - Campos dos Goytacazes</span>
+              </a>
+
+              <p class="text-blue lei"> Orçamento Municipal</p>
+              <a href= "./assets/dados/20171121/DUQUE DE CAXIAS_2016.pdf" download="DUQUE DE CAXIAS" target="_blank">
+              <span>Orçamento 2016 - Duque de Caxias</span>
+              </a>
+
+               <p class="text-blue lei"> Orçamento Municipal</p>
+              <a href= "./assets/dados/20171121/VOLTA REDONDA_2016.pdf" download="VOLTA REDONDA" target="_blank">
+              <span>Orçamento 2016 - Volta Redonda</span>
+              </a>
             </div>
           </div>
         </div>

@@ -15,17 +15,18 @@
 
 
 .ajusta_elemento{
-  width: 10em!important;
-  height: 13em !important;
-  padding: 0.5em 0.1em 0em 1em!important;
+  width: 11em;
+  height: auto;
+  padding: 1.5em 0.1em 0em 1em!important;
 }
 
 .img-envolvida {
   float: right;
   shape-outside: url("../assets/img/Ilustracao_SUAS_fase_6.png");
-  shape-margin: 5%;
+  shape-margin: 10%;
   shape-image-threshold: 0.5;
-  width: 111%;
+  width: 34em;
+  max-width: 64%;
 }
 
 div.borderedR{
@@ -36,6 +37,9 @@ div.borderedR{
 div.borderedL{
   border-left: 0.05rem solid #000000;
   padding-left: 2rem;
+}
+.full{
+  height: 100%;
 }
 
 p {
@@ -49,10 +53,15 @@ p {
   text-transform: uppercase;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background: url('/dist/dev/assets/img/borda-titulo.png') no-repeat left top;
+  background: url('./assets/borda-titulo.png') no-repeat left top;
   color: #0d2b48
 }
-
+.img-logo{
+  width: 150px;
+  height: auto;
+  margin-left: 1em;
+  padding-top: 2em;
+}
 .subtitulo {
   font-family: 'Raleway';
   font-size: 0.95rem;
@@ -126,4 +135,12 @@ p {
   color: white!important;
   background-color: #057fb2!important;
   border-color: #057fb2!important;
+}
+@media(max-width:1199px ) {
+  .img-logo{
+    display: none;
+  }
+  .ajusta_elemento{
+    width: 7em;
+  }
 }

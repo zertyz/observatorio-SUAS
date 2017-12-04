@@ -22,12 +22,15 @@
 
 span.slider:hover {
   color: white;
-  background-color: #057fb2;
+  background-color: #2e3a48;
   border-color: #057fb2;
 
-    .vt-blue{
+    .keyword{
       color:white;
     }
+  .vt-blue{
+    color: white;
+  }
 }
 
 input:checked + .slider {
@@ -35,10 +38,10 @@ input:checked + .slider {
   background-color: #057fb2;
   border-color: #057fb2;
 
-  .vt-blue{
-    color:white;
-  }
   .keyword{
+    color: white;
+  }
+  .vt-blue{
     color: white;
   }
 }
@@ -145,6 +148,9 @@ th div{
 table > th:first-child div{
   border: none;
 }
+div> tbody > tr{
+  line-height: 3.1em;
+}
 
 // Styles Cards
 .card{
@@ -157,7 +163,7 @@ table > th:first-child div{
 }
 .card-block{
   height: 100%;
-  padding: 1.7rem;
+  padding: 1.3rem;
 }
 
 // Sytles Fonts
@@ -188,7 +194,7 @@ table > th:first-child div{
 .nome-eq{
   color: rgb(5, 127, 178);
   font-family: 'Raleway';
-  font-size: .9rem;
+  font-size: .7rem;
   line-height: 90%;
   font-weight: bold;
   margin-top: 4%;
@@ -261,7 +267,7 @@ p{
 .numero-destacado{
   color: rgb(5, 127, 178);
   font-family: 'Roboto-Condensed';
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 .vt-porcentagem{
@@ -467,7 +473,7 @@ div.col-md-4{
   }
 
   .card{
-    height: 25rem;
+    height: 26.8rem;
   }
 
   section >.container {

@@ -13,26 +13,24 @@
 import { AppComponent } from '../../components/app.component';
 import { MPHomeComponent } from '../../components/pages/mp-home/mp-home.component';
 import { MPDadosEIndicadoresComponent } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.component';
-import { MPInspecoesComponent } from '../../components/pages/mp-inspecoes/mp-inspecoes.component';
 import { MPBuscaComponent } from '../../components/pages/mp-busca/mp-busca.component';
 import { MPAjudaComponent } from '../../components/pages/mp-ajuda/mp-ajuda.component';
 import { MPRankingComponent } from '../../components/pages/mp-ranking/mp-ranking.component';
 import { MPMetodologiaComponent } from '../../components/pages/mp-metodologia/mp-metodologia.component';
 
-export const MutuaExportedComponents: any[] = [AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent,MPInspecoesComponent,MPBuscaComponent,MPAjudaComponent,MPRankingComponent,MPMetodologiaComponent];
+export const MutuaExportedComponents: any[] = [AppComponent,MPHomeComponent,MPDadosEIndicadoresComponent,MPBuscaComponent,MPAjudaComponent,MPRankingComponent,MPMetodologiaComponent];
 
 // routes
 /////////
 
 import { MPHomeRoutes } from '../../components/pages/mp-home/mp-home.routes';
 import { MPDadosEIndicadoresRoutes } from '../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.routes';
-import { MPInspecoesRoutes } from '../../components/pages/mp-inspecoes/mp-inspecoes.routes';
 import { MPBuscaRoutes } from '../../components/pages/mp-busca/mp-busca.routes';
 import { MPAjudaRoutes } from '../../components/pages/mp-ajuda/mp-ajuda.routes';
 import { MPRankingRoutes } from '../../components/pages/mp-ranking/mp-ranking.routes';
 import { MPMetodologiaRoutes } from '../../components/pages/mp-metodologia/mp-metodologia.routes';
 
-export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes,...MPInspecoesRoutes,...MPBuscaRoutes,...MPAjudaRoutes,...MPRankingRoutes,...MPMetodologiaRoutes];
+export const MutuaExportedRoutes: any[] = [...MPHomeRoutes,...MPDadosEIndicadoresRoutes,...MPBuscaRoutes,...MPAjudaRoutes,...MPRankingRoutes,...MPMetodologiaRoutes];
 
 // modules
 //////////

@@ -1,0 +1,114 @@
+.full{
+  height: 100%;
+  max-height: 100%;
+}
+.img-fluid{
+  padding-top: 2em!important;
+}
+
+.title {
+  font-family: 'Raleway';
+  font-size: 140%;
+  line-height: 70%;
+  color: #0d2b48;
+}
+
+.tituloOutrosRankings {
+  font-family: 'Raleway';
+  font-size: 120%;
+  line-height: 200%;
+}
+.micro-card{
+  color: inherit;
+  background-color: white;
+  width: 100%;
+  background-color: white;
+  border-right: 1px solid #d2d7de;
+  border-bottom: 1px solid #d2d7de;
+  border-left: 1px solid #eaecee;
+  border-top: 1px solid #eaecee;
+  margin: 0em 1em 1em 0em;
+  padding: 1em;
+  height: 8em;
+}
+.ajusta_imagem{
+  width: 4em;
+  box-sizing: border-box;
+}
+
+.outrosRankings {
+  font-family: 'Raleway';
+  font-size: 100%;
+  line-height: 100%;
+  background-color: #E0E0E0;
+  border-style: none;
+  color: rgba(10, 10, 10, 0.87);
+  cursor: pointer;
+  padding: 4px 8px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+//Dropdown Personalizado {
+
+.selectdiv {
+  position: relative;
+  line-height: 3em;
+}
+
+//Opções do Select
+option{
+  width: 1em!important;
+  font-size: 0.683em;
+  color: #0d2b48;
+}
+
+//Icone do Select
+.selectdiv:after {
+  content: ".\f0c9";
+  font: normal normal normal 17px/1 FontAwesome;
+  right: 11px;
+  top: 6px;
+  height: 44px;
+  padding-top: 3px;
+  position: absolute;
+  pointer-events: none;
+  margin-left: 3em;
+  color: #0d2b48;
+  float: left;
+}
+
+//Resolve problema no IE9
+select::-ms-expand {
+  display: none;
+}
+.card{
+  height: 44em;
+  padding: 15px;
+}
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  font-family: 'Raleway';
+  line-height: 100%;
+  font-size: 1.583em;
+  font-weight: bold;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  max-height: 5.3em;
+  white-space: inherit;
+  color: #0d2b48;
+}
+
+// } Dropdown personalizado
+@media(max-width: 1199px) {
+  .ajusta_imagem{
+    width: 6em;
+    max-width: 100%;
+  }
+
+}

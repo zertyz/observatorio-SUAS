@@ -1,3 +1,7 @@
+/*.botao-download{
+  width: 19rem!important;
+}*/
+
 .field-select {
   color: #555;
   border: 1px solid #afb7c7;
@@ -16,7 +20,10 @@
 .img-fluid{
   width: 5.6em;
 }
+.card{
+  padding: 20px;
 
+}
 .text-blue{
   color: rgb(5, 127, 178);
   text-align: left;
@@ -31,6 +38,10 @@
   margin-bottom: 1.2rem;
 }
 
+#_mprjbusca_WAR_mprjbuscaportlet_keywords_param2{
+  margin-bottom: 1.2rem;
+}
+
 #_mprjbusca_WAR_mprjbuscaportlet_filtro_param{
   margin-bottom: 1.2rem;
 }
@@ -40,6 +51,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  height: 14em;
 }
 
 .btn-secundario{
