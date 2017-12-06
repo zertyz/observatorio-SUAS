@@ -46,21 +46,23 @@
 
 
 @media(max-width:1199px){
-  max-width: 100%;
   .backImg{
     position: inherit;
     z-index: inherit;
-    top:inherit;
+    top:0;
     left: inherit;
-    width: 90%;
+    width: 79%;
     height: 90%;
     padding-left: 5%;
   }
+
 }
 @media(max-width:767px){
 .backImg {
   position: relative!important;
-  max-width: 50% !important;
+  max-width: 110% !important;
   padding-left: 5%;
+  width:100%;
   }
+
 }

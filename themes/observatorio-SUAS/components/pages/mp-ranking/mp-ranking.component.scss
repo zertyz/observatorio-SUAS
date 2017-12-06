@@ -18,6 +18,9 @@
   font-size: 120%;
   line-height: 200%;
 }
+.box-text{
+  height: 155px;
+}
 .micro-card{
   color: inherit;
   background-color: white;
@@ -110,5 +113,14 @@ select::-ms-expand {
     width: 6em;
     max-width: 100%;
   }
+  .card{
+    height: auto;
+  }
 
+}
+@media(max-width: 575px) {
+  .col-2{
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
