@@ -130,11 +130,20 @@ div > a{
   .titulo{
     font-size: 1.3rem;
   }
+
   :host/deep/{
     .ui-state-default{
-    line-height: 2.5em;
+    line-height: 1.5em;
     }
   }
+
+  .keyword{
+    font-size: 1rem;
+  }
+  .button-switch{
+    width: 29%;
+  }
+
 }
 @media (min-width:1199px) {
   .card#altura{

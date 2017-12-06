@@ -128,6 +128,11 @@ p {
   left: 40%;
   cursor: pointer;
 }
+.padding-classificacao{
+  padding-top: 53px;
+  padding-right: 25%;
+  padding-left: 25%;
+}
 
 @media(max-width:1199px){
   div.borderedL { border-color: transparent;}
@@ -138,5 +143,21 @@ p {
   .macro-card{
     height: auto;
     padding-bottom: 1em!important;
+  }
+}
+@media(max-width:991px){
+  .col-6{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .padding-classificacao{
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+}
+@media(max-width:575px){
+  .img-envolvida{
+    width: 6em!important;
   }
 }

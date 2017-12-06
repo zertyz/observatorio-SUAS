@@ -18,7 +18,7 @@ $burger--thickness: 4px;
   outline: 0;
   padding: 0;
   cursor: pointer;
-  margin: 28px;
+  margin: 28px 8px 8px 8px;
   border-bottom: $burger--thickness solid currentColor;
   width: $width;
 
@@ -243,6 +243,9 @@ hr{
 
   .logo-completo {
     display: none;
+  }
+  nav a {
+    margin-left: -16%;
   }
 }
 
