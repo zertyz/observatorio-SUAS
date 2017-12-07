@@ -12,14 +12,16 @@
   width: 8vw;
   height: 3.5rem;
   padding: 0 20px;
-  padding-left: inherit;
   display: block;
   cursor: pointer;
   background-color: white;
   -webkit-transition: .3s;
   transition: .3s;
 }
-
+.height-graphic{
+  width: auto;
+  height: auto;
+}
 span.slider:hover {
   color: white;
   background-color: #2e3a48;
@@ -326,7 +328,7 @@ p{
   canvas{
     width: 3vw!important;
     height: 3vw !important;
-    padding-top: 0.5vw!important;
+    padding-top: 0.5vw;
   }
 }
 
@@ -334,17 +336,12 @@ div.col-md-4{
   padding-left: 0;
 }
 
-@media(max-width: 577px) {
-  .slider{
-    width: 16.2vw;
-  }
+@media(max-width: 576px) {
   .keyword1{
     white-space: nowrap;
     font-size: .4em;
   }
-  .keyword{
-    font-size: .64rem;
-  }
+
   .vt-blue{
     white-space: nowrap;
     font-size: .9rem;
@@ -359,6 +356,10 @@ div.col-md-4{
   .subtitulo{
     font-size: .85em;
   }
+
+  #total{
+    display: none;
+  }
 }
 
 @media(max-width:767px){
@@ -372,9 +373,13 @@ div.col-md-4{
   div.col-12{
     margin-bottom: 2rem;
   }
+  .slider{
+    padding: 0px 20px 0px 2px;
+  }
   .hw1{
   font-size: 1.483em;
   }
+
   :host/deep/{
     .ui-widget-content{
       height: inherit;
@@ -407,6 +412,9 @@ div.col-md-4{
     display:initial;
     padding-left: 0rem;
 
+  }
+  .keyword{
+    font-size: .64rem;
   }
   p.keyword{
     font-size: 12px;
@@ -445,10 +453,10 @@ div.col-md-4{
   }
 }
 
-@media(min-width: 577px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
 
   .slider{
-    width: 17.4vw;
+    width: 17.2vw;
   }
 }
 @media(min-width:768px)and(max-width: 1199px){
@@ -480,11 +488,4 @@ div.col-md-4{
     overflow-y: auto;
     height: 350px;
   }
-}
-@media(max-width: 1400px) {
-
-  .height_line{
-    line-height: 1.7em;
-  }
-
 }

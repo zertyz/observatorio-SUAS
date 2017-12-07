@@ -434,12 +434,29 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       ]
     };
 
-    // preenche estrutura de dados do gráfico Programas
+    // preenche estrutura de dados do gráfico Resumo Orcamentario
     this.graficoResumoOrcamentario = {
       labels: ['Verba Utilizada', 'Verba não utilizada'],
       datasets: [
         {
           data: [this.indicadoresOrcamentariosDoMunicipio.totalUtilizado, this.indicadoresOrcamentariosDoMunicipio.totalBloqueado],
+          backgroundColor: [
+            '#117011',
+            '#660000',
+          ],
+          hoverBackgroundColor: [
+            '#117011',
+            '#660000'
+          ]
+        }
+      ]
+    };
+    // preenche estrutura de dados do gráfico Programas
+    this.graficoProgramas = {
+      labels: ['Verba Utilizada', 'Verba não utilizada'],
+      datasets: [
+        {
+          data: [this.indicadoresOrcamentariosDoMunicipio.programasTotal, this.indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado],
           backgroundColor: [
             '#117011',
             '#660000',

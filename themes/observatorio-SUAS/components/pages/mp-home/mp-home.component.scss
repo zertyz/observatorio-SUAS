@@ -107,6 +107,14 @@ a{
   float: right;
 }
 
+.padding-left-ranking{
+  padding-left: 0.2em;
+}
+
+.padding-right-ranking{
+  padding-right:.2em;
+  margin-top: .388em
+}
 
 .dimensao {
   font-family: 'Raleway';
@@ -136,7 +144,9 @@ a{
   word-wrap: normal;
   padding-right: .13em;
 }
-
+.col-8{
+  padding-left: 0;
+}
 .info {
   font-family: 'Raleway';
   font-size: 100%;
@@ -215,6 +225,18 @@ div > span{
 @media (max-width: 575px) {
   .img-envolvida{
     display: none;
+  }
+  .macro-card{
+    height: auto;
+  }
+  .card{
+    height: auto;
+  }
+  .padding-right-ranking{
+    padding-right:15px ;
+  }
+  .padding-left-ranking{
+    padding-left: 15px;
   }
 }
 

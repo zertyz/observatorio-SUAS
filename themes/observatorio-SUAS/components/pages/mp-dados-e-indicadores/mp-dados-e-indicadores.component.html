@@ -140,7 +140,7 @@
                 <div class="vt-blue">{{contagemEquipamentos}}</div>
               </span>
             </label>
-            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+            <label class="button-switch barra" style="border-top: 1px solid #2e3a48" id="total">
               <!--<input type="radio" name="radio" (click)="selectTipo(2)" id="check2">-->
               <div class="slider">
                 <div  class="keyword1" style="text-align: right">% DO ESTADO</div>
@@ -265,7 +265,7 @@
                 <tbody>
                 <tr>
                   <td class="barraH" width="10%"><img class="img-fluid2" src="./assets/img/icones/familias_vulneraveis_70px.png" align="left"></td>
-                  <td class=" barraH height_line"width="35%">
+                  <td class=" barraH "width="35%">
                     <p class="keyword">Familias vulneráveis</p>
                       <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasVulneraveis}}</div>
                   </td>
@@ -280,7 +280,7 @@
                 </tr>
                 <tr>
                   <td class="barraH"><img class="img-fluid2" src="./assets/img/icones/bolsa_familia_70px.png" align="left"></td>
-                  <td class="barraH height_line">
+                  <td class="barraH ">
                     <p class="keyword">Bolsa família</p>
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasBolsaFamilia}}</div>
                   </td>
@@ -295,7 +295,7 @@
 
                 </tr>
                 <tr>
-                  <td colspan="2" class="barraH height_line">
+                  <td colspan="2" class="barraH ">
                     <img class="img-fluid2" src="./assets/img/icones/familias_registradas_70px.png" align="left" >
                     <p class="keyword">Famílias registradas no cadastro único</p>
                     <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasCadastroUnico}}</div>
@@ -441,12 +441,12 @@
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Gestão do Bolsa Familía e  CadÚnico</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
+                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw;width: 25%;">Gestão do Bolsa Familía e  CadÚnico</th>
+                  <td class="barra barraH vt-black" style="width: 15%">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaTotal)}}</td>
+                  <td class="barra barraH vt-green" style="width: 15%">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaUtilizado)}}</td>
+                  <td class="barraH vt-red" style="width: 15%">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaNaoUtilizado)}}</td>
+                  <td class="barraH vt-red" style="width: 10%">
+                    <div class="height-graphic" >
                       <p-chart type="doughnut"  [data]="graficoGestaoBolsaFamilia" [options]="opcoesGraficos"></p-chart>
                     </div>
                     <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaTotal, indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaNaoUtilizado)}}</div>

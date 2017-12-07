@@ -18,7 +18,7 @@ $burger--thickness: 4px;
   outline: 0;
   padding: 0;
   cursor: pointer;
-  margin: 28px 8px 8px 8px;
+  margin: 28px 0px 8px 8px;
   border-bottom: $burger--thickness solid currentColor;
   width: $width;
 
@@ -212,9 +212,8 @@ hr{
 {
   .img-fluid
   {
-    min-width: 90px !important;
-    max-width: 95px !important;
-    margin-left: 0% !important;
+    min-width: 90px ;
+    margin-left: 0%!important;
   }
 }
 
@@ -222,8 +221,8 @@ hr{
 {
   .img-fluid
   {
-    min-width: 290px !important;
-    max-width: 340px !important;
+    min-width: 290px;
+    max-width: 340px;
   }
 
   #show-burger {
@@ -238,7 +237,7 @@ hr{
 @media (max-width: 990px)
 {
   .img-fluid {
-    max-width: 309px !important;
+    max-width: 140px;
   }
 
   .logo-completo {
@@ -254,9 +253,6 @@ hr{
   .logo-mini {
     display: none;
   }
-}
-@media screen and(min-width: 998px) and (max-width:1500px)
-{
   .footer-align {
     height: 3.3rem;
   }
