@@ -11,6 +11,7 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
 
 // services
 import { IDadosGerais }       from '../../../shared/modules/m-observatorio-suas/services/IDadosGerais';
+import { IIndicadoresOrcamentarios }       from '../../../shared/modules/m-observatorio-suas/services/IIndicadoresOrcamentarios';
 
 
 @Component({
@@ -12023,49 +12024,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     }
   ];
 
-}
-
-// TODO refatorar como serviço
-interface IIndicadoresOrcamentarios {
-  anoOrcamento:                               number;
-  municipio:                                  string;
-  programasTotal:                             number;
-  programasNaoUtilizado:                      number;
-  programasUtilizado:                         number;
-  pseMediaComplexidadeTotal:                  number;
-  pseMediaComplexidadeNaoUtilizado:           number;
-  pseMediaComplexidadeUtilizado:              number;
-  pseAltaComplexidadeTotal:                   number;
-  pseAltaComplexidadeNaoUtilizado:            number;
-  pseAltaComplexidadeUtilizado:               number;
-  psbTotal:                                   number;
-  psbNaoUtilizado:                            number;
-  psbUtilizado:                               number;
-  gestaoSuasTotal:                            number;
-  gestaoSuasNaoUtilizado:                     number;
-  gestaoSuasUtilizado:                        number;
-  gestaoBolsaFamiliaTotal:                    number;
-  gestaoBolsaFamiliaNaoUtilizado:             number;
-  gestaoBolsaFamiliaUtilizado:                number;
-  pisoBasicoFixoTotal:                        number;
-  pisoBasicoFixoNaoUtilizado:                 number;
-  pisoBasicoFixoUtilizado:                    number;
-  pisoBasicoVariavelTotal:                    number;
-  pisoBasicoVariavelNaoUtilizado:             number;
-  pisoBasicoVariavelUtilizado:                number;
-  pisoAltaComplexidade1Total:                 number;
-  pisoAltaComplexidade1NaoUtilizado:          number;
-  pisoAltaComplexidade1Utilizado:             number;
-  pisoAltaComplexidade2Total:                 number;
-  pisoAltaComplexidade2NaoUtilizado:          number;
-  pisoAltaComplexidade2Utilizado:             number;
-  pisoTransicaoMediaComplexidadeTotal:        number;
-  pisoTransicaoMediaComplexidadeNaoUtilizado: number;
-  pisoTransicaoMediaComplexidadeUtilizado:    number;
-  totalPago:                                  number;
-  totalBloqueado:                             number;
-  totalUtilizado:                             number;
-  pBloqueio:                                  number;
 }
 
 // TODO refatorar como serviço
