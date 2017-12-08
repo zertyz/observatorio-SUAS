@@ -12,6 +12,7 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
 // services
 import { IDadosGerais }       from '../../../shared/modules/m-observatorio-suas/services/IDadosGerais';
 import { IIndicadoresOrcamentarios }       from '../../../shared/modules/m-observatorio-suas/services/IIndicadoresOrcamentarios';
+import { IEquipamento }       from '../../../shared/modules/m-observatorio-suas/services/IEquipamento';
 
 
 @Component({
@@ -12024,17 +12025,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     }
   ];
 
-}
-
-// TODO refatorar como serviço
-interface IEquipamento {
-  tipo:      string;
-  municipio: string;
-  porte:     string;
-  nome:      string;
-  endereco:  string;
-  cep:       string;
-  telefone:  string;
 }
 
 // TODO refatorar como serviço
