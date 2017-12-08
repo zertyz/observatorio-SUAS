@@ -9,6 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Injector } from '@angular/core';
 import { Config, RouterExtensions } from '../../../modules/core/index';
 
+// services
+import { IDadosGerais }       from '../../../shared/modules/m-observatorio-suas/services/IDadosGerais';
+
 
 @Component({
   moduleId: module.id,
@@ -12020,16 +12023,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     }
   ];
 
-}
-
-// TODO refatorar como serviço
-interface IDadosGerais {
-  municipio: string;
-  prefeito: string;
-  secretarioAssistenciaSocial: string;
-  populacao: number;
-  idh: number;
-  idc: number;
 }
 
 // TODO refatorar como serviço
