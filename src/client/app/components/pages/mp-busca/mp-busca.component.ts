@@ -7,6 +7,9 @@ import { Input } from '@angular/core';
 import { Injector } from '@angular/core';
 import { RouterExtensions } from '../../../modules/core/index';
 
+// services
+import { IPesquisa }       from '../../../shared/modules/m-observatorio-suas/services/IPesquisa';
+
 @Component({
   moduleId: module.id,
   selector: 'mp-busca',
@@ -21,7 +24,6 @@ export class MPBuscaComponent {
 
   private documentosProcurados: IPesquisa[] = [];
   private resultadosEncontrados: number = 0;
-
 
   private documentos: IPesquisa[] = [
     {
@@ -2582,12 +2584,4 @@ export class MPBuscaComponent {
     this.pesquisar(campoCategoria.value, campoPesquisa.value);
   }
 
-}
-
-// TODO refatorar como serviço
-interface IPesquisa {
-  arquivo:       string;
-  palavrasChave: string;
-  categoria:     string;
-  nome:          string;
 }
