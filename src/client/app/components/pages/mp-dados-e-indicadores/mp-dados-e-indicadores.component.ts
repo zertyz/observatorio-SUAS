@@ -10,9 +10,10 @@ import { Injector } from '@angular/core';
 import { Config, RouterExtensions } from '../../../modules/core/index';
 
 // services
-import { IDadosGerais }       from '../../../shared/modules/m-observatorio-suas/services/IDadosGerais';
-import { IIndicadoresOrcamentarios }       from '../../../shared/modules/m-observatorio-suas/services/IIndicadoresOrcamentarios';
-import { IEquipamento }       from '../../../shared/modules/m-observatorio-suas/services/IEquipamento';
+import { IDadosGerais }               from '../../../shared/modules/m-observatorio-suas/services/IDadosGerais';
+import { IIndicadoresOrcamentarios }  from '../../../shared/modules/m-observatorio-suas/services/IIndicadoresOrcamentarios';
+import { IEquipamento }               from '../../../shared/modules/m-observatorio-suas/services/IEquipamento';
+import { IIndicadoresSociais }        from '../../../shared/modules/m-observatorio-suas/services/IIndicadoresSociais';
 
 
 @Component({
@@ -12025,32 +12026,4 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     }
   ];
 
-}
-
-// TODO refatorar como serviço
-interface IIndicadoresSociais {
-  municipio:                          string;
-  contagemCRAS:                       string;
-  contagemCREAS:                      string;
-  contagemCentrosPOP:                 string;
-  totalEquipamentosEstado:            string;
-  pEquipamentosEstado:                string;
-  nFamiliasVulneraveis:               string;
-  pFamiliasVulneraveisMunicipio:      string;
-  pFamiliasVulneraveisEstado:         string;
-  nFamiliasBolsaFamilia:              string;
-  pFamiliasBolsaFamiliaMunicipio:     string;
-  pFamiliasBolsaFamiliaEstado:        string;
-  pFamiliasBolsaFamiliaCobertura:     string;
-  pFamiliasCadastroUnicoCobertura:    string;
-  bolsaFamiliaValorTotalRepassado:    string;
-  nFamiliasCadastroUnico:             string;
-  pCadastroUnicoMunicipio:            string;
-  pCadastroUnicoEstado:               string;
-  cadUnicoBeneficiosEventuais:        boolean;
-  cadUnicoPAIF:                       boolean;
-  cadUnicoPAEFI:                      boolean;
-  nBeneficiariosPrestacaoContinuada:  string;
-  bpcValorTotalRepassado:             string;
-  nivelGestao:                        string;
 }

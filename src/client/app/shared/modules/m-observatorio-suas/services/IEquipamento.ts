@@ -1,5 +1,5 @@
 /** <pre>
- * observatorioSUAS/IDadosGerais.ts
+ * observatorioSUAS/IEquipamento.ts
  * ============
  * (created by coppolaop on Sex, Dec, 08, 2017)
  *
