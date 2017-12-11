@@ -18,10 +18,12 @@
   -webkit-transition: .3s;
   transition: .3s;
 }
+
 .height-graphic{
   width: auto;
   height: auto;
 }
+
 span.slider:hover {
   color: white;
   background-color: #2e3a48;
@@ -326,7 +328,7 @@ p{
 }
 :host/deep/{
   canvas{
-    width: 3vw!important;
+    width: 3vw !important;
     height: 3vw !important;
     padding-top: 0.5vw;
   }
@@ -438,6 +440,13 @@ div.col-md-4{
   .valor-tabela{
     font-size: .9em;
   }
+  :host/deep/{
+  canvas{
+    width: 49px !important;
+    height: auto !important;
+    padding-top: 0.5vw;
+  }
+}
 }
 
 @media(min-width:992px){
