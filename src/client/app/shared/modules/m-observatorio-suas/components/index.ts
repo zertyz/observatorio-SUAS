@@ -1,0 +1,1 @@
+export * from '../../../../components/pages/mp-dados-e-indicadores/mp-dados-e-indicadores.component';
