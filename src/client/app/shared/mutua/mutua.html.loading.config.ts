@@ -48,7 +48,9 @@ let PRIMENG_MODULES: any[] = [AccordionModule,AutoCompleteModule,BlockUIModule,B
 import { MPRJModule } from '../modules/m-mprj/m-mprj.module';
 // MEdificandoOControleInternoModule
 import { MEdificandoOControleInternoModule } from '../modules/m-edificando-o-controle-interno/m-edificando-o-controle-interno.module';
+// MObservatorioSUASModule
+import { MObservatorioSUASModule } from '../modules/m-observatorio-suas/m-observatorio-suas.module';
 
-export const MutuaExportedModules: any[] = [MNg2AdminModule.forRoot(),BrowserAnimationsModule,NgbModule.forRoot(),...PRIMENG_MODULES,MPRJModule.forRoot(),MEdificandoOControleInternoModule.forRoot()];
+export const MutuaExportedModules: any[] = [MNg2AdminModule.forRoot(),BrowserAnimationsModule,NgbModule.forRoot(),...PRIMENG_MODULES,MPRJModule.forRoot(),MEdificandoOControleInternoModule.forRoot(),MObservatorioSUASModule.forRoot()];
 
 export const MutuaAppComponent: any = NG2AppComponent;
