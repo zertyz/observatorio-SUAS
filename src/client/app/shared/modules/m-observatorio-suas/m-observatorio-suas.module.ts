@@ -13,7 +13,8 @@ import { MPDadosEIndicadoresComponent } from './components/index';
 
 // services
 import { DadosEIndicadoresService } from './services/dados-e-indicadores.service';
-import { IDadosGerais }       from './services/IDadosGerais';
+import { IDadosGerais }             from './services/IDadosGerais';
+import { IIndicadoresSociais }      from './services/IIndicadoresSociais';
 
 // bootstrap?
 import { NgbModule,

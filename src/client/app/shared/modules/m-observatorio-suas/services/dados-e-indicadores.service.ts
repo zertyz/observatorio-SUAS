@@ -28,28 +28,27 @@ import { Analytics, AnalyticsService } from '../../../../modules/analytics/index
 
 // module
 import { IDadosGerais }       from './IDadosGerais';
-// import { IDadosMunicipio } from './IDadosMunicipio';
+import { IIndicadoresSociais }       from './IIndicadoresSociais';
 
 @Injectable()
 export class DadosEIndicadoresService {
 
-  private DadosGeraisJsonFileURL: string = `${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/dados/20171025/Dados_Gerais.json`;
-  // private dadosMunicipiosJsonFileURL: string = `${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/dados/dados_municipios_20170614.json`;
+  private JsonFileURL: string = `${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/dados/dados-e-indicadores/`;//Caminho para a pasta de JSONs de Dados e Indicadores
 
   constructor(private http: Http) {}
 
   public fetchDadosGerais(): Observable < IDadosGerais[] > {
-    return this.http.get(this.DadosGeraisJsonFileURL)
+    return this.http.get(this.JsonFileURL + 'Dados_Gerais.json')
                     .map((response: Response) => {
                       return < IDadosGerais[] > response.json();
                     }).catch((error:any) => Observable.throw(error.json().error || 'Erro no servidor ao resgatar Dados Gerais'));
   }
 
-  /*public fetchDadosMunicipios(): Observable < IDadosMunicipio[] > {
-    return this.http.get(this.dadosMunicipiosJsonFileURL)
-      .map((response: Response) => {
-        return < IDadosMunicipio[] > response.json();
-      }).catch((error:any) => Observable.throw(error.json().error || 'Erro no servidor ao resgatar dados dos municípios'));
-  }*/
+  public fetchIndicadoresSociais(): Observable < IIndicadoresSociais[] > {
+    return this.http.get(this.JsonFileURL + 'Indicadores_Sociais.json')
+                    .map((response: Response) => {
+                      return < IIndicadoresSociais[] > response.json();
+                    }).catch((error:any) => Observable.throw(error.json().error || 'Erro no servidor ao resgatar Indicadores Sociais'));
+  }
 
 }
