@@ -440,6 +440,7 @@ div.col-md-4{
   .valor-tabela{
     font-size: .9em;
   }
+
   :host/deep/{
   canvas{
     width: 49px !important;
@@ -466,6 +467,9 @@ div.col-md-4{
 
   .slider{
     width: 17.2vw;
+  }
+  div> tbody > tr{
+    line-height: 2.4em;
   }
 }
 @media(min-width:768px)and(max-width: 1199px){

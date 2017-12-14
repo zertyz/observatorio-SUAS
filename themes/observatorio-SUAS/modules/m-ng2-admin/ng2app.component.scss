@@ -206,6 +206,16 @@ hr{
   #show-desktop {
     display: none;
   }
+  .top-margin{
+    margin-top:4em;
+  }
+  nav{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    opacity:1;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 575px)

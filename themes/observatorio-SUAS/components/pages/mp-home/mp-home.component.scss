@@ -133,7 +133,7 @@ a{
   font-weight: normal;
   line-height: 90%;
   word-wrap: normal;
-  padding-top: .7em;
+  padding-top: .8em;
   padding-right: 1.33em;
 }
 
@@ -245,6 +245,9 @@ div > span{
 @media (max-width: 991px) {
   .card {
     padding-bottom: 1em;
+  }
+  .title{
+    font-size: 1.37em;
   }
 
 }
