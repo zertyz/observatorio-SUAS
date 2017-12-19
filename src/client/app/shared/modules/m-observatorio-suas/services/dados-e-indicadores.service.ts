@@ -27,8 +27,9 @@ import { Config } from '../../../../modules/core/index';
 import { Analytics, AnalyticsService } from '../../../../modules/analytics/index';
 
 // module
-import { IDadosGerais }       from './IDadosGerais';
-import { IIndicadoresSociais }       from './IIndicadoresSociais';
+import { IDadosGerais }               from './IDadosGerais';
+import { IIndicadoresSociais }  from './IIndicadoresSociais';
+import { IIndicadoresOrcamentarios }  from './IIndicadoresOrcamentarios';
 
 @Injectable()
 export class DadosEIndicadoresService {
@@ -49,6 +50,13 @@ export class DadosEIndicadoresService {
                     .map((response: Response) => {
                       return < IIndicadoresSociais[] > response.json();
                     }).catch((error:any) => Observable.throw(error.json().error || 'Erro no servidor ao resgatar Indicadores Sociais'));
+  }
+
+  public fetchIndicadoresOrcamentarios(): Observable < IIndicadoresOrcamentarios[] > {
+    return this.http.get(this.JsonFileURL + 'Indicadores_Orcamentarios.json')
+                    .map((response: Response) => {
+                      return < IIndicadoresOrcamentarios[] > response.json();
+                    }).catch((error:any) => Observable.throw(error.json().error || 'Erro no servidor ao resgatar Indicadores Orcamentarios'));
   }
 
 }
