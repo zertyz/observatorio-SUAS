@@ -42,21 +42,21 @@ export class DadosEIndicadoresService {
     return this.http.get(this.JsonFileURL + 'Dados_Gerais.json')
                     .map((response: Response) => {
                       return < IDadosGerais[] > response.json();
-                    }).catch((error:any) => Observable.throw(error.json().error || 'Erro no servidor ao resgatar Dados Gerais'));
+                    }).catch((error:any) => Observable.throw(String(error) || 'Erro no servidor ao resgatar Dados Gerais'));
   }
 
   public fetchIndicadoresSociais(): Observable < IIndicadoresSociais[] > {
     return this.http.get(this.JsonFileURL + 'Indicadores_Sociais.json')
                     .map((response: Response) => {
                       return < IIndicadoresSociais[] > response.json();
-                    }).catch((error:any) => Observable.throw(error.json().error || 'Erro no servidor ao resgatar Indicadores Sociais'));
+                    }).catch((error:any) => Observable.throw(String(error) || 'Erro no servidor ao resgatar Indicadores Sociais'));
   }
 
   public fetchIndicadoresOrcamentarios(): Observable < IIndicadoresOrcamentarios[] > {
     return this.http.get(this.JsonFileURL + 'Indicadores_Orcamentarios.json')
                     .map((response: Response) => {
                       return < IIndicadoresOrcamentarios[] > response.json();
-                    }).catch((error:any) => Observable.throw(error.json().error || 'Erro no servidor ao resgatar Indicadores Orcamentarios'));
+                    }).catch((error:any) => Observable.throw(String(error) || 'Erro no servidor ao resgatar Indicadores Orçamentários'));
   }
 
 }
