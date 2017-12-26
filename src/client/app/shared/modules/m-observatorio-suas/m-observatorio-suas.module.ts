@@ -13,8 +13,7 @@ import { MPDadosEIndicadoresComponent } from './components/index';
 
 // services
 import { DadosEIndicadoresService } from './services/dados-e-indicadores.service';
-import { IDadosGerais }             from './services/IDadosGerais';
-import { IIndicadoresSociais }      from './services/IIndicadoresSociais';
+import { AjudaService } from './services/ajuda.service';
 
 // bootstrap?
 import { NgbModule,
@@ -41,6 +40,7 @@ import { NgbModule,
   ],
   providers: [
     DadosEIndicadoresService,
+    AjudaService,
     NgbModule,
     NgbDropdown,
     NgbActiveModal,
@@ -55,7 +55,7 @@ export class MObservatorioSUASModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: MObservatorioSUASModule,
-      providers: [DadosEIndicadoresService, NgbModule, NgbDropdown]
+      providers: [DadosEIndicadoresService, AjudaService, NgbModule, NgbDropdown]
     };
   }
 
