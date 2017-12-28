@@ -59,12 +59,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   graficoResumoOrcamentario:any;
 
   //Blocos trazidos do JSON
-  blocoDadosGerais: IDadosGerais[];
-  blocoIndicadoresSociais: IIndicadoresSociais[];
-  blocoIndicadoresOrcamentarios: IIndicadoresOrcamentarios[];
-  crases: IEquipamento[];
-  creases: IEquipamento[];
-  centrosPOP: IEquipamento[];
+  blocoDadosGerais: IDadosGerais[] = [];
+  blocoIndicadoresSociais: IIndicadoresSociais[] = [];
+  blocoIndicadoresOrcamentarios: IIndicadoresOrcamentarios[] = [];
+  crases: IEquipamento[] = [];
+  creases: IEquipamento[] = [];
+  centrosPOP: IEquipamento[] = [];
 
   private errorMessage: string = null;
 
@@ -157,6 +157,8 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         'totalUtilizado':-2,
         'pBloqueio': -2,
       };
+
+      this.equipamentos = [];
   }
 
   ngOnInit() {
@@ -203,7 +205,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
           this.equipamentos.push(this.centrosPOP.find(e => e.municipio == this.municipio));
         }
       }, error => this.errorMessage = < any > error);
-      this.computaCampos();
+      // this.computaCampos();
       document.getElementById('check1').click();//Equipamento Total
     });
 

@@ -8,12 +8,10 @@ import { HttpModule, Http } from '@angular/http';
 // app
 import { Config } from '../../../modules/core/index';
 
-// components
-import { MPDadosEIndicadoresComponent } from './components/index'; 
-
 // services
 import { DadosEIndicadoresService } from './services/dados-e-indicadores.service';
 import { AjudaService } from './services/ajuda.service';
+import { BuscaService } from './services/busca.service';
 
 // bootstrap?
 import { NgbModule,
@@ -41,6 +39,7 @@ import { NgbModule,
   providers: [
     DadosEIndicadoresService,
     AjudaService,
+    BuscaService,
     NgbModule,
     NgbDropdown,
     NgbActiveModal,
@@ -55,7 +54,7 @@ export class MObservatorioSUASModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: MObservatorioSUASModule,
-      providers: [DadosEIndicadoresService, AjudaService, NgbModule, NgbDropdown]
+      providers: [DadosEIndicadoresService, AjudaService, BuscaService, NgbModule, NgbDropdown]
     };
   }
 

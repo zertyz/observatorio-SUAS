@@ -40,7 +40,7 @@ export class AjudaService {
     return this.http.get(this.JsonFileURL + 'Perguntas_Frequentes.json')
                     .map((response: Response) => {
                       return < IPerguntas[] > response.json();
-                    }).catch((error:any) => Observable.throw(String(error) + '. Erro no servidor ao resgatar Dados Gerais'));
+                    }).catch((error:any) => Observable.throw(String(error) + '. Erro no servidor ao resgatar Perguntas'));
   }
 
 }
