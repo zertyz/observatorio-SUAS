@@ -14,7 +14,10 @@ a{
   background-color: #2d3743;
   width: 76%;
   border-bottom: 3px solid whitesmoke;
-
+}
+.box-ranking{
+  width:100%;
+  max-width:200px;
 }
 .texto {
   font-family: 'Raleway';
@@ -58,7 +61,7 @@ a{
 
   height: 3rem;
   margin-top: 0!important;
-  margin-bottom: -24px;
+  margin-bottom: -12px;
   margin-right: -6px;
 }
 
@@ -107,6 +110,14 @@ a{
   float: right;
 }
 
+.padding-left-ranking{
+  padding-left: 0.2em;
+}
+
+.padding-right-ranking{
+  padding-right:.2em;
+  margin-top: .388em
+}
 
 .dimensao {
   font-family: 'Raleway';
@@ -122,7 +133,7 @@ a{
   font-weight: normal;
   line-height: 90%;
   word-wrap: normal;
-  padding-top: .7em;
+  padding-top: .8em;
   padding-right: 1.33em;
 }
 
@@ -136,7 +147,9 @@ a{
   word-wrap: normal;
   padding-right: .13em;
 }
-
+.col-8{
+  padding-left: 0;
+}
 .info {
   font-family: 'Raleway';
   font-size: 100%;
@@ -149,7 +162,6 @@ a{
   border-radius: 0;
   float: right;
   margin-right: 11px;
-  margin-top: 11px;
   height: 34em;
   padding: 15px 20px 0px 20px;
 }
@@ -216,11 +228,26 @@ div > span{
   .img-envolvida{
     display: none;
   }
+  .macro-card{
+    height: auto;
+  }
+  .card{
+    height: auto;
+  }
+  .padding-right-ranking{
+    padding-right:15px ;
+  }
+  .padding-left-ranking{
+    padding-left: 15px;
+  }
 }
 
 @media (max-width: 991px) {
   .card {
     padding-bottom: 1em;
+  }
+  .title{
+    font-size: 1.37em;
   }
 
 }

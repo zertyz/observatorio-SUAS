@@ -239,6 +239,12 @@ const MutuaAvailableModulesConfiguration: IMutuaAvailableModulesConfiguration = 
     htmlLocalInjections: null,
   },
 
+  // m-observatorio-suas module
+  MObservatorioSUASModule: {
+    source: '../modules/m-observatorio-suas/m-observatorio-suas.module',
+    htmlLocalInjections: null,
+  },
+
   // m-ng2-admin module
   MNg2AdminModule: {
                     source: '../modules/m-ng2-admin/m-ng2-admin.module',

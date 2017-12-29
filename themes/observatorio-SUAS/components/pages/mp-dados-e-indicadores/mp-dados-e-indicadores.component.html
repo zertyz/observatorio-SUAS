@@ -8,9 +8,12 @@
       </div>
       <div class="padding-subtitulo box-text">
         <span class="subtitulo">
-        Um panorama dos dados e indicadores do estado e dos municípios fluminenses.
-        Para visualizar informações clique no município correspondente no mapa, ou fora do mapa para ver o estado do RJ.
+          Um panorama dos dados e indicadores do estado e dos municípios fluminenses.
+          Para visualizar informações clique no município correspondente no mapa, ou fora do mapa para ver o estado do RJ.
         </span>
+        <div style="color: red">
+          {{errorMessage}}
+        </div>
       </div>
 
 
@@ -127,7 +130,7 @@
       </div>
       <div class=" box-text">
         <sub class="subtitulo">Clique em um tipo de equipamento para visualizar a relação de estabelecimento
-         e seus endereços.</sub>
+        e seus endereços.</sub>
       </div>
 
       <div class="card">
@@ -140,7 +143,7 @@
                 <div class="vt-blue">{{contagemEquipamentos}}</div>
               </span>
             </label>
-            <label class="button-switch barra" style="border-top: 1px solid #2e3a48">
+            <label class="button-switch barra" style="border-top: 1px solid #2e3a48" id="total">
               <!--<input type="radio" name="radio" (click)="selectTipo(2)" id="check2">-->
               <div class="slider">
                 <div  class="keyword1" style="text-align: right">% DO ESTADO</div>
@@ -263,100 +266,106 @@
             <div class="row">
               <div class="col-md-8 col-12">
                 <tbody>
-                <tr>
-                  <td class="barraH" width="10%"><img class="img-fluid2" src="./assets/img/icones/familias_vulneraveis_70px.png" align="left"></td>
-                  <td class=" barraH height_line"width="35%">
-                    <p class="keyword">Familias vulneráveis</p>
-                      <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasVulneraveis}}</div>
-                  </td>
-                  <td class=" barraH"width="30%">
-                    <p class="keyword" *ngIf="estadoSelected===false"> % da população do município</p>
-                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasVulneraveisMunicipio}}%</div>
-                  </td>
-                  <td class="barraH border-equipamento"style="padding-right: 3%" width="25%">
-                    <p class="keyword"> % do estado</p>
-                    <div class="vt-porcentagem">{{indicadoresSociaisDoMunicipio.pFamiliasVulneraveisEstado}}%</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="barraH"><img class="img-fluid2" src="./assets/img/icones/bolsa_familia_70px.png" align="left"></td>
-                  <td class="barraH height_line">
-                    <p class="keyword">Bolsa família</p>
-                    <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasBolsaFamilia}}</div>
-                  </td>
-                  <td class="barraH">
-                    <p class="keyword"  *ngIf="estadoSelected===false"> % da população do município</p>
-                    <div class="vt-porcentagem"  *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
-                  </td>
-                  <td class="barraH border-equipamento" style="padding-right: 3%" width="25%">
-                    <p class="keyword" *ngIf="estadoSelected===false">% cobertura</p>
-                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaCobertura}}% </div>
-                  </td>
+                  <tr>
+                    <td class="barraH" width="10%"><img class="img-fluid2" src="./assets/img/icones/familias_vulneraveis_70px.png" align="left"></td>
+                    <td class=" barraH "width="35%">
+                      <p class="keyword">Familias vulneráveis</p>
+                      <div class="vt-bold">{{indicadoresSociais.nFamiliasVulneraveis}}</div>
+                    </td>
+                    <td class=" barraH"width="30%">
+                      <p class="keyword" *ngIf="estadoSelected===false"> % da população do município</p>
+                      <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociais.pFamiliasVulneraveisMunicipio}}%</div>
+                    </td>
+                    <td class="barraH border-equipamento"style="padding-right: 3%" width="25%">
+                      <p class="keyword"> % do estado</p>
+                      <div class="vt-porcentagem">{{indicadoresSociais.pFamiliasVulneraveisEstado}}%</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="barraH"><img class="img-fluid2" src="./assets/img/icones/bolsa_familia_70px.png" align="left"></td>
+                    <td class="barraH ">
+                      <p class="keyword">Bolsa família</p>
+                      <div class="vt-bold">{{indicadoresSociais.nFamiliasBolsaFamilia}}</div>
+                    </td>
+                    <td class="barraH">
+                      <p class="keyword"  *ngIf="estadoSelected===false"> % da população do município</p>
+                      <div class="vt-porcentagem"  *ngIf="estadoSelected===false">{{indicadoresSociais.pFamiliasBolsaFamiliaMunicipio}}%</div>
+                    </td>
+                    <td class="barraH border-equipamento" style="padding-right: 3%" width="25%">
+                      <p class="keyword" *ngIf="estadoSelected===false">% cobertura</p>
+                      <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociais.pFamiliasBolsaFamiliaCobertura}}% </div>
+                    </td>
 
-                </tr>
-                <tr>
-                  <td colspan="2" class="barraH height_line">
-                    <img class="img-fluid2" src="./assets/img/icones/familias_registradas_70px.png" align="left" >
-                    <p class="keyword">Famílias registradas no cadastro único</p>
-                    <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nFamiliasCadastroUnico}}</div>
-                  </td>
-                  <td class="barraH" style="padding-right: 3%" width="25%">
-                    <p class="keyword" *ngIf="estadoSelected===false"> % da População Município</p>
-                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasBolsaFamiliaMunicipio}}%</div>
-                  </td>
-                  <td class="border-equipamento barraH"style="padding-right: 3%" >
-                    <p class="keyword" *ngIf="estadoSelected===false">% cobertura</p>
-                    <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociaisDoMunicipio.pFamiliasCadastroUnicoCobertura}}%</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td  colspan="2">
-                    <img class="img-fluid2" src="./assets/img/icones/beneficio_prestacao_continuada_70px.png" align="left">
-                    <p class="keyword"> Beneficiários de prestação continuada</p>
-                    <div class="vt-bold">{{indicadoresSociaisDoMunicipio.nBeneficiariosPrestacaoContinuada}}</div>
-                  </td>
-                  <td></td>
-                  <td class="border-equipamento1"></td>
-                </tr>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="barraH ">
+                      <img class="img-fluid2" src="./assets/img/icones/familias_registradas_70px.png" align="left" >
+                      <p class="keyword">Famílias registradas no cadastro único</p>
+                      <div class="vt-bold">{{indicadoresSociais.nFamiliasCadastroUnico}}</div>
+                    </td>
+                    <td class="barraH" style="padding-right: 3%" width="25%">
+                      <p class="keyword" *ngIf="estadoSelected===false"> % da População Município</p>
+                      <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociais.pFamiliasBolsaFamiliaMunicipio}}%</div>
+                    </td>
+                    <td class="border-equipamento barraH"style="padding-right: 3%" >
+                      <p class="keyword" *ngIf="estadoSelected===false">% cobertura</p>
+                      <div class="vt-porcentagem" *ngIf="estadoSelected===false">{{indicadoresSociais.pFamiliasCadastroUnicoCobertura}}%</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  colspan="2">
+                      <img class="img-fluid2" src="./assets/img/icones/beneficio_prestacao_continuada_70px.png" align="left">
+                      <p class="keyword"> Beneficiários de prestação continuada</p>
+                      <div class="vt-bold">{{indicadoresSociais.nBeneficiariosPrestacaoContinuada}}</div>
+                    </td>
+                    <td></td>
+                    <td class="border-equipamento1"></td>
+                  </tr>
                 </tbody>
               </div>
               <div class=" col-md-4 col-12">
-                <tr>
-                  <td>
-                    <img class="img-fluid" src="./assets/img/icones/beneficio_eventual_70px.png">
-                  </td>
-                  <td >
-                    <h3 class="p-2">Benefícios eventuais</h3>
-                    <p class="p-text">Indica se Programas Eventuais de Benefícios são disponibilizados para o ente</p>
-                  </td>
-                  <td  *ngIf="estadoSelected===false">
-                    <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoBeneficiosEventuais?'sim':'nao')+'.png'" width="50rem">
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img class="img-fluid" src="./assets/img/icones/paif_70px.png">
-                  </td>
-                  <td>
-                    <h3 class="p-2">PAIF</h3>
-                    <p class="p-text">Indica se o serviço de Proteção e Atenção Integral à Família está implantado no ente </p>
-                  </td>
-                  <td  *ngIf="estadoSelected===false">
-                    <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAIF?'sim':'nao')+'.png'" width="50rem">
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img class="img-fluid" src="./assets/img/icones/paefi_70px.png">
-                  </td>
-                  <td>
-                    <h3 class="p-2">PAEFI</h3>
-                    <p class="p-text">Indica se o serviço de Proteção e Atenção Especializado à Família está implantado no ente </p>
-                  </td>
-                  <td *ngIf="estadoSelected===false">
-                    <img  [src]="'./assets/img/icones/check-'+(indicadoresSociaisDoMunicipio.cadUnicoPAEF?'sim':'nao')+'.png'" width="50">
-                  </td>
-                </tr>
+                <div class="box-indicadores">
+                  <tr>
+                    <td>
+                      <img class="img-fluid" src="./assets/img/icones/beneficio_eventual_70px.png">
+                    </td>
+                    <td >
+                      <h3 class="p-2">Benefícios eventuais</h3>
+                      <p class="p-text"> Indica se Programas Eventuais de Benefícios são disponibilizados para o ente</p>
+                    </td>
+                    <td  *ngIf="estadoSelected===false">
+                      <img  [src]="'./assets/img/icones/check-'+(indicadoresSociais.cadUnicoBeneficiosEventuais?'sim':'nao')+'.png'" width="50rem">
+                    </td>
+                  </tr>
+                </div>
+                <div class="box-indicadores">
+                  <tr>
+                    <td>
+                      <img class="img-fluid" src="./assets/img/icones/paif_70px.png">
+                    </td>
+                    <td>
+                      <h3 class="p-2">PAIF</h3>
+                      <p class="p-text"> Indica se o serviço de Proteção e Atenção Integral à Família está implantado no ente </p>
+                    </td>
+                    <td  *ngIf="estadoSelected===false">
+                      <img  [src]="'./assets/img/icones/check-'+(indicadoresSociais.cadUnicoPAIF?'sim':'nao')+'.png'" width="50rem">
+                    </td>
+                  </tr>
+                </div>
+                <div class="box-indicadores">
+                  <tr>
+                    <td>
+                      <img class="img-fluid" src="./assets/img/icones/paefi_70px.png">
+                    </td>
+                    <td>
+                      <h3 class="p-2">PAEFI</h3>
+                      <p class="p-text">Indica se o serviço de Proteção e Atenção Especializado à Família está implantado no ente </p>
+                    </td>
+                    <td *ngIf="estadoSelected===false">
+                      <img  [src]="'./assets/img/icones/check-'+(indicadoresSociais.cadUnicoPAEFI?'sim':'null')+'.png'" width="50">
+                    </td>
+                  </tr>
+                </div>
               </div>
             </div>
           </div>
@@ -377,166 +386,166 @@
             <div class="container" style="scrollbar-face-color:#fff2aa; scrollbar-shadow-color:#fff2aa; scrollbar-highlight-color:#fff2aa; scrollbar-3dlight-color:#fff2aa; scrollbar-darkshadow-color:#fff2aa; scrollbar-track-color:#fff2aa; scrollbar-arrow-color:#fff2aa;">
               <table class="table table-bordered">
                 <thead>
-                <tr class="header">
-                  <th></th>
-                  <th>
-                    <div class="keyword" style="text-align: right">Recursos</div>
-                  </th>
-                  <th>
-                    <div class="keyword" style="text-align: right">Utilizado</div>
-                  </th>
-                  <th>
-                    <div class="keyword" style="text-align: right">Não utilizado</div>
-                  </th>
-                </tr>
+                  <tr class="header">
+                    <th></th>
+                    <th>
+                      <div class="keyword" style="text-align: right">Recursos</div>
+                    </th>
+                    <th>
+                      <div class="keyword" style="text-align: right">Utilizado</div>
+                    </th>
+                    <th>
+                      <div class="keyword" style="text-align: right">Não utilizado</div>
+                    </th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Proteção Social Básica</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoPSB" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.psbTotal, indicadoresOrcamentariosDoMunicipio.psbNaoUtilizado)}}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Proteção Social Especial de Média Complexidade</th>
-                  <td class="barra barraH  vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseMediaComplexidadeTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseMediaComplexidadeUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseMediaComplexidadeNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoPSEmedio" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.pseMediaComplexidadeTotal, indicadoresOrcamentariosDoMunicipio.pseMediaComplexidadeNaoUtilizado)}}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Proteção Social Especial de Alta Complexidade</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseAltaComplexidadeTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseAltaComplexidadeUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pseAltaComplexidadeNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoPSEalto" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.pseAltaComplexidadeTotal, indicadoresOrcamentariosDoMunicipio.pseAltaComplexidadeNaoUtilizado)}}</div>
-                  </td>
-                </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Proteção Social Básica</th>
+                    <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentarios.psbTotal)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.psbUtilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.psbNaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoPSB" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.psbTotal, indicadoresOrcamentarios.psbNaoUtilizado)}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Proteção Social Especial de Média Complexidade</th>
+                    <td class="barra barraH  vt-black">{{formataMoeda(indicadoresOrcamentarios.pseMediaComplexidadeTotal)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.pseMediaComplexidadeUtilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.pseMediaComplexidadeNaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoPSEmedio" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.pseMediaComplexidadeTotal, indicadoresOrcamentarios.pseMediaComplexidadeNaoUtilizado)}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Proteção Social Especial de Alta Complexidade</th>
+                    <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentarios.pseAltaComplexidadeTotal)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.pseAltaComplexidadeUtilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.pseAltaComplexidadeNaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoPSEalto" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.pseAltaComplexidadeTotal, indicadoresOrcamentarios.pseAltaComplexidadeNaoUtilizado)}}</div>
+                    </td>
+                  </tr>
 
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Programas</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoProgramas" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.programasTotal, indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado)}}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Gestão do Bolsa Familía e  CadÚnico</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoGestaoBolsaFamilia" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaTotal, indicadoresOrcamentariosDoMunicipio.gestaoBolsaFamiliaNaoUtilizado)}}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Gestão SUAS</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoSuasTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoSuasUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.gestaoSuasNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoGestaoSUAS" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.gestaoSuasTotal, indicadoresOrcamentariosDoMunicipio.gestaoSuasNaoUtilizado)}}</div>
-                  </td>
-                </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Programas</th>
+                    <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentarios.programasTotal)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.programasUtilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.programasNaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoProgramas" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.programasTotal, indicadoresOrcamentarios.programasNaoUtilizado)}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw;width: 25%;">Gestão do Bolsa Familía e  CadÚnico</th>
+                    <td class="barra barraH vt-black" style="width: 15%">{{formataMoeda(indicadoresOrcamentarios.gestaoBolsaFamiliaTotal)}}</td>
+                    <td class="barra barraH vt-green" style="width: 15%">{{formataMoeda(indicadoresOrcamentarios.gestaoBolsaFamiliaUtilizado)}}</td>
+                    <td class="barraH vt-red" style="width: 15%">{{formataMoeda(indicadoresOrcamentarios.gestaoBolsaFamiliaNaoUtilizado)}}</td>
+                    <td class="barraH vt-red" style="width: 10%">
+                      <div class="height-graphic" >
+                        <p-chart type="doughnut"  [data]="graficoGestaoBolsaFamilia" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.gestaoBolsaFamiliaTotal, indicadoresOrcamentarios.gestaoBolsaFamiliaNaoUtilizado)}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Gestão SUAS</th>
+                    <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentarios.gestaoSuasTotal)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.gestaoSuasUtilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.gestaoSuasNaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoGestaoSUAS" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.gestaoSuasTotal, indicadoresOrcamentarios.gestaoSuasNaoUtilizado)}}</div>
+                    </td>
+                  </tr>
 
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso Básico Fixo</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoBasicoFixoTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoBasicoFixoUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoBasicoFixoNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoPisoBasicoFixo" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.pisoBasicoFixoTotal, indicadoresOrcamentariosDoMunicipio.pisoBasicoFixoNaoUtilizado)}}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso Básico Variável</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoBasicoVariavelTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoBasicoVariavelUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoBasicoVariavelNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoPisoBasicoVariavel" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.pisoBasicoVariavelTotal, indicadoresOrcamentariosDoMunicipio.pisoBasicoVariavelNaoUtilizado)}}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso de Alta Complexidade 1</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade1Total)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade1Utilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade1NaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoPisoAlto1" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade1Total, indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade1NaoUtilizado)}}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso de Alta Complexidade 2</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade2Total)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade2Utilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade2NaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoPisoAlto2" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade2Total, indicadoresOrcamentariosDoMunicipio.pisoAltaComplexidade2NaoUtilizado)}}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso de Transicão</th>
-                  <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoTransicaoMediaComplexidadeTotal)}}</td>
-                  <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoTransicaoMediaComplexidadeUtilizado)}}</td>
-                  <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.pisoTransicaoMediaComplexidadeNaoUtilizado)}}</td>
-                  <td class="barraH vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoPisoTransicao" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.pisoTransicaoMediaComplexidadeTotal, indicadoresOrcamentariosDoMunicipio.pisoTransicaoMediaComplexidadeNaoUtilizado)}}</div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="keyword" style="text-align: left; padding-top: 1.8vw">Resumo orçamentário</th>
-                  <td class="barra vt-black">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.totalPago)}}</td>
-                  <td class="barra vt-green">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.totalUtilizado)}}</td>
-                  <td class="vt-red">{{formataMoeda(indicadoresOrcamentariosDoMunicipio.totalBloqueado)}}</td>
-                  <td class="vt-red">
-                    <div class="height-graphic">
-                      <p-chart type="doughnut"  [data]="graficoResumoOrcamentario" [options]="opcoesGraficos"></p-chart>
-                    </div>
-                    <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentariosDoMunicipio.totalPago, indicadoresOrcamentariosDoMunicipio.totalBloqueado)}}</div>
-                  </td>
-                </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso Básico Fixo</th>
+                    <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentarios.pisoBasicoFixoTotal)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.pisoBasicoFixoUtilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.pisoBasicoFixoNaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoPisoBasicoFixo" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.pisoBasicoFixoTotal, indicadoresOrcamentarios.pisoBasicoFixoNaoUtilizado)}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso Básico Variável</th>
+                    <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentarios.pisoBasicoVariavelTotal)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.pisoBasicoVariavelUtilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.pisoBasicoVariavelNaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoPisoBasicoVariavel" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.pisoBasicoVariavelTotal, indicadoresOrcamentarios.pisoBasicoVariavelNaoUtilizado)}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso de Alta Complexidade 1</th>
+                    <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentarios.pisoAltaComplexidade1Total)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.pisoAltaComplexidade1Utilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.pisoAltaComplexidade1NaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoPisoAlto1" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.pisoAltaComplexidade1Total, indicadoresOrcamentarios.pisoAltaComplexidade1NaoUtilizado)}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso de Alta Complexidade 2</th>
+                    <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentarios.pisoAltaComplexidade2Total)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.pisoAltaComplexidade2Utilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.pisoAltaComplexidade2NaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoPisoAlto2" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.pisoAltaComplexidade2Total, indicadoresOrcamentarios.pisoAltaComplexidade2NaoUtilizado)}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="keyword barraH" style="text-align: left; padding-top: 1.8vw">Piso de Transicão</th>
+                    <td class="barra barraH vt-black">{{formataMoeda(indicadoresOrcamentarios.pisoTransicaoMediaComplexidadeTotal)}}</td>
+                    <td class="barra barraH vt-green">{{formataMoeda(indicadoresOrcamentarios.pisoTransicaoMediaComplexidadeUtilizado)}}</td>
+                    <td class="barraH vt-red">{{formataMoeda(indicadoresOrcamentarios.pisoTransicaoMediaComplexidadeNaoUtilizado)}}</td>
+                    <td class="barraH vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoPisoTransicao" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.pisoTransicaoMediaComplexidadeTotal, indicadoresOrcamentarios.pisoTransicaoMediaComplexidadeNaoUtilizado)}}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="keyword" style="text-align: left; padding-top: 1.8vw">Resumo orçamentário</th>
+                    <td class="barra vt-black">{{formataMoeda(indicadoresOrcamentarios.totalPago)}}</td>
+                    <td class="barra vt-green">{{formataMoeda(indicadoresOrcamentarios.totalUtilizado)}}</td>
+                    <td class="vt-red">{{formataMoeda(indicadoresOrcamentarios.totalBloqueado)}}</td>
+                    <td class="vt-red">
+                      <div class="height-graphic">
+                        <p-chart type="doughnut"  [data]="graficoResumoOrcamentario" [options]="opcoesGraficos"></p-chart>
+                      </div>
+                      <div class="porcentagem-chart">{{formataPercent(indicadoresOrcamentarios.totalPago, indicadoresOrcamentarios.totalBloqueado)}}</div>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>

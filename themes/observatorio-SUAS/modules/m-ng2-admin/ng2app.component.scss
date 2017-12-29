@@ -18,7 +18,7 @@ $burger--thickness: 4px;
   outline: 0;
   padding: 0;
   cursor: pointer;
-  margin: 28px;
+  margin: 28px 0px 8px 8px;
   border-bottom: $burger--thickness solid currentColor;
   width: $width;
 
@@ -206,15 +206,24 @@ hr{
   #show-desktop {
     display: none;
   }
+  .top-margin{
+    margin-top:4em;
+  }
+  nav{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    opacity:1;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 575px)
 {
   .img-fluid
   {
-    min-width: 90px !important;
-    max-width: 95px !important;
-    margin-left: 0% !important;
+    min-width: 90px ;
+    margin-left: 0%!important;
   }
 }
 
@@ -222,8 +231,8 @@ hr{
 {
   .img-fluid
   {
-    min-width: 290px !important;
-    max-width: 340px !important;
+    min-width: 290px;
+    max-width: 340px;
   }
 
   #show-burger {
@@ -238,11 +247,14 @@ hr{
 @media (max-width: 990px)
 {
   .img-fluid {
-    max-width: 309px !important;
+    max-width: 140px;
   }
 
   .logo-completo {
     display: none;
+  }
+  nav a {
+    margin-left: -16%;
   }
 }
 
@@ -251,9 +263,6 @@ hr{
   .logo-mini {
     display: none;
   }
-}
-@media screen and(min-width: 998px) and (max-width:1500px)
-{
   .footer-align {
     height: 3.3rem;
   }

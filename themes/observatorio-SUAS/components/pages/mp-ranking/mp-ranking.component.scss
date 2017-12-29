@@ -18,6 +18,7 @@
   font-size: 120%;
   line-height: 200%;
 }
+
 .micro-card{
   color: inherit;
   background-color: white;
@@ -64,8 +65,10 @@ option{
 }
 
 //Icone do Select
+
 .selectdiv:after {
-  content: ".\f0c9";
+
+  content: "  \f0c9";
   font: normal normal normal 17px/1 FontAwesome;
   right: 11px;
   top: 6px;
@@ -73,9 +76,7 @@ option{
   padding-top: 3px;
   position: absolute;
   pointer-events: none;
-  margin-left: 3em;
   color: #0d2b48;
-  float: left;
 }
 
 //Resolve problema no IE9
@@ -110,5 +111,22 @@ select::-ms-expand {
     width: 6em;
     max-width: 100%;
   }
+  .card{
+    height: auto;
+  }
 
+}
+@media(max-width: 575px) {
+  .col-2{
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .box-text{
+    height: 155px;
+  }  
+}
+@media(max-width: 700px) {
+.box-text{
+  height: 105px;
+  }
 }

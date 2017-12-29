@@ -5,6 +5,8 @@
 
 .container-fluid{
   background-color: #fafafa;
+ 
+
 }
 
 .box-text{
@@ -18,6 +20,7 @@
   width: 11em;
   height: auto;
   padding: 1.5em 0.1em 0em 1em!important;
+  margin-left: 1.5em;
 }
 
 .img-envolvida {
@@ -59,7 +62,7 @@ p {
 .img-logo{
   width: 150px;
   height: auto;
-  margin-left: 1em;
+  margin-left: 2.5em;
   padding-top: 2em;
 }
 .subtitulo {
@@ -80,9 +83,7 @@ p {
 .card{
   color: inherit;
   background-color: white;
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+
   width: 100%;
   background-color: white;
   border-right: 1px solid #d2d7de!important;
@@ -142,5 +143,14 @@ p {
   }
   .ajusta_elemento{
     width: 7em;
+  }
+}
+@media(max-width:991px ) {
+  .container-fluid{
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+  .card{
+    padding: 18px;
   }
 }

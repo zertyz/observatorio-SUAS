@@ -75,11 +75,14 @@ export const MutuaInstanceProjectModulesActivationConfiguration: IInstanceProjec
   {moduleName: 'NgbModule',               htmlEnabled: true,  mobileEnabled: false},  // bootstrap for angular
   {moduleName: 'PRIMENG_MODULES',         htmlEnabled: true,  mobileEnabled: false},  // form components. depends on 'BrowserAnimationsModule'
 
-  // módulos do projeto Edificando o Controle Interno
+  // módulos do projeto angular-seed-advanced-mprj
   {moduleName: 'MPRJModule', htmlEnabled: true, mobileEnabled: false},
 
   // módulos do projeto Edificando o Controle Interno
   {moduleName: 'MEdificandoOControleInternoModule', htmlEnabled: true, mobileEnabled: false},
+
+  // módulos do projeto Observatório SUAS
+  {moduleName: 'MObservatorioSUASModule', htmlEnabled: true, mobileEnabled: false},
 
 ];
 
