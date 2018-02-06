@@ -294,6 +294,22 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         }
       ],
     };
+    this.graficoProgramas = {
+      labels: ['Verba Utilizada', 'Verba não utilizada'],
+      datasets: [
+        {
+          data: [this.indicadoresOrcamentariosDoMunicipio.programasUtilizado, this.indicadoresOrcamentariosDoMunicipio.programasNaoUtilizado],
+          backgroundColor: [
+            '#117011',
+            '#660000'
+          ],
+          hoverBackgroundColor: [
+            '#117011',
+            '#660000'
+          ],
+        }
+      ],
+    };
     // preenche estrutura de dados do gráfico Piso
     this.graficoPisoBasicoFixo = {
       labels: ['Verba Utilizada', 'Verba não utilizada'],
@@ -601,7 +617,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     }
   }
 
-  // TODO cópia de indicadores_orcamentarios_20170810.json até que se implemente como serviço
+ // TODO cópia de indicadores_orcamentarios_20170810.json até que se implemente como serviço
   indicadoresOrcamentarios: IIndicadoresOrcamentarios[] = [
     {
       'anoOrcamento': 2016,
@@ -12002,6 +12018,9 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       'nivelGestao': '--'
     }
   ];
+
+
+
 
 }
 

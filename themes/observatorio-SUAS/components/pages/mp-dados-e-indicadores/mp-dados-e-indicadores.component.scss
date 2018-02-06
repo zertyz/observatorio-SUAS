@@ -57,6 +57,7 @@ input:checked + .slider {
 // Images
 .img-fluid{
   min-width: 2.7rem;
+  padding-left: .4em;
 }
 .img-fluid2 {
   width:2.8rem;
@@ -149,7 +150,7 @@ table > th:first-child div{
   border: none;
 }
 div> tbody > tr{
-  line-height: 3.1em;
+  line-height: 2 .1em;
 }
 
 // Styles Cards
@@ -200,7 +201,9 @@ div> tbody > tr{
   margin-top: 4%;
   padding-left: 1rem;
 }
-
+.box-social{
+  height: 7rem;
+}
 
 .h-text{
   font-size: 1.14vw;
@@ -239,7 +242,7 @@ p{
 }
 .valor-tabela{
   font-size: 1rem;
-  padding-left: 1rem;
+
   font-family: Roboto-Condensed;
   text-align: right;
 }
