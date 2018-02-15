@@ -14,7 +14,7 @@ export interface IEquipamento {
   municipio: string;
   porte:     string;
   nome:      string;
-  endereco:  string;
+  endereco: string;
   cep:       string;
   telefone:  string;
 }

@@ -56,7 +56,7 @@ export class MPAjudaComponent {
     this.ajudaService.fetchPerguntas().subscribe(response => {
       this.perguntasFrequentes = response;
     }, error => this.errorMessage = < any > error);
-
+    this.computaAjuda();
     document.getElementById('check1').click();
   }
 
@@ -90,6 +90,21 @@ export class MPAjudaComponent {
     return Observable.throw(error.message || error);
   }*/
 
+  computaAjuda(){
+    this.ajudaService.fetchPerguntas().subscribe(response => {
+      this.perguntasFrequentes = response;
+
+      this.perguntasExibidas = this.perguntasFrequentes
+      .filter(cras => cras.equipamento.toLocaleLowerCase() == 'cras')
+      .map(cras => {
+        return {
+          equipamento: cras.equipamento,
+          eixo:        cras.eixo,
+          pergunta:    cras.pergunta,
+          resposta:    cras.resposta
+        };
+      })}, error => this.errorMessage = < any > error);
+  }
   selectTipo(i: string) {
      if (i === 'cras') {
       // this.equipamentoSelecionado = 'CRAS';
