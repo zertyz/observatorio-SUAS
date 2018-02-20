@@ -37,13 +37,12 @@ export class MPBuscaComponent {
   ngOnInit() {
     this.buscaService.fetchPesquisa().subscribe(response => {
       this.documentos = response;
-    }, error => this.errorMessage = < any > error);
-
-    this.route.params.subscribe(params => {
+      this.route.params.subscribe(params => {
       this.pesquisa = params['pesquisa'];
       this.categoria = params['categoria'];
       this.pesquisar(this.categoria, this.pesquisa);
     });
+    }, error => this.errorMessage = < any > error);
 
   }
 
@@ -72,7 +71,7 @@ export class MPBuscaComponent {
             this.documentosProcurados.push(this.documentos[i]);
             this.resultadosEncontrados++;
           } else {
-            if (this.documentos[i].palavrasChave.toUpperCase().indexOf(value.toUpperCase()) !== -1) {
+            if (this.documentos[i].arquivo.toUpperCase().indexOf(value.toUpperCase()) !== -1) {
               this.documentosProcurados.push(this.documentos[i]);
               this.resultadosEncontrados++;
             }
@@ -84,7 +83,7 @@ export class MPBuscaComponent {
             this.documentosProcurados.push(this.documentos[i]);
             this.resultadosEncontrados++;
           } else {
-            if (this.documentos[i].palavrasChave.toUpperCase().indexOf(value.toUpperCase()) !== -1 && ((this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) || (categoria.toUpperCase().indexOf('ORCAMENTO') !== -1) && ((this.documentos[i].categoria.toUpperCase().indexOf('REPASSE')) !== -1 ) )) {
+            if (this.documentos[i].arquivo.toUpperCase().indexOf(value.toUpperCase()) !== -1 && ((this.documentos[i].categoria.toUpperCase().indexOf(categoria.toUpperCase()) !== -1) || (categoria.toUpperCase().indexOf('ORCAMENTO') !== -1) && ((this.documentos[i].categoria.toUpperCase().indexOf('REPASSE')) !== -1 ) )) {
               this.documentosProcurados.push(this.documentos[i]);
               this.resultadosEncontrados++;
             }

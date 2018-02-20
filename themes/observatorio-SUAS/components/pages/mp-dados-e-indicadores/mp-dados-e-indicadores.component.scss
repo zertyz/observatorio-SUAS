@@ -288,11 +288,13 @@ p{
   @extend .vt-porcentagem;
   text-transform: none;
   color: #660000;
+  text-align: center;
 }
 
 .vt-bold{
   @extend .valor-tabela;
   font-weight: bold;
+  text-align: center;
 }
 
 .vt-black{
@@ -333,9 +335,9 @@ p{
 }
 :host/deep/{
   canvas{
-    width: 3vw !important;
-    height: 3vw !important;
-    padding-top: 0.5vw;
+    width: 75px !important;
+    height: auto;
+    padding-top: 0.35vw;
   }
 }
 
@@ -448,9 +450,10 @@ div.col-md-4{
 
   :host/deep/{
   canvas{
-    width: 49px !important;
-    height: auto !important;
-    padding-top: 0.5vw;
+    width: 75px!important;
+    height: 40px !important;
+    max-width: 75px;
+    padding-top: 0.35vw;
   }
 }
 }
