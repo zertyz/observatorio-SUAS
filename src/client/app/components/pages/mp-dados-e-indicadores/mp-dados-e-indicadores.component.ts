@@ -219,7 +219,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     this.dadosEIndicadoresService.fetchIndicadoresOrcamentarios().subscribe(response => {
       this.blocoIndicadoresOrcamentarios = response;
       if(this.blocoIndicadoresOrcamentarios!=undefined){
-        this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento == 2016);
+        this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento == 2017);
       }
       this.graficoPSEalto = {
         labels: ['Verba Utilizada', 'Verba não utilizada'],
@@ -677,6 +677,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     // encontra 'Indicadores Sociais' baseado no nome do município
     this.indicadoresSociais = this.blocoIndicadoresSociais.find(e => e.municipio == this.municipio);
     //encontra 'Indicadores Orcamentarios' baseado no nome do município e no ano desejado
-    this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento==2016);
+    this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento==2017);
   }
 }
