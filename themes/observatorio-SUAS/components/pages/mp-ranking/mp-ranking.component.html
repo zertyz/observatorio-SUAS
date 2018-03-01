@@ -1,57 +1,46 @@
-<div class="container-fluid full">
+<div class="container-fluid height:100vh">
 
   <mp-subscribe></mp-subscribe>
 
   <div class="row">
-    <div class="col-xl-2 col-3 ">
-        <div class="row">
-          <figure>
-            <img src="./assets/img/Logo_SUAS.png" class="img-responsive ajusta_elemento">
-            <img class="img-logo" src="./assets/img/CAO-CIDADANIA-LOGO-blue.png" >
-          </figure>
-          <!--/Temporario-->
-        </div>
-        <div class="row">
-          <p><br/></p>
-        </div>
+    
+    <div class="col-xl-2 col-3">
+      <figure>
+        <img src="./assets/img/Logo_SUAS.png" class="img-fluid ajusta_elemento">
+        <img class="img-logo" src="./assets/img/CAO-CIDADANIA-LOGO-blue.png">
+      </figure>
     </div>
+
     <div class="col-xl-10  col-11">
-
-      <div class="col-xl-12">
-        <div class="row t-padding">
-          <span class="titulo">ranking observatório suas</span>
-          <p class="box-text">Ranking de avaliação do indicadores referentes ao SUAS no municípios fluminenses. Para visualizar outros rankings,
-            específicos para cada dimensão avaliada, utilize o menu identificado por três barras ao lado do nome do ranking abaixo.</p>
-        </div>
+   
+      <div class="row t-padding">
+        <h1 class="titulo">ranking observatório suas</h1>
+        <p class="box-text">Ranking de avaliação do indicadores referentes ao SUAS no municípios fluminenses. Para visualizar outros rankings,
+          específicos para cada dimensão avaliada, utilize o menu identificado por três barras ao lado do nome do ranking
+          abaixo.
+        </p>
       </div>
-
+    
       <div class="row">
-        <div class="col-xl-4 "style="max-height: 49rem">
+        <div class="col-xl-4 " style="max-height: 49rem">
           <div class="card">
             <div class="card-block">
               <div class="micro-card">
-              <table width="100%">
-                <tr>
-                  <td>
-
-                    <div class="row ">
-                      <div class="col-xl-3  col-2">
-                        <figure >
-                          <img class="ajusta_imagem" src="./assets/img/icones/{{dimensao}}.png" align="left">
-                        </figure>
-                      </div>
-                      <div ngbDropdown class="col-xl-9 col-10 d-inline-block ">
-                        <span class="title">Ranking </span>
-                        <div class='selectdiv'>
-                          <select  #selectElem [(ngModel)] = "dimensao" (change)="trocaRanking(selectElem.value)">
-                            <option *ngFor="let campo of gradacoes.listaDeDimensoesETitulos;" [value]="campo[0]">{{campo[1]}}</option>
-                          </select>
-                        </div>
-                      </div>
+                <div class="row ">
+                  <div class="col-xl-3  col-2">
+                    <figure>
+                      <img class="ajusta_imagem" src="./assets/img/icones/{{dimensao}}.png" align="left">
+                    </figure>
+                  </div>
+                  <div ngbDropdown class="col-xl-9 col-10 d-inline-block ">
+                    <h3 class="title">Ranking </h3>
+                    <div class='selectdiv'>
+                      <select #selectElem [(ngModel)]="dimensao" (change)="trocaRanking(selectElem.value)">
+                         <option *ngFor="let campo of gradacoes.listaDeDimensoesETitulos;" [value]="campo[0]">{{campo[1]}}</option>
+                     </select>
                     </div>
-                  </td>
-                </tr>
-              </table>
+                  </div> 
+                </div>
               </div>
               <!-- Outros Rankings -->
               <e-ranking-geral dimensao="{{dimensao}}"> </e-ranking-geral>

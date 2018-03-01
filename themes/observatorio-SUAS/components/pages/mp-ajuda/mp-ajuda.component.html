@@ -1,30 +1,23 @@
-<div class="container-fluid"  style="min-height: 100vh">
+<div class="container-fluid">
   <div class="row">
     <div class="col-xl-2 col-3">
-      <div class="row">
-        <figure>
-          <img src="./assets/img/Logo_SUAS.png" class="img-responsive ajusta_elemento">
-          <img class="img-logo" src="./assets/img/CAO-CIDADANIA-LOGO-blue.png" >
-        </figure>
-        <!--/Temporario-->
-      </div>
-      <div class="row">
-        <p><br/></p>
-      </div>
+      <figure>
+        <img src="./assets/img/Logo_SUAS.png" class="img-fluid ajusta_elemento">
+        <img class="img-logo" src="./assets/img/CAO-CIDADANIA-LOGO-blue.png">
+      </figure>
     </div>
 
     <div class="col-xl-7 col-12">
       <div class="row t-padding">
-        <span class="titulo">Perguntas Frequentes</span>
+        <h1 class="titulo">Perguntas Frequentes</h1>
       </div>
       <div>
-        <p class="subtitulo box-text" > Perguntas recorrentes e relevantes sobre o Observatório SUAS</p>
+        <p class="subtitulo box-text"> Perguntas recorrentes e relevantes sobre o Observatório SUAS</p>
       </div>
-      <div class="card" id="altura">
-        <div class="card-block" >
-
+      <div class="card">
+        <div class="card-block">
           <div class="row">
-            <label class="button-switch barra"  style="margin-left:1em; border-top: 1px solid #2e3a48">
+            <label class="button-switch barra" style="margin-left:1em; border-top: 1px solid #2e3a48">
               <input type="radio" name="radio" checked="checked" (click)="selectTipo('cras')" id="check1">
               <span class="slider">
                 <div  class="keyword" >CRAS</div>
@@ -44,23 +37,21 @@
             </label>
           </div>
 
-
           <p-accordion *ngFor="let pergunta of perguntasExibidas">
             <p-accordionTab styleClass="classAccordion" header="{{pergunta.pergunta}}">
               {{pergunta.resposta}}
             </p-accordionTab>
           </p-accordion>
-
         </div>
       </div>
     </div>
 
     <div class="col-xl-3 col-12 ">
-      <div  class="row t-padding">
-        <span class="titulo">Cartilhas e Manuais</span>
+      <div class="row t-padding">
+        <h1 class="titulo">Cartilhas e Manuais</h1>
       </div>
       <div>
-        <span class="subtitulo box-text">Visualize cartilhas e manuais de orientação disponíveis na base do Observatório SUAS</span>
+        <p class="subtitulo box-text">Visualize cartilhas e manuais de orientação disponíveis na base do Observatório SUAS</p>
       </div>
       <div class="card">
         <div class="card-block">
@@ -73,7 +64,7 @@
               <p>O Ministério Público na Fiscalização do SUAS</p>
             </div>
             <div class=" col-3">
-              <a href= "./assets/dados/busca/cartilha_suas.pdf" download="O Ministério Público na Fiscalização do SUAS" target="_blank">
+              <a href="./assets/dados/busca/cartilha_suas.pdf" download="O Ministério Público na Fiscalização do SUAS" target="_blank">
                 <button class="btn-secundario">ver</button>
               </a>
             </div>
@@ -87,29 +78,30 @@
               <p>A Tutela da População em situação de Rua</p>
             </div>
             <div class="col-3">
-              <a href= "./assets/dados/busca/cartilha_tutela_populacao_situacao_rua.pdf" download="A Tutela da População em situação de Rua" target="_blank">
+              <a href="./assets/dados/busca/cartilha_tutela_populacao_situacao_rua.pdf" download="A Tutela da População em situação de Rua"
+                target="_blank">
                 <button class="btn-secundario">ver</button>
               </a>
             </div>
           </div>
         </div>
       </div>
+
       <div class="row t-padding">
-        <span class="titulo">Fale conosco</span>
+        <h1 class="titulo">Fale conosco</h1>
       </div>
-      <div>
-        <span class="subtitulo ">Entre em contato com a equipe do Observatório SUAS</span>
-      </div>
+      <p class="subtitulo ">Entre em contato com a equipe do Observatório SUAS</p>
+      
       <div class="card">
         <div class="card-block">
-          <div class="titulo-cartao" style="margin-top: 9px; margin-bottom: 15px;">
+          <h3 class="titulo-cartao" style="margin-top: 9px; margin-bottom: 15px;">
             Centro de Apoio Operacional das Promotorias de Justiça de Tutela Coletiva de Defesa da Cidadania
-          </div>
+          </h3>
           <a href="mailto:observatorio.suas@mprj.mp.br">observatorio.suas@mprj.mp.br</a>
           <div style="font-family: Roboto">(21) 2215-1758</div>
         </div>
       </div>
-          <!--<div class="form-group">
+      <!--<div class="form-group">
             <p> Nome Completo * </p>
             <input id="nome" type="text" pInputText [(ngModel)]="nome">
             <p> E-mail * </p>
@@ -118,61 +110,45 @@
             <input id="mensagem" style="height: 5.5rem; max-height: 100%;" type="text" pInputText [(ngModel)]="mensagem">
             <button class="btn-primario">enviar</button>
           </div>-->
-        <!--</div>-->
-        <div class="card">
-          <div class="card-block">
-            <div class="journal-content-article">
-              <div>
-                <span class="titulo-cartao">Localização</span>
-              </div>
-              <div style="margin: 20px 0;">
-                <a href="https://www.google.com.br/maps/place/Av.+Mal.+C%C3%A2mara,+370+-+Centro,+Rio+de+Janeiro+-+RJ/@-22.9075564,-43.1720566,17z/data=!3m1!4b1!4m5!3m4!1s0x9981e734ccbfe3:0xd2e719dbd3ab0e75!8m2!3d-22.9075564!4d-43.1698679" target="_blank">
-                  <img style="width: 100%" alt="Link para a localização no Google Maps" src="./assets/img/endereco.png">
-                </a>
-              </div>
-              <div>
-                <span>
-                  <strong>Endereço</strong>
-                </span>
-                <br>
-                <span>Av. Marechal Câmara, 370 - 6º andar - Centro - CEP 20020-080</span>
-              </div>
+      <!--</div>-->
+      <div class="card">
+        <div class="card-block">
+          <div class="journal-content-article">
+            <h3 class="titulo-cartao">Localização</h3>
+            <div style="margin: 20px 0;">
+              <a href="https://www.google.com.br/maps/place/Av.+Mal.+C%C3%A2mara,+370+-+Centro,+Rio+de+Janeiro+-+RJ/@-22.9075564,-43.1720566,17z/data=!3m1!4b1!4m5!3m4!1s0x9981e734ccbfe3:0xd2e719dbd3ab0e75!8m2!3d-22.9075564!4d-43.1698679"
+                target="_blank">
+                <img style="width: 100%" alt="Link para a localização no Google Maps" src="./assets/img/endereco.png">
+              </a>
+            </div>
+            <strong>Endereço</strong>
+            <br>
+            <span>Av. Marechal Câmara, 370 - 6º andar - Centro - CEP 20020-080</span>  
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-block">
+          <div class="journal-content-article">
+            <h3 class="titulo-cartao">Responsáveis</h3>
+            <div class="responsaveis">
+              <h3 class="titulo-funcao">Coordenadora</h3>
+              <span>Drª. Patrícia do Couto Villela</span>
+              <hr>
+            </div>
+            <div class="responsaveis">
+              <h3 class="titulo-funcao">Subcoordenadora</h3>
+              <span>Drª. Glicia Pessanha Viana Crispim</span>
+              <hr>
+            </div>
+            <div class="responsaveis">
+              <h3 class="titulo-funcao">Assistente Social</h3>
+              <span>Meimei Alessandra de Oliveira</span>
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-block">
-            <div class="journal-content-article">
-              <div>
-                <span class="titulo-cartao">Responsáveis</span>
-              </div>
-              <div class="responsaveis">
-              <div>
-                <span class="titulo-funcao">Coordenadora</span>
-                <br>
-                <span>Drª. Patrícia do Couto Villela</span>
-              </div>
-                <hr>
-              </div>
-              <div class="responsaveis">
-                <div>
-                  <span class="titulo-funcao">Subcoordenadora</span>
-                  <br>
-                  <span>Drª. Glicia Pessanha Viana Crispim</span>
-                </div>
-                <hr>
-              </div>
-              <div class="responsaveis">
-                <div>
-                  <span class="titulo-funcao">Assistente Social</span>
-                  <br>
-                  <span>Meimei Alessandra de Oliveira</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
     </div>
   </div>
 </div>
-

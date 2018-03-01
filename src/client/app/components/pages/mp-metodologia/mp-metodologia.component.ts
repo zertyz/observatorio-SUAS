@@ -1,5 +1,5 @@
 // libs
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild , OnInit} from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
@@ -12,8 +12,16 @@ import { Config, RouterExtensions } from '../../../modules/core/index';
   templateUrl: 'mp-metodologia.component.html',
   styleUrls: ['mp-metodologia.component.css']
 })
-export class MPMetodologiaComponent {
+export class MPMetodologiaComponent{
+ metodologia : IMetodologia;
+;
 
-  constructor(private injector: Injector, public routerext: RouterExtensions) {}
+  constructor(private injector: Injector, public routerext: RouterExtensions) {
+  }
+  
+}
 
+interface IMetodologia{
+  titulo: string;
+  texto:string;
 }

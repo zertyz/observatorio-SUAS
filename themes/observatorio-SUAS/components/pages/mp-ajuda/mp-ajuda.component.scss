@@ -94,10 +94,6 @@ div > a{
 .card-block > p{
   text-transform: uppercase;
 }
-.img-fluid{
-  width: 6rem;
-  height: auto;
-}
 
 :host/deep/{
   .ui-state-default{
@@ -145,8 +141,4 @@ div > a{
   }
 
 }
-@media (min-width:1199px) {
-  .card#altura{
-    min-height:82%
-  }
-}
+
