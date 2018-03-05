@@ -38,7 +38,7 @@ export class MPRankingComponent implements OnInit {
   trocaRanking(novaDimensao: string) {
     this.municipio = '0';
     this.dimensao = novaDimensao;
-    this.routerext.navigate([`mp-ranking/0/${this.dimensao}`]);
+    this.routerext.navigate([`ranking/0/${this.dimensao}`]);
   }
 
 }
