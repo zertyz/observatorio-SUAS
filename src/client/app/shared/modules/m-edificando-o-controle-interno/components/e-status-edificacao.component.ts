@@ -95,8 +95,8 @@ export class EStatusEdificacaoComponent {
     this.posicao = -1;
     this.nota    = -1;
     if (this.rankings != null) {
-      let rankingOrdenadoPorDimensao:      IRankings[] = this.rankings.sort( (e1, e2) => (e2[this.dimensao]*e2[this.dimensao]+e2.geral) - (e1[this.dimensao]*e1[this.dimensao]+e1.geral));
-
+      let rankingOrdenadoPorDimensao:      IRankings[] = this.rankings.sort( (e1, e2) => (e2[this.dimensao]+(e2.geral*0.001)) - (e1[this.dimensao]+(e1.geral*0.001)));
+  
       // encontra 'elemento' baseado no índice (se 'município' for um número) ou no nome do município (se for uma string)
       let elemento: IRankings;
       if (isNaN(Number(this.municipio))) {

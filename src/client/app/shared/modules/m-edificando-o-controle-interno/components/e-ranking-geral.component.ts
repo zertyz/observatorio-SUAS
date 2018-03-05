@@ -66,7 +66,8 @@ export class ERankingGeralComponent {
 
   ngOnChanges() {
     if (this.ranking) {
-      this.rankingOrdenado = this.ranking.sort((e1, e2) => (e2[this.dimensao]*e2[this.dimensao]) - (e1[this.dimensao]*e1[this.dimensao]));
+      this.rankingOrdenado = this.ranking.sort((e1, e2) => (e2[this.dimensao]+(e2.geral*0.001)) - (e1[this.dimensao]+(e1.geral*0.001)));
+    
     }
   }
   onSelect(ranking:IRankings):void{
