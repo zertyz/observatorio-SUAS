@@ -65,19 +65,18 @@ option{
 }
 
 //Icone do Select
-
 .selectdiv:after {
-
   content: "  \f0c9";
   font: normal normal normal 17px/1 FontAwesome;
   right: 11px;
-  top: 6px;
+  top: 12px;
   height: 44px;
   padding-top: 3px;
   position: absolute;
   pointer-events: none;
   color: #0d2b48;
 }
+
 
 //Resolve problema no IE9
 select::-ms-expand {
@@ -91,12 +90,16 @@ select::-ms-expand {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-
+  //background: url('./assets/hamburguer.png')100% 50% no-repeat; 
+  background-size: 30px 30px;
+  background-color: transparent;
+  background-clip: content-box; 
+  padding-right: 30px;
+  
   font-family: 'Raleway';
   line-height: 100%;
-  font-size: 1.593em;
+  font-size: 1.393em;
   font-weight: bold;
-  background-color: transparent;
   border-color: transparent;
   cursor: pointer;
   width: 100%;

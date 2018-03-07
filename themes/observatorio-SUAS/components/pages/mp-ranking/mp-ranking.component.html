@@ -37,7 +37,9 @@
                     <div class='selectdiv'>
                       <select #selectElem [(ngModel)]="dimensao" (change)="trocaRanking(selectElem.value)">
                          <option *ngFor="let campo of gradacoes.listaDeDimensoesETitulos;" [value]="campo[0]">{{campo[1]}}</option>
-                     </select>
+                     
+                        </select>
+                       
                     </div>
                   </div> 
                 </div>
