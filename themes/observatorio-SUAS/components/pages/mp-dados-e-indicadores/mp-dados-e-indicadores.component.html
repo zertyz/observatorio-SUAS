@@ -395,8 +395,13 @@
                       <div class="keyword" style="text-align: right">Utilizado</div>
                     </th>
                     <th>
-                      <div class="keyword" style="text-align: right">Não utilizado</div>
+                      <div class="keyword" >Não utilizado
+                      <select #anoAtual [(ngModel)]="selectAno" (change)="mudaAno(anoAtual.value)">
+                        <option *ngFor="let ano of arrayAno" [value]="ano"> {{ano}}</option>
+                      </select>
+</div>
                     </th>
+                    
                   </tr>
                 </thead>
                 <tbody>

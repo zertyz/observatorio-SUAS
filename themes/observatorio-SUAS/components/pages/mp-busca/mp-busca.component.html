@@ -56,9 +56,17 @@
           <span>{{documento.nome}}</span>
 
         </div>
-        <a href= "./assets/dados/busca/{{documento.arquivo}}" download="{{documento.arquivo}}" target="_blank">
+        <a *ngIf="documento.categoria !='inspecoes'" href= "./assets/dados/busca/{{documento.arquivo}}" download="{{documento.arquivo}}" target="_blank">
           <button class="btn-secundario botao-download">Acessar</button>
         </a>
+        <a *ngIf="documento.categoria==='inspecoes'" href= "./assets/dados/busca/{{documento.arquivo}}" download="{{documento.arquivo}}" target="_blank">
+          <button class="btn-secundario botao-download">Relatório Completo</button>
+        </a>
+       
+        <a *ngIf="documento.categoria==='inspecoes'" href= "./assets/dados/busca/{{documento.arquivo}}" download="{{documento.arquivo}}" target="_blank">
+          <button class="btn-secundario botao-download">Relatório Compacto</button>
+        </a>
+       
       </div>
     </div>
 

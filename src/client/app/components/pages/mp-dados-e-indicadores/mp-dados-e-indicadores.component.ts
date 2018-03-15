@@ -31,6 +31,8 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   estado:         string = 'Rio de Janeiro';
   estadoId:       string = 'Rio de Janeiro - RJ';     // Esta string deve constar como 'nome do município' nos dados, para apresentar dados de todo o estado. Também é usada no componente MAPA.
   estadoSelected: boolean = true;
+  selectAno :     number = 2016;
+  arrayAno:       number[] = [2016,2017];
 
   //Campo selecionado nos botões no menu de equipamentos
   equipamentoSelecionado: string = 'equipamento';
@@ -219,7 +221,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     this.dadosEIndicadoresService.fetchIndicadoresOrcamentarios().subscribe(response => {
       this.blocoIndicadoresOrcamentarios = response;
       if(this.blocoIndicadoresOrcamentarios!=undefined){
-        this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento == 2017);
+        this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento == this.selectAno);
       }
       this.graficoPSEalto = {
         labels: ['Verba Utilizada', 'Verba não utilizada'],
@@ -510,6 +512,11 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     }, error => this.errorMessage = < any > error);
   }
 
+  mudaAno(ano : number){
+    this.selectAno = ano;
+    this.ngOnChanges();
+  }
+
   formataMoeda(value: number): string {
     let currencySign: string = 'R$ ';
     let decimalLength: number = 2;
@@ -677,6 +684,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     // encontra 'Indicadores Sociais' baseado no nome do município
     this.indicadoresSociais = this.blocoIndicadoresSociais.find(e => e.municipio == this.municipio);
     //encontra 'Indicadores Orcamentarios' baseado no nome do município e no ano desejado
-    this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento==2017);
+    this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento==this.selectAno);
   }
 }
