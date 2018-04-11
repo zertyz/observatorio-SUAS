@@ -70,6 +70,7 @@ export class ERankingGeralComponent {
     
     }
   }
+  
   onSelect(ranking:IRankings):void{
     this.selectRanking = ranking;
   }

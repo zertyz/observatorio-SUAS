@@ -31,8 +31,8 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   estado:         string = 'Rio de Janeiro';
   estadoId:       string = 'Rio de Janeiro - RJ';     // Esta string deve constar como 'nome do município' nos dados, para apresentar dados de todo o estado. Também é usada no componente MAPA.
   estadoSelected: boolean = true;
-  selectAno :     number = 2016;
-  arrayAno:       number[] = [2016,2017];
+  selectAno :     string = '2016';
+  arrayAno:       string[] =['2016'];
 
   //Campo selecionado nos botões no menu de equipamentos
   equipamentoSelecionado: string = 'equipamento';
@@ -191,10 +191,10 @@ export class MPDadosEIndicadoresComponent implements OnInit {
       },error => this.errorMessage = < any > error)
 
   }
-
+ 
   // computa campos assim que for resolvido o parâmetro 'municipio'
   computaCampos() {
-
+   
     // computa equipamentos
     this.contagemCentrosPOP   = 0;
     this.contagemCRAS         = 0;
@@ -221,7 +221,8 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     this.dadosEIndicadoresService.fetchIndicadoresOrcamentarios().subscribe(response => {
       this.blocoIndicadoresOrcamentarios = response;
       if(this.blocoIndicadoresOrcamentarios!=undefined){
-        this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento == this.selectAno);
+        this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento.toString() == this.selectAno);
+        this.arrayAno = this.eliminarObjetosDuplicados(this.blocoIndicadoresOrcamentarios, 'anoOrcamento');
       }
       this.graficoPSEalto = {
         labels: ['Verba Utilizada', 'Verba não utilizada'],
@@ -510,9 +511,26 @@ export class MPDadosEIndicadoresComponent implements OnInit {
         this.totalEquipamentosEstado = (this.crases.length + this.creases.length + this.centrosPOP.length);
       }
     }, error => this.errorMessage = < any > error);
-  }
 
-  mudaAno(ano : number){
+  
+  }
+ 
+  eliminarObjetosDuplicados(arr, prop) {
+     var novoArray = [];
+     var lookup  = {};
+ 
+     for (var i in arr) {
+         lookup[arr[i][prop]] = arr[i];
+     }
+ 
+     for (i in lookup) {
+         novoArray.push(lookup[i]);
+     }
+ 
+     return novoArray;
+ }
+   
+  mudaAno(ano : string){
     this.selectAno = ano;
     this.ngOnChanges();
   }
@@ -684,6 +702,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
     // encontra 'Indicadores Sociais' baseado no nome do município
     this.indicadoresSociais = this.blocoIndicadoresSociais.find(e => e.municipio == this.municipio);
     //encontra 'Indicadores Orcamentarios' baseado no nome do município e no ano desejado
-    this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento==this.selectAno);
+    this.indicadoresOrcamentarios = this.blocoIndicadoresOrcamentarios.find(e => e.municipio == this.municipio && e.anoOrcamento.toString()==this.selectAno);
   }
 }

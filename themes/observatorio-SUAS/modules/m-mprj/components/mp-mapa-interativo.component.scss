@@ -52,6 +52,7 @@ option{
   padding-top: 3px;
   position: absolute;
   pointer-events: none;
+  
 }
 
 //Resolve problema no IE9
@@ -62,8 +63,7 @@ select::-ms-expand {
 .selectdiv select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-
+  
   font-size: 1.683em;
   font-family: Roboto-Condensed;
   font-weight: bold;
@@ -72,5 +72,10 @@ select::-ms-expand {
   border-color: transparent;
   cursor: pointer;
   width: 100%;
-  height: 2.3rem;
+  background-size: 30px 30px;
+  background-color: transparent;
+  background-clip: content-box; 
+  padding-right: 30px;
+  max-height: 5.3em;
+  white-space: inherit;
 }

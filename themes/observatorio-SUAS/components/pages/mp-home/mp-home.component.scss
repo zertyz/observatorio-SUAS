@@ -67,14 +67,16 @@ a{
 
 .keyword{
   font-family: 'Raleway';
-  font-size: 0.865rem;
+  font-size: 1.16rem;
   text-transform: uppercase;
-  color: whitesmoke;
+  color:#2f3a47;
 }
 
 .keyword-small{
   @extend .keyword;
-  font-size: 41%;
+  font-size: 40%;
+  white-space:nowrap;
+  
 }
 
 .keyword-municipio{
@@ -87,14 +89,11 @@ a{
 .number-big{
   font-family: 'Roboto-Condensed';
   text-transform: uppercase;
-  color: whitesmoke;
-  font-size: 3.9rem;
+  color: #2f3a47;
+  font-size: 1.5em;
+  white-space:nowrap;
 }
 
-.number{
-  @extend .number-big;
-  font-size: 1.4rem;
-}
 
 .superior a {
   color: white!important;

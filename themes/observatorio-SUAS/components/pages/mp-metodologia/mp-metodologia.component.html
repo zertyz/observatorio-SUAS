@@ -18,197 +18,23 @@
           </div>
 
           <div class="macro-card">
-            <div class="card-block">
-              <div class="row">
-                
-                <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                  <div class="micro-card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-3">
-                          <img class="icone" src="./assets/img/icones/financiamento.png" align="left">
-                        </div>
-                        <div class="col-7">
+            <div class="row">
+              <div *ngFor="let dimensao of dimensoes" class="col-md-6 col-xs-12" style="padding: 0.2em">
+                <div class="micro-card">
+                  <div class="card-block">
+                    <div class="row">
+                      <div class="col-3">
+                        <img class="icone" src="./assets/img/icones/{{dimensao.tituloImagem}}.png" align="left">
+                      </div>
+                      <div class="col-7">
+                        <div class="row">
+                          <div class="dimensao">{{dimensao.titulo}}</div>
                           <div class="row">
-                            <div class="dimensao">Financiamento</div>
-                            <div class="row">
-                              <p class="info"><br/>Avalia a utilização dos recursos do Fundo Municipal de Assistência Social oriundos do
-                                Governo Federal, aplicados em programas, projetos, serviços e beneficios da assistência social.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-1 pesoHeader">
-                          PESO <span class="pesoValor">10</span>
+                            <p class="info"><br/>{{dimensao.texto}}</div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                  <div class="micro-card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-3">
-                          <img class="icone" src="./assets/img/icones/secretario_assistencia_social_70px.png" align="left">
-                        </div>
-                        <div class="col-7">
-                          <div class="row">
-                            <div class="dimensao">Gestão</div>
-                            <div class="row">
-                              <p class="info"><br/>Avalia a utilização dos recursos do Fundo Municipal de Assistência Social oriundos do
-                                Governo Federal, aplicados em programas, projetos, serviços e benefícios da assistência social.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-1 pesoHeader">
-                          PESO <span class="pesoValor">08</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                  <div class="micro-card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-3">
-                          <img class="icone" src="./assets/img/icones/inspecoes_70px.png" align="left">
-                        </div>
-                        <div class="col-7">
-                          <div class="row">
-                            <div class="dimensao">Inspeções</div>
-                            <div class="row">
-                              <p class="info"><br/>Avalia, através de um questionário semi-estruturado os equipamentos de assistência social
-                                do estado do Rio de Janeiro, a partir de inspeções realizadas por equipe técnica do Ministério
-                                Público do Rio de Janeiro.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-1 pesoHeader">
-                          PESO <span class="pesoValor">10</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                  <div class="micro-card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-3">
-                          <img class="icone" src="./assets/img/icones/CRAS_Médio_70px.png" align="left">
-                        </div>
-                        <div class="col-7">
-                          <div class="row">
-                            <div class="dimensao">Número de Equipamentos</div>
-                            <div class="row">
-                              <p class="info"><br/>Avalia a partir do censo SUAS 2016, as atividades desenvolvidas pelos orgãos de gestão
-                                das Secretarias Municipais de Assistência Social.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-1 pesoHeader">
-                          PESO <span class="pesoValor">08</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                  <div class="micro-card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-3">
-                          <img class="icone" src="./assets/img/icones/controle social.png" align="left">
-                        </div>
-                        <div class="col-7">
-                          <div class="row">
-                            <div class="dimensao">Controle Social</div>
-                            <div class="row">
-                              <p class="info"><br/>Avalia as ações realizadas pelos Conselhos Municipais de Assistencia Social a partir de
-                                dados extraídos do Censo SUAS.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-1 pesoHeader">
-                          PESO <span class="pesoValor">08</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                  <div class="micro-card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-3">
-                          <img class="icone" src="./assets/img/icones/bolsa_familia_70px.png" align="left">
-                        </div>
-                        <div class="col-7">
-                          <div class="row">
-                            <div class="dimensao">Cobertura Bolsa Família</div>
-                            <div class="row">
-                              <p class="info"><br/>Avalia o alcance da cobertura de famílias com o perfil para o programa Bolsa Família.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-1 pesoHeader">
-                          PESO <span class="pesoValor">05</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                  <div class="micro-card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-3">
-                          <img class="icone" src="./assets/img/icones/familias_registradas_70px.png" align="left">
-                        </div>
-                        <div class="col-7">
-                          <div class="row">
-                            <div class="dimensao">Cobertura do Cadastro Único</div>
-                            <div class="row">
-                              <p class="info"><br/>Avalia o alcance da cobertura de cadastramento de familias com perfil CadÚnico dos municípios.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-1 pesoHeader">
-                          PESO <span class="pesoValor">08</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-xs-12" style="padding: 0.2em">
-                  <div class="micro-card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-3">
-                          <img class="icone" src="./assets/img/icones/beneficio_eventual_70px.png" align="left">
-                        </div>
-                        <div class="col-7">
-                          <div class="row">
-                            <div class="dimensao">Resolução de Benefícios Eventuais </div>
-                            <div class="row">
-                              <p class="info"><br/>Avalia a existência de atos normativos que regulamentem os Benefícios Eventuais nos municípios.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-1 pesoHeader">
-                          PESO <span class="pesoValor">05</span>
-                        </div>
+                      <div class="col-1 pesoHeader">
+                        PESO <span class="pesoValor">{{dimensao.peso}}</span>
                       </div>
                     </div>
                   </div>

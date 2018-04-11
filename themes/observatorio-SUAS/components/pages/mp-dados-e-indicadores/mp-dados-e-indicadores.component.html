@@ -397,7 +397,7 @@
                     <th>
                       <div class="keyword" >Não utilizado
                       <select #anoAtual [(ngModel)]="selectAno" (change)="mudaAno(anoAtual.value)">
-                        <option *ngFor="let ano of arrayAno" [value]="ano"> {{ano}}</option>
+                        <option *ngFor="let ano of arrayAno" [value]="ano.anoOrcamento"> {{ano.anoOrcamento}}</option>
                       </select>
 </div>
                     </th>

@@ -12,7 +12,6 @@
     </div>
 
     <div class="col-xl-10  col-11">
-   
       <div class="row t-padding">
         <h1 class="titulo">ranking observatório suas</h1>
         <p class="box-text">Ranking de avaliação do indicadores referentes ao SUAS no municípios fluminenses. Para visualizar outros rankings,
@@ -36,12 +35,10 @@
                     <h3 class="title">Ranking </h3>
                     <div class='selectdiv'>
                       <select #selectElem [(ngModel)]="dimensao" (change)="trocaRanking(selectElem.value)">
-                         <option *ngFor="let campo of gradacoes.listaDeDimensoesETitulos;" [value]="campo[0]">{{campo[1]}}</option>
-                     
+                         <option *ngFor="let campo of gradacoes.listaDeDimensoesETitulos;" [value]="campo[0]">{{campo[1]}}</option>     
                         </select>
-                       
                     </div>
-                  </div> 
+                  </div>
                 </div>
               </div>
               <!-- Outros Rankings -->
