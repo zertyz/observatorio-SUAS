@@ -18,16 +18,18 @@
           </div>
           <div class="row">
             <div class="col-lg-7 col-md-12">
-              <input *ngIf="pesquisa==='0'" class="field-input" id="_mprjbusca_WAR_mprjbuscaportlet_keywords_param2" name="pesquisa" type="text" value="" style="height: 28px; margin-right: 10px; border-radius: 0 !important; border-color: #A9A9A9; box-shadow: none;" onfocus="removeLabel()">
-              <input *ngIf="pesquisa!=='0'" [ngModel]="pesquisa" class="field-input" id="_mprjbusca_WAR_mprjbuscaportlet_keywords_param" name="pesquisa" type="text" value="" style="height: 28px; margin-right: 10px; border-radius: 0 !important; border-color: #A9A9A9; box-shadow: none;" onfocus="removeLabel()">
-            </div>
+              <input *ngIf="pesquisa==='0'" class="field-input" id="_mprjbusca_WAR_mprjbuscaportlet_keywords_param2" name="pesquisa" type="text" value="" style="height: 28px; margin-right: 10px; border-radius: 0 !important; border-color: #A9A9A9; box-shadow: none;" (keydown.enter)= "onSubmit();">
+            <!--input *ngIf="pesquisa!=='0'" [ngModel]="pesquisa" class="field-input" id="_mprjbusca_WAR_mprjbuscaportlet_keywords_param" name="pesquisa" type="text" value="" style="height: 28px; margin-right: 10px; border-radius: 0 !important; border-color: #A9A9A9; box-shadow: none;" onfocus="removeLabel();"-->
+    
+              </div>
             <div class="col-lg-3 col-md-12">
               <select [ngModel]="categoria" class="field-select" id="_mprjbusca_WAR_mprjbuscaportlet_filtro_param" name="categoria"  style="height: 38px !important; margin-right: 10px; border-radius: 0 !important; border-color: #A9A9A9; box-shadow: none;">
-                <option class="" value="0"> Todas as Categorias </option>
-                <option class="" value="legislacao"> Legislação </option>
-                <option class="" value="orcamento"> Orçamento </option>
-                <option class="" value="cartilha"> Cartilhas </option>
-                <option class="" value="inspecoes"> Inspeções </option>
+                <option value="0"> Todas as categorias </option>
+                <option value="legislacao"> Legislação </option>
+                <option value="orcamento"> Orçamento </option>
+                <option value="cartilha"> Cartilhas </option>
+                <option value="inspecoes"> Inspeções </option>
+                <option value="saldoconta"> Relatório de saldo detalhado por conta </option>
               </select>
             </div>
             <div class="col-lg-2 col-md-5">
@@ -53,6 +55,7 @@
           <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='repasse'"> Repasse Financeiro Federal</p>
           <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='cartilha'"> Manual/Cartilha</p>
           <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='inspecoes'"> Inspeção</p>
+          <p class="text-blue" style="text-transform: uppercase" *ngIf="documento.categoria==='saldoconta'"> Relatório de saldo detalhado por conta</p>
           <span>{{documento.nome}}</span>
 
         </div>

@@ -76,5 +76,5 @@ interface IMetodologia{
   titulo: string;
   texto:  string;
   peso:   string;
-  tituloImagem
+  tituloImagem: string;
 }

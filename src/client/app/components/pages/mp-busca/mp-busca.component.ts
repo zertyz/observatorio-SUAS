@@ -99,5 +99,4 @@ export class MPBuscaComponent {
     let campoCategoria = document.getElementsByName('categoria')[0] as HTMLInputElement;
     this.pesquisar(campoCategoria.value, campoPesquisa.value);
   }
-
 }
