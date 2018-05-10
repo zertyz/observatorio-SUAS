@@ -515,12 +515,12 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   
   }
  
-  eliminarObjetosDuplicados(arr, prop) {
+  eliminarObjetosDuplicados(array, prop) {
      var novoArray = [];
      var lookup  = {};
  
-     for (var i in arr) {
-         lookup[arr[i][prop]] = arr[i];
+     for (var i in array) {
+         lookup[array[i][prop]] = array[i];
      }
  
      for (i in lookup) {
@@ -533,6 +533,7 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   mudaAno(ano : string){
     this.selectAno = ano;
     this.ngOnChanges();
+    this.computaCampos();
   }
 
   formataMoeda(value: number): string {
@@ -612,7 +613,6 @@ export class MPDadosEIndicadoresComponent implements OnInit {
   }
 
   selectTipo(i: string) {
-    'user strict'
 
     // Centros Pop do municipio ou com o do estado (todos os municípios)
     let   equipamentosCentroPop: IEquipamento[] = this.centrosPOP
