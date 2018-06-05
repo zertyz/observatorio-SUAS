@@ -71,8 +71,8 @@ export class ERankingGeralComponent {
     }
   }
   
-  onSelect(ranking:IRankings):void{
-    this.selectRanking = ranking;
+  onSelect(selecao:IRankings):void{
+    this.selectRanking = selecao;
   }
 
 

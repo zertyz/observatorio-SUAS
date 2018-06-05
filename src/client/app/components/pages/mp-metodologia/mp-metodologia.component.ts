@@ -34,7 +34,7 @@ export class MPMetodologiaComponent{
   {
     'titulo':"inspeções",
     'texto': "Avalia, através de um questionário semi-estruturado os equipamentos de assistência social do estado do Rio de Janeiro, a partir de inspeções realizadas por equipe técnica do Ministério Público do Rio de Janeiro.",
-    'peso' :'10',
+    'peso' :'30',
     'tituloImagem':"inspecoes" 
   },
   {

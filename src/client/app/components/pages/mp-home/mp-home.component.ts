@@ -43,10 +43,6 @@ export class MPHomeComponent {
   // constroi a estrutura 'top10Cidades'
   constructor(private rankingsService: RankingsService, private buscaService: BuscaService,
     private dadosEIndicadoresService: DadosEIndicadoresService, private gradacoes: GradacoesDeCores) {
-    
-    let crases: IEquipamento[] = [];
-    let creases: IEquipamento[] = [];
-    let centrosPOP: IEquipamento[] = [];
 
     rankingsService.fetchRankings().subscribe(response => {
       let rankings: IRankings[] = response.sort((e1, e2) => e2.geral - e1.geral);
@@ -56,21 +52,19 @@ export class MPHomeComponent {
       }
     }, error => this.errorMessage = <any>error);
 
+  
     this.dadosEIndicadoresService.fetchCRAS().subscribe(response => {
-      crases = response;
-      this.totalCras = crases.length;
+      this.totalCras = response.length;
     }, error => this.errorMessage = <any>error)
 
-    this.dadosEIndicadoresService.fetchCREAS().subscribe(response => {
-      creases = response;
-      this.totalCreas = creases.length;
+    this.dadosEIndicadoresService.fetchCREAS().subscribe(response => {   
+      this.totalCreas = response.length;
     }, error => this.errorMessage = <any>error)
      
     this.dadosEIndicadoresService.fetchCentroPop().subscribe(response => {
-      centrosPOP = response;
-      this.totalCentroPop = centrosPOP.length;
+      this.totalCentroPop = response.length;
     }, error => this.errorMessage = <any>error)
-
+   
     buscaService.fetchPesquisa().subscribe(response => {
       let creas: number = 0;
       let cras: number = 0;
@@ -88,11 +82,17 @@ export class MPHomeComponent {
           centroPop++;
         }
       }
+     
 
-      this.porcentagemCreas = ((creas * 100) / this.totalCreas).toFixed(2).concat('%');
-      this.porcentagemCras = ((cras * 100) / this.totalCras).toFixed(2).concat('%');
-      this.porcentagemCentroPop = ((centroPop * 100) / this.totalCentroPop).toFixed(2).concat('%');
-
+      this.porcentagemCras = ((cras * 100) / 453).toFixed(2).concat('%');
+      this.porcentagemCreas = ((creas * 100) / 116).toFixed(2).concat('%');
+      this.porcentagemCentroPop = ((centroPop * 100) / 19).toFixed(2).concat('%');
+      console.log(this.porcentagemCras);
+      console.log(this.porcentagemCreas)
+      console.log(this.porcentagemCentroPop);
+      console.log(this.totalCras);
+      console.log(this.totalCreas);
+      console.log(this.totalCentroPop);
     }, error => this.errorMessage = <any>error);
   }
 }
